@@ -22,6 +22,10 @@
 				</article>
 			<?php endwhile; ?>
 			<!-- // end the loop -->
+				<nav class="post-navigation pagination">
+					<div class="post-navigation prev-link"><?php next_posts_link('&laquo; Older Entries') ?></div>
+					<div class="post-navigation next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+				</nav>
 			<?php else : ?>
 				<!-- 404 or if post not found -->
 			<?php endif; ?>

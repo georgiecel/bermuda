@@ -16,7 +16,7 @@
 					</footer>
 					<div class="post-content" itemprop="articleBody">
 						<?php the_content(); ?>
-						<?php edit_post_link('Click here to edit this entry (admin).'); ?>
+						<?php edit_post_link('Click here to edit this page (admin).'); ?>
 					</div>
 				</article>
 			<?php endwhile; ?>
