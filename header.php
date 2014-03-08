@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+		<?php wp_head(); ?>
 		<meta charset="utf-8">
 		<meta name="description" content="The tales of a web designer, photographer, musician, writer – someone who loves everything from A to Z.">
 	</head>
