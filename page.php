@@ -12,7 +12,7 @@
 					<meta itemprop="inLanguage" content="en">
 					<meta itemprop="copyrightYear" content="<?php the_time('Y') ?>">
 					<meta itemprop="url" content="<?php echo get_permalink(); ?>">
-					<meta itemprop="wordCount" content="<?php echo wcount(); ?>">
+					<meta itemprop="wordCount" content="<?php echo wordcount(); ?>">
 				</footer>
 				<div class="post-content" itemprop="articleBody">
 					<?php the_content(); ?>

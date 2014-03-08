@@ -1,11 +1,14 @@
 <!doctype html>
-<html>
+<html <?php language_attributes(); ?>>
 	<head>
-		<title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-		<?php wp_head(); ?>
 		<meta charset="utf-8">
 		<meta name="description" content="The tales of a web designer, photographer, musician, writer – someone who loves everything from A to Z.">
-	</head>
+		<title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+		<?php wp_head(); ?>
+		</head>
 	<body>
 		<header class="site-header">
 			<h1 class="site-title">Hey Georgie</h1>
