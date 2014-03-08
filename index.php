@@ -1,7 +1,7 @@
-			<?php get_header(); ?>
-			<section class="blog-listing">
+		<?php get_header(); ?>
+			<section class="blog-listing post-listing">
 			<!-- // begin the loop -->
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<!-- HTML for individual post here -->
 				<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 					<h1 class="post-title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title" itemprop="url"><?php the_title(); ?></a></h1>
@@ -21,6 +21,7 @@
 					</div>
 				</article>
 			<?php endwhile; ?>
+			</section>
 			<!-- // end the loop -->
 				<nav class="post-navigation pagination">
 					<div class="post-navigation prev-link"><?php next_posts_link('&laquo; Older Entries') ?></div>
@@ -28,6 +29,5 @@
 				</nav>
 			<?php else : ?>
 				<!-- 404 or if post not found -->
-			<?php endif; ?>
-			</section>
-			<?php get_footer(); ?>
+		<?php endif; ?>
+		<?php get_footer(); ?>
