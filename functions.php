@@ -1,5 +1,34 @@
 <?php
 
+	// remove rel attribute from the category list
+
+	function remove_category_list_rel($output){
+		$output = str_replace(' rel="category tag"', '', $output);
+		return $output;
+	}
+
+	add_filter('wp_list_categories', 'remove_category_list_rel');
+	add_filter('the_category', 'remove_category_list_rel');
+
+	// use nice search 
+
+	function roots_nice_search_redirect() {
+		global $wp_rewrite;
+		if (!isset($wp_rewrite) || !is_object($wp_rewrite) || !$wp_rewrite->using_permalinks()) {
+ 			return;
+		}
+
+		$search_base = $wp_rewrite->search_base;
+		if (is_search() && !is_admin() && strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false) {
+			wp_redirect(home_url("/{$search_base}/" . urlencode(get_query_var('s'))));
+    		exit();
+		}
+	}
+
+	if (current_theme_supports('nice-search')) {
+		add_action('template_redirect', 'roots_nice_search_redirect');
+	}
+
 	// post thumbnail inclusion
 
 	if ( function_exists( 'add_theme_support' ) ) {
@@ -112,5 +141,28 @@
 		<?php }
 
 	}
+
+	// remove unnecessary bloaty things in the header
+
+	remove_action( 'wp_head', 'feed_links_extra', 3 );
+	remove_action( 'wp_head', 'feed_links', 2 );
+	remove_action( 'wp_head', 'rsd_link' );
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+	remove_action( 'wp_head', 'index_rel_link' );
+	remove_action( 'wp_head', 'parent_post_rel_link_wp_head', 10, 0 );
+	remove_action( 'wp_head', 'start_post_rel_link_wp_head', 10, 0 );
+	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+	remove_action( 'wp_head', 'wp_generator' );
+	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+
+	// remove unnecessary self-closing tags
+	
+	function remove_self_closing_tags($input) {
+		return str_replace(' />', '>', $input);
+	}
+
+	add_filter('get_avatar', 'remove_self_closing_tags'); // <img />
+	add_filter('comment_id_fields', 'remove_self_closing_tags'); // <input />
+	add_filter('post_thumbnail_html', 'remove_self_closing_tags'); // <img />
 
 ?>
