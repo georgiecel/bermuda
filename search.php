@@ -8,8 +8,8 @@
 			<?php while (have_posts()) : the_post(); ?>
 				<!-- HTML for each search result -->
 				<article class="post">
-					<h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title"><?php the_title(); ?></a></h1>
-					<p><?php the_excerpt(); ?></p>
+					<h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title"><?php search_title_highlight(); ?></a></h1>
+					<p><?php search_excerpt_highlight(); ?></p>
 					<p>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read this article?</a>
 					</p>
