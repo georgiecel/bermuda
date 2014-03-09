@@ -68,7 +68,15 @@
 			$depth++;
 			$GLOBALS['comment_depth'] = $depth;
 			$GLOBALS['comment'] = $comment;
-			$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' ); ?>
+			$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' ); 
+	
+			if ( 'article' == $args['style'] ) {
+				$tag = 'article';
+				$add_below = 'comment';
+			} else {
+				$tag = 'article';
+				$add_below = 'comment';
+			} ?>
 
 			<article <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>" itemscope itemtype="http://schema.org/Comment">
 				<figure class="gravatar"><?php echo get_avatar( $comment, 65, 'http://hey.georgie.nu/wp-content/themes/heygeorgie/images/bg.png', 'Author’s gravatar' ); ?></figure>
@@ -84,9 +92,7 @@
 				</div>
 				<div class="comment-content post-content" itemprop="text">
 					<?php comment_text() ?>
-					<div class="comment-reply">
-						<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-					</div>
+					<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 				</div>
 
 		<?php }

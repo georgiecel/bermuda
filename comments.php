@@ -5,7 +5,7 @@
 				return;
 			}
 		?>
-			<section class="comments">
+			<section class="comments" id="comments">
 		<?php if ( have_comments() ) : ?>
 			<h1 class="comments-title post-title">Comments</h1>
 			<?php wp_list_comments(array('walker' => new comment_walker() ));
@@ -18,9 +18,9 @@
     		endif; 
 		?>
 		<?php if ('open' == $post->comment_status) : ?>
-			<div class="comments-respond">
-				<h2 class="comments-respond-title"><?php comment_form_title( 'Leave a Comment', 'Reply to %s' ); ?></h2>
-				<form class="comments-respond-form" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" role="form">
+			<div class="comments-respond" id="respond">
+				<h2 class="comments-respond-title"><?php comment_form_title( 'Leave a Comment', 'Reply to %s' ); ?> <?php cancel_comment_reply_link('(Cancel reply)') ?></h2>
+				<form class="comments-respond-form" id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" role="form">
 				<?php if ( $user_ID ) : ?>
 					<p class="comments-respond-form-row">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
 				<?php else : ?>
@@ -47,7 +47,6 @@
 					<?php comment_id_fields( $post_id ); ?>
 					<?php do_action( 'comment_form', $post_id ); ?>
 				</form>
-				<p class="comments-cancel-reply"><small><?php cancel_comment_reply_link() ?></small></p>
 			</div>
 		</section>
 	<?php endif; ?>
