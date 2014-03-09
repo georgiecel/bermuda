@@ -10,11 +10,11 @@
 		<?php wp_head(); ?>
 		</head>
 	<body>
-		<header class="site-header">
+		<header class="site-header" role="banner">
 			<h1 class="site-title">Hey Georgie</h1>
 			<nav class="main-navigation" role="navigation">
 				<!-- This is an example link -->
 				<a class="main-navigation-link" href="/">Home</a>
 			</nav>
 		</header>
-		<div class="site-content">
+		<div class="site-content" role="main">

@@ -1,6 +1,6 @@
 		<?php get_header(); ?>
 			<div class="post">
-				<h1>This page has just blown up.</h1>
+				<h1 role="heading">This page has just blown up.</h1>
 				<img class="image-alignright alignright" src="<?php bloginfo('template_url'); ?>/images/creeper.png">
 				<p>Shit. <a href="/contact/">Please tell me about this</a>. I might have forgotten to install a door somewhere.</p>
 				<h2>Frequently asked questions about missing pages</h2>

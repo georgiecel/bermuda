@@ -1,13 +1,13 @@
 		<?php get_header(); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<article class="post page" itemscope itemtype="http://schema.org/Article">
+			<article class="post page" itemscope itemtype="http://schema.org/Article" role="article">
 				<?php if ( is_page('about') ) {
-						echo '<h1 class="post-title" itemprop="name">About Georgie</h1>';
+						echo '<h1 class="post-title" itemprop="name" role="heading">About Georgie</h1>';
 					} else {
-						echo '<h1 class="post-title" itemprop="name">', the_title(), '</h1>';
+						echo '<h1 class="post-title" itemprop="name" role="heading">', the_title(), '</h1>';
 					}
 				?>
-				<footer class="post-meta" role="contentinfo">
+				<footer class="post-meta" role="complementary">
 					<meta itemprop="author" content="Georgie Luhur">
 					<meta itemprop="inLanguage" content="en">
 					<meta itemprop="copyrightYear" content="<?php the_time('Y') ?>">
