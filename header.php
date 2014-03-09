@@ -16,5 +16,8 @@
 				<!-- This is an example link -->
 				<a class="main-navigation-link" href="/">Home</a>
 			</nav>
+			<div class="site-search">
+				<?php get_search_form(); ?>
+			</div>
 		</header>
 		<div class="site-content" role="main">
