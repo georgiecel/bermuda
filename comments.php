@@ -8,11 +8,9 @@
 			<section class="comments">
 		<?php if ( have_comments() ) : ?>
 			<h1 class="comments-title post-title">Comments</h1>
-			<section class="comments-list">
-				<?php wp_list_comments(array('walker' => new comment_walker() ));
+			<?php wp_list_comments(array('walker' => new comment_walker() ));
 				// 'style=section&callback=better_comment&end-callback=better_comment_close');
-				?>
-			</section>
+			?>
 		<?php endif; ?>
 		<?php
     		if ( ! comments_open() ) : // There are comments but comments are now closed

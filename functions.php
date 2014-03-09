@@ -40,17 +40,14 @@
 		var $tree_type = 'comment';
 		var $db_fields = array( 'parent' => 'comment_parent', 'id' => 'comment_ID' );
  
-		/** CONSTRUCTOR
-		* You'll have to use this if you plan to get to the top of the comments list, as
-		* start_lvl() only goes as high as 1 deep nested comments */
+		// constructor – wrapper for the comments list
 		function __construct() { ?>
 
-			<section class="comments">
+			<section class="comments-list">
 
 		<?php }
 
-		/** START_LVL
-	     * Starts the list before the CHILD elements are added. */
+		// start_lvl – wrapper for child comments list
 		function start_lvl( &$output, $depth = 0, $args = array() ) {
 			$GLOBALS['comment_depth'] = $depth + 2; ?>
 			
@@ -58,16 +55,15 @@
 
 		<?php }
 	
-		/** END_LVL
-		 * Ends the children list of after the elements are added. */
+		// end_lvl – closing wrapper for child comments list
 		function end_lvl( &$output, $depth = 0, $args = array() ) {
 			$GLOBALS['comment_depth'] = $depth + 2; ?>
 
-			</section><!-- /.children -->
- 
+			</section>
+
 		<?php }
 
-		/** START_EL */
+		// start_el – HTML for comment template
 		function start_el( &$output, $comment, $depth, $args, $id = 0 ) {
 			$depth++;
 			$GLOBALS['comment_depth'] = $depth;
@@ -91,20 +87,21 @@
 					<div class="comment-reply">
 						<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 					</div>
-				</div>			
-
-		<?php }		
-
-		function end_el(&$output, $comment, $depth = 0, $args = array() ) { ?>
-
-			</article><!-- /#comment-' . get_comment_ID() . ' -->
+				</div>
 
 		<?php }
 
-		/** DESTRUCTOR */
+		// end_el – closing HTML for comment template
+		function end_el(&$output, $comment, $depth = 0, $args = array() ) { ?>
+
+			</article>
+
+		<?php }
+
+		// destructor – closing wrapper for the comments list
 		function __destruct() { ?>
 
-			</section><!-- /#comment-list -->
+			</section>
 		
 		<?php }
 
