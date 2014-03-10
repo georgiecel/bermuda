@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="The tales of a web designer, photographer, musician, writer – someone who loves everything from A to Z.">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, width=device-width">
 		<title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen">
 		<link rel="profile" href="http://gmpg.org/xfn/11">

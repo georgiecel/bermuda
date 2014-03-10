@@ -5,7 +5,9 @@
 				<!-- HTML for individual post here -->
 				<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
 				<?php if ( has_post_thumbnail() ) { ?>
-					<figure class="post-thumbnail"><?php the_post_thumbnail(); ?></figure>
+					<div class="post-thumbnail-wrapper">
+						<figure class="post-thumbnail"><?php the_post_thumbnail(); ?></figure>
+					</div>
 				<?php } ?>
 					<h1 class="post-title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title" itemprop="url" role="heading"><?php the_title(); ?></a></h1>
 					<footer class="post-meta" role="complementary">
