@@ -218,6 +218,19 @@ h5 {
 h6 {
   font-size: 1.1em;
 }
+a,
+a:link {
+  color: #000;
+}
+a:visited {
+  color: #000;
+}
+a:hover {
+  color: #000;
+}
+a:active {
+  color: #000;
+}
 @media (min-width 600px) {
   .post-content {
     float: left;
@@ -243,6 +256,11 @@ img {
 }
 .post-thumbnail {
   margin: 0;
+  padding: 0;
+  text-align: center;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
 }
 .post {
   overflow: hidden;
