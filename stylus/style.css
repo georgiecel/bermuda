@@ -169,9 +169,86 @@ td,
 th {
   padding: 0;
 }
+@font-face {
+  font-family: 'edmondsansbold';
+  src: url("fonts/edmondsans-bold-webfont.eot");
+  src: url("fonts/edmondsans-bold-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/edmondsans-bold-webfont.woff") format('woff'), url("fonts/edmondsans-bold-webfont.ttf") format('truetype'), url("fonts/edmondsans-bold-webfont.svg#edmondsansbold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'edmondsansmedium';
+  src: url("fonts/edmondsans-medium-webfont.eot");
+  src: url("fonts/edmondsans-medium-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/edmondsans-medium-webfont.woff") format('woff'), url("fonts/edmondsans-medium-webfont.ttf") format('truetype'), url("fonts/edmondsans-medium-webfont.svg#edmondsansmedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'edmondsansregular';
+  src: url("fonts/edmondsans-regular-webfont.eot");
+  src: url("fonts/edmondsans-regular-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/edmondsans-regular-webfont.woff") format('woff'), url("fonts/edmondsans-regular-webfont.ttf") format('truetype'), url("fonts/edmondsans-regular-webfont.svg#edmondsansregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body,
 p {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  line-height: 1.5;
+  font-size: 1.05em;
+  color: #000;
+}
+h1 {
+  font-size: 1.75em;
+  font-family: edmondsansmedium;
+}
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.45em;
+}
+h4 {
+  font-size: 1.3em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1.1em;
+}
+@media (min-width 600px) {
+  .post-content {
+    float: left;
+    width: 50%;
+  }
+  .post-meta {
+    float: right;
+    width: 20%;
+    padding: 0 15%;
+  }
+}
+.alignleft,
+.prev-link {
+  float: left;
+}
+.alignright,
+.next-link {
+  float: right;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.post-thumbnail {
+  margin: 0;
+}
+.post {
+  overflow: hidden;
+  padding: 1.5em;
+  border-bottom: 1px solid #999;
+}
+.post-meta-item {
+  margin: 0;
 }
