@@ -170,6 +170,18 @@ th {
   padding: 0;
 }
 @font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Muli Light'), local('Muli-Light'), url("http://themes.googleusercontent.com/static/fonts/muli/v5/TgrecWq39GVsTOFonFwGXQLUuEpTyoUstqEm5AMlJo4.woff") format('woff');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Muli Light Italic'), local('Muli-LightItalic'), url("http://themes.googleusercontent.com/static/fonts/muli/v5/Q5N_zd0042xOVES9NXt9QrO3LdcAZYWl9Si6vvxL-qU.woff") format('woff');
+}
+@font-face {
   font-family: 'MissionGothicBold';
   src: url("fonts/mission_gothic_bold-webfont.eot");
   src: url("fonts/mission_gothic_bold-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/mission_gothic_bold-webfont.woff") format('woff'), url("fonts/mission_gothic_bold-webfont.ttf") format('truetype'), url("fonts/mission_gothic_bold-webfont.svg#mission_gothicbold") format('svg');
@@ -215,7 +227,7 @@ gi
 html,
 body,
 p {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   line-height: 1.5;
   font-size: 1.05em;
@@ -296,6 +308,11 @@ img {
   overflow: hidden;
   padding: 1.5em;
   border-bottom: 1px solid #999;
+}
+.post-meta {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.75em;
 }
 .post-meta-item {
   margin: 0;
