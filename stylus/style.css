@@ -170,6 +170,28 @@ th {
   padding: 0;
 }
 @font-face {
+  font-family: 'MissionGothicBold';
+  src: url("fonts/mission_gothic_bold-webfont.eot");
+  src: url("fonts/mission_gothic_bold-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/mission_gothic_bold-webfont.woff") format('woff'), url("fonts/mission_gothic_bold-webfont.ttf") format('truetype'), url("fonts/mission_gothic_bold-webfont.svg#mission_gothicbold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MissionGothicLightItalic';
+  src: url("fonts/mission_gothic_light_italic-webfont.eot");
+  src: url("fonts/mission_gothic_light_italic-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/mission_gothic_light_italic-webfont.woff") format('woff'), url("fonts/mission_gothic_light_italic-webfont.ttf") format('truetype'), url("fonts/mission_gothic_light_italic-webfont.svg#mission_gothiclight_italic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MissionGothicLight';
+  src: url("fonts/mission_gothic_light-webfont.eot");
+  src: url("fonts/mission_gothic_light-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/mission_gothic_light-webfont.woff") format('woff'), url("fonts/mission_gothic_light-webfont.ttf") format('truetype'), url("fonts/mission_gothic_light-webfont.svg#mission_gothiclight") format('svg');
+  font-weight: normal;
+  font-style: normal;
+gi
+}
+@font-face {
   font-family: 'edmondsansbold';
   src: url("fonts/edmondsans-bold-webfont.eot");
   src: url("fonts/edmondsans-bold-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/edmondsans-bold-webfont.woff") format('woff'), url("fonts/edmondsans-bold-webfont.ttf") format('truetype'), url("fonts/edmondsans-bold-webfont.svg#edmondsansbold") format('svg');
@@ -184,7 +206,7 @@ th {
   font-style: normal;
 }
 @font-face {
-  font-family: 'edmondsansregular';
+  font-family: 'EdmondSansRegular';
   src: url("fonts/edmondsans-regular-webfont.eot");
   src: url("fonts/edmondsans-regular-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/edmondsans-regular-webfont.woff") format('woff'), url("fonts/edmondsans-regular-webfont.ttf") format('truetype'), url("fonts/edmondsans-regular-webfont.svg#edmondsansregular") format('svg');
   font-weight: normal;
@@ -200,14 +222,20 @@ p {
   color: #000;
 }
 h1 {
+  font-weight: normal;
   font-size: 1.75em;
-  font-family: edmondsansmedium;
+  font-family: MissionGothicLightItalic;
+  text-align: center;
 }
 h2 {
+  font-weight: normal;
   font-size: 1.6em;
+  font-family: EdmondSansRegular;
 }
 h3 {
+  font-weight: normal;
   font-size: 1.45em;
+  font-family: EdmondSansRegular;
 }
 h4 {
   font-size: 1.3em;
@@ -258,6 +286,8 @@ img {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+.attachment-post-thumbnail {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
