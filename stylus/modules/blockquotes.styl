@@ -1,0 +1,24 @@
+// blockquotes
+
+blockquote
+	// border-left 5px solid #fee8c0
+	margin 1.5em 0
+	padding 1em
+	background bg-light
+	border(solid, cquarternary)
+	line-height 1.75
+	quotes "\201C""\201D""\2018""\2019"
+	p
+		display inline
+
+blockquote:before
+	color csecondary
+	content open-quote
+	font-size 4em
+	line-height .01em
+	margin-right .25em
+	vertical-align -.4em
+	font-family EdmondSansRegular
+
+blockquote:before
+	content "\201C"

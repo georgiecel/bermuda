@@ -373,6 +373,29 @@ img {
 .wp-smiley {
   width: 1em;
 }
+blockquote {
+  margin: 1.5em 0;
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  line-height: 1.75;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote p {
+  display: inline;
+}
+blockquote:before {
+  color: #777;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.01em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  font-family: EdmondSansRegular;
+}
+blockquote:before {
+  content: "\201C";
+}
 .post {
   overflow: hidden;
   padding: 0.5em 0 0.5em 0;
