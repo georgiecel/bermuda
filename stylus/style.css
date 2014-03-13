@@ -336,19 +336,29 @@ em {
   text-transform: uppercase;
   font-size: 0.85em;
 }
-.site-search,
-.search-form,
-.search-form-input,
-.search-form-submit {
-  font-size: 1em;
+.search-form {
+  text-align: center;
+  padding-top: 10px;
 }
 .search-form-input {
   background: #fff;
   border: 1px solid #ddd;
 }
+button,
+input {
+  border: 1px solid #ddd;
+  line-height: 1.5;
+}
 button {
   background: #eee;
-  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+button:hover {
+  cursor: pointer;
+  background: #f9f9f9;
+}
+input {
+  padding: 7px 10px;
 }
 img {
   max-width: 100%;
@@ -403,13 +413,15 @@ blockquote:before {
 }
 .post-meta {
   text-transform: uppercase;
-  font-size: 0.75em;
+  line-height: 1.4;
 }
 .post-meta-item {
   margin: 0;
+  font-size: 0.75em;
 }
 .site-footer {
-  padding: 0.25em 1.25em;
+  background: #f9f9f9;
+  padding: 0.5em 1.25em;
   font-size: 0.9em;
 }
 .site-footer a {
