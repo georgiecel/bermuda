@@ -461,18 +461,20 @@ blockquote:before {
   }
   .post-content {
     float: left;
-    width: 50%;
+    width: 47%;
+    padding-right: 4%;
+    border-right: 1px solid #ddd;
   }
   .post-meta {
     text-align: left;
     float: right;
     width: 20%;
-    padding: 0 15%;
+    padding: 0 14%;
     margin-top: 13em;
   }
   .post-meta-item {
     font-size: 1em;
-    line-height: 1em 0;
+    margin: 1em 0;
   }
   .post-thumbnail-wrapper {
     position: absolute;
