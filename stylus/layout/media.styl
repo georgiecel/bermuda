@@ -1,4 +1,4 @@
-@media (min-width: 500px)
+@media (min-width: 600px)
 
 	html
 	body 
@@ -13,19 +13,30 @@
 		h2(1.6em)
 
 	h3
-		h3(1.45em)		
+		h3(1.45em)
+
+	.post
+		position relative
 
 	.post-content
 		float left
 		width 50%
 
 	.post-meta
-		text-align center
+		text-align left
 		float right
 		width 20%
 		padding 0 15%
+		margin-top 13em
+
+	.post-meta-item
+		fz(1em)
+		line-height 1em 0
 
 	.post-thumbnail-wrapper
+		position absolute
+		top 0
+		right 0
 		height 100px
 		width 75px
 		border(dashed, cquarternary)

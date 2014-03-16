@@ -348,10 +348,12 @@ button,
 input {
   border: 1px solid #ddd;
   line-height: 1.5;
+  -webkit-appearance: none;
 }
 button {
   background: #eee;
   padding: 5px 10px;
+  height: 34px;
 }
 button:hover {
   cursor: pointer;
@@ -359,6 +361,7 @@ button:hover {
 }
 input {
   padding: 7px 10px;
+  height: 18px;
 }
 img {
   max-width: 100%;
@@ -427,7 +430,7 @@ blockquote:before {
 .site-footer a {
   text-decoration: none;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   p {
     font-family: Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
@@ -453,17 +456,28 @@ blockquote:before {
     font-size: 1.45em;
     font-family: EdmondSansRegular;
   }
+  .post {
+    position: relative;
+  }
   .post-content {
     float: left;
     width: 50%;
   }
   .post-meta {
-    text-align: center;
+    text-align: left;
     float: right;
     width: 20%;
     padding: 0 15%;
+    margin-top: 13em;
+  }
+  .post-meta-item {
+    font-size: 1em;
+    line-height: 1em 0;
   }
   .post-thumbnail-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 100px;
     width: 75px;
     border: 1px dashed #ddd;
