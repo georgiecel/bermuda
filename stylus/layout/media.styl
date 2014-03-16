@@ -72,6 +72,7 @@
 	body 
 	p
 		font(1.15em)
+		line-height 1.75
 
 	.site-sidebar
 		display block
@@ -87,8 +88,8 @@
 
 		.post-title
 			margin 0.67em 0
-			max-width auto
-			fz(1.85em)
+			max-width none
+			fz(2em)
 			text-align left
 
 		.post-content
@@ -101,19 +102,22 @@
 		.post-meta
 			text-align left
 			float none
+			overflow hidden
 			width auto
 			padding 0
 			margin-top 0
 
 		.post-meta-item
-			margin 0
+			margin 0 2em 0 0
 			fz(0.95em)
+			float left
 
 		.post-thumbnail-wrapper
 			position static
 			float right
-			margin-top 3em
-			margin-right 3em
+			margin-top 2em
+			margin-right 2em
+			padding 3px
 			height 150px
 			width 150px
 			border(dashed, cquarternary)
@@ -122,7 +126,7 @@
 		.post-thumbnail
 			height auto
 			width auto
-			margin 3px
+			margin 0
 
 		.attachment-post-thumbnail
 			margin 0
