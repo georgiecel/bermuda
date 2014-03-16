@@ -295,6 +295,9 @@ i,
 em {
   font-family: Muli;
 }
+.site-body {
+  overflow: hidden;
+}
 .site-sidebar {
   display: none;
 }
@@ -447,7 +450,7 @@ blockquote:before {
   }
   h2 {
     font-weight: normal;
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-family: EdmondSansRegular;
     line-height: 1.25;
   }
@@ -456,55 +459,115 @@ blockquote:before {
     font-size: 1.45em;
     font-family: EdmondSansRegular;
   }
-  .post {
+  .post-listing .post {
     position: relative;
   }
-  .post-content {
+  .post-listing .post-title {
+    margin: 0.75em auto;
+    max-width: 18em;
+    font-size: 1.65em;
+  }
+  .post-listing .post-content {
     float: left;
+    margin-bottom: 1em;
     width: 47%;
     padding-right: 4%;
     border-right: 1px solid #ddd;
   }
-  .post-meta {
+  .post-listing .post-meta {
     text-align: left;
     float: right;
     width: 20%;
     padding: 0 14%;
-    margin-top: 13em;
+    margin-top: 14em;
   }
-  .post-meta-item {
+  .post-listing .post-meta-item {
     font-size: 1em;
     margin: 1em 0;
   }
-  .post-thumbnail-wrapper {
+  .post-listing .post-thumbnail-wrapper {
     position: absolute;
-    top: 0;
+    top: 3em;
     right: 0;
-    height: 100px;
-    width: 75px;
+    height: 110px;
+    width: 85px;
     border: 1px dashed #ddd;
   }
-  .post-thumbnail {
+  .post-listing .post-thumbnail {
     margin: 2px;
-    height: 96px;
-    width: 71px;
+    height: 106px;
+    width: 81px;
     overflow: hidden;
   }
-  .post-thumbnail-wrapper {
+  .post-listing .post-thumbnail-wrapper {
     float: none;
   }
-  .attachment-post-thumbnail {
+  .post-listing .attachment-post-thumbnail {
     max-width: none;
     margin-top: -30%;
     margin-left: -30%;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 800px) {
+  p {
+    font-family: Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 1.15em;
+    color: #000;
+  }
   .site-sidebar {
     display: block;
   }
   .site-content {
     float: right;
     width: 75%;
+  }
+  .post-listing .post {
+    position: relative;
+  }
+  .post-listing .post-title {
+    margin: 0.67em 0;
+    max-width: auto;
+    font-size: 1.85em;
+    text-align: left;
+  }
+  .post-listing .post-content {
+    float: none;
+    margin-bottom: 1em;
+    width: auto;
+    padding-right: 4%;
+    border-right: none;
+  }
+  .post-listing .post-meta {
+    text-align: left;
+    float: none;
+    width: auto;
+    padding: 0;
+    margin-top: 0;
+  }
+  .post-listing .post-meta-item {
+    margin: 0;
+    font-size: 0.95em;
+  }
+  .post-listing .post-thumbnail-wrapper {
+    position: static;
+    float: right;
+    margin-top: 3em;
+    margin-right: 3em;
+    height: 150px;
+    width: 150px;
+    border: 1px dashed #ddd;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+  }
+  .post-listing .post-thumbnail {
+    height: auto;
+    width: auto;
+    margin: 3px;
+  }
+  .post-listing .attachment-post-thumbnail {
+    margin: 0;
   }
 }

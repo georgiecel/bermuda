@@ -22,6 +22,7 @@
 				<?php get_search_form(); ?>
 			</div>
 		</header>
+		<div class="site-body">
 		<!-- Sidebar may or may not be included ... -->
 		<?php get_sidebar(); ?>
 		<div class="site-content" role="main">
