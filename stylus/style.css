@@ -310,7 +310,7 @@ h6 {
 }
 a,
 a:link {
-  color: #000;
+  color: #f73992;
 }
 a:visited {
   color: #000;
@@ -336,6 +336,19 @@ em {
 }
 .site-sidebar {
   display: none;
+  width: 20%;
+  padding: 1em 2%;
+  float: left;
+  font-size: 0.9em;
+}
+.site-sidebar-heading {
+  text-align: right;
+  color: #50c8c4;
+}
+.site-sidebar-text {
+  font-family: Karla;
+  font-style: italic;
+  color: #555;
 }
 .site-content {
   padding: 1.25em;
@@ -382,11 +395,11 @@ em {
 }
 .search-form-input {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #555;
 }
 button,
 input {
-  border: 1px solid #ddd;
+  border: 1px solid #555;
   line-height: 1.5;
   -webkit-appearance: none;
 }
@@ -425,11 +438,28 @@ img {
 .wp-smiley {
   width: 1em;
 }
+.post figure,
+.post-figure,
+.wp-caption {
+  margin: 0;
+}
+.post figure img,
+.post-figure img,
+.wp-caption img {
+  display: block;
+}
+.post figcaption,
+.post-figcaption,
+.wp-caption-text {
+  padding: 0.5em;
+  color: #50c8c4;
+  background: #cef7f4;
+}
 blockquote {
   margin: 1.5em 0;
   padding: 1em;
   background: #eee;
-  border: 1px solid #ddd;
+  border: 1px solid #555;
   line-height: 1.75;
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -450,7 +480,7 @@ blockquote:before {
 }
 .post {
   padding: 0.5em 0 0.5em 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #555;
 }
 .post-meta {
   text-transform: uppercase;
@@ -510,7 +540,7 @@ blockquote:before {
     margin-bottom: 1em;
     width: 47%;
     padding-right: 4%;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #555;
   }
   .post-listing .post-meta {
     text-align: left;
@@ -529,7 +559,7 @@ blockquote:before {
     right: 0;
     height: 110px;
     width: 85px;
-    border: 1px dashed #ddd;
+    border: 1px dashed #555;
   }
   .post-listing .post-thumbnail {
     margin: 2px;
@@ -555,6 +585,9 @@ blockquote:before {
     font-size: 1.15em;
     color: #000;
     line-height: 1.75;
+  }
+  .site-header {
+    display: none;
   }
   .site-sidebar {
     display: block;
@@ -600,7 +633,7 @@ blockquote:before {
     padding: 3px;
     height: 150px;
     width: 150px;
-    border: 1px dashed #ddd;
+    border: 1px dashed #555;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
