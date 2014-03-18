@@ -283,6 +283,7 @@ h1 {
   font-size: 1.55em;
   font-family: MissionGothicLightItalic;
   line-height: 1.25;
+  color: #50c8c4;
 }
 h1 a {
   text-decoration: none;
@@ -358,8 +359,8 @@ em {
   overflow: hidden;
 }
 .site-title {
-  font-size: 1.8em;
-  font-family: EdmondSansRegular;
+  font-size: 3em;
+  font-family: Karla;
   text-align: center;
 }
 .main-navigation {
@@ -390,21 +391,21 @@ input {
   -webkit-appearance: none;
 }
 button {
-  background: #aaa;
+  background: #cef7f4;
   padding: 5px 10px;
   height: 34px;
 }
 button:hover {
   cursor: pointer;
-  background: #cef7f4;
+  background: #eee;
 }
 input {
   padding: 7px 10px;
-  height: 18px;
 }
 img {
-  max-width: 100%;
   height: auto;
+  margin: 0 -1.25em;
+  width: 110%;
 }
 .post-thumbnail-wrapper {
   float: right;
@@ -428,7 +429,7 @@ img {
 blockquote {
   margin: 1.5em 0;
   padding: 1em;
-  background: #cef7f4;
+  background: #eee;
   border: 1px solid #ddd;
   line-height: 1.75;
   quotes: "\201C" "\201D" "\2018" "\2019";
@@ -449,7 +450,6 @@ blockquote:before {
   content: "\201C";
 }
 .post {
-  overflow: hidden;
   padding: 0.5em 0 0.5em 0;
   border-bottom: 1px solid #ddd;
 }
@@ -483,6 +483,7 @@ blockquote:before {
     font-size: 1.75em;
     font-family: MissionGothicLightItalic;
     line-height: 1.25;
+    color: #50c8c4;
     text-align: center;
   }
   h2 {
@@ -496,8 +497,14 @@ blockquote:before {
     font-size: 1.45em;
     font-family: Karla;
   }
+  img {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+  }
   .post-listing .post {
     position: relative;
+    overflow: hidden;
   }
   .post-listing .post-title {
     margin: 0.75em auto;
@@ -591,6 +598,7 @@ blockquote:before {
     margin: 0 2em 0 0;
     font-size: 0.95em;
     float: left;
+    line-height: 1;
   }
   .post-listing .post-thumbnail-wrapper {
     position: static;
