@@ -267,12 +267,16 @@ th {
 }
 html,
 body,
-p {
+p,
+li {
   font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   line-height: 1.5;
   font-size: 1em;
   color: #000;
+}
+body {
+  background: #cef7f4;
 }
 h1 {
   font-weight: normal;
@@ -331,10 +335,10 @@ em {
 }
 .site-sidebar {
   display: none;
-  background: #f9f9f9;
 }
 .site-content {
   padding: 1.25em;
+  background: #fefefe;
 }
 .alignleft,
 .prev-link {
@@ -386,13 +390,13 @@ input {
   -webkit-appearance: none;
 }
 button {
-  background: #eee;
+  background: #aaa;
   padding: 5px 10px;
   height: 34px;
 }
 button:hover {
   cursor: pointer;
-  background: #f9f9f9;
+  background: #cef7f4;
 }
 input {
   padding: 7px 10px;
@@ -424,7 +428,7 @@ img {
 blockquote {
   margin: 1.5em 0;
   padding: 1em;
-  background: #f9f9f9;
+  background: #cef7f4;
   border: 1px solid #ddd;
   line-height: 1.75;
   quotes: "\201C" "\201D" "\2018" "\2019";
@@ -433,7 +437,7 @@ blockquote p {
   display: inline;
 }
 blockquote:before {
-  color: #777;
+  color: #f73992;
   content: open-quote;
   font-size: 4em;
   line-height: 0.01em;
@@ -458,7 +462,7 @@ blockquote:before {
   font-size: 0.75em;
 }
 .site-footer {
-  background: #f9f9f9;
+  background: #fefefe;
   padding: 0.5em 1.25em;
   font-size: 0.9em;
 }
@@ -466,7 +470,8 @@ blockquote:before {
   text-decoration: none;
 }
 @media (min-width: 600px) {
-  p {
+  p,
+  li {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     line-height: 1.5;
@@ -541,7 +546,8 @@ blockquote:before {
   }
 }
 @media (min-width: 800px) {
-  p {
+  p,
+  li {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     line-height: 1.5;
@@ -554,7 +560,8 @@ blockquote:before {
   }
   .site-content {
     float: right;
-    width: 75%;
+    width: 71%;
+    padding: 1.25em 2.5%;
   }
   .post-listing .post {
     position: relative;
@@ -569,7 +576,7 @@ blockquote:before {
     float: none;
     margin-bottom: 1em;
     width: auto;
-    padding-right: 4%;
+    padding-right: 0;
     border-right: none;
   }
   .post-listing .post-meta {
@@ -588,8 +595,6 @@ blockquote:before {
   .post-listing .post-thumbnail-wrapper {
     position: static;
     float: right;
-    margin-top: 2em;
-    margin-right: 2em;
     padding: 3px;
     height: 150px;
     width: 150px;
@@ -608,7 +613,8 @@ blockquote:before {
   }
 }
 @media (min-width: 1000px) {
-  p {
+  p,
+  li {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     line-height: 1.5;
