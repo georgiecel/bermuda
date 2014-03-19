@@ -542,55 +542,6 @@ blockquote:before {
     font-size: 1.45em;
     font-family: Karla;
   }
-  .post-listing .post {
-    position: relative;
-    overflow: hidden;
-  }
-  .post-listing .post-title {
-    margin: 0.75em auto;
-    max-width: 18em;
-    font-size: 1.65em;
-  }
-  .post-listing .post-content {
-    float: left;
-    margin-bottom: 1em;
-    width: 47%;
-    padding-right: 4%;
-    border-right: 1px solid #555;
-  }
-  .post-listing .post-meta {
-    text-align: left;
-    float: right;
-    width: 20%;
-    padding: 0 14%;
-    margin-top: 14em;
-  }
-  .post-listing .post-meta-item {
-    font-size: 1em;
-    margin: 1em 0;
-  }
-  .post-listing .post-thumbnail-wrapper {
-    position: absolute;
-    top: 3em;
-    right: 0;
-    height: 110px;
-    width: 85px;
-    border: 1px dashed #555;
-  }
-  .post-listing .post-thumbnail {
-    margin: 2px;
-    height: 106px;
-    width: 81px;
-    overflow: hidden;
-  }
-  .post-listing .post-thumbnail-wrapper {
-    float: none;
-  }
-  .post-listing .attachment-post-thumbnail {
-    max-width: none;
-    margin-top: -30%;
-    margin-left: -30%;
-  }
   .figure-alignright {
     float: right;
     margin: 1em 0 1em 1em;
