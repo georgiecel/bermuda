@@ -542,6 +542,20 @@ blockquote:before {
     font-size: 1.45em;
     font-family: Karla;
   }
+  .site-content {
+    padding: 1.25em 3em;
+  }
+  .post-thumbnail-wrapper {
+    float: none;
+    margin: 1em auto;
+  }
+  .post-thumbnail {
+    width: auto;
+    height: auto;
+  }
+  .attachment-post-thumbnail {
+    margin: 0 auto;
+  }
   .figure-alignright {
     float: right;
     margin: 1em 0 1em 1em;
@@ -553,6 +567,10 @@ blockquote:before {
   }
   .figure-aligncenter {
     margin: 1em auto;
+  }
+  .site-footer {
+    background: #cef7f4;
+    text-align: center;
   }
 }
 @media (min-width: 800px) {
