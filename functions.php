@@ -10,6 +10,20 @@
 	add_filter('wp_list_categories', 'remove_category_list_rel');
 	add_filter('the_category', 'remove_category_list_rel');
 
+
+	// add classes to next and previous links
+
+	add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
+	add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
+
+	function posts_link_attributes_1() {
+    	return 'class="prev-link"';
+	}
+
+	function posts_link_attributes_2() {
+    	return 'class="next-link"';
+	}
+
 	// use nice search 
 
 	function roots_nice_search_redirect() {

@@ -26,8 +26,8 @@
 				</div>
 			</article>
 			<nav class="post-navigation pagination">
-				<div class="post-navigation prev-link"><?php previous_post_link('%link', $link='&laquo; %title') ?></div>
-				<div class="post-navigation next-link"><?php next_post_link('%link', $link='%title &raquo;') ?></div>
+				<?php previous_post_link('%link', $link='&laquo; %title') ?>
+				<?php next_post_link('%link', $link='%title &raquo;') ?>
 			</nav>
 			<?php comments_template(); ?>
 			<?php endwhile; ?>
