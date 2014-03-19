@@ -419,6 +419,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+.figure-alignright {
+  float: right;
+  margin: 1em 0 1em 1em;
+  clear: both;
+}
+.figure-alignleft {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+.figure-aligncenter {
+  margin: 1.5em auto;
+}
 .post-thumbnail-wrapper {
   float: right;
   margin: 1em 0 0.5em 0.5em;
@@ -454,6 +466,13 @@ img {
   padding: 0.5em;
   color: #50c8c4;
   background: #cef7f4;
+}
+.post-figure,
+.wp-caption {
+  max-width: 100%;
+}
+.post-figure + .post-figure {
+  margin-top: 1.5em;
 }
 blockquote {
   margin: 1.5em 0;
