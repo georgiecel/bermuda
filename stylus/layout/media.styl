@@ -68,6 +68,18 @@
 			margin-top -30%
 			margin-left -30%
 
+	.figure-alignright
+		float right
+		margin 1em 0 1em 1em
+		clear both
+
+	.figure-alignleft 
+		float left
+		margin 1em 1em 1em 0
+
+	.figure-aligncenter
+		margin 1em auto
+
 @media (min-width: 800px)
 
 	html
@@ -136,6 +148,14 @@
 
 		.attachment-post-thumbnail
 			margin 0
+
+	.post figcaption
+	.post-figcaption
+	.wp-caption-text
+		fz(1em)
+
+	.post-figure + .post-figure
+		margin-top 1.5em
 
 @media (min-width: 1000px)
 

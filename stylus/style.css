@@ -338,7 +338,6 @@ em {
   display: none;
   width: 20%;
   padding: 1em 2%;
-  float: left;
   font-size: 0.9em;
 }
 .site-sidebar-heading {
@@ -354,14 +353,23 @@ em {
   padding: 1.25em;
   background: #fefefe;
 }
-.alignleft,
+.site-sidebar {
+  float: left;
+}
+.figure-alignright,
+.figure-alignleft,
+.figure-aligncenter {
+  float: none;
+}
+.post-thumbnail-wrapper {
+  float: right;
+}
 .prev-link {
   text-align: left;
   float: left;
   width: 49%;
   margin-right: 1%;
 }
-.alignright,
 .next-link {
   text-align: right;
   float: right;
@@ -419,20 +427,12 @@ img {
   max-width: 100%;
   height: auto;
 }
-.figure-alignright {
-  float: right;
-  margin: 1em 0 1em 1em;
-  clear: both;
-}
-.figure-alignleft {
-  float: left;
-  margin: 1em 1em 1em 0;
-}
+.figure-alignright,
+.figure-alignleft,
 .figure-aligncenter {
-  margin: 1.5em auto;
+  margin: 1em auto;
 }
 .post-thumbnail-wrapper {
-  float: right;
   margin: 1em 0 0.5em 0.5em;
 }
 .post-thumbnail {
@@ -450,11 +450,6 @@ img {
 .wp-smiley {
   width: 1em;
 }
-.post figure,
-.post-figure,
-.wp-caption {
-  margin: 0;
-}
 .post figure img,
 .post-figure img,
 .wp-caption img {
@@ -466,13 +461,15 @@ img {
   padding: 0.5em;
   color: #50c8c4;
   background: #cef7f4;
+  font-size: 0.85em;
+  text-align: center;
 }
 .post-figure,
 .wp-caption {
   max-width: 100%;
 }
 .post-figure + .post-figure {
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 blockquote {
   margin: 1.5em 0;
@@ -594,6 +591,18 @@ blockquote:before {
     margin-top: -30%;
     margin-left: -30%;
   }
+  .figure-alignright {
+    float: right;
+    margin: 1em 0 1em 1em;
+    clear: both;
+  }
+  .figure-alignleft {
+    float: left;
+    margin: 1em 1em 1em 0;
+  }
+  .figure-aligncenter {
+    margin: 1em auto;
+  }
 }
 @media (min-width: 800px) {
   p,
@@ -664,6 +673,14 @@ blockquote:before {
   }
   .post-listing .attachment-post-thumbnail {
     margin: 0;
+  }
+  .post figcaption,
+  .post-figcaption,
+  .wp-caption-text {
+    font-size: 1em;
+  }
+  .post-figure + .post-figure {
+    margin-top: 1.5em;
   }
 }
 @media (min-width: 1000px) {
