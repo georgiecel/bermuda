@@ -400,6 +400,18 @@ em {
   text-transform: uppercase;
   font-size: 0.85em;
 }
+.more-link {
+  background: #f73992;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+}
+.more-link:link,
+.more-link:visited {
+  color: #fff;
+}
+.more-link:hover {
+  background: #67dfde;
+}
 .search-form {
   text-align: center;
   padding-top: 10px;
@@ -580,6 +592,10 @@ blockquote:before {
   }
   .figure-aligncenter {
     margin: 1em auto;
+  }
+  .pagination,
+  .post-navigation {
+    font-size: 0.95em;
   }
   .site-footer {
     background: #cef7f4;
