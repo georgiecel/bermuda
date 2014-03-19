@@ -271,9 +271,9 @@ p,
 li {
   font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  line-height: 1.5;
   font-size: 1em;
   color: #000;
+  line-height: 1.5;
 }
 body {
   background: #cef7f4;
@@ -347,7 +347,7 @@ em {
 .site-sidebar-text {
   font-family: Karla;
   font-style: italic;
-  color: #555;
+  color: #888;
 }
 .site-content {
   padding: 1.25em;
@@ -403,11 +403,11 @@ em {
 }
 .search-form-input {
   background: #fff;
-  border: 1px solid #555;
+  border: 1px solid #bbb;
 }
 button,
 input {
-  border: 1px solid #555;
+  border: 1px solid #bbb;
   line-height: 1.5;
   -webkit-appearance: none;
 }
@@ -427,9 +427,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+.post-figure,
 .figure-alignright,
 .figure-alignleft,
-.figure-aligncenter {
+.figure-aligncenter,
+.wp-caption {
   margin: 1em auto;
 }
 .post-thumbnail-wrapper {
@@ -475,7 +477,7 @@ blockquote {
   margin: 1.5em 0;
   padding: 1em;
   background: #eee;
-  border: 1px solid #555;
+  border: 1px solid #ddd;
   line-height: 1.75;
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -496,7 +498,7 @@ blockquote:before {
 }
 .post {
   padding: 0.5em 0 0.5em 0;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #ddd;
 }
 .post-meta {
   text-transform: uppercase;
@@ -519,9 +521,9 @@ blockquote:before {
   li {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-    line-height: 1.5;
     font-size: 1.05em;
     color: #000;
+    line-height: 1.65;
   }
   h1 {
     font-weight: normal;
@@ -545,6 +547,9 @@ blockquote:before {
   .site-content {
     padding: 1.25em 3em;
   }
+  .post-meta {
+    text-align: center;
+  }
   .post-thumbnail-wrapper {
     float: none;
     margin: 1em auto;
@@ -556,12 +561,14 @@ blockquote:before {
   .attachment-post-thumbnail {
     margin: 0 auto;
   }
-  .figure-alignright {
+  .figure-alignright,
+  .post-content .alignright {
     float: right;
     margin: 1em 0 1em 1em;
     clear: both;
   }
-  .figure-alignleft {
+  .figure-alignleft,
+  .post-content .alignleft {
     float: left;
     margin: 1em 1em 1em 0;
   }
@@ -573,16 +580,16 @@ blockquote:before {
     text-align: center;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   p,
   li {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-    line-height: 1.5;
-    font-size: 1.15em;
+    font-size: 1.175em;
     color: #000;
-    line-height: 1.75;
   }
+}
+@media (min-width: 850px) {
   .site-header {
     display: none;
   }
@@ -594,29 +601,15 @@ blockquote:before {
     width: 71%;
     padding: 1.25em 2.5%;
   }
-  .post-listing .post {
-    position: relative;
-  }
   .post-listing .post-title {
     margin: 0.67em 0;
-    max-width: none;
-    font-size: 2em;
     text-align: left;
-  }
-  .post-listing .post-content {
-    float: none;
-    margin-bottom: 1em;
-    width: auto;
-    padding-right: 0;
-    border-right: none;
+    font-size: 2em;
   }
   .post-listing .post-meta {
     text-align: left;
-    float: none;
     overflow: hidden;
     width: auto;
-    padding: 0;
-    margin-top: 0;
   }
   .post-listing .post-meta-item {
     margin: 0 2em 0 0;
@@ -625,12 +618,11 @@ blockquote:before {
     line-height: 1;
   }
   .post-listing .post-thumbnail-wrapper {
-    position: static;
     float: right;
     padding: 3px;
     height: 150px;
     width: 150px;
-    border: 1px dashed #555;
+    border: 1px solid #ddd;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
@@ -638,9 +630,6 @@ blockquote:before {
   .post-listing .post-thumbnail {
     height: auto;
     width: auto;
-    margin: 0;
-  }
-  .post-listing .attachment-post-thumbnail {
     margin: 0;
   }
   .post figcaption,
@@ -657,7 +646,6 @@ blockquote:before {
   li {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
-    line-height: 1.5;
     font-size: 1.2em;
     color: #000;
   }

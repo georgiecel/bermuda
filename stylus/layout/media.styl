@@ -5,6 +5,7 @@
 	p
 	li
 		font(1.05em)
+		line-height 1.65
 
 	h1
 		h1(1.75em)
@@ -19,6 +20,9 @@
 	.site-content
 		padding 1.25em 3em
 
+	.post-meta
+		text-align center
+
 	.post-thumbnail-wrapper
 		float none
 		margin 1em auto
@@ -31,11 +35,13 @@
 		margin 0 auto
 
 	.figure-alignright
+	.post-content .alignright
 		float right
 		margin 1em 0 1em 1em
 		clear both
 
-	.figure-alignleft 
+	.figure-alignleft
+	.post-content .alignleft 
 		float left
 		margin 1em 1em 1em 0
 
@@ -46,14 +52,15 @@
 		background bg-tertiary
 		text-align center
 
-@media (min-width: 800px)
+@media (min-width: 700px)
 
 	html
 	body 
 	p
 	li
-		font(1.15em)
-		line-height 1.75
+		font(1.175em)
+
+@media (min-width: 850px)
 
 	.site-header
 		display none
@@ -68,29 +75,15 @@
 
 	.post-listing
 
-		.post
-			position relative
-
 		.post-title
 			margin 0.67em 0
-			max-width none
-			fz(2em)
 			text-align left
-
-		.post-content
-			float none
-			margin-bottom 1em
-			width auto
-			padding-right 0
-			border-right none
+			fz(2em)
 
 		.post-meta
 			text-align left
-			float none
 			overflow hidden
 			width auto
-			padding 0
-			margin-top 0
 
 		.post-meta-item
 			margin 0 2em 0 0
@@ -99,20 +92,16 @@
 			line-height 1
 
 		.post-thumbnail-wrapper
-			position static
 			float right
 			padding 3px
 			height 150px
 			width 150px
-			border(dashed, c-quarternary)
+			border(solid, c-quinary)
 			bdr(100px)
 
 		.post-thumbnail
 			height auto
 			width auto
-			margin 0
-
-		.attachment-post-thumbnail
 			margin 0
 
 	.post figcaption
