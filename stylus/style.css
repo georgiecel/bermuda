@@ -276,7 +276,7 @@ li {
   line-height: 1.5;
 }
 body {
-  background: #cef7f4;
+  background: #67dfde;
 }
 h1 {
   font-weight: normal;
@@ -291,8 +291,9 @@ h1 a {
 h2 {
   font-weight: normal;
   font-size: 1.35em;
-  font-family: Karla;
+  font-family: MissionGothicLightItalic;
   line-height: 1.25;
+  color: #888;
 }
 h3 {
   font-weight: normal;
@@ -506,11 +507,11 @@ blockquote:before {
 .post-meta {
   text-transform: uppercase;
   line-height: 1.4;
-  color: #888;
 }
 .post-meta-item {
   margin: 0;
   font-size: 0.75em;
+  color: #888;
 }
 .site-footer {
   background: #fefefe;
@@ -540,8 +541,9 @@ blockquote:before {
   h2 {
     font-weight: normal;
     font-size: 1.5em;
-    font-family: Karla;
+    font-family: MissionGothicLightItalic;
     line-height: 1.25;
+    color: #888;
   }
   h3 {
     font-weight: normal;
