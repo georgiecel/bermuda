@@ -313,13 +313,15 @@ a:link {
   color: #f73992;
 }
 a:visited {
-  color: #000;
+  color: #f73992;
 }
 a:hover {
   color: #000;
+  text-decoration: none;
 }
 a:active {
   color: #000;
+  text-decoration: none;
 }
 b,
 strong {
@@ -431,7 +433,8 @@ img {
 .figure-alignright,
 .figure-alignleft,
 .figure-aligncenter,
-.wp-caption {
+.wp-caption,
+.post-content .aligncenter {
   margin: 1em auto;
 }
 .post-thumbnail-wrapper {
@@ -503,6 +506,7 @@ blockquote:before {
 .post-meta {
   text-transform: uppercase;
   line-height: 1.4;
+  color: #888;
 }
 .post-meta-item {
   margin: 0;
