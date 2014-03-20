@@ -10,7 +10,6 @@
 	add_filter('wp_list_categories', 'remove_category_list_rel');
 	add_filter('the_category', 'remove_category_list_rel');
 
-
 	// add classes to next and previous links
 
 	add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
@@ -22,6 +21,21 @@
 
 	function posts_link_attributes_2() {
     	return 'class="next-link"';
+	}
+
+	// do the same for single
+
+	add_filter('next_post_link', 'post_link_attributes_1');
+	add_filter('previous_post_link', 'post_link_attributes_2');
+
+	function post_link_attributes_1($output) {
+		$code = 'class="next-post-link"';
+    	return str_replace('<a href=', '<a '.$code.' href=', $output);
+	}
+
+	function post_link_attributes_2($output) {
+		$code = 'class="prev-post-link"';
+    	return str_replace('<a href=', '<a '.$code.' href=', $output);
 	}
 
 	// use nice search 
@@ -84,7 +98,7 @@
 			$id = 'id="' . $id . '" aria-labelledby="figcaption_' . $id . '" ';
 		}
 
-		return '<figure ' . $id . 'class="post-figure figure-' . esc_attr($align) . ' ' . esc_attr($align) . '" style="width: '. (int) $width . 'px">' 
+		return '<figure ' . $id . 'class="post-figure figure-' . esc_attr($align) . '" style="width: '. (int) $width . 'px">' 
 			. do_shortcode( $content ) . '<figcaption ' . $capid . 'class="post-figcaption">' . $caption . '</figcaption></figure>';
 	}	
 

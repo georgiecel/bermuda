@@ -25,7 +25,7 @@
 
 	.post-thumbnail-wrapper
 		float none
-		margin 1em auto
+		margin 0.5em auto
 
 	.post-thumbnail
 		width auto
@@ -73,30 +73,31 @@
 		display block
 
 	.site-content
-		float right
+		float left
 		width 71%
 		padding 1.25em 2.5%
 
 	.post-listing
 
 		.post-title
-			margin 0.67em 0
-			text-align left
+			margin 0.6em 0
 			fz(2em)
+			& + .post-meta
+				margin-top -0.5em
 
 		.post-meta
 			text-align left
 			overflow hidden
 			width auto
+			text-align center
 
 		.post-meta-item
-			margin 0 2em 0 0
+			display inline-block
+			margin 0 0.75em
 			fz(0.95em)
-			float left
 			line-height 1
 
 		.post-thumbnail-wrapper
-			float right
 			padding 3px
 			height 150px
 			width 150px
@@ -121,3 +122,10 @@
 	p
 	li
 		font(1.2em)
+
+	.site-body
+		max-width 80em
+		margin 0 auto
+
+	.site-content
+		max-width 65em

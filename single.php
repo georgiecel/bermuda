@@ -25,9 +25,15 @@
 					<?php edit_post_link('Click here to edit this entry (admin).'); ?>
 				</div>
 			</article>
-			<nav class="post-navigation pagination">
-				<?php previous_post_link('%link', $link='&laquo; %title') ?>
-				<?php next_post_link('%link', $link='%title &raquo;') ?>
+			<nav class="post-navigation post-pagination pagination">
+				<div class="next-link-wrapper">
+					Next post<br>
+					<?php next_post_link('%link', $link='%title &raquo;') ?>
+				</div>
+				<div class="prev-link-wrapper">
+					Previous post<br>
+					<?php previous_post_link('%link', $link='&laquo; %title') ?>
+				</div>
 			</nav>
 			<?php comments_template(); ?>
 			<?php endwhile; ?>

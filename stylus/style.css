@@ -369,7 +369,7 @@ em {
   background: #fefefe;
 }
 .site-sidebar {
-  float: left;
+  float: right;
 }
 .figure-alignright,
 .figure-alignleft,
@@ -379,12 +379,14 @@ em {
 .post-thumbnail-wrapper {
   float: right;
 }
-.prev-link {
+.prev-link,
+.prev-link-wrapper {
   float: left;
   max-width: 45%;
   margin-right: 1%;
 }
-.next-link {
+.next-link,
+.next-link-wrapper {
   float: right;
   max-width: 45%;
   margin-left: 1%;
@@ -423,20 +425,39 @@ em {
   background: #50c8c4;
 }
 .prev-link,
-.next-link {
+.next-link,
+.prev-post-link,
+.next-post-link {
   background: #50c8c4;
   padding: 0.25em 0.5em;
   text-decoration: none;
 }
 .prev-link:link,
 .next-link:link,
+.prev-post-link:link,
+.next-post-link:link,
 .prev-link:visited,
-.next-link:visited {
+.next-link:visited,
+.prev-post-link:visited,
+.next-post-link:visited {
   color: #fff;
 }
 .prev-link:hover,
-.next-link:hover {
+.next-link:hover,
+.prev-post-link:hover,
+.next-post-link:hover {
   background: #f73992;
+}
+.prev-link-wrapper,
+.next-link-wrapper {
+  line-height: 2;
+}
+.next-link-wrapper {
+  text-align: right;
+}
+.prev-post-link,
+.next-post-link {
+  text-transform: none;
 }
 .search-form {
   text-align: center;
@@ -475,6 +496,9 @@ img {
 .wp-caption,
 .post-content .aligncenter {
   margin: 1em auto;
+}
+.post-content .aligncenter {
+  display: block;
 }
 .post-thumbnail-wrapper {
   margin: 1em 0 0.5em 0.5em;
@@ -595,7 +619,7 @@ blockquote:before {
   }
   .post-thumbnail-wrapper {
     float: none;
-    margin: 1em auto;
+    margin: 0.5em auto;
   }
   .post-thumbnail {
     width: auto;
@@ -644,28 +668,30 @@ blockquote:before {
     display: block;
   }
   .site-content {
-    float: right;
+    float: left;
     width: 71%;
     padding: 1.25em 2.5%;
   }
   .post-listing .post-title {
-    margin: 0.67em 0;
-    text-align: left;
+    margin: 0.6em 0;
     font-size: 2em;
+  }
+  .post-listing .post-title + .post-meta {
+    margin-top: -0.5em;
   }
   .post-listing .post-meta {
     text-align: left;
     overflow: hidden;
     width: auto;
+    text-align: center;
   }
   .post-listing .post-meta-item {
-    margin: 0 2em 0 0;
+    display: inline-block;
+    margin: 0 0.75em;
     font-size: 0.95em;
-    float: left;
     line-height: 1;
   }
   .post-listing .post-thumbnail-wrapper {
-    float: right;
     padding: 3px;
     height: 150px;
     width: 150px;
@@ -695,5 +721,12 @@ blockquote:before {
     font-weight: 300;
     font-size: 1.2em;
     color: #000;
+  }
+  .site-body {
+    max-width: 80em;
+    margin: 0 auto;
+  }
+  .site-content {
+    max-width: 65em;
   }
 }
