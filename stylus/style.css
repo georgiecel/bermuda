@@ -414,7 +414,8 @@ em {
   font-size: 0.85em;
 }
 .more-link,
-.comment-reply-link {
+.comment-reply-link,
+.post-edit-link {
   display: inline-block;
   background: #f73992;
   padding: 0.25em 0.5em;
@@ -422,12 +423,15 @@ em {
 }
 .more-link:link,
 .comment-reply-link:link,
+.post-edit-link:link,
 .more-link:visited,
-.comment-reply-link:visited {
+.comment-reply-link:visited,
+.post-edit-link:visited {
   color: #fff;
 }
 .more-link:hover,
-.comment-reply-link:hover {
+.comment-reply-link:hover,
+.post-edit-link:hover {
   background: #50c8c4;
 }
 .prev-link,
@@ -580,6 +584,17 @@ blockquote:before {
   margin: 0;
   font-size: 0.75em;
   color: #888;
+}
+.footnotes {
+  font-size: 0.75em;
+  padding: 0.75em 0;
+  border: 1px dashed #ddd;
+}
+.footnotes li {
+  color: #888;
+}
+.footnotereverse a {
+  text-decoration: none;
 }
 .comments-list .comment-meta {
   text-align: left;
