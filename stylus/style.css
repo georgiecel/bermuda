@@ -224,6 +224,12 @@ th {
   src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightIt'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6H7XMO6S-yJpg1torQFmnv33rGVtsTkPsbDajuO5ueQw.woff") format('woff');
 }
 @font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGCmgpmuQqK2I-L2S9cF65Ek.woff") format('woff');
+}
+@font-face {
   font-family: 'MissionGothicBold';
   src: url("fonts/mission_gothic_bold-webfont.eot");
   src: url("fonts/mission_gothic_bold-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/mission_gothic_bold-webfont.woff") format('woff'), url("fonts/mission_gothic_bold-webfont.ttf") format('truetype'), url("fonts/mission_gothic_bold-webfont.svg#mission_gothicbold") format('svg');
@@ -275,13 +281,15 @@ li {
   color: #000;
   line-height: 1.5;
 }
+li {
+  list-style: square;
+}
 body {
   background: #67dfde;
 }
 h1 {
-  font-weight: normal;
+  font-weight: 600;
   font-size: 1.55em;
-  font-family: MissionGothicLightItalic;
   line-height: 1.25;
   color: #50c8c4;
 }
@@ -341,16 +349,19 @@ em {
   display: none;
   width: 20%;
   padding: 1em 2%;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  line-height: 1;
 }
 .site-sidebar-heading {
-  text-align: right;
-  color: #50c8c4;
+  color: #fff;
+  font-family: Karla;
+  margin-bottom: 0.5em;
+}
+.site-sidebar-heading + .site-sidebar-text {
+  margin-top: 0;
 }
 .site-sidebar-text {
-  font-family: Karla;
-  font-style: italic;
-  color: #888;
+  color: #3c9493;
 }
 .site-content {
   padding: 1.25em;
@@ -369,12 +380,12 @@ em {
 }
 .prev-link {
   float: left;
-  width: 45%;
+  max-width: 45%;
   margin-right: 1%;
 }
 .next-link {
   float: right;
-  width: 45%;
+  max-width: 45%;
   margin-left: 1%;
 }
 .site-header {
@@ -408,11 +419,11 @@ em {
   color: #fff;
 }
 .more-link:hover {
-  background: #67dfde;
+  background: #50c8c4;
 }
 .prev-link,
 .next-link {
-  background: #67dfde;
+  background: #50c8c4;
   padding: 0.25em 0.5em;
   text-decoration: none;
 }
@@ -557,9 +568,8 @@ blockquote:before {
     line-height: 1.65;
   }
   h1 {
-    font-weight: normal;
+    font-weight: 600;
     font-size: 1.75em;
-    font-family: MissionGothicLightItalic;
     line-height: 1.25;
     color: #50c8c4;
     text-align: center;
