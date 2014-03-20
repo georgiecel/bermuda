@@ -10,6 +10,7 @@
 	h1
 		h1(1.75em)
 		text-align center
+		margin 0.5em auto
 
 	h2
 		h2(1.5em)
@@ -23,13 +24,16 @@
 	.post-meta
 		text-align center
 
+	.post-meta-item
+		fz(0.8em)
+
 	.post-thumbnail-wrapper
 		float none
-		margin 0.5em auto
+		margin 1em auto
 
 	.post-thumbnail
-		width auto
-		height auto
+		width 85px
+		height 85px
 
 	.attachment-post-thumbnail
 		margin 0 auto
@@ -77,37 +81,30 @@
 		width 71%
 		padding 1.25em 2.5%
 
-	.post-listing
+	.post-title
+		margin 0.6em 0
+		fz(2em)
+		& + .post-meta
+			margin-top -0.5em
 
-		.post-title
-			margin 0.6em 0
-			fz(2em)
-			& + .post-meta
-				margin-top -0.5em
+	.post-meta-item
+		display inline-block
+		margin 0 0.75em
+		fz(0.95em)
+		line-height 1
 
-		.post-meta
-			text-align left
-			overflow hidden
-			width auto
-			text-align center
+	.post-thumbnail-wrapper
+		margin 0.5em auto
+		padding 3px
+		height 150px
+		width 150px
+		border(solid, c-quinary)
+		bdr(100px)
 
-		.post-meta-item
-			display inline-block
-			margin 0 0.75em
-			fz(0.95em)
-			line-height 1
-
-		.post-thumbnail-wrapper
-			padding 3px
-			height 150px
-			width 150px
-			border(solid, c-quinary)
-			bdr(100px)
-
-		.post-thumbnail
-			height auto
-			width auto
-			margin 0
+	.post-thumbnail
+		height auto
+		width auto
+		margin 0
 
 	.post figcaption
 	.post-figcaption

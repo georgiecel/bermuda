@@ -299,14 +299,15 @@ h1 a {
 h2 {
   font-weight: normal;
   font-size: 1.35em;
-  font-family: MissionGothicLightItalic;
   line-height: 1.25;
-  color: #888;
+  color: #50c8c4;
+  font-family: Karla;
 }
 h3 {
   font-weight: normal;
   font-size: 1.3em;
-  font-family: Karla;
+  font-style: italic;
+  color: #888;
 }
 h4 {
   font-size: 1.2em;
@@ -598,18 +599,20 @@ blockquote:before {
     line-height: 1.25;
     color: #50c8c4;
     text-align: center;
+    margin: 0.5em auto;
   }
   h2 {
     font-weight: normal;
     font-size: 1.5em;
-    font-family: MissionGothicLightItalic;
     line-height: 1.25;
-    color: #888;
+    color: #50c8c4;
+    font-family: Karla;
   }
   h3 {
     font-weight: normal;
     font-size: 1.45em;
-    font-family: Karla;
+    font-style: italic;
+    color: #888;
   }
   .site-content {
     padding: 1.25em 3em;
@@ -617,13 +620,16 @@ blockquote:before {
   .post-meta {
     text-align: center;
   }
+  .post-meta-item {
+    font-size: 0.8em;
+  }
   .post-thumbnail-wrapper {
     float: none;
-    margin: 0.5em auto;
+    margin: 1em auto;
   }
   .post-thumbnail {
-    width: auto;
-    height: auto;
+    width: 85px;
+    height: 85px;
   }
   .attachment-post-thumbnail {
     margin: 0 auto;
@@ -672,26 +678,21 @@ blockquote:before {
     width: 71%;
     padding: 1.25em 2.5%;
   }
-  .post-listing .post-title {
+  .post-title {
     margin: 0.6em 0;
     font-size: 2em;
   }
-  .post-listing .post-title + .post-meta {
+  .post-title + .post-meta {
     margin-top: -0.5em;
   }
-  .post-listing .post-meta {
-    text-align: left;
-    overflow: hidden;
-    width: auto;
-    text-align: center;
-  }
-  .post-listing .post-meta-item {
+  .post-meta-item {
     display: inline-block;
     margin: 0 0.75em;
     font-size: 0.95em;
     line-height: 1;
   }
-  .post-listing .post-thumbnail-wrapper {
+  .post-thumbnail-wrapper {
+    margin: 0.5em auto;
     padding: 3px;
     height: 150px;
     width: 150px;
@@ -700,7 +701,7 @@ blockquote:before {
     -moz-border-radius: 100px;
     border-radius: 100px;
   }
-  .post-listing .post-thumbnail {
+  .post-thumbnail {
     height: auto;
     width: auto;
     margin: 0;
