@@ -154,7 +154,7 @@
 			} ?>
 
 			<article <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>" itemscope itemtype="http://schema.org/Comment">
-				<figure class="gravatar"><?php echo get_avatar( $comment, 65, 'http://hey.georgie.nu/wp-content/themes/heygeorgie/images/bg.png', 'Author’s gravatar' ); ?></figure>
+				<figure class="comment-gravatar"><?php echo get_avatar( $comment, 65, 'http://hey.georgie.nu/wp-content/themes/heygeorgie/images/bg.png', 'Author’s gravatar' ); ?></figure>
 				<div class="comment-meta post-meta" role="complementary">
 					<h2 class="comment-author">
 						<a class="comment-author-link" href="<?php comment_author_url(); ?>" itemprop="author"><?php comment_author(); ?></a>

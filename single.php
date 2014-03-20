@@ -26,14 +26,10 @@
 				</div>
 			</article>
 			<nav class="post-navigation post-pagination pagination">
-				<div class="next-link-wrapper">
-					Next post<br>
-					<?php next_post_link('%link', $link='%title &raquo;') ?>
-				</div>
-				<div class="prev-link-wrapper">
-					Previous post<br>
-					<?php previous_post_link('%link', $link='&laquo; %title') ?>
-				</div>
+				<?php next_post_link('<div class="next-link-wrapper">
+					Next post<br>','%link', $link='%title &raquo;','</div>') ?>
+				<?php previous_post_link('<div class="prev-link-wrapper">
+					Previous post<br>','%link', $link='&laquo; %title','</div>') ?>
 			</nav>
 			<?php comments_template(); ?>
 			<?php endwhile; ?>

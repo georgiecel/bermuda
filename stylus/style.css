@@ -413,16 +413,21 @@ em {
   text-transform: uppercase;
   font-size: 0.85em;
 }
-.more-link {
+.more-link,
+.comment-reply-link {
+  display: inline-block;
   background: #f73992;
   padding: 0.25em 0.5em;
   text-decoration: none;
 }
 .more-link:link,
-.more-link:visited {
+.comment-reply-link:link,
+.more-link:visited,
+.comment-reply-link:visited {
   color: #fff;
 }
-.more-link:hover {
+.more-link:hover,
+.comment-reply-link:hover {
   background: #50c8c4;
 }
 .prev-link,
@@ -576,6 +581,38 @@ blockquote:before {
   font-size: 0.75em;
   color: #888;
 }
+.comments-list .comment-meta {
+  text-align: left;
+  min-height: 75px;
+  margin-left: 75px;
+}
+.comment {
+  margin-bottom: 2em;
+}
+.comment-gravatar {
+  margin: 0 1em 1em 0;
+  float: left;
+  padding: 3px;
+  border: 1px solid #ddd;
+}
+.avatar {
+  display: block;
+}
+.comment-author {
+  margin: 0;
+  padding: 0.25em 0 0 0;
+}
+.comment-author-link {
+  text-decoration: none;
+}
+.comment-meta-item {
+  display: block;
+  margin-top: 0.25em;
+  text-transform: none;
+}
+.child-comments {
+  margin: 1em 0 0 3em;
+}
 .site-footer {
   background: #fefefe;
   padding: 0.5em 1.25em;
@@ -625,7 +662,7 @@ blockquote:before {
   }
   .post-thumbnail-wrapper {
     float: none;
-    margin: 1em auto;
+    margin: 0.5em auto;
   }
   .post-thumbnail {
     width: 85px;
@@ -692,7 +729,7 @@ blockquote:before {
     line-height: 1;
   }
   .post-thumbnail-wrapper {
-    margin: 0.5em auto;
+    margin: 1em auto;
     padding: 3px;
     height: 150px;
     width: 150px;
