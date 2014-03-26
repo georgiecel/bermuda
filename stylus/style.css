@@ -485,7 +485,9 @@ em {
   border: 1px solid #bbb;
 }
 button,
-input {
+input,
+textarea {
+  background: #fff;
   border: 1px solid #bbb;
   line-height: 1.5;
   -webkit-appearance: none;
@@ -499,7 +501,8 @@ button:hover {
   cursor: pointer;
   background: #eee;
 }
-input {
+input,
+textarea {
   padding: 7px 10px;
 }
 img {
