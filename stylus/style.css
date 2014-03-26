@@ -293,6 +293,9 @@ h1 {
   line-height: 1.25;
   color: #50c8c4;
 }
+.page h1 {
+  text-align: left;
+}
 h1 a {
   text-decoration: none;
 }
@@ -302,6 +305,9 @@ h2 {
   line-height: 1.25;
   color: #50c8c4;
   font-family: Karla;
+}
+.page h2 {
+  text-align: left;
 }
 h3 {
   font-weight: normal;
@@ -501,6 +507,10 @@ textarea {
   -webkit-appearance: none;
   font-size: 1em;
 }
+input,
+textarea {
+  padding: 7px 10px;
+}
 button,
 input[type="submit"] {
   background: #f73992;
@@ -516,9 +526,8 @@ input[type="submit"]:hover {
   background: #50c8c4;
   color: #fff;
 }
-input,
-textarea {
-  padding: 7px 10px;
+.contact-submit {
+  margin-top: 0;
 }
 img {
   max-width: 100%;
@@ -681,12 +690,18 @@ blockquote:before {
     text-align: center;
     margin: 0.5em auto;
   }
+  .page h1 {
+    text-align: left;
+  }
   h2 {
     font-weight: normal;
     font-size: 1.5em;
     line-height: 1.25;
     color: #50c8c4;
     font-family: Karla;
+  }
+  .page h2 {
+    text-align: left;
   }
   h3 {
     font-weight: normal;
