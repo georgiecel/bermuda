@@ -636,6 +636,7 @@ blockquote:before {
   margin: 0 1em 1em 0;
   float: left;
   padding: 3px;
+  border: 1px solid #ddd;
 }
 .avatar {
   display: block;
