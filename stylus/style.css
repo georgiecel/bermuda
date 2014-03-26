@@ -564,8 +564,11 @@ blockquote {
   line-height: 1.75;
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
-blockquote p {
+blockquote p:first-child {
   display: inline;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
 }
 blockquote:before {
   color: #f73992;

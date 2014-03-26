@@ -38,6 +38,15 @@
     	return str_replace('<a href=', '<a '.$code.' href=', $output);
 	}
 
+	// add a class to edit comment link
+
+	function custom_edit_comment_link( $output ) {
+		$editcomment = 'comment-meta-item';
+		return preg_replace( '/comment-edit-link/', 'comment-edit-link ' . $editcomment, $output, 1 );
+	}
+
+	add_filter( 'edit_comment_link', 'custom_edit_comment_link' );
+
 	// use nice search 
 
 	function roots_nice_search_redirect() {
@@ -160,7 +169,7 @@
 						<a class="comment-author-link" href="<?php comment_author_url(); ?>" itemprop="author"><?php comment_author(); ?></a>
 					</h2>
 					<time class="comment-meta-item" datetime="<?php comment_date('Y-m-d') ?>T<?php comment_time('H:iP') ?>" itemprop="datePublished"><?php comment_date('jS F Y') ?>, <a href="#comment-<?php comment_ID() ?>" itemprop="url"><?php comment_time() ?></a></time>
-					<?php edit_comment_link('<p class="comment-meta-item">Edit this comment</p>','',''); ?>
+					<?php edit_comment_link('Edit this comment','',''); ?>
 					<?php if ($comment->comment_approved == '0') : ?>
 					<p class="comment-meta-item">Your comment is awaiting moderation.</p>
 					<?php endif; ?>

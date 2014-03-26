@@ -8,8 +8,10 @@ blockquote
 	border(solid, c-quinary)
 	line-height 1.75
 	quotes "\201C""\201D""\2018""\2019"
-	p
+	p:first-child
 		display inline
+	p:last-child
+		margin-bottom 0
 
 blockquote:before
 	color c-secondary
