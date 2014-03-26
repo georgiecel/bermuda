@@ -19,7 +19,7 @@
 		?>
 		<?php if ('open' == $post->comment_status) : ?>
 			<div class="comments-respond" id="respond">
-				<h2 class="comments-respond-title"><?php comment_form_title( 'Leave a Comment', 'Reply to %s' ); ?> <?php cancel_comment_reply_link('(Cancel reply)') ?></h2>
+				<h2 class="comments-respond-title"><?php comment_form_title( 'Leave a Comment', 'Reply to %s' ); ?></h2>
 				<form class="comments-respond-form" id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" role="form">
 				<?php if ( $user_ID ) : ?>
 					<p class="comments-respond-form-row">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
@@ -42,7 +42,8 @@
 						<textarea name="comment" id="comment" cols="30" rows="10" tabindex="4"></textarea>
 					</p>
 					<p class="comments-respond-form-row">
-						<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+						<button name="submit" type="submit" id="submit" tabindex="5">Submit Comment</button>
+						<?php cancel_comment_reply_link('Cancel') ?>
 					</p>
 					<?php comment_id_fields( $post_id ); ?>
 					<?php do_action( 'comment_form', $post_id ); ?>

@@ -438,7 +438,8 @@ em {
 .next-link,
 .prev-post-link,
 .next-post-link,
-.post-edit-link {
+.post-edit-link,
+.cancel-comment-reply {
   background: #50c8c4;
   padding: 0.25em 0.5em;
   text-decoration: none;
@@ -448,23 +449,29 @@ em {
 .prev-post-link:link,
 .next-post-link:link,
 .post-edit-link:link,
+.cancel-comment-reply:link,
 .prev-link:visited,
 .next-link:visited,
 .prev-post-link:visited,
 .next-post-link:visited,
-.post-edit-link:visited {
+.post-edit-link:visited,
+.cancel-comment-reply:visited {
   color: #fff;
 }
 .prev-link:hover,
 .next-link:hover,
 .prev-post-link:hover,
 .next-post-link:hover,
-.post-edit-link:hover {
+.post-edit-link:hover,
+.cancel-comment-reply:hover {
   background: #f73992;
 }
 .post-edit-link {
   margin-bottom: 1em;
   display: inline-block;
+}
+.cancel-comment-reply {
+  margin-left: 0.5em;
 }
 .prev-link-wrapper,
 .next-link-wrapper {
@@ -501,12 +508,13 @@ input[type="submit"] {
   padding: 5px 10px;
   height: 34px;
   border: none;
+  line-height: 1;
 }
 button:hover,
 input[type="submit"]:hover {
   cursor: pointer;
-  background: #fff;
-  color: #f73992;
+  background: #50c8c4;
+  color: #fff;
 }
 input,
 textarea {

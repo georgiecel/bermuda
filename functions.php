@@ -2,7 +2,7 @@
 
 	// remove rel attribute from the category list
 
-	function remove_category_list_rel($output){
+	function remove_category_list_rel( $output ){
 		$output = str_replace(' rel="category tag"', '', $output);
 		return $output;
 	}
@@ -28,12 +28,12 @@
 	add_filter('next_post_link', 'post_link_attributes_1');
 	add_filter('previous_post_link', 'post_link_attributes_2');
 
-	function post_link_attributes_1($output) {
+	function post_link_attributes_1( $output ) {
 		$code = 'class="next-post-link"';
     	return str_replace('<a href=', '<a '.$code.' href=', $output);
 	}
 
-	function post_link_attributes_2($output) {
+	function post_link_attributes_2( $output ) {
 		$code = 'class="prev-post-link"';
     	return str_replace('<a href=', '<a '.$code.' href=', $output);
 	}
@@ -46,6 +46,16 @@
 	}
 
 	add_filter( 'edit_comment_link', 'custom_edit_comment_link' );
+
+	// change cancel reply link to a button 
+
+	function cancel_comment_reply_button( $html, $link, $text ) {
+		$style = isset($_GET['replytocom']) ? '' : ' style="display:none;"';
+		$button = '<button id="cancel-comment-reply-link" class="cancel-comment-reply"' . $style . '>';
+		return $button . $text . '</button>';
+	}
+
+	add_action('cancel_comment_reply_link', 'cancel_comment_reply_button', 10, 3);
 
 	// use nice search 
 
