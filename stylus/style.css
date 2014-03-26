@@ -418,8 +418,7 @@ em {
   border-bottom: 1px solid #ddd;
 }
 .more-link,
-.comment-reply-link,
-.post-edit-link {
+.comment-reply-link {
   display: inline-block;
   background: #f73992;
   padding: 0.25em 0.5em;
@@ -427,24 +426,19 @@ em {
 }
 .more-link:link,
 .comment-reply-link:link,
-.post-edit-link:link,
 .more-link:visited,
-.comment-reply-link:visited,
-.post-edit-link:visited {
+.comment-reply-link:visited {
   color: #fff;
 }
 .more-link:hover,
-.comment-reply-link:hover,
-.post-edit-link:hover {
+.comment-reply-link:hover {
   background: #50c8c4;
-}
-.post-edit-link {
-  margin-bottom: 1em;
 }
 .prev-link,
 .next-link,
 .prev-post-link,
-.next-post-link {
+.next-post-link,
+.post-edit-link {
   background: #50c8c4;
   padding: 0.25em 0.5em;
   text-decoration: none;
@@ -453,17 +447,24 @@ em {
 .next-link:link,
 .prev-post-link:link,
 .next-post-link:link,
+.post-edit-link:link,
 .prev-link:visited,
 .next-link:visited,
 .prev-post-link:visited,
-.next-post-link:visited {
+.next-post-link:visited,
+.post-edit-link:visited {
   color: #fff;
 }
 .prev-link:hover,
 .next-link:hover,
 .prev-post-link:hover,
-.next-post-link:hover {
+.next-post-link:hover,
+.post-edit-link:hover {
   background: #f73992;
+}
+.post-edit-link {
+  margin-bottom: 1em;
+  display: inline-block;
 }
 .prev-link-wrapper,
 .next-link-wrapper {
@@ -491,15 +492,21 @@ textarea {
   border: 1px solid #bbb;
   line-height: 1.5;
   -webkit-appearance: none;
+  font-size: 1em;
 }
-button {
-  background: #cef7f4;
+button,
+input[type="submit"] {
+  background: #f73992;
+  color: #fff;
   padding: 5px 10px;
   height: 34px;
+  border: none;
 }
-button:hover {
+button:hover,
+input[type="submit"]:hover {
   cursor: pointer;
-  background: #eee;
+  background: #fff;
+  color: #f73992;
 }
 input,
 textarea {
@@ -621,7 +628,6 @@ blockquote:before {
   margin: 0 1em 1em 0;
   float: left;
   padding: 3px;
-  border: 1px solid #ddd;
 }
 .avatar {
   display: block;

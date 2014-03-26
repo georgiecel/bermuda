@@ -2,17 +2,22 @@ button
 input
 textarea
 	background bg-senary
-	border(solid, c-quarternary)
+	border-all(solid, c-quarternary)
 	line-height 1.5	
 	-webkit-appearance none
+	fz(1em)
 
 button
-	background bg-tertiary
+input[type="submit"]
+	background link
+	color link-inverted
 	padding 5px 10px
 	height 34px
+	border none
 	&:hover
 		cursor pointer
-		background bg-quarternary
+		background link-inverted
+		color link
 
 input
 textarea
