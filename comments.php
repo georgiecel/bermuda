@@ -43,7 +43,7 @@
 					</p>
 					<p class="comments-respond-form-row">
 						<button name="submit" type="submit" id="submit" tabindex="5">Submit Comment</button>
-						<?php cancel_comment_reply_link('Cancel') ?>
+						<?php cancel_comment_reply_link('Cancel Reply') ?>
 					</p>
 					<?php comment_id_fields( $post_id ); ?>
 					<?php do_action( 'comment_form', $post_id ); ?>
