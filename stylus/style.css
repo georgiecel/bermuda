@@ -442,8 +442,6 @@ em {
 }
 .prev-link,
 .next-link,
-.prev-post-link,
-.next-post-link,
 .post-edit-link {
   background: #50c8c4;
   padding: 0.25em 0.5em;
@@ -451,22 +449,21 @@ em {
 }
 .prev-link:link,
 .next-link:link,
-.prev-post-link:link,
-.next-post-link:link,
 .post-edit-link:link,
 .prev-link:visited,
 .next-link:visited,
-.prev-post-link:visited,
-.next-post-link:visited,
 .post-edit-link:visited {
   color: #fff;
 }
 .prev-link:hover,
 .next-link:hover,
-.prev-post-link:hover,
-.next-post-link:hover,
 .post-edit-link:hover {
   background: #f73992;
+}
+.prev-post-link,
+.next-post-link {
+  display: inline-block;
+  line-height: 1.5;
 }
 .post-edit-link {
   margin-bottom: 1em;
@@ -644,8 +641,8 @@ blockquote:before {
   border-bottom: 1px solid #bbb;
 }
 .comment {
-  margin-bottom: 2em;
-  padding-bottom: 1em;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
 }
 .comment-gravatar {
   margin: 0 1em 1em 0;
@@ -669,7 +666,7 @@ blockquote:before {
   text-transform: none;
 }
 .child-comments {
-  margin: 1em 0 0 1.5em;
+  margin-top: 1em;
   padding-left: 1.5em;
   border-left: 1px solid #eee;
 }
@@ -677,6 +674,7 @@ blockquote:before {
   border-bottom: none;
   padding-bottom: 0;
   padding-top: 1em;
+  margin-bottom: 0.5em;
 }
 .site-footer {
   background: #fefefe;
