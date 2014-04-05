@@ -632,6 +632,9 @@ blockquote:before {
 .footnotereverse a {
   text-decoration: none;
 }
+.page {
+  border-bottom: none;
+}
 .comments-list .comment-meta {
   text-align: left;
   min-height: 75px;
