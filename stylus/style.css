@@ -278,7 +278,7 @@ li {
   font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 1em;
-  color: #000;
+  color: #333;
   line-height: 1.5;
 }
 li {
@@ -327,6 +327,7 @@ h6 {
 a,
 a:link {
   color: #f73992;
+  text-decoration: none;
 }
 a:visited {
   color: #f73992;
@@ -409,8 +410,11 @@ em {
 .main-navigation {
   text-align: center;
 }
-.main-navigation .main-navigation-link {
+a.main-navigation-link {
   display: block;
+  color: #50c8c4;
+  font-size: 1.2em;
+  padding: 0.25em 0.5em;
 }
 .pagination,
 .post-navigation {
@@ -680,9 +684,10 @@ blockquote:before {
   margin-bottom: 0.5em;
 }
 .site-footer {
-  background: #fefefe;
+  background: #cef7f4;
   padding: 0.5em 1.25em;
   font-size: 0.9em;
+  color: #50c8c4;
 }
 .site-footer a {
   text-decoration: none;
@@ -693,7 +698,7 @@ blockquote:before {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.05em;
-    color: #000;
+    color: #333;
     line-height: 1.65;
   }
   h1 {
@@ -764,6 +769,7 @@ blockquote:before {
   .site-footer {
     background: #cef7f4;
     text-align: center;
+    padding: 1em 1.25em;
   }
 }
 @media (min-width: 700px) {
@@ -772,12 +778,16 @@ blockquote:before {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.175em;
-    color: #000;
+    color: #333;
   }
 }
 @media (min-width: 850px) {
   .site-header {
-    display: none;
+    background: #cef7f4;
+  }
+  a.main-navigation-link {
+    display: inline-block;
+    margin: 0 0.5em;
   }
   .site-sidebar {
     display: block;
@@ -830,7 +840,7 @@ blockquote:before {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.2em;
-    color: #000;
+    color: #333;
   }
   .site-body {
     max-width: 80em;

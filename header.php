@@ -15,14 +15,15 @@
 		<header class="site-header" role="banner">
 			<h1 class="site-title">Hey Georgie</h1>
 			<nav class="main-navigation" role="navigation">
-				<!-- This is an example link -->
 				<a class="main-navigation-link" href="/">Home</a>
+				<a class="main-navigation-link" href="/about/">About</a>
+				<a class="main-navigation-link" href="/lzrgun-manifesto">The LZRGUN Manifesto</a>
+				<a class="main-navigation-link" href="/poetry/">Poetry</a>
+				<a class="main-navigation-link" href="/2-minutes-40-seconds/">2 minutes and 40 seconds</a>
+				<a class="main-navigation-link" href="/category/photoblog/">Photoblog</a>
+				<a class="main-navigation-link" href="/links/">Links</a>
 			</nav>
-			<div class="site-search">
-				<?php get_search_form(); ?>
-			</div>
 		</header>
 		<div class="site-body">
-		<!-- Sidebar may or may not be included ... -->
 		<?php get_sidebar(); ?>
 		<div class="site-content" role="main">
