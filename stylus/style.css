@@ -412,9 +412,13 @@ em {
 }
 a.main-navigation-link {
   display: block;
-  color: #50c8c4;
+  color: #fff;
   font-size: 1.2em;
   padding: 0.25em 0.5em;
+}
+a.main-navigation-link:hover {
+  background: #cef7f4;
+  color: #50c8c4;
 }
 .pagination,
 .post-navigation {
@@ -616,6 +620,9 @@ blockquote:before {
   padding: 0.5em 0 0.5em 0;
   border-bottom: 1px solid #ddd;
 }
+.post-title + .post-meta {
+  margin-top: -0.5em;
+}
 .post-meta {
   text-transform: uppercase;
   line-height: 1.4;
@@ -785,9 +792,17 @@ blockquote:before {
   .site-header {
     background: #cef7f4;
   }
+  .main-navigation {
+    margin: 1em auto;
+  }
   a.main-navigation-link {
     display: inline-block;
     margin: 0 0.5em;
+    color: #50c8c4;
+  }
+  a.main-navigation-link:hover {
+    background: #f73992;
+    color: #fff;
   }
   .site-sidebar {
     display: block;
