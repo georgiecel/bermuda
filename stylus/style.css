@@ -421,6 +421,7 @@ a.main-navigation-link {
   color: #fff;
   font-size: 1.05em;
   padding: 0.25em 0.5em;
+  font-weight: 400;
 }
 a.main-navigation-link:hover {
   background: #cef7f4;
@@ -472,7 +473,8 @@ a.main-navigation-link:hover {
 .prev-link:hover,
 .next-link:hover,
 .post-edit-link:hover {
-  background: #f73992;
+  background: #cef7f4;
+  color: #50c8c4;
 }
 .prev-post-link,
 .next-post-link {
@@ -509,7 +511,17 @@ a.main-navigation-link:hover {
 }
 .search-form-input {
   background: #fff;
-  border: 1px solid #bbb;
+  height: 34px;
+  width: 75%;
+  border: none;
+}
+.search-form-submit {
+  background: #50c8c4;
+  color: #fff;
+}
+.search-form-submit:hover {
+  background: #cef7f4;
+  color: #50c8c4;
 }
 button,
 input,
@@ -523,6 +535,15 @@ textarea {
 input,
 textarea {
   padding: 7px 10px;
+  width: 100%;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input:hover,
+textarea:hover {
+  border-color: #67dfde;
 }
 button,
 input[type="submit"] {
@@ -530,6 +551,7 @@ input[type="submit"] {
   color: #fff;
   padding: 5px 10px;
   height: 34px;
+  width: auto;
   border: none;
   line-height: 1;
 }
@@ -793,13 +815,17 @@ blockquote:before {
     font-size: 1.175em;
     color: #222;
   }
+  input,
+  textarea {
+    width: 40%;
+  }
 }
 @media (min-width: 850px) {
   .site-header {
     background: #cef7f4;
   }
   .main-navigation {
-    margin: 0.5em auto;
+    margin: 0.75em auto;
   }
   a.main-navigation-link {
     display: inline-block;
@@ -863,6 +889,9 @@ blockquote:before {
   .site-body {
     max-width: 80em;
     margin: 0 auto;
+  }
+  .main-navigation {
+    margin: 1.25em auto;
   }
   a.main-navigation-link {
     margin: 0 1em;
