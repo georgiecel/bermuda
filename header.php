@@ -13,7 +13,7 @@
 		</head>
 	<body>
 		<header class="site-header" role="banner">
-			<h1 class="site-title">Hey Georgie</h1>
+			<!--<h1 class="site-title">Hey Georgie</h1>-->
 			<nav class="main-navigation" role="navigation">
 				<a class="main-navigation-link" href="/">Home</a>
 				<a class="main-navigation-link" href="/about/">About</a>

@@ -11,4 +11,8 @@
 				<h3 class="site-sidebar-heading">The LZRGUN Manifesto</h3>
 				<p class="site-sidebar-text">Everyone is a friend unless proven otherwise. Appreciate. Optimism is a road that you create. Believe in magic. Embrace the morning. Love is a heavy word.</p>
 			</div>
+			<div class="site-sidebar-widget">
+				<h3 class="site-sidebar-heading">Find me places</h3>
+				<p class="site-sidebar-text"></p>
+			</div>
 		</aside>

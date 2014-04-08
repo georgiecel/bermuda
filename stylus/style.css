@@ -278,7 +278,7 @@ li {
   font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 1em;
-  color: #333;
+  color: #222;
   line-height: 1.5;
 }
 li {
@@ -406,6 +406,12 @@ em {
   font-size: 3em;
   font-family: Karla;
   text-align: center;
+  width: 150px;
+  height: 123px;
+  display: block;
+  text-indent: -9999em;
+  background: url("logo.png") no-repeat center top;
+  background-size: 100% auto;
 }
 .main-navigation {
   text-align: center;
@@ -413,7 +419,7 @@ em {
 a.main-navigation-link {
   display: block;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.05em;
   padding: 0.25em 0.5em;
 }
 a.main-navigation-link:hover {
@@ -705,7 +711,7 @@ blockquote:before {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.05em;
-    color: #333;
+    color: #222;
     line-height: 1.65;
   }
   h1 {
@@ -785,7 +791,7 @@ blockquote:before {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.175em;
-    color: #333;
+    color: #222;
   }
 }
 @media (min-width: 850px) {
@@ -793,7 +799,7 @@ blockquote:before {
     background: #cef7f4;
   }
   .main-navigation {
-    margin: 1em auto;
+    margin: 0.5em auto;
   }
   a.main-navigation-link {
     display: inline-block;
@@ -801,8 +807,8 @@ blockquote:before {
     color: #50c8c4;
   }
   a.main-navigation-link:hover {
-    background: #f73992;
-    color: #fff;
+    background: #fff;
+    color: #3c9493;
   }
   .site-sidebar {
     display: block;
@@ -852,11 +858,14 @@ blockquote:before {
     font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.2em;
-    color: #333;
+    color: #222;
   }
   .site-body {
     max-width: 80em;
     margin: 0 auto;
+  }
+  a.main-navigation-link {
+    margin: 0 1em;
   }
   .site-content {
     max-width: 65em;
