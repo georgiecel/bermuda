@@ -16,11 +16,11 @@
 	add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
 
 	function posts_link_attributes_1() {
-    	return 'class="prev-link"';
+		return 'class="prev-link"';
 	}
 
 	function posts_link_attributes_2() {
-    	return 'class="next-link"';
+		return 'class="next-link"';
 	}
 
 	// do the same for single
@@ -30,12 +30,12 @@
 
 	function post_link_attributes_1( $output ) {
 		$code = 'class="next-post-link"';
-    	return str_replace('<a href=', '<a '.$code.' href=', $output);
+		return str_replace('<a href=', '<a '.$code.' href=', $output);
 	}
 
 	function post_link_attributes_2( $output ) {
 		$code = 'class="prev-post-link"';
-    	return str_replace('<a href=', '<a '.$code.' href=', $output);
+		return str_replace('<a href=', '<a '.$code.' href=', $output);
 	}
 
 	// add a class to edit comment link
@@ -68,7 +68,7 @@
 		$search_base = $wp_rewrite->search_base;
 		if (is_search() && !is_admin() && strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false) {
 			wp_redirect(home_url("/{$search_base}/" . urlencode(get_query_var('s'))));
-    		exit();
+			exit();
 		}
 	}
 
@@ -79,11 +79,11 @@
 	// search highlight 
 
 	function search_excerpt_highlight() {
-		$excerpt = get_the_excerpt();
+		$excerpt = the_excerpt();
 		$keys = implode('|', explode(' ', get_search_query()));
 		$excerpt = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt);
 	
-		echo '<p>' . $excerpt . '</p>';
+		echo '' . $excerpt . '';
 	}
 
 	function search_title_highlight() {
@@ -120,6 +120,61 @@
 		return '<figure ' . $id . 'class="post-figure figure-' . esc_attr($align) . '" style="width: '. (int) $width . 'px">' 
 			. do_shortcode( $content ) . '<figcaption ' . $capid . 'class="post-figcaption">' . $caption . '</figcaption></figure>';
 	}	
+
+	// not truncating excerpts in search results
+
+	function nice_search_excerpt($text) {
+	$raw_excerpt = $text;
+	if ( '' == $text ) {
+		$text = get_the_content('');
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]&gt;', $text);
+
+		$allowed_tags = '<p>,<a>,<em>,<strong>,<img>';
+		$text = strip_tags($text, $allowed_tags);
+
+		$excerpt_word_count = 150;
+		$excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+		
+		$excerpt_end = '[...]'; 
+		$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+		
+		$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+		
+		if ( count($words) > $excerpt_length ) {
+				array_pop($words);
+				$text = implode(' ', $words);
+				$text = $text . $excerpt_more;
+			} else {
+				$text = implode(' ', $words);
+			}
+		}
+		return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+	}
+
+	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+	add_filter('get_the_excerpt', 'nice_search_excerpt');
+
+	// allowing shortcodes to work in excerpts
+
+	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+	add_filter('get_the_excerpt', 'nice_trim_excerpt');
+
+	function nice_trim_excerpt($text = '') {
+		$raw_excerpt = $text;
+		if ( '' == $text ) {
+			$text = get_the_content('');
+
+			$text = apply_filters('the_content', $text);
+			$text = str_replace(']]&gt;', ']]&gt;', $text);
+			$excerpt_length = apply_filters('excerpt_length', 250);
+			$excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+			$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+		}
+		return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+	}	
+
+	add_filter('get_the_excerpt','do_shortcode');
 
 	// word count function
 

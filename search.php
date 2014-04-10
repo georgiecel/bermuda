@@ -9,16 +9,18 @@
 				<!-- HTML for each search result -->
 				<article class="post">
 					<h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title"><?php search_title_highlight(); ?></a></h1>
-					<p><?php search_excerpt_highlight(); ?></p>
-					<p>
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read this article?</a>
-					</p>
+					<div class="post-content">
+						<?php search_excerpt_highlight(); ?>
+						<p>
+							<a class="more-link" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read this article?</a>
+						</p>
+					</div>
 				</article>
 			<?php endwhile; ?>
 			</section>
 			<nav class="post-navigation pagination">
-				<div class="post-navigation prev-link"><?php next_posts_link('&laquo; Older Entries') ?></div>
-				<div class="post-navigation next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+				<?php next_posts_link('&laquo; Older Entries') ?>
+				<?php previous_posts_link('Newer Entries &raquo;') ?>
 			</nav>
 			<?php else : ?>
 				<article class="post">

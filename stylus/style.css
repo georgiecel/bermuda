@@ -523,6 +523,9 @@ a.main-navigation-link:hover {
   background: #cef7f4;
   color: #50c8c4;
 }
+.search-listing .post-title {
+  text-align: left;
+}
 button,
 input,
 textarea {
