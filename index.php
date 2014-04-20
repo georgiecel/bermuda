@@ -22,7 +22,7 @@
 						</a></p>
 					</footer>
 					<div class="post-content" itemprop="text">
-						<?php the_content(); ?>
+						<?php the_content('','[...]'); ?>
 					</div>
 				</article>
 			<?php endwhile; ?>

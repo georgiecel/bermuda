@@ -79,7 +79,7 @@
 	// search highlight 
 
 	function search_excerpt_highlight() {
-		$excerpt = the_excerpt();
+		$excerpt = the_excerpt('');
 		$keys = implode('|', explode(' ', get_search_query()));
 		$excerpt = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt);
 	
@@ -136,7 +136,7 @@
 		$excerpt_word_count = 150;
 		$excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
 		
-		$excerpt_end = '[...]'; 
+		$excerpt_end = ''; 
 		$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
 		
 		$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
@@ -175,6 +175,15 @@
 	}	
 
 	add_filter('get_the_excerpt','do_shortcode');
+
+	// adding [...] string to end of excerpt
+
+	function excerpt_read_more_link($output) {
+		global $post;
+		return substr($output,0,-5) . ' [...]';
+	}
+
+	add_filter('the_excerpt', 'excerpt_read_more_link');
 
 	// word count function
 
