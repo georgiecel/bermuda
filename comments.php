@@ -42,7 +42,7 @@
 						<textarea name="comment" id="comment" cols="30" rows="10" tabindex="4"></textarea>
 					</p>
 					<p class="comments-respond-form-row">
-						<button name="submit" type="submit" id="submit" tabindex="5">Submit Comment</button>
+						<button name="submit" type="submit" id="submit" tabindex="5" class="btn">Submit Comment</button>
 						<?php cancel_comment_reply_link('Cancel Reply') ?>
 					</p>
 					<?php comment_id_fields( $post_id ); ?>

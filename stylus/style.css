@@ -433,6 +433,7 @@ a.main-navigation-link:hover {
   margin-top: 1em;
   text-transform: uppercase;
   font-size: 0.85em;
+  font-family: Karla;
 }
 .post-pagination {
   padding-bottom: 1em;
@@ -522,6 +523,8 @@ a.main-navigation-link:hover {
   font-size: 1.1em;
   margin-left: 3px;
   vertical-align: middle;
+  padding: 5px 10px;
+  height: 34px;
 }
 .search-form-submit:hover {
   background: #cef7f4;
@@ -530,12 +533,16 @@ a.main-navigation-link:hover {
 .search-listing .post-title {
   text-align: left;
 }
+.search-highlight {
+  background: #cef7f4;
+}
 .btn,
 button,
 .pushbutton-wide,
 .post-edit-link,
 .comment-reply-link {
   font-family: Karla;
+  padding: 0.25em 0.5em;
 }
 button,
 input,
@@ -563,11 +570,8 @@ button,
 input[type="submit"] {
   background: #f73992;
   color: #fff;
-  padding: 5px 10px;
-  height: 34px;
   width: auto;
   border: none;
-  line-height: 1;
 }
 button:hover,
 input[type="submit"]:hover {
@@ -905,7 +909,7 @@ blockquote:before {
     margin: 0 auto;
   }
   .main-navigation {
-    margin: 1.25em auto;
+    margin: 1em auto;
   }
   a.main-navigation-link {
     margin: 0 1em;
