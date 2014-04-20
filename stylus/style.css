@@ -512,12 +512,16 @@ a.main-navigation-link:hover {
 .search-form-input {
   background: #fff;
   height: 34px;
-  width: 75%;
+  width: 71%;
+  vertical-align: middle;
   border: none;
 }
 .search-form-submit {
   background: #50c8c4;
   color: #fff;
+  font-size: 1.1em;
+  margin-left: 3px;
+  vertical-align: middle;
 }
 .search-form-submit:hover {
   background: #cef7f4;
@@ -528,8 +532,9 @@ a.main-navigation-link:hover {
 }
 .btn,
 button,
-[type="submit"],
-.post-edit-link {
+.pushbutton-wide,
+.post-edit-link,
+.comment-reply-link {
   font-family: Karla;
 }
 button,
