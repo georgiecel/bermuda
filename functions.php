@@ -10,17 +10,25 @@
 	add_filter('wp_list_categories', 'remove_category_list_rel');
 	add_filter('the_category', 'remove_category_list_rel');
 
+	// add class to “continue reading” link
+
+	function add_morelink_class( $link, $text ) {
+		return str_replace( 'more-link', 'btn more-link', $link );
+	}
+
+	add_action( 'the_content_more_link', 'add_morelink_class', 10, 2 );
+
 	// add classes to next and previous links
 
 	add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
 	add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
 
 	function posts_link_attributes_1() {
-		return 'class="prev-link"';
+		return 'class="btn prev-link"';
 	}
 
 	function posts_link_attributes_2() {
-		return 'class="next-link"';
+		return 'class="btn next-link"';
 	}
 
 	// do the same for single
@@ -51,7 +59,7 @@
 
 	function cancel_comment_reply_button( $html, $link, $text ) {
 		$style = isset($_GET['replytocom']) ? '' : ' style="display:none;"';
-		$button = '<button id="cancel-comment-reply-link" class="cancel-comment-reply"' . $style . '>';
+		$button = '<button id="cancel-comment-reply-link" class="btn cancel-comment-reply"' . $style . '>';
 		return $button . $text . '</button>';
 	}
 

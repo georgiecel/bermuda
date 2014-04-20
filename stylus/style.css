@@ -526,6 +526,12 @@ a.main-navigation-link:hover {
 .search-listing .post-title {
   text-align: left;
 }
+.btn,
+button,
+[type="submit"],
+.post-edit-link {
+  font-family: Karla;
+}
 button,
 input,
 textarea {
