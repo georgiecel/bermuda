@@ -86,12 +86,28 @@
 
 	// search highlight 
 
-	function search_excerpt_highlight() {
-		$excerpt = the_excerpt('');
+	function search_excerpt_highlight($limit) {
+		$excerpt = get_the_excerpt();
+		$excerpt = explode(' ', get_the_excerpt(), $limit);
+
+		if (count($excerpt)>=$limit) {
+			array_pop($excerpt);
+			$excerpt = implode(' ',$excerpt).' ...';
+		} else {
+			$excerpt = implode(' ',$excerpt);
+		}
+
+		$excerpt = apply_filters('get_the_excerpt', $excerpt);
+
+		$allowed_tags = '<em>,<strong>,<br>,<mark>';
+		$excerpt = strip_tags($excerpt, $allowed_tags);
+
+		$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+
 		$keys = implode('|', explode(' ', get_search_query()));
-		$excerpt = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt);
+		$excerpt = trim(preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt));
 	
-		echo '' . $excerpt . '';
+		echo '<p>' . $excerpt . '</p>';
 	}
 
 	function search_title_highlight() {
@@ -138,7 +154,7 @@
 		$text = apply_filters('the_content', $text);
 		$text = str_replace(']]>', ']]&gt;', $text);
 
-		$allowed_tags = '<p>,<a>,<em>,<strong>,<img>';
+		$allowed_tags = '<p>,<a>,<em>,<strong>,<img>,<mark>';
 		$text = strip_tags($text, $allowed_tags);
 
 		$excerpt_word_count = 150;
