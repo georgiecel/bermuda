@@ -92,14 +92,14 @@
 
 		if (count($excerpt)>=$limit) {
 			array_pop($excerpt);
-			$excerpt = implode(' ',$excerpt).' ...';
+			$excerpt = implode(' ',$excerpt);
 		} else {
 			$excerpt = implode(' ',$excerpt);
 		}
 
 		$excerpt = apply_filters('get_the_excerpt', $excerpt);
 
-		$allowed_tags = '<em>,<strong>,<br>,<mark>';
+		$allowed_tags = '<script>,<em>,<strong>,<br>,<mark>';
 		$excerpt = strip_tags($excerpt, $allowed_tags);
 
 		$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
@@ -107,7 +107,7 @@
 		$keys = implode('|', explode(' ', get_search_query()));
 		$excerpt = trim(preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt));
 	
-		echo '<p>' . $excerpt . '</p>';
+		echo '<p>' . $excerpt . ' [...]</p>';
 	}
 
 	function search_title_highlight() {
@@ -202,12 +202,12 @@
 
 	// adding [...] string to end of excerpt
 
-	function excerpt_read_more_link($output) {
-		global $post;
-		return substr($output,0,-5) . ' [...]';
-	}
+	// function excerpt_read_more_link($output) {
+	// 	global $post;
+	// 	return substr($output,0,-5) . ' [...]';
+	// }
 
-	add_filter('the_excerpt', 'excerpt_read_more_link');
+	// add_filter('the_excerpt', 'excerpt_read_more_link');
 
 	// word count function
 

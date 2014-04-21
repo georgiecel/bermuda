@@ -539,6 +539,11 @@ a.main-navigation-link:hover {
 .search-listing .post .post-title {
   font-size: 1.35em;
 }
+.search-listing-intro {
+  padding-bottom: 1em;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ddd;
+}
 .search-highlight {
   background: #cef7f4;
   color: #3c9493;
