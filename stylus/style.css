@@ -439,6 +439,9 @@ a.main-navigation-link:hover {
   padding-bottom: 1em;
   border-bottom: 1px solid #ddd;
 }
+.more-link {
+  font-size: 0.9em;
+}
 .more-link,
 .comment-reply-link {
   display: inline-block;
@@ -533,8 +536,12 @@ a.main-navigation-link:hover {
 .search-listing .post-title {
   text-align: left;
 }
+.search-listing .post .post-title {
+  font-size: 1.35em;
+}
 .search-highlight {
   background: #cef7f4;
+  color: #3c9493;
 }
 .btn,
 button,
@@ -783,6 +790,9 @@ blockquote:before {
   }
   .site-content {
     padding: 1.25em 3em;
+  }
+  .search-listing .post .post-title {
+    font-size: 1.65em;
   }
   .post-meta {
     text-align: center;
