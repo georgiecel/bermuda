@@ -14,9 +14,14 @@
 	<body>
 		<header class="site-header" role="banner">
 			<!--<h1 class="site-title">Hey Georgie</h1>-->
-			<nav class="main-navigation" role="navigation">
+			<a class="main-navigation-toggle" href="#">
+				<span class="main-navigation-toggle-open">open menu</span>
+				<span class="main-navigation-toggle-close">close menu</span>
+			</a>
+			<nav id="main-navigation" class="main-navigation" role="navigation">
 				<a class="main-navigation-link" href="/">Home</a>
 				<a class="main-navigation-link" href="/about/">About</a>
+				<a class="main-navigation-link" href="/about/contact/">Contact</a>
 				<a class="main-navigation-link" href="/lzrgun-manifesto">The LZRGUN Manifesto</a>
 				<a class="main-navigation-link" href="/poetry/">Poetry</a>
 				<a class="main-navigation-link" href="/2-minutes-40-seconds/">2 minutes and 40 seconds</a>

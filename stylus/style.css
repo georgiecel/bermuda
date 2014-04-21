@@ -329,12 +329,24 @@ a:link {
   color: #f73992;
   text-decoration: none;
 }
+.site-sidebar-text a,
+.site-sidebar-text a:link {
+  color: #3c9493;
+  font-weight: 500;
+}
 a:visited {
   color: #f73992;
+}
+.site-sidebar-text a:visited {
+  color: #3c9493;
+  font-weight: 500;
 }
 a:hover {
   color: #000;
   text-decoration: none;
+}
+.site-sidebar-text a:hover {
+  color: #fff;
 }
 a:active {
   color: #000;
@@ -416,15 +428,34 @@ em {
 .main-navigation {
   text-align: center;
 }
-a.main-navigation-link {
+a.main-navigation-link,
+.main-navigation-toggle {
   display: block;
   color: #fff;
   font-size: 1.05em;
   padding: 0.25em 0.5em;
   font-weight: 400;
 }
-a.main-navigation-link:hover {
+a.main-navigation-link:hover,
+.main-navigation-toggle:hover {
   background: #cef7f4;
+  color: #50c8c4;
+}
+.site-sidebar-list {
+  padding: 0;
+}
+.site-sidebar-list-item {
+  list-style: none;
+  margin: 0.25em 0;
+}
+.site-sidebar-list-item a {
+  display: block;
+  padding: 0.25em 0.5em;
+  background: #50c8c4;
+  color: #fff;
+}
+.site-sidebar-list-item a:hover {
+  background: #fff;
   color: #50c8c4;
 }
 .pagination,
@@ -508,6 +539,33 @@ a.main-navigation-link:hover {
 .prev-post-link,
 .next-post-link {
   text-transform: none;
+}
+.main-navigation-toggle-open,
+.main-navigation-toggle-close {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-variant: small-caps;
+}
+.main-navigation-toggle-open:hover,
+.main-navigation-toggle-close:hover {
+  color: #50c8c4;
+}
+.main-navigation-toggle-close {
+  display: none;
+}
+.main-navigation-toggle.is-open .main-navigation-toggle-open {
+  display: none;
+}
+.main-navigation-toggle.is-open .main-navigation-toggle-close {
+  display: block;
+}
+#main-navigation {
+  display: none;
+}
+#main-navigation.is-open {
+  display: block;
 }
 .search-form {
   text-align: center;
@@ -752,7 +810,7 @@ blockquote:before {
   background: #cef7f4;
   padding: 0.5em 1.25em;
   font-size: 0.9em;
-  color: #50c8c4;
+  color: #3c9493;
 }
 .site-footer a {
   text-decoration: none;
@@ -851,6 +909,12 @@ blockquote:before {
   input,
   textarea {
     width: 40%;
+  }
+  .main-navigation-toggle {
+    display: none;
+  }
+  #main-navigation {
+    display: block;
   }
 }
 @media (min-width: 850px) {
