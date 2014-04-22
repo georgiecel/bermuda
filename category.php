@@ -1,19 +1,27 @@
 		<?php get_header(); ?>
-			<section class="blog-listing post-listing">
+			<section class="blog-listing post-listing category-listing">
 			<!-- Category descriptions -->
-			<h1 class="post-title">Category: <?php single_cat_title(); ?></h1>
-			<?php if (is_category('Things I Miss')) : ?>
-			<p><strong>Things I Miss</strong> is an occasional segment about things that I miss. It could include places I have been, things I bought as a child, things I used to do, things that have become obsolete or are no longer produced like old television shows, foods, toys, and the like.</p>
-			<?php elseif (is_category('2 minutes and 40 seconds')) : ?>
-			<p><strong>2 minutes and 40 seconds</strong> is an interview segment in which I interview people from any walk of life, and ask them questions outside of the traditional interview format to reveal random facts, suss out their quirks, and provide an enjoyable read. To find out more about this segment, <a href="/2-minutes-40-seconds/">read this page</a>.</p>
-			<p>A new ‘2 minutes and 40 seconds’ is posted every second Thursday.</p>
-			<?php elseif (is_category('Fashion Friday')) : ?>
-			<p><strong>Fashion Friday</strong> is an fashion segment I started in 2013, where I share outfits or items related to fashion and beauty.</p>
-			<p>There used to be a new post each month, on average, but now occurs every second Friday. Some older posts have been posted on Saturday rather than Friday, due to timezones, but are now more consistent.</p>
-			<p>I would like to thank one of my best friends <a href="http://alonelyseptember.org">Seb</a> for having the time and patience to photograph in some of the more recent posts.</p>
-			<?php else : ?>
-			<p>You are currently viewing the <strong><?php single_cat_title(); ?></strong> category.</p>
-			<?php endif; ?>
+			<div class="category-listing-intro">
+				<h1 class="category-title post-title">Category: <?php single_cat_title(); ?></h1>
+				<?php if (is_category('Things I Miss')) : ?>
+					<p><strong>Things I Miss</strong> is an occasional segment about things that I miss. It could include places I have been, things I bought as a child, things I used to do, things that have become obsolete or are no longer produced like old television shows, foods, toys, and the like.</p>
+				<?php elseif (is_category('2 minutes and 40 seconds')) : ?>
+					<p><strong>2 minutes and 40 seconds</strong> is an interview segment in which I interview people from any walk of life, and ask them questions outside of the traditional interview format to reveal random facts, suss out their quirks, and provide an enjoyable read. To find out more about this segment, <a href="/2-minutes-40-seconds/">read this page</a>.</p>
+					<p>A new ‘2 minutes and 40 seconds’ is posted every second Thursday.</p>
+				<?php elseif (is_category('Fashion Friday')) : ?>
+					<p><strong>Fashion Friday</strong> is an fashion segment I started in 2013, where I share outfits or items related to fashion and beauty.</p>
+					<p>There used to be a new post each month, on average, but now occurs every second Friday. Some older posts have been posted on Saturday rather than Friday, due to timezones, but are now more consistent.</p>
+					<p>I would like to thank one of my best friends <a href="http://alonelyseptember.org">Seb</a> for having the time and patience to photograph in some of the more recent posts.</p>
+				<?php elseif (is_category('Photoblog')) : ?>
+					<p>The <strong>Photoblog</strong> category is currently “in-progress”. It contains posts that contain mainly photographs, or where the photographs are the focus of the post.</p>
+					<p>I had a photoblog for about four years, initially at www.o1s.net from January 2009 to February 2010, which was later located at <a href="http://indecisively.me">Indecisively.me</a>. In late 2013 I made the decision to move the posts from my photoblog here to my blog, because I had been sharing photos at <em>Hey Georgie</em> more often than on my photoblog.</p>
+					<p>As at April 2014, I am still gradually moving the posts and removing old and unnecessary posts.</p>
+				<?php elseif (is_category('Music')) : ?>
+					<p>The <strong>Music</strong> category is one of my biggest categories. Posts in this category are often reviews of concerts I have been to, general discussion about bands I like, my experience playing piano or other instruments, or photos of concerts. Photos of concerts are likely to be in the <a href="/category/photoblog/">Photoblog</a> category as well.</p>
+				<?php else : ?>
+					<p>You are currently viewing the <strong><?php single_cat_title(); ?></strong> category.</p>
+				<?php endif; ?>
+			</div>
 			<!-- // begin the loop -->
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<!-- HTML for individual post here -->

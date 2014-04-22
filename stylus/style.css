@@ -597,10 +597,17 @@ a.main-navigation-link:hover,
 .search-listing .post .post-title {
   font-size: 1.35em;
 }
-.search-listing-intro {
+.category-title {
+  text-align: left;
+}
+.search-listing-intro,
+.category-listing-intro {
   padding-bottom: 1em;
   margin-bottom: 0;
   border-bottom: 1px solid #ddd;
+}
+.category-listing-intro {
+  padding-botom: 0;
 }
 .search-highlight {
   background: #cef7f4;
