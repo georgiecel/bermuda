@@ -446,7 +446,7 @@ a.main-navigation-link:hover,
 }
 .site-sidebar-list-item {
   list-style: none;
-  margin: 0.25em 0;
+  margin: 4px 0;
 }
 .site-sidebar-list-item a {
   display: block;
@@ -596,6 +596,9 @@ a.main-navigation-link:hover,
 }
 .search-listing .post .post-title {
   font-size: 1.35em;
+}
+.category-listing .post-thumbnail-wrapper {
+  display: none;
 }
 .category-title {
   text-align: left;

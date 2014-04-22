@@ -202,12 +202,12 @@
 
 	// adding [...] string to end of excerpt
 
-	// function excerpt_read_more_link($output) {
-	// 	global $post;
-	// 	return substr($output,0,-5) . ' [...]';
-	// }
+	function excerpt_read_more_link($output) {
+		global $post;
+		return substr($output,0,-5) . ' [...]';
+	}
 
-	// add_filter('the_excerpt', 'excerpt_read_more_link');
+	add_filter('the_excerpt', 'excerpt_read_more_link');
 
 	// word count function
 

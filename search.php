@@ -12,7 +12,7 @@
 					<div class="post-content">
 						<?php search_excerpt_highlight(80); ?>
 						<p>
-							<a class="btn more-link" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Continue reading &raquo;</a>
+							<a class="btn more-link" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more of this post &raquo;</a>
 						</p>
 					</div>
 				</article>

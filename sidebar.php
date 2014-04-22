@@ -19,6 +19,9 @@
 						<a href="/category/2-minutes-40-seconds">2 minutes and 40 seconds</a>
 					</li>
 					<li class="site-sidebar-list-item">
+						<a href="/category/a-day-in-the-life">A Day in the Life</a>
+					</li>
+					<li class="site-sidebar-list-item">
 						<a href="/category/fashion-friday">Fashion Friday</a>
 					</li>
 					<li class="site-sidebar-list-item">
