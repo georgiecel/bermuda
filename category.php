@@ -17,10 +17,18 @@
 				<?php elseif (is_category('Daniel')) : ?>
 					<p><strong>Daniel</strong> is a friend of mine who resides in Singapore. He is a moderator on <a href="http://stackoverflow.com">Stack Overflow</a> and is often known as BoltClock online. He’s a good listener, a great writer, and an even better friend!</p>
 					<p>Thanks to Daniel I now have a secret dream of being a member of Australian children’s musical group Hi-5, but don’t tell anyone that.</p>
+				<?php elseif (is_category('Family')) : ?>
+					<p><strong>Family</strong> contains general posts about my family. You will find that I keep details down to a minimum as I consider this information rather personal. Some of my older posts may contain sensitive information, but in recent years I have refrained from including too much detail about my family to respect their privacy.</p>
+					<p>For those curious, my family do know that I have a blog, but they only read a few posts when they initially discovered it (or rather, bothered to actually look! &mdash; they had known for a while that I had one). I do, however, write frequently about my brother <a href="/category/brandon/">Brandon</a>.</p>
 				<?php elseif (is_category('Fashion Friday')) : ?>
 					<p><strong>Fashion Friday</strong> is an fashion segment I started in 2013, where I share outfits or items related to fashion and beauty.</p>
 					<p>There used to be a new post each month, on average, but now occurs every second Friday. Some older posts have been posted on Saturday rather than Friday, due to timezones, but are now more consistent.</p>
 					<p>I would like to thank one of my best friends <a href="http://alonelyseptember.org">Seb</a> for having the time and patience to photograph in some of the more recent posts.</p>
+				<?php elseif (is_category('Friends')) : ?>
+					<p>Not <em>really</em> suggesting that they aren’t special, posts in <strong>Friends</strong> mention friends who may not have their own category on my blog. They may not be people I spend a lot of time with, and thus I have not created a category especially for them. I may also mention friends in general.</p>
+					<p>For your information, friends that do have their own categories include <a href="/category/james/">James</a>, <a href="/category/lilian/">Lilian</a>, <a href="/category/tristan/">Tristan</a>, <a href="/category/dylan/">Dylan</a>, <a href="/category/daniel/">Daniel</a>, <a href="/category/seb/">Seb</a>, <a href="/category/rachel/">Rachel</a>, <a href="/category/ryan/">Ryan</a>, <a href="/category/mike/">Mike</a>, <a href="/category/johnny/">Johnny</a>, <a href="/category/fern/">Fern</a> and <a href="/category/kiah/">Kiah</a>.</p>
+				<?php elseif (is_category('General')) : ?>
+					<p><strong>General</strong> is a bit of a hit and miss. I created the category to account for discussion on general topics not necessarily related to my personal life. This category and the <a href="/category/life/">Life</a> category are a little bit of a mix, but for the most part, posts under this General category are more likely to fuel discussion.</p>
 				<?php elseif (is_category('Health')) : ?>
 					<p><strong>Health</strong> discusses everything health, though mostly related to my personal life. I have had a countless amount of health issues related to my digestive system and mental illness.</p>
 					<p>In particular, I have had two main issues. Firstly, I had a twelve-year battle with high cholesterol despite being extremely thin. I was constantly told that genetics did not contribute to my condition. I tried every diet on the planet to reduce my cholesterol levels, but to no avail.  Visiting a new doctor in 2013 led me to discover that my condition was indeed genetic, and I was put on medication.</p>
@@ -29,6 +37,8 @@
 				<?php elseif (is_category('Hong Kong')) : ?>
 					<p>I visited <strong>Hong Kong</strong> for the second time, in December 2013. I first visited in about 1996 when I was six years old, and apparently lost my first tooth there. I really liked the McDonald’s Happy Meal toys.</p>
 					<p>My boyfriend James and I went there for Christmas for about a week. Posts in this category are about our travels.</p>
+				<?php elseif (is_category('Internet')) : ?>
+					<p>The <strong>Internet</strong> category contains posts that discuss things that might happen online/over the internet. It might also include my opinions or reviews about services or applications. For this reason, posts here may be easy to relate to.</p>
 				<?php elseif (is_category('James')) : ?>
 					<p>I properly met <strong>James</strong> in 2004 when he had a fake map and pretended he knew where me and my friend Jennifer were going. We soon discovered his trick.</p>
 					<p>In 2007, we became very good friends. James helped me through a rough patch with another friend, and became my shoulder to cry on. We started a relationship in early 2008 and are still together. He’s been there for the good times and the bad, and has been there for me when I have needed it.</p>
@@ -36,6 +46,8 @@
 					<p>I adore <strong>Japan</strong>. I studied the language in high school for about four years. I don’t remember very much of the vocabulary, but I have very good reading ability of hiragana and katakana characters. Kanji not so much, though.</p>
 					<p>I absolutely adore Japanese cuisine and culture. The cuisine really suits me because I am a pescetarian and don’t eat land meat or red meat; I do, however, eat fish, shellfish and white sea meat.</p>
 					<p>My boyfriend James and I visited Japan in December 2013 when it was winter. Posts in this category are about our travels.</p>
+				<?php elseif (is_category('Life')) : ?>
+					<p><strong>Life</strong> is the default category for my blog posts. It usually contains anything to do with my general life, or life at the moment. Recounts of stories from years gone by would appear in <a href="/category/stories/">Stories</a>.</p>
 				<?php elseif (is_category('Lilian')) : ?>
 					<p><strong>Lilian</strong> is my best (and pretty much only) girl friend, and we’ve known each other for nearly twelve years. We used to have a lot in common but our interests have drifted apart. But &mdash; we are still the best of friends. I trust her with everything.</p>
 				<?php elseif (is_category('Music')) : ?>
@@ -47,6 +59,12 @@
 				<?php elseif (is_category('School')) : ?>
 					<p>I started blogging long before the posts in this category might suggest. In fact, I was in my last year of high school when I started blogging more actively and independently. <strong>School</strong> is unlikely to contain posts that I wrote while I was actually still in school; my oldest post dates to 2009 which is when I was already in university.</p>
 					<p>Posts in this category may refer to incidents that happened while I was in school, or may tell stories from that period of time.</p>
+				<?php elseif (is_category('Seb')) : ?>
+					<p><strong>Seb</strong> (previously Sebby, the name later deemed too childish) is one of my close friends who I met in university. We’ve had our fair share of arguments over time, but obsess over the same things &mdash; Doctor Who, photography, books, and music. I do think that he will be forever grateful for the time I discovered the song <em>Sunsets</em> by Powderfinger &mdash; it was, as he described, a rock song that he saw the video clip for on a television, somewhere, during his first couple of years in Australia, and it was red, and animated, and it was surely an Australian band...</p>
+					<p>I vaguely remember thinking, “What a sketchy description”. Nonetheless, my data mining skills (probably strengthened by my Bachelors degree, hah) led me to find a list of animated music video clips and a handful of miscellaneous screen captures of these. I don’t know how, really, that I stumbled upon <em>Sunsets</em> and asked, “Well, could this be it?” and <a href="/lzrgun-manifesto/">as magic would have it</a> it was it.</p>
+				<?php elseif (is_category('Stories')) : ?>
+					<p><strong>Stories</strong> is a long-running category &mdash; as of writing this, there are 82 posts in this category. Individual posts in this category generally tell an individual story, and the story could be old or new, but more importantly, is true. I sometimes write about funny things that happened when I was younger (many of these will pop up), some things that may have happened recently, or my experiences with certain things.</p>
+					<p>The Stories category was present even on blogs I owned before <em>Hey Georgie</em>, but was often meshed with a category I used to have called <em>idiots</em>, which detailed annoying encounters with people on public transport.</p>
 				<?php elseif (is_category('Tristan')) : ?>
 					<p>Also known as Toffeecake, Honeydew or Tris, <strong>Tristan</strong> is my sweetest, dearest friend who also happens to live down the road from me. Not technically neighbours, but the definition works. We met in 2013, and I don’t exaggerate when I say he helped me find myself. &hearts; He’s pretty much my best friend.</p>
 					<p>Tristan and I are completely ridiculous in each other’s company &mdash; we’ll go to gigs together and dance; we’ll sing; he’ll probably try to tickle me occasionally; we’ll call each other names (both nasty and cheesy). But honestly, I think I would be lost without him.</p>
