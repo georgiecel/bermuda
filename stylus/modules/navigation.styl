@@ -9,8 +9,8 @@ a.main-navigation-link
 	padding 0.25em 0.5em
 	font-weight 400
 	&:hover
-		background bg-tertiary
-		color c-primary
+		background bg-primary
+		color link-inverted
 
 .site-sidebar-list
 	padding 0
@@ -97,6 +97,13 @@ a.main-navigation-link
 
 // navigation toggle
 
+.main-navigation-toggle
+	padding 0.75em
+	line-height 1
+	&:hover
+		span
+			color link-inverted
+
 .main-navigation-toggle-open
 .main-navigation-toggle-close
 	display block
@@ -116,7 +123,7 @@ a.main-navigation-link
 	.main-navigation-toggle-close
 		display block
 
-#main-navigation
+.main-navigation
 	display none
 	&.is-open
 		display block
