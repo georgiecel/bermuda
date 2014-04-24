@@ -56,6 +56,8 @@
 					<p>The <strong>Photoblog</strong> category is currently “in-progress”. It contains posts that contain mainly photographs, or where the photographs are the focus of the post.</p>
 					<p>I had a photoblog for about four years, initially at www.o1s.net from January 2009 to February 2010, which was later located at <a href="http://indecisively.me">Indecisively.me</a>. In late 2013 I made the decision to move the posts from my photoblog here to my blog, because I had been sharing photos at <em>Hey Georgie</em> more often than on my photoblog.</p>
 					<p>As at April 2014, I am still gradually moving the posts and removing old and unnecessary posts.</p>
+				<?php elseif (is_category('Reading')) : ?>
+					<p><strong>Reading</strong> contains posts that may discuss books, certain titles that I am reading, or other literature.</p>
 				<?php elseif (is_category('School')) : ?>
 					<p>I started blogging long before the posts in this category might suggest. In fact, I was in my last year of high school when I started blogging more actively and independently. <strong>School</strong> is unlikely to contain posts that I wrote while I was actually still in school; my oldest post dates to 2009 which is when I was already in university.</p>
 					<p>Posts in this category may refer to incidents that happened while I was in school, or may tell stories from that period of time.</p>
@@ -77,6 +79,8 @@
 						<li>Twitter’s impact on users’ imagined audience and trust in social networking</li>
 					</ul>
 					<p>My major (group) project in my Masters degree was focused on creating an online network to support carers of sufferers of Alzheimer’s Disease.</p>
+				<?php elseif (is_category('Work')) : ?>
+					<p>In the <strong>Work</strong> category I post about my experiences with work, both in and out of having a job. I have had two major jobs over the years, one for a small company called The Working Party, and the one I have currently &mdash; as a front-end developer for <a href="http://freelancer.com">Freelancer.com</a>. In the past I worked at an education centre for four years, as a graphic designer and web designer in small jobs, and as a freelancer doing blog design commissions.</p>
 				<?php else : ?>
 					<p>You are currently viewing the <strong><?php single_cat_title(); ?></strong> category. This category doesn’t have a fancy custom description yet, probably because:</p>
 					<ul>
