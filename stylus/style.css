@@ -170,6 +170,90 @@ th {
   padding: 0;
 }
 @font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff") format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/RxZJdnzeo3R5zSexge8UUbO3LdcAZYWl9Si6vvxL-qU.woff") format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/7m8l7TlFO-S3VkhHuR0at7rIa-7acMAeDBVuclsi6Gc.woff") format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/1pO9eUAp8pSF8VnRTP3xnnYhjbSpvc47ee6xR_80Hnw.woff") format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/OLffGBTaF0XFOW1gnuHF0brIa-7acMAeDBVuclsi6Gc.woff") format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff") format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff") format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGCmgpmuQqK2I-L2S9cF65Ek.woff") format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightIt'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6H7XMO6S-yJpg1torQFmnv33rGVtsTkPsbDajuO5ueQw.woff") format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-It'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/M2Jd71oPJhLKp0zdtTvoM_bce-VcyLJMRR1FC9qWbU8.woff") format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold Italic'), local('SourceSansPro-SemiboldIt'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6J4LxuTxC3JbLqy8IUt0K1T3rGVtsTkPsbDajuO5ueQw.woff") format('woff');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Karla'), local('Karla-Regular'), url("http://themes.googleusercontent.com/static/fonts/karla/v3/QT0qO2FiFD03cwUe_t62t6CWcynf_cDxXwCLxiixG1c.woff") format('woff');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Karla Italic'), local('Karla-Italic'), url("http://themes.googleusercontent.com/static/fonts/karla/v3/ietJ6bjhwzrJL8NSJOc2mgLUuEpTyoUstqEm5AMlJo4.woff") format('woff');
+}
+@font-face {
   font-family: 'Muli';
   font-style: normal;
   font-weight: 300;
@@ -192,63 +276,6 @@ th {
   font-style: italic;
   font-weight: 400;
   src: local('Muli Italic'), local('Muli-Italic'), url("http://themes.googleusercontent.com/static/fonts/muli/v5/DSOyST5zmfghBgRIogdupevvDin1pK8aKteLpeZ5c0A.woff") format('woff');
-}
-@font-face {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Karla'), local('Karla-Regular'), url("http://themes.googleusercontent.com/static/fonts/karla/v3/QT0qO2FiFD03cwUe_t62t6CWcynf_cDxXwCLxiixG1c.woff") format('woff');
-}
-@font-face {
-  font-family: 'Karla';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Karla Italic'), local('Karla-Italic'), url("http://themes.googleusercontent.com/static/fonts/karla/v3/ietJ6bjhwzrJL8NSJOc2mgLUuEpTyoUstqEm5AMlJo4.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightIt'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6H7XMO6S-yJpg1torQFmnv33rGVtsTkPsbDajuO5ueQw.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGCmgpmuQqK2I-L2S9cF65Ek.woff") format('woff');
-}
-@font-face {
-  font-family: 'MissionGothicBold';
-  src: url("fonts/mission_gothic_bold-webfont.eot");
-  src: url("fonts/mission_gothic_bold-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/mission_gothic_bold-webfont.woff") format('woff'), url("fonts/mission_gothic_bold-webfont.ttf") format('truetype'), url("fonts/mission_gothic_bold-webfont.svg#mission_gothicbold") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'MissionGothicLightItalic';
-  src: url("fonts/mission_gothic_light_italic-webfont.eot");
-  src: url("fonts/mission_gothic_light_italic-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/mission_gothic_light_italic-webfont.woff") format('woff'), url("fonts/mission_gothic_light_italic-webfont.ttf") format('truetype'), url("fonts/mission_gothic_light_italic-webfont.svg#mission_gothiclight_italic") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'MissionGothicLight';
-  src: url("fonts/mission_gothic_light-webfont.eot");
-  src: url("fonts/mission_gothic_light-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/mission_gothic_light-webfont.woff") format('woff'), url("fonts/mission_gothic_light-webfont.ttf") format('truetype'), url("fonts/mission_gothic_light-webfont.svg#mission_gothiclight") format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: 'edmondsansbold';
@@ -275,11 +302,12 @@ html,
 body,
 p,
 li {
-  font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 1em;
   color: #222;
   line-height: 1.5;
+  text-rendering: optimizeLegibility;
 }
 li {
   list-style: square;
@@ -288,7 +316,7 @@ body {
   background: #67dfde;
 }
 h1 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.55em;
   line-height: 1.25;
   color: #50c8c4;
@@ -354,13 +382,11 @@ a:active {
 }
 b,
 strong {
-  font-family: "Source Sans Pro", Karla;
-  font-weight: 400;
+  font-weight: 500;
 }
 i,
 em {
-  font-family: "Source Sans Pro", Karla;
-  font-weight: 400;
+  font-weight: 300;
 }
 .site-body {
   overflow: hidden;
@@ -438,8 +464,8 @@ a.main-navigation-link,
 }
 a.main-navigation-link:hover,
 .main-navigation-toggle:hover {
-  background: #cef7f4;
-  color: #50c8c4;
+  background: #50c8c4;
+  color: #fff;
 }
 .site-sidebar-list {
   padding: 0;
@@ -540,6 +566,13 @@ a.main-navigation-link:hover,
 .next-post-link {
   text-transform: none;
 }
+.main-navigation-toggle {
+  padding: 0.75em;
+  line-height: 1;
+}
+.main-navigation-toggle:hover span {
+  color: #fff;
+}
 .main-navigation-toggle-open,
 .main-navigation-toggle-close {
   display: block;
@@ -561,10 +594,10 @@ a.main-navigation-link:hover,
 .main-navigation-toggle.is-open .main-navigation-toggle-close {
   display: block;
 }
-#main-navigation {
+.main-navigation {
   display: none;
 }
-#main-navigation.is-open {
+.main-navigation.is-open {
   display: block;
 }
 .search-form {
@@ -828,14 +861,14 @@ blockquote:before {
 @media (min-width: 600px) {
   p,
   li {
-    font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.05em;
     color: #222;
     line-height: 1.65;
   }
   h1 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.75em;
     line-height: 1.25;
     color: #50c8c4;
@@ -911,7 +944,7 @@ blockquote:before {
 @media (min-width: 700px) {
   p,
   li {
-    font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.175em;
     color: #222;
@@ -988,7 +1021,7 @@ blockquote:before {
 @media (min-width: 1000px) {
   p,
   li {
-    font-family: "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.2em;
     color: #222;
