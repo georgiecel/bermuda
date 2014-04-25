@@ -10,6 +10,7 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
+		<script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script>
 		</head>
 	<body>
 		<header class="site-header" role="banner">

@@ -5,7 +5,7 @@
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">holla@</h3>
-				<p class="site-sidebar-text">I’m Georgie, a front-end web developer, concert photographer &amp; tea obsessed pescetarian. This is my blog, <em>Hey Georgie</em>, named after my favourite band Hey Geronimo.</p>
+				<p class="site-sidebar-text">I’m Georgie, a front-end web developer, concert photographer &amp; tea obsessed pescetarian. <em>Hey Georgie</em> is named after my favourite band, Hey Geronimo.</p>
 				<p class="site-sidebar-text">
 					<a href="http://twitter.com/georgiecel">Twitter</a> |
 					<a href="http://instagram.com/georgiecel">Instagram</a> |

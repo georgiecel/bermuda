@@ -4,7 +4,8 @@
 			&copy; Hey Georgie, 2007-<?php $year = date("Y"); echo $year; ?> &middot; designed by <a href="http://georgieluhur.com">Georgie</a> &middot; &uarr; <a href="#page-top">top</a>
 		</footer>
 		<?php wp_footer(); ?>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/js/respond.js"></script>
 		<script>
 		$(document).ready(function() {
 
