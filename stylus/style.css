@@ -344,7 +344,7 @@ h3 {
   font-weight: normal;
   font-size: 1.2em;
   font-family: Karla;
-  color: #888;
+  color: #50c8c4;
   margin-bottom: -0.5em;
 }
 h4 {
@@ -356,13 +356,13 @@ h4 {
 h5 {
   font-weight: normal;
   font-size: 1.1em;
-  color: #444;
+  color: #888;
   margin-bottom: -0.5em;
 }
 h6 {
   font-weight: 300;
   font-size: 1em;
-  color: #888;
+  color: #444;
   margin-bottom: -0.5em;
 }
 a,
