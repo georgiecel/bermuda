@@ -600,10 +600,6 @@ a.main-navigation-link:hover,
 .main-navigation.is-open {
   display: block;
 }
-a.external_icon {
-  background: url("images/external.png") no-repeat scroll right center;
-  padding-right: 13px;
-}
 .search-form {
   text-align: center;
   padding-top: 10px;
@@ -795,17 +791,6 @@ blockquote:before {
   font-size: 0.75em;
   color: #888;
 }
-.footnotes {
-  font-size: 0.75em;
-  padding: 0.75em 0;
-  border-top: 1px dashed #ddd;
-}
-.footnotes li {
-  color: #888;
-}
-.footnotereverse a {
-  text-decoration: none;
-}
 .page {
   border-bottom: none;
 }
@@ -861,6 +846,40 @@ blockquote:before {
 }
 .site-footer a {
   text-decoration: none;
+}
+a.external_icon {
+  background: url("images/external.png") no-repeat scroll right center;
+  padding-right: 13px;
+}
+.footnotes {
+  font-size: 0.75em;
+  padding: 0.75em 0;
+  border-top: 1px dashed #ddd;
+}
+.footnotes li {
+  color: #888;
+}
+.footnotereverse a {
+  text-decoration: none;
+}
+.ikaz {
+  background: url("http://hey.georgie.nu/wp-content/plugins/old-post-notifier/ikaz.png") no-repeat scroll 2.2em center #fff6bf;
+  border-bottom: 2px solid #ffd324;
+  border-color: #ffd324;
+  border-top: 2px solid #ffd324;
+  color: #444;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  padding: 1em 1.5em 1em 5.5em;
+}
+.ikaz .kapat {
+  float: right;
+  position: relative;
+  right: -5px;
+  top: -5px;
+}
+.ikaz a {
+  color: #817134;
 }
 @media (min-width: 600px) {
   p,
