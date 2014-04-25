@@ -305,7 +305,7 @@ li {
   font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 1em;
-  color: #222;
+  color: #444;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 }
@@ -890,7 +890,7 @@ a.external_icon {
     font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.05em;
-    color: #222;
+    color: #444;
     line-height: 1.65;
   }
   h1 {
@@ -973,7 +973,7 @@ a.external_icon {
     font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.175em;
-    color: #222;
+    color: #444;
   }
   input,
   textarea {
@@ -1050,7 +1050,7 @@ a.external_icon {
     font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 1.2em;
-    color: #222;
+    color: #444;
   }
   .site-body {
     max-width: 84em;
