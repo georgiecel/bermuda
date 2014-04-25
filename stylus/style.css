@@ -312,6 +312,9 @@ li {
 li {
   list-style: square;
 }
+li li {
+  font-size: 1em;
+}
 body {
   background: #67dfde;
 }
