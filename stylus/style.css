@@ -600,6 +600,10 @@ a.main-navigation-link:hover,
 .main-navigation.is-open {
   display: block;
 }
+a.external_icon {
+  background: url("images/external.png") no-repeat scroll right center rgba(0,0,0,0);
+  padding-right: 13px;
+}
 .search-form {
   text-align: center;
   padding-top: 10px;
@@ -1027,7 +1031,7 @@ blockquote:before {
     color: #222;
   }
   .site-body {
-    max-width: 80em;
+    max-width: 84em;
     margin: 0 auto;
   }
   .main-navigation {
@@ -1038,5 +1042,12 @@ blockquote:before {
   }
   .site-content {
     max-width: 65em;
+  }
+}
+@media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
+  a.external_icon {
+    padding-right: 13px;
+    background: url("images/external@2x.png") no-repeat scroll right center !important;
+    background-size: 10px 10px !important;
   }
 }
