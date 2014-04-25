@@ -350,7 +350,7 @@ h3 {
 h4 {
   font-weight: normal;
   font-size: 1.2em;
-  color: #f73992;
+  color: #444;
   margin-bottom: -0.5em;
 }
 h5 {
@@ -362,8 +362,9 @@ h5 {
 h6 {
   font-weight: 300;
   font-size: 1em;
-  color: #444;
+  color: #3c9493;
   margin-bottom: -0.5em;
+  margin-top: 1.5em;
 }
 a,
 a:link {
@@ -646,7 +647,8 @@ a.main-navigation-link:hover,
 .category-listing .post-thumbnail-wrapper {
   display: none;
 }
-.category-title {
+.category-title,
+.error-title {
   text-align: left;
 }
 .search-listing-intro,
@@ -804,7 +806,8 @@ blockquote:before {
   font-size: 0.75em;
   color: #888;
 }
-.page {
+.page,
+.error-post {
   border-bottom: none;
 }
 .comments-list .comment-meta {
