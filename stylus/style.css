@@ -342,18 +342,28 @@ h2 {
 }
 h3 {
   font-weight: normal;
-  font-size: 1.3em;
-  font-style: italic;
+  font-size: 1.2em;
+  font-family: Karla;
   color: #888;
+  margin-bottom: -0.5em;
 }
 h4 {
+  font-weight: normal;
   font-size: 1.2em;
+  color: #f73992;
+  margin-bottom: -0.5em;
 }
 h5 {
+  font-weight: normal;
   font-size: 1.1em;
+  color: #444;
+  margin-bottom: -0.5em;
 }
 h6 {
+  font-weight: 300;
   font-size: 1em;
+  color: #888;
+  margin-bottom: -0.5em;
 }
 a,
 a:link {
@@ -894,31 +904,18 @@ a.external_icon {
     line-height: 1.65;
   }
   h1 {
-    font-weight: 500;
     font-size: 1.75em;
-    line-height: 1.25;
-    color: #50c8c4;
     text-align: center;
     margin: 0.5em auto;
   }
-  .page h1 {
-    text-align: left;
-  }
   h2 {
-    font-weight: normal;
-    font-size: 1.5em;
-    line-height: 1.25;
-    color: #50c8c4;
-    font-family: Karla;
-  }
-  .page h2 {
-    text-align: left;
-  }
-  h3 {
-    font-weight: normal;
     font-size: 1.45em;
-    font-style: italic;
-    color: #888;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.3em;
   }
   .site-content {
     padding: 1.25em 3em;
