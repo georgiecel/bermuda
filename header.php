@@ -12,7 +12,7 @@
 		<?php wp_head(); ?>
 		<script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script>
 		</head>
-	<body>
+	<body id="site-top">
 		<header class="site-header" role="banner">
 			<!--<h1 class="site-title">Hey Georgie</h1>-->
 			<a class="main-navigation-toggle" href="#">
