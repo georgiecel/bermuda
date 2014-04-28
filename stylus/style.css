@@ -514,7 +514,8 @@ a.main-navigation-link:hover,
   font-size: 0.9em;
 }
 .more-link,
-.comment-reply-link {
+.comment-reply-link,
+.car-toggler {
   display: inline-block;
   background: #f73992;
   padding: 0.25em 0.5em;
@@ -522,12 +523,15 @@ a.main-navigation-link:hover,
 }
 .more-link:link,
 .comment-reply-link:link,
+.car-toggler:link,
 .more-link:visited,
-.comment-reply-link:visited {
+.comment-reply-link:visited,
+.car-toggler:visited {
   color: #fff;
 }
 .more-link:hover,
-.comment-reply-link:hover {
+.comment-reply-link:hover,
+.car-toggler:hover {
   background: #50c8c4;
 }
 .prev-link,
@@ -862,6 +866,9 @@ blockquote:before {
 }
 .site-footer a {
   text-decoration: none;
+}
+.car-toggler {
+  font-family: Karla;
 }
 a.external_icon {
   background: url("images/external.png") no-repeat scroll right center;
