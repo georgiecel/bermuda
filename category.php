@@ -15,16 +15,9 @@
 				<?php elseif (is_category('Brandon')) : ?>
 					<p>Posts in this category mention my younger brother <strong>Brandon</strong> who recently started a Bachelor of Arts in Pschology. We used to fight and argue a lot when we were younger, but got along better as we grew up.</p>
 					<p>We have a lot of funny conversations, and although we have varied interests, we like to share thoughts about music, social events, restaurants, and technology. He calls me Cici (chie-chie) about 99% of the time &mdash; “Cici” means “big sister” in Indonesian &mdash; the other 1% of the time is some variant like Ci, Chip, or Chips.</p>
-				<?php elseif (is_category('Cooking')) : ?>
-					<p>I am a really bad cook. <strong>Cooking</strong> usually covers a lot of what James and I cook together. We love trying new foods and mixing up different flavours. Also, when I say I’m a bad cook, I just mean that I can’t really cook. My preference strays towards raw/unprocessed foods, keeping things very simple &mdash; boil-a-handful-of-carrots-with-spices kind of simple, so I don’t really know how to cook something extravagant.</p>
 				<?php elseif (is_category('Daniel')) : ?>
 					<p><strong>Daniel</strong> is a friend of mine who resides in Singapore. He is a moderator on <a href="http://stackoverflow.com">Stack Overflow</a> and is often known as BoltClock online. He’s a good listener, a great writer, and an even better friend!</p>
 					<p>Thanks to Daniel I now have a secret dream of being a member of Australian children’s musical group Hi-5, but don’t tell anyone that.</p>
-				<?php elseif (is_category('Digital Media Technologies')) : ?>
-					<p><strong>Digital Media Technologies</strong> is a pretty much defunct category. It was used in 2012 when I studied a subject of the same name in university. We were required to maintain a blog discussing our experiences and discoveries, and any progress on our work. Since I already had a blog, I just made a new category for these specific posts.</p>
-					<p>Some links in these posts may lead to broken pages; I used to host my assignments and tasks here as well, but be aware that the page styles may be broken.</p>
-				<?php elseif (is_category('Doctor Who')) : ?>
-					<p><strong>Doctor Who</strong> is my favourite television show. In fact, it’s probably the only one I watch regularly. I don’t really like television. I was convinced by <a href="/category/ryan/">Ryan</a> and <a href="/category/seb/">Seb</a> to watch the show, because around the time it was the talk of the town (around the time Matt Smith became the new Doctor). <a href="/category/james/">James</a> also likes Doctor Who. My first Doctor was essentially Nine, but I love Ten and Eleven just as much. I guess they all have their good points. ;)</p>
 				<?php elseif (is_category('Dylan')) : ?>
 					<p><strong>Dylan</strong> is one of my friends from high school. We catch up every now and then, pretty much always at a gig or a concert, over a couple of drinks. I can talk to him about pretty much anything, as he’s an open, non-judgemental guy. We love talking about music.</p>
 				<?php elseif (is_category('Family')) : ?>
@@ -43,8 +36,8 @@
 				<?php elseif (is_category('Fern')) : ?>
 					<p>Whenever mentioning <strong>Fern</strong>, I tend to also mention <a href="/category/johnny/">Johnny</a> &mdash; the two are my photography buddies who studied photography with me in university. It should also be known that Fern is a guy; his full name is Fernando, and he does get called Nando, but that is an annoying extra syllable for the lazies.</p>
 					<p>We have common interests in Futurama and music.</p>
-				<?php elseif (is_category('Fifty 50: Diptychs')) : ?>
-					<p>The category <strong>Fifty 50: Diptychs</strong> contains a handful of photographic diptychs that I completed as part of a segment at chasethelight.org. I only did these for one month, but I think that I might do more of these in the future.</p>
+				<?php elseif (is_category('Food')) : ?>					
+					<p><strong>Food</strong> has posts about restaurants I’ve been to, general posts about foods, meals or diet. I am a really bad cook. I previously had a small category called Cooking on my blog before merging it into the Food category. It covered a lot of what James and I cook together. We love trying new foods and mixing up different flavours. Also, when I say I’m a bad cook, I just mean that I can’t really cook. My preference strays towards raw/unprocessed foods, keeping things very simple &mdash; boil-a-handful-of-carrots-with-spices kind of simple, so I don’t really know how to cook something extravagant.</p>
 				<?php elseif (is_category('Friends')) : ?>
 					<p>Not <em>really</em> suggesting that they aren’t special, posts in <strong>Friends</strong> mention friends who may not have their own category on my blog. They may not be people I spend a lot of time with, and thus I have not created a category especially for them. I may also mention friends in general.</p>
 					<p>For your information, friends that do have their own categories include <a href="/category/james/">James</a>, <a href="/category/lilian/">Lilian</a>, <a href="/category/tristan/">Tristan</a>, <a href="/category/dylan/">Dylan</a>, <a href="/category/daniel/">Daniel</a>, <a href="/category/seb/">Seb</a>, <a href="/category/rachel/">Rachel</a>, <a href="/category/ryan/">Ryan</a>, <a href="/category/mike/">Mike</a>, <a href="/category/johnny/">Johnny</a>, <a href="/category/fern/">Fern</a> and <a href="/category/kiah/">Kiah</a>.</p>
@@ -55,21 +48,11 @@
 					<p>In particular, I have had two main issues. Firstly, I had a twelve-year battle with high cholesterol despite being extremely thin. I was constantly told that genetics did not contribute to my condition. I tried every diet on the planet to reduce my cholesterol levels, but to no avail.  Visiting a new doctor in 2013 led me to discover that my condition was indeed genetic, and I was put on medication.</p>
 					<p>My second issue is related to depression, which I suffered from since 2004. I went through bouts of being suicidal, and self-harmed a lot of the time. I visited a counsellor in 2008, and began taking medication in 2011. I stopped in 2013, feeling a lot better.</p>
 					<p>Occasionally, I still get anxious, and there are times I have been extremely stressed and on edge. The last time I recall feeling suicidal was in late 2013, whereupon I called a friend to talk to. It was the first time in about a year that I had had thoughts of suicide.</p>
-				<?php elseif (is_category('Hong Kong')) : ?>
-					<p>I visited <strong>Hong Kong</strong> for the second time, in December 2013. I first visited in about 1996 when I was six years old, and apparently lost my first tooth there. I really liked the McDonald’s Happy Meal toys.</p>
-					<p>My boyfriend James and I went there for Christmas for about a week. Posts in this category are about our travels.</p>
-				<?php elseif (is_category('Indonesia')) : ?>
-					<p>My parents are from <strong>Indonesia</strong>, and a lot of my family lives there. The last time I visited Indonesia was in 2012, when one of my cousins got married. I don’t really like Indonesia in general, mostly because I get strange looks and weird comments because I look really pale compared to people there, and there, pale people are sometimes considered attractive.</p>
-					<p>Posts in this category are mostly from my experiences in Indonesia.</p>
 				<?php elseif (is_category('Internet')) : ?>
 					<p>The <strong>Internet</strong> category contains posts that discuss things that might happen online/over the internet. It might also include my opinions or reviews about services or applications. For this reason, posts here may be easy to relate to.</p>
 				<?php elseif (is_category('James')) : ?>
 					<p>I properly met <strong>James</strong> in 2004 when he had a fake map and pretended he knew where me and my friend Jennifer were going. We soon discovered his trick.</p>
 					<p>In 2007, we became very good friends. James helped me through a rough patch with another friend, and became my shoulder to cry on. We started a relationship in early 2008 and are still together. He’s been there for the good times and the bad, and has been there for me when I have needed it.</p>
-				<?php elseif (is_category('Japan')) : ?>
-					<p>I adore <strong>Japan</strong>. I studied the language in high school for about four years. I don’t remember very much of the vocabulary, but I have very good reading ability of hiragana and katakana characters. Kanji not so much, though.</p>
-					<p>I absolutely adore Japanese cuisine and culture. The cuisine really suits me because I am a pescetarian and don’t eat land meat or red meat; I do, however, eat fish, shellfish and white sea meat.</p>
-					<p>My boyfriend James and I visited Japan in December 2013 when it was winter. Posts in this category are about our travels.</p>
 				<?php elseif (is_category('Johnny')) : ?>
 					<p>Whenever mentioning <strong>Johnny</strong>, I tend to also mention <a href="/category/fern/">Fern</a> &mdash; the two are my photography buddies who studied photography with me in university. Johnny used to give me rides all the time because he doesn’t live far from me.</p>
 					<p>We have common interests in Futurama. That is all.</p>
@@ -86,9 +69,6 @@
 					<p>The idea was greatly loved by everyone, and though I think I have removed the pages with all of everyone’s answers, you can still view the comments on the posts to see what other people have written.</p>
 				<?php elseif (is_category('Mike')) : ?>
 					<p><strong>Mike</strong> is one of my university friends, who I got to know through <a href="/category/james/">James</a>. He is also into photography, and we have spent time hanging out as a group. </p>
-				<?php elseif (is_category('Minecraft')) : ?>
-					<p>This is a pretty small category. <strong>Minecraft</strong> is a sandbox game I used to play with <a href="/category/james/">James</a> and <a href="/category/mike/">Mike</a>. We built a whole city with a handful of houses, a very long train line, and some underground paths/caves (that was mostly my doing; I loved digging around and building things underground).</p>
-					<p>I haven’t played Minecraft in a while, but I still love the game, of course.</p>
 				<?php elseif (is_category('Music')) : ?>
 					<p>The <strong>Music</strong> category is one of my biggest categories. Posts in this category are often reviews of concerts I have been to, general discussion about bands I like, my experience playing piano or other instruments, or photos of concerts. Photos of concerts are likely to be in the <a href="/category/photoblog/">Photoblog</a> category as well.</p>
 				<?php elseif (is_category('Photoblog')) : ?>
@@ -104,8 +84,6 @@
 					<p>She’s been an absolutely marvellous friend and I can’t wait until we meet and have a great time. It is also a running joke that we travel to see each other by purple kayak across the Pacific Ocean. (Thanks Google Maps for suggesting this route when we asked for walking directions.)
 				<?php elseif (is_category('Reading')) : ?>
 					<p><strong>Reading</strong> contains posts that may discuss books, certain titles that I am reading, or other literature.</p>
-				<?php elseif (is_category('Reviews')) : ?>
-					<p><strong>Reviews</strong> contains a handful of reviews. Not that many, but I may review some products, music or concerts.</p>
 				<?php elseif (is_category('Ryan')) : ?>
 					<p><strong>Ryan</strong> is one of my university friends, known as the librarian. During university we hung out a lot and did some group work together; it was always a hilarity when he stood next to me and it looked pretty funny because he’s pretty much twice my height.</p>
 					<p>We have had a lot of funny moments together, but are definitely due for a meet-up since he moved to a town four hours out of Sydney.</p>
@@ -121,6 +99,11 @@
 					<p>The Stories category was present even on blogs I owned before <em>Hey Georgie</em>, but was often meshed with a category I used to have called <em>idiots</em>, which detailed annoying encounters with people on public transport.</p>
 				<?php elseif (is_category('Things I Miss')) : ?>
 					<p><strong>Things I Miss</strong> is an occasional segment about things that I miss. It could include places I have been, things I bought as a child, things I used to do, things that have become obsolete or are no longer produced like old television shows, foods, toys, and the like.</p>
+				<?php elseif (is_category('Travel')) : ?>
+					<p>Since I wanted to avoid creating a category for each country I visited, I created <strong>Travel</strong> &mdash; that way I can also include posts about local trips or day trips. Some countries that may be mentioned in this category include Singapore, Indonesia, Hong Kong and Japan.</p>
+					<p>My parents are from Indonesia, and a lot of my family lives there. The last time I visited Indonesia was in 2012, when one of my cousins got married. I don’t really like Indonesia in general, mostly because I get strange looks and weird comments because I look really pale compared to people there, and there, pale people are sometimes considered attractive.</p>
+					<p>I visited Hong Kong for the second time, in December 2013. I first visited in about 1996 when I was six years old, and apparently lost my first tooth there. I really liked the McDonald’s Happy Meal toys.</p>
+					<p>I studied Japanese in high school for about four years. I don’t remember very much of the vocabulary, but I have very good reading ability of hiragana and katakana characters. Kanji not so much, though. I visited Japan in 2013. I absolutely adore their cuisine and culture.</p>
 				<?php elseif (is_category('Tristan')) : ?>
 					<p>Also known as Toffeecake, Honeydew or Tris, <strong>Tristan</strong> is my sweetest, dearest friend who also happens to live down the road from me. Not technically neighbours, but the definition works. We met in 2013, and I don’t exaggerate when I say he helped me find myself. &hearts; He’s pretty much my best friend.</p>
 					<p>Tristan and I are completely ridiculous in each other’s company &mdash; we’ll go to gigs together and dance; we’ll sing; he’ll probably try to tickle me occasionally; we’ll call each other names (both nasty and cheesy). But honestly, I think I would be lost without him.</p>
