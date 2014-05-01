@@ -320,7 +320,7 @@ body {
 }
 h1 {
   font-weight: 500;
-  font-size: 1.55em;
+  font-size: 1.45em;
   line-height: 1.25;
   color: #50c8c4;
 }
@@ -411,6 +411,13 @@ em {
   padding: 1em 2%;
   font-size: 0.8em;
   line-height: 1;
+}
+.site-logo {
+  display: block;
+  width: 120px;
+  height: 105px;
+  background: url("images/logo.png") no-repeat scroll center top;
+  margin: 1.5em auto;
 }
 .site-sidebar-heading {
   color: #fff;
@@ -641,6 +648,9 @@ a.main-navigation-link:hover,
 .search-form-submit:hover {
   background: #cef7f4;
   color: #50c8c4;
+}
+.search-listing .post {
+  border-bottom: none;
 }
 .search-listing .post-title {
   text-align: left;
@@ -986,16 +996,17 @@ a.external_icon {
   textarea {
     width: 40%;
   }
+  .site-header {
+    background: #cef7f4;
+  }
+  .site-header .site-logo {
+    display: none;
+  }
   .main-navigation-toggle {
     display: none;
   }
   #main-navigation {
     display: block;
-  }
-}
-@media (min-width: 850px) {
-  .site-header {
-    background: #cef7f4;
   }
   .main-navigation {
     margin: 0.75em auto;
@@ -1009,6 +1020,8 @@ a.external_icon {
     background: #fff;
     color: #3c9493;
   }
+}
+@media (min-width: 850px) {
   .site-sidebar {
     display: block;
   }
@@ -1075,5 +1088,11 @@ a.external_icon {
     padding-right: 13px;
     background: url("images/external@2x.png") no-repeat scroll right center !important;
     background-size: 10px 10px !important;
+  }
+  .site-logo {
+    display: block;
+    width: 120px;
+    height: 105px;
+    background: url("images/logo@2x.png") no-repeat scroll center top;
   }
 }

@@ -79,16 +79,16 @@
 	textarea
 		width 40%
 
+	.site-header
+		background bg-tertiary
+		.site-logo
+			display none
+
 	.main-navigation-toggle
 		display none
 
 	#main-navigation
 		display block
-
-@media (min-width: 850px)
-
-	.site-header
-		background bg-tertiary
 
 	.main-navigation
 		margin 0.75em auto
@@ -100,6 +100,8 @@
 		&:hover
 			background link-inverted
 			color c-primary-dark
+
+@media (min-width: 850px)
 
 	.site-sidebar
 		display block
@@ -165,3 +167,9 @@
 			padding-right 13px
 			background url('images/external@2x.png') no-repeat scroll right center !important;
 			background-size 10px 10px !important
+
+		.site-logo
+			display block
+			width 120px
+			height 105px
+			background url('images/logo@2x.png') no-repeat scroll center top

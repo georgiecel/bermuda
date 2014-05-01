@@ -1,5 +1,6 @@
 		<aside class="site-sidebar">
 			<!-- Insert logo here -->
+			<div class="site-logo"></div>
 			<div class="site-search">
 				<?php get_search_form(); ?>
 			</div>

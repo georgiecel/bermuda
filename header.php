@@ -14,7 +14,7 @@
 		</head>
 	<body id="site-top">
 		<header class="site-header" role="banner">
-			<!--<h1 class="site-title">Hey Georgie</h1>-->
+			<div class="site-logo"></div>
 			<a class="main-navigation-toggle" href="#">
 				<span class="main-navigation-toggle-open">open menu</span>
 				<span class="main-navigation-toggle-close">close menu</span>
