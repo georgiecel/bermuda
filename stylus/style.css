@@ -878,8 +878,9 @@ blockquote:before {
 }
 .comments-list .comment-meta {
   text-align: left;
-  min-height: 75px;
-  margin-left: 75px;
+  min-height: 55px;
+  margin-left: 65px;
+  font-size: 0.85em;
 }
 .comments-list > .comment {
   border-bottom: 1px solid #bbb;
@@ -896,6 +897,7 @@ blockquote:before {
 }
 .avatar {
   display: block;
+  width: 45px;
 }
 .comment-author {
   margin: 0;
@@ -1157,6 +1159,14 @@ a.external_icon {
   }
   .post-figure + .post-figure {
     margin-top: 1.5em;
+  }
+  .comments-list .comment-meta {
+    min-height: 75px;
+    margin-left: 75px;
+    font-size: 1em;
+  }
+  .avatar {
+    width: 65px;
   }
 }
 @media (min-width: 1000px) {

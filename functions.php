@@ -267,7 +267,6 @@
 						<a class="comment-author-link" href="<?php comment_author_url(); ?>" itemprop="author"><?php comment_author(); ?></a>
 					</h2>
 					<time class="comment-meta-item" datetime="<?php comment_date('Y-m-d') ?>T<?php comment_time('H:iP') ?>" itemprop="datePublished"><?php comment_date('jS F Y') ?>, <a href="#comment-<?php comment_ID() ?>" itemprop="url"><?php comment_time() ?></a></time>
-					<?php edit_comment_link('Edit this comment','',''); ?>
 					<?php if ($comment->comment_approved == '0') : ?>
 					<p class="comment-meta-item">Your comment is awaiting moderation.</p>
 					<?php endif; ?>
