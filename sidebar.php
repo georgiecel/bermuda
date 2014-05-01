@@ -6,11 +6,6 @@
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">holla@</h3>
 				<p class="site-sidebar-text">I’m Georgie, a front-end web developer, concert photographer &amp; tea obsessed pescetarian. <em>Hey Georgie</em> is named after my favourite band, Hey Geronimo.</p>
-				<p class="site-sidebar-text">
-					<a href="http://twitter.com/georgiecel">Twitter</a> |
-					<a href="http://instagram.com/georgiecel">Instagram</a> |
-					<a href="http://notegraphy.com/georgiecel">Notegraphy</a>
-				</p>
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">Regularly Updated</h3>
@@ -34,5 +29,43 @@
 						<a href="/category/things-i-miss">Things I Miss</a>
 					</li>
 				</ul>
+			</div>
+			<div class="site-sidebar-widget">
+				<h3 class="site-sidebar-heading">Find me places</h3>
+				<ul class="site-sidebar-list">
+					<li class="site-sidebar-list-item">
+						<a href="http://twitter.com/georgiecel">Twitter</a>
+					</li>
+					<li class="site-sidebar-list-item">
+						<a href="http://last.fm/user/jazzmoodles">Last.fm</a>
+					</li>
+					<li class="site-sidebar-list-item">
+						<a href="http://instagram.com/georgiecel/">Instagram</a>
+					</li>
+					<li class="site-sidebar-list-item">
+						<a href="http://notegraphy.com/georgiecel">Notegraphy</a>
+					</li>
+					<li class="site-sidebar-list-item">
+						<a href="http://love.georgie.nu">Carbon Affair (fanlistings)</a>
+					</li>
+					<li class="site-sidebar-list-item">
+						<a href="http://by.georgie.nu">by Georgie (dev stuff)</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-sidebar-widget">
+				<h3 class="site-sidebar-heading">Subscribe to Hey Georgie</h3>
+			<?php $status = isset( $_REQUEST['subscribe'] ) ? $_REQUEST['subscribe'] : false; ?>
+			<?php if ( $status == 'invalid_email' ) : ?>
+				<p class="site-sidebar-text">You’ve entered an invalid email address, please try again.</p>
+			<?php elseif ( $status == 'success' ) : ?>
+				<p class="site-sidebar-text">Thank you for subscribing! &hearts; Please check your email to confirm.</p>
+			<?php else : ?>
+			    <form class="subscribe-form" method="POST">
+			    	<input type="hidden" name="my-form-action" value="subscribe" />
+					<input class="subscribe-form-input" name="my-email" value="" placeholder="Type your email address" />
+					<button class="subscribe-form-submit" type="submit">Go!</button>
+				</form>
+			<?php endif; ?>
 			</div>
 		</aside>

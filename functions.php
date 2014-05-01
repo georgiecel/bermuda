@@ -295,6 +295,46 @@
 
 	}
 
+	// subscription form 
+
+	add_action( 'init', 'process_my_subscription_form' );
+	function process_my_subscription_form() {
+    	if ( isset( $_POST['my-form-action'] ) && $_POST['my-form-action'] == 'subscribe' ) {
+			$email = $_POST['my-email'];
+			$subscribe = Jetpack_Subscriptions::subscribe( $email, 0, false );
+			// check subscription status
+			if ( is_wp_error( $subscribe ) ) {
+				$error = $subscribe->get_error_code();
+			} else {
+				$error = false;
+			    foreach ( $subscribe as $response ) {
+			        if ( is_wp_error( $response ) ) {
+						$error = $response->get_error_code();
+						break;
+					}
+				}
+			}
+
+			if ( $error ) {
+			    switch( $error ) {
+			        case 'invalid_email':
+						$redirect = add_query_arg( 'subscribe', 'invalid_email' );
+			            break;
+			        case 'active': case 'pending':
+						$redirect = add_query_arg( 'subscribe', 'already' );
+			            break;
+			        default:
+						$redirect = add_query_arg( 'subscribe', 'error' );
+			            break;
+				}
+			} else {
+				$redirect = add_query_arg( 'subscribe', 'success' );
+			}
+
+			wp_safe_redirect( $redirect );
+		}
+	}
+
 	// remove unnecessary bloaty things in the header
 
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
