@@ -7,15 +7,17 @@
 		<script src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
 		<script src="<?php bloginfo('template_url'); ?>/js/respond.js"></script>
 		<script>
-		$(document).ready(function() {
+		(function($) {
+			$(document).ready(function() {
 
-			$('.main-navigation-toggle').click(function () {
-				$('#main-navigation').toggleClass('is-open');
-				$('.main-navigation-toggle').toggleClass('is-open');
-				e.preventDefault();
+				$('.main-navigation-toggle').click(function (e) {
+					$('#main-navigation').toggleClass('is-open');
+					$('.main-navigation-toggle').toggleClass('is-open');
+					e.preventDefault();
+				});
+				
 			});
-			
-		});
+		})(jQuery);
 		</script>
 	</body>
 </html>
