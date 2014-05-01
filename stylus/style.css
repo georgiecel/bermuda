@@ -414,6 +414,7 @@ em {
   height: 105px;
   background: url("images/logo.png") no-repeat scroll center top;
   margin: 1.5em auto;
+  text-indent: -9999em;
 }
 .site-logo-mini {
   display: block;
