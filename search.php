@@ -23,7 +23,7 @@
 				<?php previous_posts_link('Newer Entries &raquo;') ?>
 			</nav>
 			<?php else : ?>
-				<article class="post">
+				<article class="post error-post">
 					<h1 class="post-title">Search Results</h1>
 					<p>Sorry, your search for <em><?php echo wp_specialchars($s); ?></em> did not return any results.</p>	
 					<h2>Browse blog categories</h2>

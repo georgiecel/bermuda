@@ -626,9 +626,6 @@ a.main-navigation-link:hover,
 .site-sidebar-text {
   color: #3c9493;
 }
-.search-listing .post {
-  border-bottom: none;
-}
 .search-listing .post-title {
   text-align: left;
 }
