@@ -31,6 +31,21 @@
 				</ul>
 			</div>
 			<div class="site-sidebar-widget">
+				<h3 class="site-sidebar-heading">Subscribe to Hey Georgie</h3>
+			<?php $status = isset( $_REQUEST['subscribe'] ) ? $_REQUEST['subscribe'] : false; ?>
+			<?php if ( $status == 'invalid_email' ) : ?>
+				<p class="site-sidebar-text">You’ve entered an invalid email address, please try again.</p>
+			<?php elseif ( $status == 'success' ) : ?>
+				<p class="site-sidebar-text">Thank you for subscribing! &hearts; Please check your email to confirm.</p>
+			<?php else : ?>
+			    <form class="subscribe-form" method="POST">
+			    	<input type="hidden" name="my-form-action" value="subscribe" />
+					<input class="subscribe-form-input" name="my-email" value="" placeholder="Type your email address" />
+					<button class="subscribe-form-submit" type="submit">Go!</button>
+				</form>
+			<?php endif; ?>
+			</div>
+			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">Find me places</h3>
 					<a class="site-sidebar-icon" href="http://twitter.com/georgiecel"><i class="icon-twitter"></i></a>
 					<a class="site-sidebar-icon" href="http://last.fm/user/jazzmoodles"><i class="icon-lastfm"></i></a>
@@ -49,20 +64,5 @@
 						<a href="http://by.georgie.nu">by Georgie (dev stuff)</a>
 					</li>
 				</ul>
-			</div>
-			<div class="site-sidebar-widget">
-				<h3 class="site-sidebar-heading">Subscribe to Hey Georgie</h3>
-			<?php $status = isset( $_REQUEST['subscribe'] ) ? $_REQUEST['subscribe'] : false; ?>
-			<?php if ( $status == 'invalid_email' ) : ?>
-				<p class="site-sidebar-text">You’ve entered an invalid email address, please try again.</p>
-			<?php elseif ( $status == 'success' ) : ?>
-				<p class="site-sidebar-text">Thank you for subscribing! &hearts; Please check your email to confirm.</p>
-			<?php else : ?>
-			    <form class="subscribe-form" method="POST">
-			    	<input type="hidden" name="my-form-action" value="subscribe" />
-					<input class="subscribe-form-input" name="my-email" value="" placeholder="Type your email address" />
-					<button class="subscribe-form-submit" type="submit">Go!</button>
-				</form>
-			<?php endif; ?>
 			</div>
 		</aside>

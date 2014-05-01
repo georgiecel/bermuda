@@ -13,6 +13,6 @@
 				<p>They were simply not up to standard, and I decided to remove them. They were not responsive/mobile friendly, the HTML was not so well formatted, the CSS could have been minified, and the themes overall could be optimised. At the time I created them, they were quite well done, but in the year 2013, nope. But I was kind enough to save the PHP and WordPress versions <a href="https://www.dropbox.com/sh/fk65c586cdinjqy/uVTnaGgyhn">on Dropbox</a>, so have at it, and you’re welcome.</p>
 				<h4>Are you going to make more free WordPress themes?</h4>
 				<p>No. I’m a busy girl. <em>*cries*</em> Frankly I don’t have time to make free things for people because it takes up a lot of my time and is honestly not a priority right now.</p>
-				<p>However, I do paid custom designs if you would like to work with me. <a href="/contact/">Check out my portfolio.</a></p>
+				<p>However, I do paid custom designs if you would like to work with me. <a href="http://georgieluhur.com">Check out my portfolio.</a></p>
 			</div>
 		<?php get_footer(); ?>
