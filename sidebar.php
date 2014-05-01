@@ -36,8 +36,4 @@
 					</li>
 				</ul>
 			</div>
-			<div class="site-sidebar-widget">
-				<h3 class="site-sidebar-heading">bermuda</h3>
-				<p class="site-sidebar-text">I built this theme from scratch, and named it <strong>bermuda</strong>. What does “bermuda” make you think of?</p>
-			</div>
 		</aside>

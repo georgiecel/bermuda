@@ -25,6 +25,7 @@
 				<a class="main-navigation-link" href="/lzrgun-manifesto">The LZRGUN Manifesto</a>
 				<a class="main-navigation-link" href="/poetry/">Poetry</a>
 				<a class="main-navigation-link" href="/links/">Links</a>
+				<a class="main-navigation-link" href="/archives/">Archives</a>
 			</nav>
 		</header>
 		<div class="site-body">
