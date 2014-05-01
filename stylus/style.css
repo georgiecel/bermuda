@@ -408,34 +408,6 @@ em {
   font-size: 0.8em;
   line-height: 1;
 }
-.site-logo {
-  display: block;
-  width: 120px;
-  height: 105px;
-  background: url("images/logo.png") no-repeat scroll center top;
-  margin: 1.5em auto;
-  text-indent: -9999em;
-}
-.site-logo-mini {
-  display: block;
-  width: 60px;
-  height: 53px;
-  background: url("images/logo-mini.png") no-repeat scroll center top;
-  margin: 1em auto;
-  text-indent: -9999em;
-}
-.site-sidebar-heading {
-  color: #fff;
-  font-family: Karla;
-  margin-bottom: 0.5em;
-  margin-top: 1.5em;
-}
-.site-sidebar-heading + .site-sidebar-text {
-  margin-top: 0;
-}
-.site-sidebar-text {
-  color: #3c9493;
-}
 .site-content {
   padding: 1.25em;
   background: #fefefe;
@@ -630,53 +602,29 @@ a.main-navigation-link:hover,
 .main-navigation.is-open {
   display: block;
 }
-.search-form,
-.subscribe-form {
-  overflow: hidden;
-  margin-top: 30px;
-}
-.subscribe-form {
-  margin-top: 15px;
-}
-.search-form-input,
-.subscribe-form-input {
-  background: #cef7f4;
-  float: left;
-  height: 34px;
-  width: 71%;
-  vertical-align: middle;
-  font-family: Karla;
-  border: none;
-  color: #3c9493;
-  font-size: 1.1em;
-}
-.search-form-input:hover,
-.subscribe-form-input:hover,
-.search-form-input:focus,
-.subscribe-form-input:focus {
-  background: #fff;
-}
-.subscribe-form-input {
-  width: 80%;
-}
-.search-form-submit,
-.subscribe-form-submit {
-  background: #50c8c4;
-  float: right;
-  height: 34px;
-  width: 29%;
+.site-sidebar-heading {
   color: #fff;
-  font-size: 1.1em;
-  vertical-align: middle;
-  padding: 5px 10px;
+  font-family: Karla;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
 }
-.search-form-submit:hover,
-.subscribe-form-submit:hover {
-  background: #fff;
-  color: #50c8c4;
+.site-sidebar-heading + .site-sidebar-text {
+  margin-top: 0;
 }
-.subscribe-form-submit {
-  width: 20%;
+.site-sidebar-icon {
+  display: inline-block;
+}
+.site-sidebar-icon i {
+  display: block;
+  padding: 0.25em;
+  font-size: 1.5em;
+  color: #3c9493;
+}
+.site-sidebar-icon i:hover {
+  color: #fff;
+}
+.site-sidebar-text {
+  color: #3c9493;
 }
 .search-listing .post {
   border-bottom: none;
@@ -751,6 +699,54 @@ input[type="submit"]:hover {
   background: #50c8c4;
   color: #fff;
 }
+.search-form,
+.subscribe-form {
+  overflow: hidden;
+  margin-top: 30px;
+}
+.subscribe-form {
+  margin-top: 15px;
+}
+.search-form-input,
+.subscribe-form-input {
+  background: #cef7f4;
+  float: left;
+  height: 34px;
+  width: 71%;
+  vertical-align: middle;
+  font-family: Karla;
+  border: none;
+  color: #3c9493;
+  font-size: 1.1em;
+}
+.search-form-input:hover,
+.subscribe-form-input:hover,
+.search-form-input:focus,
+.subscribe-form-input:focus {
+  background: #fff;
+}
+.subscribe-form-input {
+  width: 80%;
+}
+.search-form-submit,
+.subscribe-form-submit {
+  background: #50c8c4;
+  float: right;
+  height: 34px;
+  width: 29%;
+  color: #fff;
+  font-size: 1.1em;
+  vertical-align: middle;
+  padding: 5px 10px;
+}
+.search-form-submit:hover,
+.subscribe-form-submit:hover {
+  background: #fff;
+  color: #50c8c4;
+}
+.subscribe-form-submit {
+  width: 20%;
+}
 .contact-submit {
   margin-top: 0;
 }
@@ -763,6 +759,22 @@ img.about-georgie {
   margin: 1em auto;
   padding: 3px;
   border: 1px solid #ddd;
+}
+.site-logo {
+  display: block;
+  width: 120px;
+  height: 105px;
+  background: url("images/logo.png") no-repeat scroll center top;
+  margin: 1.5em auto;
+  text-indent: -9999em;
+}
+.site-logo-mini {
+  display: block;
+  width: 60px;
+  height: 53px;
+  background: url("images/logo-mini.png") no-repeat scroll center top;
+  margin: 1em auto;
+  text-indent: -9999em;
 }
 .post-figure,
 .figure-alignright,
@@ -962,6 +974,44 @@ a.external_icon {
 }
 .ikaz a {
   color: #817134;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?56qzmq");
+  src: url("fonts/icomoon.eot?#iefix56qzmq") format('embedded-opentype'), url("fonts/icomoon.woff?56qzmq") format('woff'), url("fonts/icomoon.ttf?56qzmq") format('truetype'), url("fonts/icomoon.svg?56qzmq#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-instagram:before {
+  content: "\e600";
+}
+.icon-twitter:before {
+  content: "\e601";
+}
+.icon-steam:before {
+  content: "\e602";
+}
+.icon-linkedin:before {
+  content: "\e603";
+}
+.icon-lastfm:before {
+  content: "\e604";
+}
+.icon-delicious:before {
+  content: "\e605";
 }
 @media (min-width: 600px) {
   p,

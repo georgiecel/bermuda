@@ -32,16 +32,13 @@
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">Find me places</h3>
+					<a class="site-sidebar-icon" href="http://twitter.com/georgiecel"><i class="icon-twitter"></i></a>
+					<a class="site-sidebar-icon" href="http://last.fm/user/jazzmoodles"><i class="icon-lastfm"></i></a>
+					<a class="site-sidebar-icon" href="http://instagram.com/georgiecel/"><i class="icon-instagram"></i></a>
+					<a class="site-sidebar-icon" href="http://linkedin.com/in/gluhur/"><i class="icon-linkedin"></i></a>
+					<a class="site-sidebar-icon" href="http://delicious.com/sashimi/"><i class="icon-delicious"></i></a>
+					<a class="site-sidebar-icon" href="http://steamcommunity.com/id/heygeorgie"><i class="icon-steam"></i></a>
 				<ul class="site-sidebar-list">
-					<li class="site-sidebar-list-item">
-						<a href="http://twitter.com/georgiecel">Twitter</a>
-					</li>
-					<li class="site-sidebar-list-item">
-						<a href="http://last.fm/user/jazzmoodles">Last.fm</a>
-					</li>
-					<li class="site-sidebar-list-item">
-						<a href="http://instagram.com/georgiecel/">Instagram</a>
-					</li>
 					<li class="site-sidebar-list-item">
 						<a href="http://notegraphy.com/georgiecel">Notegraphy</a>
 					</li>
