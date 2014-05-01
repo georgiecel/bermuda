@@ -422,6 +422,7 @@ em {
   height: 53px;
   background: url("images/logo-mini.png") no-repeat scroll center top;
   margin: 1em auto;
+  text-indent: -9999em;
 }
 .site-sidebar-heading {
   color: #fff;
