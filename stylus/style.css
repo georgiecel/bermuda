@@ -1043,7 +1043,7 @@ a.external_icon {
   }
   a.main-navigation-link,
   .main-navigation-toggle {
-    font-size: 1.05em;
+    font-size: 0.9em;
   }
   .main-navigation-toggle {
     display: none;
@@ -1127,6 +1127,10 @@ a.external_icon {
   }
 }
 @media (min-width: 850px) {
+  a.main-navigation-link,
+  .main-navigation-toggle {
+    font-size: 1.05em;
+  }
   .post-title {
     margin: 0.6em 0;
     font-size: 2em;
