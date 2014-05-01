@@ -677,8 +677,7 @@ a.main-navigation-link:hover,
 .category-listing .post-thumbnail-wrapper {
   display: none;
 }
-.category-title,
-.error-title {
+.category-title {
   text-align: left;
 }
 .search-listing-intro,
@@ -839,6 +838,13 @@ blockquote:before {
 .page,
 .error-post {
   border-bottom: none;
+}
+.post-404 {
+  background: url("images/404.png") no-repeat scroll center top;
+  display: block;
+  width: 202px;
+  height: 178px;
+  margin: 1em auto 2.5em auto;
 }
 .comments-list .comment-meta {
   text-align: left;
@@ -1129,6 +1135,10 @@ a.external_icon {
     width: 60px;
     height: 53px;
     background: url("images/logo.png") no-repeat scroll center top;
+    background-size: 100% auto;
+  }
+  .post-404 {
+    background: url("images/404@2x.png") no-repeat scroll center top;
     background-size: 100% auto;
   }
 }
