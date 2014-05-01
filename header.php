@@ -6,6 +6,17 @@
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, width=device-width">
 		<title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen">
+		<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/favicons/144.png">
+		<!-- For iPhone 4 Retina display: -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_url'); ?>/favicons/114-icon.png">
+		<!-- For iPad: -->
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_url'); ?>/favicons/72.png">
+		<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/favicons/195.png">
+		<!-- For Windows 8 -->
+		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicons/favicon.ico">
+		<meta name="application-name" content="Hey Georgie">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/favicons/144.png">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
