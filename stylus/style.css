@@ -419,6 +419,13 @@ em {
   background: url("images/logo.png") no-repeat scroll center top;
   margin: 1.5em auto;
 }
+.site-logo-mini {
+  display: block;
+  width: 60px;
+  height: 53px;
+  background: url("images/logo-mini.png") no-repeat scroll center top;
+  margin: 1em auto;
+}
 .site-sidebar-heading {
   color: #fff;
   font-family: Karla;
@@ -479,7 +486,7 @@ a.main-navigation-link,
 .main-navigation-toggle {
   display: block;
   color: #fff;
-  font-size: 1.05em;
+  font-size: 0.95em;
   padding: 0.25em 0.5em;
   font-weight: 400;
 }
@@ -593,7 +600,7 @@ a.main-navigation-link:hover,
 }
 .main-navigation-toggle {
   padding: 0.75em;
-  line-height: 1;
+  line-height: 0.65;
 }
 .main-navigation-toggle:hover span {
   color: #fff;
@@ -999,8 +1006,12 @@ a.external_icon {
   .site-header {
     background: #cef7f4;
   }
-  .site-header .site-logo {
+  .site-header .site-logo-mini {
     display: none;
+  }
+  a.main-navigation-link,
+  .main-navigation-toggle {
+    font-size: 1.05em;
   }
   .main-navigation-toggle {
     display: none;
@@ -1094,5 +1105,13 @@ a.external_icon {
     width: 120px;
     height: 105px;
     background: url("images/logo@2x.png") no-repeat scroll center top;
+    background-size: 100% auto;
+  }
+  .site-logo-mini {
+    display: block;
+    width: 60px;
+    height: 53px;
+    background: url("images/logo.png") no-repeat scroll center top;
+    background-size: 100% auto;
   }
 }

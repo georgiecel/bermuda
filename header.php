@@ -14,7 +14,7 @@
 		</head>
 	<body id="site-top">
 		<header class="site-header" role="banner">
-			<div class="site-logo"></div>
+			<div class="site-logo-mini"></div>
 			<a class="main-navigation-toggle" href="#">
 				<span class="main-navigation-toggle-open">open menu</span>
 				<span class="main-navigation-toggle-close">close menu</span>
