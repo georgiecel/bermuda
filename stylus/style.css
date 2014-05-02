@@ -460,6 +460,7 @@ a.main-navigation-link,
   font-size: 0.95em;
   padding: 0.25em 0.5em;
   font-weight: 400;
+  font-family: Karla;
 }
 a.main-navigation-link:hover,
 .main-navigation-toggle:hover {
@@ -478,6 +479,7 @@ a.main-navigation-link:hover,
   padding: 0.25em 0.5em;
   background: #50c8c4;
   color: #fff;
+  font-family: Karla;
 }
 .site-sidebar-list-item a:hover {
   background: #fff;
@@ -626,6 +628,7 @@ a.main-navigation-link:hover,
 }
 .site-sidebar-text {
   color: #3c9493;
+  font-family: Karla;
 }
 .search-listing .post-title {
   text-align: left;
@@ -934,7 +937,7 @@ blockquote:before {
 }
 .site-footer {
   background: #cef7f4;
-  padding: 0.5em 1.25em;
+  padding: 0.5em 1.25em 1.5em 1.25em;
   font-size: 0.9em;
   color: #3c9493;
 }
@@ -1060,10 +1063,6 @@ a.external_icon {
   .site-header .site-logo-mini {
     display: none;
   }
-  a.main-navigation-link,
-  .main-navigation-toggle {
-    font-size: 0.9em;
-  }
   .main-navigation-toggle {
     display: none;
   }
@@ -1141,15 +1140,15 @@ a.external_icon {
   textarea {
     width: 40%;
   }
+  a.main-navigation-link,
+  .main-navigation-toggle {
+    font-size: 1.05em;
+  }
   .contact-form textarea {
     width: 70% !important;
   }
 }
 @media (min-width: 850px) {
-  a.main-navigation-link,
-  .main-navigation-toggle {
-    font-size: 1.05em;
-  }
   .post-title {
     margin: 0.6em 0;
     font-size: 2em;
