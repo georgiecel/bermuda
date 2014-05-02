@@ -38,9 +38,9 @@
 			<?php elseif ( $status == 'success' ) : ?>
 				<p class="site-sidebar-text">Thank you for subscribing! &hearts; Please check your email to confirm.</p>
 			<?php else : ?>
-			    <form class="subscribe-form" method="POST">
-			    	<input type="hidden" name="my-form-action" value="subscribe" />
-					<input class="subscribe-form-input" name="my-email" value="" placeholder="Type your email address" />
+				<form class="subscribe-form" method="POST">
+					<input type="hidden" name="my-form-action" value="subscribe" />
+					<input type="email" class="subscribe-form-input" name="my-email" value="" placeholder="Type your email address" />
 					<button class="subscribe-form-submit" type="submit">Go!</button>
 				</form>
 			<?php endif; ?>

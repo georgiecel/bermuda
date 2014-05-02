@@ -1,10 +1,9 @@
 		<?php get_header(); ?>
 			<section class="blog-listing post-listing category-listing">
-			<!-- Category descriptions -->
 			<div class="category-listing-intro">
 				<h1 class="category-title post-title">Category: <?php single_cat_title(); ?></h1>
 				<?php if (is_category('2 minutes and 40 seconds')) : ?>
-					<p><strong>2 minutes and 40 seconds</strong> is an interview segment in which I interview people from any walk of life, and ask them questions outside of the traditional interview format to reveal random facts, suss out their quirks, and provide an enjoyable read. To find out more about this segment, <a href="/2-minutes-40-seconds/">read this page</a>.</p>
+					<p><strong>2 minutes and 40 seconds</strong> is an interview segment in which I interview people from any walk of life, and ask them questions outside of the traditional interview format to reveal random facts, suss out their quirks, and provide an enjoyable read. To find out more about this segment and apply for a possible interview, <a href="/2-minutes-40-seconds/">read this page</a>. Not all interviewees are accepted.</p>
 					<p>A new ‘2 minutes and 40 seconds’ is posted every second Thursday.</p>
 				<?php elseif (is_category('A Day in the Life')) : ?>
 					<p><strong>A Day in the Life</strong> is part of <a href="http://breakthesky.net/tag/day-life/">Manda’s ‘A Day in the Life’</a> monthly linkup. In this linkup, bloggers document their daily life once a month.</p>
