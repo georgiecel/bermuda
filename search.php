@@ -4,7 +4,7 @@
 		<?php if (have_posts()) : ?>
 				<!-- Search results introduction -->
 				<h1 class="post-title">Search Results</h1>
-				<p class="search-listing-intro">Your search for <strong><mark class="search-highlight"><?php echo wp_specialchars($s); ?></strong></mark> returned the following results. Results are displayed newest first, only showing a 80-or-so-word formatting-limited summary of the beginning of the post or page. Instances of your search term are <mark class="search-highlight">highlighted</mark>.</p>
+				<p class="search-listing-intro">Your search for <strong><mark class="search-highlight"><?php echo wp_specialchars($s); ?></mark></strong> returned the following results. Results are displayed newest first, only showing a 80-or-so-word formatting-limited summary of the beginning of the post or page. Instances of your search term are <mark class="search-highlight">highlighted</mark>.</p>
 			<?php while (have_posts()) : the_post(); ?>
 				<!-- HTML for each search result -->
 				<article class="post">

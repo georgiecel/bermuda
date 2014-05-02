@@ -84,6 +84,14 @@
 		add_action('template_redirect', 'roots_nice_search_redirect');
 	}
 
+	function change_search_url_rewrite() {
+		if ( is_search() && ! empty( $_GET['s'] ) ) {
+			wp_redirect( home_url( "/search/" ) . urlencode( get_query_var( 's' ) ) );
+			exit();
+		}	
+	}
+	add_action( 'template_redirect', 'change_search_url_rewrite' );	
+
 	// search highlight 
 
 	function search_excerpt_highlight($limit) {
