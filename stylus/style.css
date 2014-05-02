@@ -828,9 +828,10 @@ img.about-georgie {
 .post-figcaption,
 .wp-caption-text {
   padding: 0.5em;
-  color: #50c8c4;
+  color: #3c9493;
   background: #cef7f4;
   font-size: 0.85em;
+  font-family: Karla;
   text-align: center;
 }
 .post-figure,
