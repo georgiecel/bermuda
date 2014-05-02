@@ -16,7 +16,10 @@
 		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicons/favicon.ico">
 		<meta name="application-name" content="Hey Georgie">
 		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/favicons/144.png">
+		<meta name="msapplication-square70x70logo" content="<?php bloginfo('template_url'); ?>/favicons/small.png">
+		<meta name="msapplication-square150x150logo" content="<?php bloginfo('template_url'); ?>/favicons/medium.png">
+		<meta name="msapplication-wide310x150logo" content="<?php bloginfo('template_url'); ?>/favicons/wide.png">
+		<meta name="msapplication-square310x310logo" content="<?php bloginfo('template_url'); ?>/favicons/large.png">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>

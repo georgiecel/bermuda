@@ -6,13 +6,13 @@
 				<p class="site-footer-text">Get new blog posts delivered to your inbox by typing your email address into the box below. Or <a href="/feed/">use the feed URL</a>.</p>
 				<?php $status = isset( $_REQUEST['subscribe'] ) ? $_REQUEST['subscribe'] : false; ?>
 				<?php if ( $status == 'invalid_email' ) : ?>
-					<p class="site-sidebar-text">You’ve entered an invalid email address, please try again.</p>
+					<p class="site-footer-text">You’ve entered an invalid email address, please try again.</p>
 				<?php elseif ( $status == 'success' ) : ?>
-					<p class="site-sidebar-text">Thank you for subscribing! &hearts; Please check your email to confirm.</p>
+					<p class="site-footer-text">Thank you for subscribing! &hearts; Please check your email to confirm.</p>
 				<?php else : ?>
 					<form class="subscribe-form" method="POST">
 						<input type="hidden" name="my-form-action" value="subscribe" />
-						<input type="email" class="subscribe-form-input" name="my-email" value="" placeholder="Type your email address" />
+						<input type="email" class="subscribe-form-input" name="my-email" onblur="if (this.value == '') {this.value = 'Type your email address';}" onfocus="if (this.value == 'Type your email address') {this.value = '';}" value="Type your email address" placeholder="Type your email address" />
 						<button class="subscribe-form-submit" type="submit">Go!</button>
 					</form>
 				<?php endif; ?>
