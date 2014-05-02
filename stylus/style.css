@@ -572,7 +572,7 @@ a.main-navigation-link:hover,
   text-transform: none;
 }
 .main-navigation-toggle {
-  padding: 0.75em;
+  padding: 0.85em;
   line-height: 0.65;
 }
 .main-navigation-toggle:hover span {
@@ -584,7 +584,7 @@ a.main-navigation-link:hover,
   text-align: center;
   color: #fff;
   font-weight: 500;
-  font-variant: small-caps;
+  text-transform: uppercase;
 }
 .main-navigation-toggle-open:hover,
 .main-navigation-toggle-close:hover {
