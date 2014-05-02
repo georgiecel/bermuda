@@ -937,7 +937,7 @@ blockquote:before {
 }
 .site-footer {
   background: #cef7f4;
-  padding: 0.5em 1.25em 1.5em 1.25em;
+  padding: 0.5em 1.25em;
   font-size: 0.9em;
   color: #3c9493;
 }
@@ -1123,9 +1123,7 @@ a.external_icon {
     font-size: 0.95em;
   }
   .site-footer {
-    background: #cef7f4;
     text-align: center;
-    padding: 1em 1.25em;
   }
 }
 @media (min-width: 700px) {
@@ -1216,6 +1214,9 @@ a.external_icon {
   }
   a.main-navigation-link {
     margin: 0 1em;
+  }
+  .site-footer {
+    padding: 1em 1.25em 1.5em 1.25em;
   }
   .site-footer-component {
     width: 280px;
