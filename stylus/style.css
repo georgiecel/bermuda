@@ -414,6 +414,9 @@ em {
   vertical-align: top;
   text-align: left;
 }
+iframe {
+  max-width: 100%;
+}
 .site-sidebar {
   float: right;
 }
