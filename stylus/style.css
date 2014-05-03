@@ -1147,6 +1147,7 @@ a.external_icon {
   .main-navigation-toggle {
     font-size: 1.05em;
   }
+  .comment-respond,
   .contact-form textarea {
     width: 70% !important;
   }

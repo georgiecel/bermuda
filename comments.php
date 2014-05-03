@@ -39,7 +39,7 @@
 				<?php endif; ?>
 					<?php if ( function_exists(cs_print_smilies) ) {cs_print_smilies();} ?>
 					<p class="comments-respond-form-row">
-						<textarea name="comment" id="comment" cols="30" rows="10" tabindex="4"></textarea>
+						<textarea class="comment-respond" name="comment" id="comment" cols="30" rows="10" tabindex="4"></textarea>
 					</p>
 					<p class="comments-respond-form-row">
 						<button name="submit" type="submit" id="submit" tabindex="5" class="btn">Submit Comment</button>
