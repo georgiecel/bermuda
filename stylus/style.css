@@ -299,10 +299,10 @@ li {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 }
-li {
+ul li {
   list-style: square;
 }
-li li {
+ul li li {
   font-size: 1em;
 }
 body {
