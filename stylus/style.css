@@ -428,7 +428,7 @@ a.main-navigation-link:hover,
 .car-toggler {
   display: inline-block;
   background: #f73992;
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0.65em;
   text-decoration: none;
 }
 .more-link:link,
@@ -448,7 +448,7 @@ a.main-navigation-link:hover,
 .next-link,
 .post-edit-link {
   background: #50c8c4;
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0.65em;
   text-decoration: none;
 }
 .prev-link:link,
@@ -587,7 +587,7 @@ button,
 .post-edit-link,
 .comment-reply-link {
   font-family: Karla;
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0.65em;
   border-radius: 0;
 }
 button,
