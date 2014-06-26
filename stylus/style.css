@@ -196,42 +196,6 @@ th {
   src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/OLffGBTaF0XFOW1gnuHF0brIa-7acMAeDBVuclsi6Gc.woff") format('woff');
 }
 @font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGMVNtom4QlEDNJaqqqzqdSs.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGCmgpmuQqK2I-L2S9cF65Ek.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightIt'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6H7XMO6S-yJpg1torQFmnv33rGVtsTkPsbDajuO5ueQw.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Source Sans Pro Italic'), local('SourceSansPro-It'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/M2Jd71oPJhLKp0zdtTvoM_bce-VcyLJMRR1FC9qWbU8.woff") format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 600;
-  src: local('Source Sans Pro Semibold Italic'), local('SourceSansPro-SemiboldIt'), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/fpTVHK8qsXbIeTHTrnQH6J4LxuTxC3JbLqy8IUt0K1T3rGVtsTkPsbDajuO5ueQw.woff") format('woff');
-}
-@font-face {
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
@@ -243,56 +207,11 @@ th {
   font-weight: 400;
   src: local('Karla Italic'), local('Karla-Italic'), url("http://themes.googleusercontent.com/static/fonts/karla/v3/ietJ6bjhwzrJL8NSJOc2mgLUuEpTyoUstqEm5AMlJo4.woff") format('woff');
 }
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Muli Light'), local('Muli-Light'), url("http://themes.googleusercontent.com/static/fonts/muli/v5/TgrecWq39GVsTOFonFwGXQLUuEpTyoUstqEm5AMlJo4.woff") format('woff');
-}
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Muli Light Italic'), local('Muli-LightItalic'), url("http://themes.googleusercontent.com/static/fonts/muli/v5/Q5N_zd0042xOVES9NXt9QrO3LdcAZYWl9Si6vvxL-qU.woff") format('woff');
-}
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Muli'), url("http://themes.googleusercontent.com/static/fonts/muli/v5/minRpKQdEvXRRS8oAbAtWvesZW2xOQ-xsNqO47m55DA.woff") format('woff');
-}
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Muli Italic'), local('Muli-Italic'), url("http://themes.googleusercontent.com/static/fonts/muli/v5/DSOyST5zmfghBgRIogdupevvDin1pK8aKteLpeZ5c0A.woff") format('woff');
-}
-@font-face {
-  font-family: 'edmondsansbold';
-  src: url("fonts/edmondsans-bold-webfont.eot");
-  src: url("fonts/edmondsans-bold-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/edmondsans-bold-webfont.woff") format('woff'), url("fonts/edmondsans-bold-webfont.ttf") format('truetype'), url("fonts/edmondsans-bold-webfont.svg#edmondsansbold") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'edmondsansmedium';
-  src: url("fonts/edmondsans-medium-webfont.eot");
-  src: url("fonts/edmondsans-medium-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/edmondsans-medium-webfont.woff") format('woff'), url("fonts/edmondsans-medium-webfont.ttf") format('truetype'), url("fonts/edmondsans-medium-webfont.svg#edmondsansmedium") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'EdmondSansRegular';
-  src: url("fonts/edmondsans-regular-webfont.eot");
-  src: url("fonts/edmondsans-regular-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/edmondsans-regular-webfont.woff") format('woff'), url("fonts/edmondsans-regular-webfont.ttf") format('truetype'), url("fonts/edmondsans-regular-webfont.svg#edmondsansregular") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 html,
 body,
 p,
 li {
-  font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1em;
   color: #444;
@@ -865,7 +784,7 @@ blockquote:before {
   line-height: 0.01em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
-  font-family: EdmondSansRegular;
+  font-family: Karla;
 }
 blockquote:before {
   content: "\201C";
@@ -1045,7 +964,7 @@ a.external_icon {
 @media (min-width: 600px) {
   p,
   li {
-    font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.05em;
     color: #444;
@@ -1137,7 +1056,7 @@ a.external_icon {
 @media (min-width: 700px) {
   p,
   li {
-    font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.175em;
     color: #444;
@@ -1201,7 +1120,7 @@ a.external_icon {
 @media (min-width: 1000px) {
   p,
   li {
-    font-family: Roboto, "Source Sans Pro", Karla, Muli, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.2em;
     color: #444;
