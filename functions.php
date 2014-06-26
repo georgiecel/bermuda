@@ -354,6 +354,7 @@
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 	remove_action( 'wp_head', 'wp_generator' );
 	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+	add_filter( 'jetpack_enable_open_graph', '__return_false' );
 
 	// remove unnecessary self-closing tags
 	
