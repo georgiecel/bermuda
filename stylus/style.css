@@ -822,10 +822,17 @@ blockquote:before {
   margin-left: 65px;
   font-size: 0.85em;
 }
-.comments-list > .comment {
+.comments-list > .comment,
+.comments-list > .pingback {
   border-bottom: 1px solid #bbb;
 }
-.comment {
+.comments-list > .comment .comment-meta,
+.comments-list > .pingback .comment-meta {
+  min-height: 0;
+  margin-left: 0;
+}
+.comment,
+.pingback {
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;
 }
@@ -834,6 +841,9 @@ blockquote:before {
   float: left;
   padding: 3px;
   border: 1px solid #ddd;
+}
+.pingback .comment-gravatar {
+  display: none;
 }
 .avatar {
   display: block;
@@ -861,6 +871,10 @@ blockquote:before {
   padding-bottom: 0;
   padding-top: 1em;
   margin-bottom: 0.5em;
+}
+.pingback .comment-meta-item,
+.pingback .comment-reply-link {
+  display: none;
 }
 .site-footer {
   background: #cef7f4;

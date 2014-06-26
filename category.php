@@ -28,16 +28,16 @@
 					<p>In 2010 or so, I became a trouble chcker at The Fanlistings Network, and in 2012 I was appointed as a category staffer for the Websites category. I now also staff the Songs: Bands/Groups: 0-M category.</p>
 				<?php elseif (is_category('Fashion Friday')) : ?>
 					<p><strong>Fashion Friday</strong> is an fashion segment I started in 2013, where I share outfits or items related to fashion and beauty.</p>
-					<p>There used to be a new post each month, on average, but now occurs every second Friday. Some older posts have been posted on Saturday rather than Friday, due to timezones, but are now more consistent.</p>
+					<p>There used to be a new post each month, on average, but now occurs every second Friday. Some older posts have been posted on Saturday rather than Friday, due to timezones, but are now more consistent. Some Fridays in between may be filled in.</p>
 					<p>I would like to thank one of my best friends <a href="http://alonelyseptember.org">Seb</a> for having the time and patience to photograph in some of the more recent posts.</p>
 				<?php elseif (is_category('Fern')) : ?>
 					<p>Whenever mentioning <strong>Fern</strong>, I tend to also mention <a href="/category/johnny/">Johnny</a> &mdash; the two are my photography buddies who studied photography with me in university. It should also be known that Fern is a guy; his full name is Fernando, and he does get called Nando, but that is an annoying extra syllable for the lazies.</p>
 					<p>We have common interests in Futurama and music.</p>
-				<?php elseif (is_category('Food')) : ?>					
+				<?php elseif (is_category('Food')) : ?>
 					<p><strong>Food</strong> has posts about restaurants I’ve been to, general posts about foods, meals or diet. I am a really bad cook. I previously had a small category called Cooking on my blog before merging it into the Food category. It covered a lot of what James and I cook together. We love trying new foods and mixing up different flavours. Also, when I say I’m a bad cook, I just mean that I can’t really cook. My preference strays towards raw/unprocessed foods, keeping things very simple &mdash; boil-a-handful-of-carrots-with-spices kind of simple, so I don’t really know how to cook something extravagant.</p>
 				<?php elseif (is_category('Friends')) : ?>
 					<p>Not <em>really</em> suggesting that they aren’t special, posts in <strong>Friends</strong> mention friends who may not have their own category on my blog. They may not be people I spend a lot of time with, and thus I have not created a category especially for them. I may also mention friends in general.</p>
-					<p>For your information, friends that do have their own categories include <a href="/category/james/">James</a>, <a href="/category/lilian/">Lilian</a>, <a href="/category/tristan/">Tristan</a>, <a href="/category/dylan/">Dylan</a>, <a href="/category/daniel/">Daniel</a>, <a href="/category/seb/">Seb</a>, <a href="/category/rachel/">Rachel</a>, <a href="/category/ryan/">Ryan</a>, <a href="/category/mike/">Mike</a>, <a href="/category/johnny/">Johnny</a>, <a href="/category/fern/">Fern</a> and <a href="/category/kiah/">Kiah</a>.</p>
+					<p>For your information, friends that do have their own categories include <a href="/category/james/">James</a>, <a href="/category/lilian/">Lilian</a>, <a href="/category/tristan/">Tristan</a>, <a href="/category/dylan/">Dylan</a>, <a href="/category/daniel/">Daniel</a>, <a href="/category/seb/">Seb</a>, <a href="/category/rachel/">Rachel</a>, <a href="/category/ryan/">Ryan</a>, <a href="/category/mike/">Mike</a>, <a href="/category/johnny/">Johnny</a> and <a href="/category/fern/">Fern</a>.</p>
 				<?php elseif (is_category('General')) : ?>
 					<p><strong>General</strong> is a bit of a hit and miss. I created the category to account for discussion on general topics not necessarily related to my personal life. This category and the <a href="/category/life/">Life</a> category are a little bit of a mix, but for the most part, posts under this General category are more likely to fuel discussion.</p>
 				<?php elseif (is_category('Health')) : ?>
@@ -53,9 +53,6 @@
 				<?php elseif (is_category('Johnny')) : ?>
 					<p>Whenever mentioning <strong>Johnny</strong>, I tend to also mention <a href="/category/fern/">Fern</a> &mdash; the two are my photography buddies who studied photography with me in university. Johnny used to give me rides all the time because he doesn’t live far from me.</p>
 					<p>We have common interests in Futurama. That is all.</p>
-				<?php elseif (is_category('Kiah')) : ?>
-					<p><strong>Kiah</strong> is actually my ex-boyfriend, who I dated for a year on-and-off in 2006. I would definitely still class him as a friend, as we didn’t have a nasty break-up. Well, he broke my heart, but you know, I was young and he was, in actuality, younger.</p>
-					<p>I have spoken to him several times since I graduated from high school, and he went from being the top of his year group to dropping out... but hey, what do you know.</p>
 				<?php elseif (is_category('Life')) : ?>
 					<p><strong>Life</strong> is the default category for my blog posts. It usually contains anything to do with my general life, or life at the moment. Recounts of stories from years gone by would appear in <a href="/category/stories/">Stories</a>.</p>
 				<?php elseif (is_category('Lilian')) : ?>
