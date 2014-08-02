@@ -3,7 +3,7 @@
 		<footer class="site-footer" role="contentinfo">
 			<div class="site-footer-component">
 				<h3>Subscribed yet?</h3>
-				<p class="site-footer-text">Get new blog posts delivered to your inbox by typing your email address into the box below. Or <a href="/feed/">use the feed URL</a>.</p>
+				<p class="site-footer-text">Get new blog posts delivered to your inbox by typing your email address into the box below.</p>
 				<?php $status = isset( $_REQUEST['subscribe'] ) ? $_REQUEST['subscribe'] : false; ?>
 				<?php if ( $status == 'invalid_email' ) : ?>
 					<p class="site-footer-text">You’ve entered an invalid email address, please try again.</p>
@@ -25,7 +25,7 @@
 			</div>
 			<div class="site-footer-component">
 				<h3>bermuda</h3>
-				<p class="site-footer-text">I’m in love with this little band called Hey Geronimo from the sunny city of Brisbane. This theme was built with a lot of magic &amp; love, and is named <em>bermuda</em> after a funky little song they wrote, the colours inspired by a poster of theirs on my wall.</p>
+				<p class="site-footer-text">I’m in love with this little band called Hey Geronimo from the sunny city of Brisbane. This theme was built with a lot of magic &amp; love, and is named <em>bermuda</em> after a funky little song they wrote, the colours inspired by a poster of theirs on my wall. <a href="/bermuda/">Read more?</a></p>
 				<p class="site-footer-text">&copy; Hey Georgie, 2007-<?php $year = date("Y"); echo $year; ?></p>
 			</div>
 		</footer>
