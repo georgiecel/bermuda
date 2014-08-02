@@ -37,6 +37,10 @@
 				</ul>
 			</div>
 			<div class="site-sidebar-widget">
+				<h3 class="site-sidebar-heading">Get interviewed!</h3>
+				<p class="site-sidebar-text">Want to be featured on Hey Georgie? I’m looking for people from all walks of life to join in my fun interview segment, <em>2 minutes and 40 seconds</em>. <a href="/2-minutes-40-seconds/">Learn more?</a></p>
+			</div>
+			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">Subscribe to Hey Georgie</h3>
 			<?php $status = isset( $_REQUEST['subscribe'] ) ? $_REQUEST['subscribe'] : false; ?>
 			<?php if ( $status == 'invalid_email' ) : ?>

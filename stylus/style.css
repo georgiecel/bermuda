@@ -282,7 +282,10 @@ a:link {
 }
 .site-sidebar-text a,
 .site-sidebar-text a:link {
-  color: #3c9493;
+  margin: 0 2px;
+  padding: 2px 5px;
+  background: #50c8c4;
+  color: #fff !important;
   font-weight: 500;
 }
 a:visited {
@@ -297,7 +300,8 @@ a:hover {
   text-decoration: none;
 }
 .site-sidebar-text a:hover {
-  color: #fff;
+  background: #fff;
+  color: #3c9493 !important;
 }
 a:active {
   color: #000;
@@ -533,7 +537,7 @@ a.main-navigation-link:hover,
   color: #fff;
   font-family: Karla;
   margin-bottom: 0.5em;
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 .site-sidebar-heading + .site-sidebar-text {
   margin-top: 0;
