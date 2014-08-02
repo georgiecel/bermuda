@@ -335,6 +335,7 @@ em {
 }
 iframe {
   max-width: 100%;
+  margin: 0 auto !important;
 }
 .site-sidebar {
   float: right;
@@ -765,7 +766,7 @@ img.about-georgie {
 }
 blockquote {
   margin: 1.5em 0;
-  padding: 1.5em 3em;
+  padding: 1.5em;
   background: #f9f9f9;
   border: 1px solid #ddd;
   line-height: 1.75;
@@ -997,6 +998,9 @@ a.external_icon {
   h5,
   h6 {
     font-size: 1.3em;
+  }
+  blockquote {
+    padding: 1.5em 3em;
   }
   .site-header {
     background: #cef7f4;
