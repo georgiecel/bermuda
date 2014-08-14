@@ -9,8 +9,8 @@
 						<figure class="post-thumbnail"><?php the_post_thumbnail(); ?></figure>
 					</div>
 				<?php } ?>
-					<h1 class="post-title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title" itemprop="url" role="heading"><?php the_title(); ?></a></h1>
-					<footer class="post-meta" role="complementary">
+					<h1 class="post-title" itemprop="name" role="heading"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title" itemprop="url"><?php the_title(); ?></a></h1>
+					<footer class="post-meta" role="contentinfo">
 						<meta itemprop="author" content="Georgie Luhur">
 						<meta itemprop="inLanguage" content="en">
 						<meta itemprop="copyrightYear" content="<?php the_time('Y') ?>">

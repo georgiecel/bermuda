@@ -7,7 +7,7 @@
 						echo '<h1 class="post-title" itemprop="name" role="heading">', the_title(), '</h1>';
 					}
 				?>
-				<footer class="post-meta" role="complementary">
+				<footer class="post-meta" role="contentinfo">
 					<meta itemprop="author" content="Georgie Luhur">
 					<meta itemprop="inLanguage" content="en">
 					<meta itemprop="copyrightYear" content="<?php the_time('Y') ?>">
