@@ -210,13 +210,17 @@ th {
 html,
 body,
 p,
-li {
+li,
+dl {
   font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1em;
   color: #444;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
+}
+dt {
+  font-weight: 500;
 }
 ul li {
   list-style: square;
@@ -982,7 +986,8 @@ a.external_icon {
 }
 @media (min-width: 600px) {
   p,
-  li {
+  li,
+  dl {
     font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.05em;
@@ -1077,7 +1082,8 @@ a.external_icon {
 }
 @media (min-width: 700px) {
   p,
-  li {
+  li,
+  dl {
     font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.175em;
@@ -1141,7 +1147,8 @@ a.external_icon {
 }
 @media (min-width: 1000px) {
   p,
-  li {
+  li,
+  dl {
     font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.2em;
