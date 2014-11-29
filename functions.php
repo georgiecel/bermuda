@@ -1,5 +1,20 @@
 <?php
 
+	// move jQuery to footer
+
+	function jquery_in_footer() {
+		if (!is_admin()) {
+			wp_deregister_script('jquery');
+
+			// load the local copy of jQuery in the footer
+			wp_register_script('jquery', home_url(trailingslashit(WPINC) . 'js/jquery/jquery.js'), false, null, true);
+
+			wp_enqueue_script('jquery');
+		}
+	}
+
+	add_action('init', 'jquery_in_footer');
+
 	// remove rel attribute from the category list
 
 	function remove_category_list_rel( $output ){
@@ -70,7 +85,7 @@
 	function roots_nice_search_redirect() {
 		global $wp_rewrite;
 		if (!isset($wp_rewrite) || !is_object($wp_rewrite) || !$wp_rewrite->using_permalinks()) {
- 			return;
+			return;
 		}
 
 		$search_base = $wp_rewrite->search_base;
@@ -306,7 +321,7 @@
 
 	add_action( 'init', 'process_my_subscription_form' );
 	function process_my_subscription_form() {
-    	if ( isset( $_POST['my-form-action'] ) && $_POST['my-form-action'] == 'subscribe' ) {
+		if ( isset( $_POST['my-form-action'] ) && $_POST['my-form-action'] == 'subscribe' ) {
 			$email = $_POST['my-email'];
 			$subscribe = Jetpack_Subscriptions::subscribe( $email, 0, false );
 			// check subscription status
@@ -314,8 +329,8 @@
 				$error = $subscribe->get_error_code();
 			} else {
 				$error = false;
-			    foreach ( $subscribe as $response ) {
-			        if ( is_wp_error( $response ) ) {
+				foreach ( $subscribe as $response ) {
+					if ( is_wp_error( $response ) ) {
 						$error = $response->get_error_code();
 						break;
 					}
@@ -323,16 +338,16 @@
 			}
 
 			if ( $error ) {
-			    switch( $error ) {
-			        case 'invalid_email':
+				switch( $error ) {
+					case 'invalid_email':
 						$redirect = add_query_arg( 'subscribe', 'invalid_email' );
-			            break;
-			        case 'active': case 'pending':
+						break;
+					case 'active': case 'pending':
 						$redirect = add_query_arg( 'subscribe', 'already' );
-			            break;
-			        default:
+						break;
+					default:
 						$redirect = add_query_arg( 'subscribe', 'error' );
-			            break;
+						break;
 				}
 			} else {
 				$redirect = add_query_arg( 'subscribe', 'success' );
@@ -365,5 +380,15 @@
 	add_filter('get_avatar', 'remove_self_closing_tags'); // <img />
 	add_filter('comment_id_fields', 'remove_self_closing_tags'); // <input />
 	add_filter('post_thumbnail_html', 'remove_self_closing_tags'); // <img />
+
+	// remove jetpack plugin CSS
+
+	add_action('wp_footer', 'deregister_css_js');
+	add_filter( 'jetpack_implode_frontend_css', '__return_false' );
+
+	function deregister_css_js () {
+	    wp_deregister_style( 'jetpack-subscriptions' );
+	    wp_deregister_style( 'jetpack_css' );
+	}
 
 ?>

@@ -153,8 +153,7 @@ img.about-georgie{display:block;margin:1em auto;padding:3px;border:1px solid #dd
 .site-logo-mini{display:block;width:60px;height:53px;background:url("images/logo-mini.png") no-repeat scroll center top;margin:1em auto;text-indent:-9999em}
 .post-figure,.figure-alignright,.figure-alignleft,.figure-aligncenter,.wp-caption,.post-content .aligncenter{margin:1em auto}
 .post-content .aligncenter{display:block}
-.post-thumbnail-wrapper{margin:1em 0 .5em .5em}
-.post-thumbnail{width:75px;height:75px;margin:0 auto}
+.post-thumbnail-wrapper{display:none}
 .attachment-post-thumbnail{-webkit-border-radius:100px;-moz-border-radius:100px;border-radius:100px;margin:0;padding:0}
 .wp-smiley{width:1em}
 .post figure img,.post-figure img,.wp-caption img{display:block}
@@ -193,7 +192,7 @@ blockquote:before{content:"\201C"}
 .car-toggler{font-family:Karla}
 .contact-form textarea{width:100% !important}
 .contact-form .pushbutton-wide{font-size:.9em}
-a.external_icon{background:url("images/external.png") no-repeat scroll right center !important;padding-right:13px}
+a.external_icon,a.external{background:url("images/external.png") no-repeat scroll right center !important;padding-right:13px}
 .footnotes{font-size:.75em;padding:.75em 0;border-top:1px dashed #ddd;}
 .footnotes li{color:#888}
 .footnotereverse a{text-decoration:none}
@@ -224,8 +223,8 @@ a.main-navigation-link:hover{background:#fff;color:#3c9493}
 .search-listing .post .post-title{font-size:1.65em}
 .post-meta{text-align:center}
 .post-meta-item{font-size:.8em}
-.post-thumbnail-wrapper{float:none;margin:.5em auto}
-.post-thumbnail{width:85px;height:85px}
+.post-thumbnail-wrapper{display:block;float:none;margin:.5em auto}
+.post-thumbnail{width:85px;height:85px;margin:0 auto}
 .attachment-post-thumbnail{margin:0 auto}
 .figure-alignright,.post-content .alignright{float:right;margin:1em 0 1em 1em;clear:both}
 .figure-alignleft,.post-content .alignleft{float:left;margin:1em 1em 1em 0}

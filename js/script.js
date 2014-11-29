@@ -7,6 +7,17 @@
 			$('.main-navigation-toggle').toggleClass('is-open');
 			e.preventDefault();
 		});
+
+		// function hideThumb() {
+		// 	var windowSize = $(window).width();
+		// 	if (windowSize <= 450) {
+		// 		$('.post-thumbnail-wrapper').remove();
+		// 		console.log("screen width is less than 450");
+		// 	}
+		// }
+
+		// hideThumb();
+		// $(window).resize(hideThumb);
 		
 	});
 })(jQuery);
