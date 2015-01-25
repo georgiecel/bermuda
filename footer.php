@@ -19,8 +19,8 @@
 				<p class="site-footer-text">If you wanna say hi, <a href="/contact/">holla@</a> is the way to go.</p>
 			</div>
 			<div class="site-footer-component">
-				<h3>The Manifesto</h3>
-				<p class="site-footer-text">Because I believe in a lot of things (like magic), and because everyone is a friend unless proven otherwise, and because laser guns are cool, I wrote <a href="/lzrgun-manifesto/">The LZRGUN Manifesto</a> to illustrate more of my personality rather than a <a href="/about/">typical biography</a>.</p>
+				<h3>Get interviewed!</h3>
+				<p class="site-footer-text">Want to be featured on Hey Georgie? I’m looking for people from all walks of life to join in my fun interview segment, <em>2 minutes and 40 seconds</em>. <a href="/2-minutes-40-seconds/">Learn more?</a></p>
 				<p class="site-footer-text">&uarr; <a href="#site-top">here’s a cool “jump to top” link</a></p>
 			</div>
 			<div class="site-footer-component">

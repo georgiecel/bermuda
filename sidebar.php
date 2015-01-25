@@ -5,13 +5,12 @@
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">holla@</h3>
-				<p class="site-sidebar-text">I’m Georgie, a front-end web developer, concert photographer &amp; tea obsessed pescetarian. <em>Hey Georgie</em> is named after my favourite band, Hey Geronimo.</p>
+				<p class="site-sidebar-text">I’m Georgie. I code during the day and photograph bands at night. I love waffles, noodles &amp; tea. I write about fashion, music, getting through life, and finding hidden gems in Sydney.</p>
 				<a class="site-sidebar-icon" href="http://twitter.com/georgiecel"><i class="icon-twitter"></i></a>
 				<a class="site-sidebar-icon" href="http://last.fm/user/jazzmoodles"><i class="icon-lastfm"></i></a>
-				<a class="site-sidebar-icon" href="http://instagram.com/georgiecel/"><i class="icon-instagram"></i></a>
+				<a class="site-sidebar-icon" href="http://instagram.com/hey.georgie/"><i class="icon-instagram"></i></a>
 				<a class="site-sidebar-icon" href="http://linkedin.com/in/gluhur/"><i class="icon-linkedin"></i></a>
 				<a class="site-sidebar-icon" href="http://delicious.com/sashimi/"><i class="icon-delicious"></i></a>
-				<a class="site-sidebar-icon" href="http://steamcommunity.com/id/heygeorgie"><i class="icon-steam"></i></a>
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">Regularly Updated</h3>
@@ -37,8 +36,8 @@
 				</ul>
 			</div>
 			<div class="site-sidebar-widget">
-				<h3 class="site-sidebar-heading">Get interviewed!</h3>
-				<p class="site-sidebar-text">Want to be featured on Hey Georgie? I’m looking for people from all walks of life to join in my fun interview segment, <em>2 minutes and 40 seconds</em>. <a href="/2-minutes-40-seconds/">Learn more?</a></p>
+				<h3 class="site-sidebar-heading">A Day in the Life linkup</h3>
+				<p class="site-sidebar-text">Blog about a designated day in your life each month, share your post and make friends. <a href="/day-life/">Take part!</a></p>
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">Subscribe to Hey Georgie</h3>
