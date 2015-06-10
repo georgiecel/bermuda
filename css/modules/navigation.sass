@@ -1,0 +1,132 @@
+.main-navigation
+	text-align: center
+
+a.main-navigation-link,
+.main-navigation-toggle 
+	display: block
+	color: $link-inverted
+	@include fontsize(0.95em)
+	padding: 0.25em 0.5em
+	font-weight: 400
+	font-family: Karla
+	&:hover
+		background: $bg-primary
+		color: $link-inverted
+
+.site-sidebar-list
+	padding: 0
+
+.site-sidebar-list-item
+	list-style: none
+	margin: 4px 0
+	a
+		display: block
+		padding: 0.25em 0.5em
+		background: $bg-primary
+		color: $link-inverted
+		font-family: Karla
+		&:hover
+			background: $bg-senary
+			color: $c-primary
+
+.pagination,
+.post-navigation
+	overflow: hidden
+	margin-top: 1em
+	text-transform: uppercase
+	@include fontsize(0.85em)
+	font-family: Karla
+
+.post-pagination
+	padding-bottom: 1em
+	@include separator(solid, $c-quinary)
+
+.more-link
+	@include fontsize(0.9em)
+
+.more-link,
+.comment-reply-link,
+.car-toggler
+	display: inline-block
+	background: $link
+	padding: 0.25em 0.65em
+	text-decoration: none
+	&:link,
+	&:visited
+		color: $link-inverted
+	&:hover
+		background: $bg-primary
+
+.prev-link,
+.next-link,
+.post-edit-link
+	background: $bg-primary
+	padding: 0.25em 0.65em
+	text-decoration: none
+	&:link,
+	&:visited 
+		color: $link-inverted
+	&:hover
+		background: $bg-tertiary
+		color: $c-primary
+
+.prev-post-link,
+.next-post-link
+	display: inline-block
+	line-height: 1.5
+
+.post-edit-link
+	margin-bottom: 1em
+	display: inline-block
+
+.cancel-comment-reply
+	background: $bg-quarternary
+	color: $c-tertiary-dark
+	margin-left: 0.5em
+	&:hover
+		background: $bg-tertiary
+		color: $c-primary
+
+.prev-link-wrapper,
+.next-link-wrapper
+	line-height: 2
+
+.next-link-wrapper
+	text-align: right
+
+.prev-post-link,
+.next-post-link
+	text-transform: none
+
+// navigation toggle
+
+.main-navigation-toggle
+	padding: 0.85em
+	line-height: 0.65
+	&:hover
+		span
+			color: $link-inverted
+
+.main-navigation-toggle-open,
+.main-navigation-toggle-close
+	display: block
+	text-align: center
+	color: $link-inverted
+	font-weight: 500
+	text-transform: uppercase
+	&:hover
+		color: $c-primary
+
+.main-navigation-toggle-close
+	display: none
+
+.main-navigation-toggle.is-open,
+	.main-navigation-toggle-open
+		display: none
+	.main-navigation-toggle-close
+		display: block
+
+.main-navigation
+	display: none
+	&.is-open
+		display: block

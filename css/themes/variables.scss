@@ -1,0 +1,64 @@
+// colours
+
+// blue
+$c-primary: #50C8C4;
+$c-primary-dark: #3c9493;
+$c-primary-light: #67dfde;
+$c-primary-lighter: #CEF7F4;
+
+// hot pink
+$c-secondary: #F73992;
+
+// a random colour; currently dark grey
+$c-tertiary: #888;
+$c-tertiary-dark: #444;
+$c-tertiary-light: #bbb;
+$c-tertiary-lighter: #ddd;
+
+// light grey
+$c-quarternary: #bbb;
+$c-quarternary-light: #eee;
+$c-quarternary-lighter: #fefefe;
+
+// super light grey
+$c-quinary: #ddd;
+
+// backgrounds
+
+// blue to match c-primary
+$bg-primary: #50C8C4;
+
+// a slightly lighter blue
+$bg-secondary: #67dfde;
+$bg-secondary-dark: #67DFD8;
+
+// a pale blue
+$bg-tertiary: #CEF7F4;
+
+// light grey
+$bg-quarternary: #eee;
+
+// super light grey; almost white
+$bg-quinary-dark: #f9f9f9;
+$bg-quinary: #fefefe;
+
+// just pure white
+$bg-senary: #fff;
+
+$text: #444;
+
+// standard pink link
+$link: #F73992;
+
+// inverted pink (white)
+$link-inverted: #fff;
+
+$link-visited: #F73992;
+$link-hover: #000;
+$link-active: #000;
+
+// radical mixins 
+
+@mixin separator($style, $color) {
+	border-bottom: 1px $style $color;
+}
