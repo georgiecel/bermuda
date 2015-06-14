@@ -3,7 +3,7 @@
 		text-align: left;
 		min-height: 55px;
 		margin-left: 65px;
-		@include fontsize(0.85em);
+		font-size: 0.85em;
 	}
 	> .comment,
 	> .pingback {

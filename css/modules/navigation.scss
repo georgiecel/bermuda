@@ -6,7 +6,7 @@ a.main-navigation-link,
 .main-navigation-toggle {
 	display: block;
 	color: $link-inverted;
-	@include fontsize(0.95em);
+	font-size: 0.95em;
 	padding: 0.25em 0.5em;
 	font-weight: 400;
 	font-family: Karla;
@@ -41,7 +41,7 @@ a.main-navigation-link,
 	overflow: hidden;
 	margin-top: 1em;
 	text-transform: uppercase;
-	@include fontsize(0.85em);
+	font-size: 0.85em;
 	font-family: Karla;
 }
 
@@ -51,7 +51,7 @@ a.main-navigation-link,
 }
 
 .more-link {
-	@include fontsize(0.9em);
+	font-size: 0.9em;
 }
 
 .more-link,

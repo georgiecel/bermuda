@@ -3,7 +3,7 @@
 }
 
 .site-title {
-	@include fontsize(3em);
+	font-size: 3em;
 	font-family: Karla;
 	text-align: center;
 	width: 150px;

@@ -1,7 +1,7 @@
 .site-footer {
 	background: $bg-tertiary;
 	padding: 0.5em 1.25em;
-	@include fontsize(0.9em);
+	font-size: 0.9em;
 	color: $c-primary-dark;
 	a {
 		text-decoration: none;
@@ -15,5 +15,5 @@
 .site-footer-text {
 	color: $c-primary-dark;
 	font-family: Karla;
-	@include fontsize(1em);
+	font-size: 1em;
 }

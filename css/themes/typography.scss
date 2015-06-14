@@ -4,10 +4,6 @@
 	font-size: $fontsize;
 	color: $text;
 }
-
-@mixin fontsize($fontsize) {
-	font-size: $fontsize;
-}
 	
 @mixin h1($fontsize) {
 	font-weight: 500;

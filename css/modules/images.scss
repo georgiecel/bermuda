@@ -68,7 +68,7 @@ img {
 	padding: 0.5em;
 	color: $c-primary-dark;
 	background: $bg-tertiary;
-	@include fontsize(0.85em);
+	font-size: 0.85em;
 	font-family: Karla;
 	text-align: center;
 }

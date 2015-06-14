@@ -16,7 +16,7 @@ textarea {
 	line-height: 1.5;
 	-webkit-appearance: none;
 	border-radius: 0;
-	@include fontsize(1em);
+	font-size: 1em;
 }
 
 input,
@@ -62,7 +62,7 @@ input[type="submit"] {
 	font-family: Karla;
 	border: none;
 	color: $c-primary-dark;
-	@include fontsize(1.1em);
+	font-size: 1.1em;
 	&:hover,
 	&:focus {
 		background: $bg-senary;
@@ -86,7 +86,7 @@ input[type="submit"] {
 	height: 34px;
 	width: 29%;
 	color: $link-inverted;
-	@include fontsize(1.1em);
+	font-size: 1.1em;
 	vertical-align: middle;
 	padding: 5px 10px;
 	&:hover {
