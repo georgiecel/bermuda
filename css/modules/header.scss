@@ -1,0 +1,15 @@
+.site-header {
+	overflow: hidden;
+}
+
+.site-title {
+	@include fontsize(3em);
+	font-family: Karla;
+	text-align: center;
+	width: 150px;
+	height: 123px;
+	display: block;
+	text-indent: -9999em;
+	background: url(logo.png) no-repeat center top;
+	background-size: 100% auto;
+}

@@ -531,8 +531,8 @@ a.main-navigation-link,
     padding: 0.25em;
     font-size: 1.5em;
     color: #3c9493; }
-  .site-sidebar-icon i:hover {
-    color: #fff; }
+    .site-sidebar-icon i:hover {
+      color: #fff; }
 
 .site-sidebar-text {
   color: #3c9493;
@@ -745,13 +745,13 @@ blockquote:before {
   color: #F73992;
   content: open-quote;
   font-size: 4em;
-  line-height: 0.01em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+  line-height: .01em;
+  margin-right: .25em;
+  vertical-align: -.4em;
   font-family: Karla; }
 
 blockquote:before {
-  content: "“"; }
+  content: "\201C"; }
 
 .post {
   padding: 0.5em 0 0.5em 0;
