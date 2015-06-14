@@ -1,11 +1,14 @@
 @charset "UTF-8";
-/* Theme Name: bermuda
+/*!
+ * Theme Name: bermuda
  * Theme URI: http://hey.georgie.nu/
  * Description: Responsive, clean web design for personal blog Hey Georgie. Inspired by Hey Geronimo, postcards and minimalism.
  * Version: 1.0
  * Author: Georgie Luhur
  * Author URI: http://hey.georgie.nu/
- * Copyright Georgie Luhur 2014, not to be redistributed. Please respect my work and do not copy parts of my layout directly. */
+ * Copyright Georgie Luhur 2014-2015, not to be redistributed. Please respect my work and do not copy parts of my layout directly.
+ *
+ */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -1148,5 +1151,3 @@ a.external {
   .post-404 {
     background: url(images/404@2x.png) no-repeat scroll center top;
     background-size: 100% auto; } }
-
-/*# sourceMappingURL=style.css.map */
