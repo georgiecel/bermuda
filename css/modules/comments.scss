@@ -1,9 +1,9 @@
 .comments-list {
 	.comment-meta {
-		text-align: left;
 		min-height: 55px;
 		margin-left: 65px;
-		font-size: 0.85em;
+		font-size: .85em;
+		text-align: left;
 	}
 	> .comment,
 	> .pingback {
@@ -22,8 +22,8 @@
 }
 
 .comment-gravatar {
-	margin: 0 1em 1em 0;
 	float: left;
+	margin: 0 1em 1em 0;
 	padding: 3px;
 	border: 1px solid $c-quinary;
 	.pingback & {
@@ -38,7 +38,6 @@
 
 .comment-author {
 	margin: 0;
-	padding: 0.25em 0 0 0;
 }
 
 .comment-author-link {
@@ -47,7 +46,7 @@
 
 .comment-meta-item {
 	display: block;
-	margin-top: 0.25em;
+	margin-top: .25em;
 	text-transform: none;
 }
 
@@ -56,10 +55,10 @@
 	padding-left: 1.5em;
 	border-left: 1px solid $c-quarternary-light;
 	> .comment {
-		border-bottom: none;
+		margin-bottom: .5em;
 		padding-bottom: 0;
 		padding-top: 1em;
-		margin-bottom: 0.5em;
+		border-bottom: none;
 	}
 }
 

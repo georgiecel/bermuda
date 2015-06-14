@@ -1,10 +1,10 @@
 // sidebar
 
 .site-sidebar-heading {
+	margin-top: 2em;
+	margin-bottom: .5em;
 	color: $bg-senary;
 	font-family: Karla;
-	margin-bottom: 0.5em;
-	margin-top: 2em;
 	& + .site-sidebar-text {
 		margin-top: 0;
 	}
@@ -14,9 +14,9 @@
 	display: inline-block;
 	i {
 		display: block;
-		padding: 0.25em;
-		font-size: 1.5em;
+		padding: .25em;
 		color: $c-primary-dark;
+		font-size: 1.5em;
 		&:hover {
 			color: $link-inverted;
 		}

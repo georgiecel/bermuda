@@ -21,8 +21,8 @@
 
 .search-listing-intro,
 .category-listing-intro {
-	padding-bottom: 1em;
 	margin-bottom: 0;
+	padding-bottom: 1em;
 	@include separator(solid, $c-quinary);
 }
 

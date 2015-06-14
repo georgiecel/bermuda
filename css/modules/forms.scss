@@ -3,8 +3,8 @@ button,
 .pushbutton-wide,
 .post-edit-link,
 .comment-reply-link {
+	padding: .25em .65em;
 	font-family: Karla;
-	padding: 0.25em 0.65em;
 	border-radius: 0;
 }
 
@@ -12,18 +12,17 @@ button,
 input,
 textarea {
 	background: $bg-senary;
-	border: 1px solid $c-quarternary;
-	line-height: 1.5;
-	-webkit-appearance: none;
-	border-radius: 0;
 	font-size: 1em;
+	line-height: 1.5;
+	border: 1px solid $c-quarternary;
+	-webkit-appearance: none;
 }
 
 input,
 textarea {
-	padding: 7px 10px;
-	width: 100%;
 	box-sizing: border-box;
+	width: 100%;
+	padding: 7px 10px;
 	&:hover {
 		border-color: $c-primary-light;
 	}
@@ -31,14 +30,14 @@ textarea {
 
 button,
 input[type="submit"] {
+	width: auto;
 	background: $link;
 	color: $link-inverted;
-	width: auto;
 	border: none;
 	&:hover {
-		cursor: pointer;
 		background: $bg-primary;
 		color: $link-inverted;
+		cursor: pointer;
 	}
 }
 
@@ -54,15 +53,15 @@ input[type="submit"] {
 
 .search-form-input,
 .subscribe-form-input {
-	background: $bg-tertiary;
 	float: left;
-	height: 34px;
 	width: 71%;
+	height: 34px;
 	vertical-align: middle;
-	font-family: Karla;
-	border: none;
+	background: $bg-tertiary;
 	color: $c-primary-dark;
+	font-family: Karla;
 	font-size: 1.1em;
+	border: none;
 	&:hover,
 	&:focus {
 		background: $bg-senary;
@@ -81,14 +80,14 @@ input[type="submit"] {
 
 .search-form-submit,
 .subscribe-form-submit {
-	background: $bg-primary;
 	float: right;
-	height: 34px;
 	width: 29%;
+	height: 34px;
+	padding: 5px 10px;
+	vertical-align: middle;
+	background: $bg-primary;
 	color: $link-inverted;
 	font-size: 1.1em;
-	vertical-align: middle;
-	padding: 5px 10px;
 	&:hover {
 		background: $bg-senary;
 		color: $c-primary;

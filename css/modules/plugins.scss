@@ -13,23 +13,23 @@
 		width: 100% !important;
 	}
 	.pushbutton-wide {
-		font-size: 0.9em;
+		font-size: .9em;
 	}
 }
 
 // external icon
 
-a.external_icon,
-a.external {
-	background: url('images/external.png') no-repeat scroll right center !important; // overriding plugin default
+.external_icon,
+.external {
 	padding-right: 13px;
+	background: url(images/external.png) no-repeat right;
 }
 
 // footnotes
 
 .footnotes {
-	font-size: 0.75em;
-	padding: 0.75em 0;
+	padding: .75em 0;
+	font-size: .75em;
 	border-top: 1px dashed $c-quinary;
 	li {
 		color: $c-tertiary;
@@ -43,25 +43,18 @@ a.external {
 // old-post-notifier
 
 .ikaz {
-	background: url("http://hey.georgie.nu/wp-content/plugins/old-post-notifier/ikaz.png") no-repeat scroll 2.2em center #FFF6BF;
+	margin: 1.5em 0 .5em;
+	padding: 1.5em;
+	background: #FFF6BF;
 	border-bottom: 2px solid #FFD324;
-	border-color: #FFD324;
 	border-top: 2px solid #FFD324;
-	color: #444444;
-	margin-bottom: 0.5em;
-	margin-top: 1.5em;
-	padding: 1em 1.5em 1em 5.5em;
 }
 
 .ikaz .kapat {
 	float: right;
 	position: relative;
+	top: -15px;
 	right: -5px;
-	top: -5px;
-}
-
-.ikaz a {
-	color: #817134;
 }
 
 // icomoon
@@ -96,9 +89,6 @@ a.external {
 }
 .icon-twitter:before {
 	content: "\e601";
-}
-.icon-steam:before {
-	content: "\e602";
 }
 .icon-linkedin:before {
 	content: "\e603";

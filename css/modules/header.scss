@@ -3,13 +3,13 @@
 }
 
 .site-title {
-	font-size: 3em;
-	font-family: Karla;
-	text-align: center;
+	display: block;
 	width: 150px;
 	height: 123px;
-	display: block;
-	text-indent: -9999em;
-	background: url(logo.png) no-repeat center top;
+	background: url(logo.png);
 	background-size: 100% auto;
+	font-family: Karla;
+	font-size: 3em;
+	text-align: center;
+	text-indent: -9999em;
 }

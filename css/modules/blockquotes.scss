@@ -4,8 +4,8 @@ blockquote {
 	margin: 1.5em 0;
 	padding: 1.5em;
 	background: $bg-quinary-dark;
-	border: 1px solid $c-quinary;
 	line-height: 1.75;
+	border: 1px solid $c-quinary;
 	quotes: "\201C""\201D""\2018""\2019";
 	p:first-child {
 		display: inline;
@@ -16,13 +16,13 @@ blockquote {
 }
 
 blockquote:before {
-	color: $c-secondary;
 	content: open-quote;
+	margin-right: .25em;
+	color: $c-secondary;
+	font-family: Karla;
 	font-size: 4em;
 	line-height: .01em;
-	margin-right: .25em;
 	vertical-align: -.4em;
-	font-family: Karla;
 }
 
 blockquote:before {
