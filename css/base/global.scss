@@ -1,4 +1,28 @@
-// font sizes and things
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: $bg-secondary-dark;
+}
+
+[hidden] {
+	display: none;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
 
 html,
 body,
@@ -8,21 +32,6 @@ dl {
 	@include font(1em);
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
-}
-
-dt {
-	font-weight: 500;
-}
-
-ul li {
-	list-style: square;
-	li {
-		font-size: 1em;
-	}
-}
-
-body {
-	background: $bg-secondary-dark;
 }
 
 h1 {
@@ -97,10 +106,70 @@ em {
 	font-weight: 300;
 }
 
+img {
+	border: 0;
+}
+
+button,
+input,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+textarea,
+pre {
+	overflow: auto;
+}
+
+code,
+pre {
+	font-family: monospace;
+	font-size: 1em;
+}
+
+dt {
+	font-weight: 500;
+}
+
+ul li {
+	list-style: square;
+	li {
+		font-size: 1em;
+	}
+}
+
 hr {
+	box-sizing: content-box;
 	height: 1px;
 	width: 80%;
 	margin: 2em auto;
 	background: $c-quarternary-light;
 	border: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+small {
+	font-size: 80%;
+}
+
+sup {
+	position: relative;
+	top: -0.5em;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
 }

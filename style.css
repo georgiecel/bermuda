@@ -9,157 +9,6 @@
  * Copyright Georgie Luhur 2014-2015, not to be redistributed. Please respect my work and do not copy parts of my layout directly.
  *
  */
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0; }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block; }
-
-audio {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
-
-[hidden],
-template {
-  display: none; }
-
-a {
-  background: transparent; }
-
-a:active,
-a:hover {
-  outline: 0; }
-
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-b,
-strong {
-  font-weight: bold; }
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-mark {
-  background: #ff0;
-  color: #000; }
-
-small {
-  font-size: 80%; }
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  border: 0; }
-
-figure {
-  margin: 1em 40px; }
-
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
-
-pre {
-  overflow: auto; }
-
-code,
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
-button,
-input,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */ }
-
-button {
-  overflow: visible; }
-
-button,
-select {
-  text-transform: none; }
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  cursor: pointer;
-  /* 3 */ }
-
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-input {
-  line-height: normal; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-textarea {
-  overflow: auto; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td,
-th {
-  padding: 0; }
-
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -200,6 +49,28 @@ th {
   font-style: italic;
   font-weight: 400;
   src: local("Karla Italic"), local("Karla-Italic"), url(http://themes.googleusercontent.com/static/fonts/karla/v3/ietJ6bjhwzrJL8NSJOc2mgLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #67DFD8; }
+
+[hidden] {
+  display: none; }
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block; }
+
 html,
 body,
 p,
@@ -211,17 +82,6 @@ dl {
   font-weight: 300;
   line-height: 1.5;
   text-rendering: optimizeLegibility; }
-
-dt {
-  font-weight: 500; }
-
-ul li {
-  list-style: square; }
-  ul li li {
-    font-size: 1em; }
-
-body {
-  background: #67DFD8; }
 
 h1 {
   color: #50C8C4;
@@ -305,12 +165,60 @@ i,
 em {
   font-weight: 300; }
 
+img {
+  border: 0; }
+
+button,
+input,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  cursor: pointer; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea,
+pre {
+  overflow: auto; }
+
+code,
+pre {
+  font-family: monospace;
+  font-size: 1em; }
+
+dt {
+  font-weight: 500; }
+
+ul li {
+  list-style: square; }
+  ul li li {
+    font-size: 1em; }
+
 hr {
+  box-sizing: content-box;
   height: 1px;
   width: 80%;
   margin: 2em auto;
   background: #eee;
   border: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+small {
+  font-size: 80%; }
+
+sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline; }
 
 .site-body {
   overflow: hidden; }
