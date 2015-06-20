@@ -287,7 +287,7 @@
 				<figure class="comment-gravatar"><?php echo get_avatar( $comment, 65, 'http://hey.georgie.nu/wp-content/themes/hg-bermuda/favicons/small.png', 'Author’s gravatar' ); ?></figure>
 				<div class="comment-meta post-meta" role="complementary">
 					<h2 class="comment-author">
-						<a class="comment-author-link" href="<?php comment_author_url(); ?>" itemprop="author"><?php comment_author(); ?></a>
+						<a class="comment-author-link" href="<?php comment_author_url(); ?>" rel="nofollow" itemprop="author"><?php comment_author(); ?></a>
 					</h2>
 					<time class="comment-meta-item" datetime="<?php comment_date('Y-m-d') ?>T<?php comment_time('H:iP') ?>" itemprop="datePublished"><?php comment_date('jS F Y') ?>, <a href="#comment-<?php comment_ID() ?>" itemprop="url"><?php comment_time() ?></a></time>
 					<?php if ($comment->comment_approved == '0') : ?>
