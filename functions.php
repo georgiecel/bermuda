@@ -202,6 +202,15 @@
 	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 	add_filter('get_the_excerpt', 'nice_search_excerpt');
 
+	// strip <br> from excerpt
+
+	function remove_br_excerpt($content) {
+		return wpautop( $content, false );
+	}
+
+	remove_filter('the_excerpt', 'wpautop');
+	add_filter('the_excerpt', 'remove_br_excerpt' );
+
 	// allowing shortcodes to work in excerpts
 
 	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
