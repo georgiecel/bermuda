@@ -1,0 +1,57 @@
+@mixin font($fontsize) {
+	color: $text;
+	font-family: Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: $fontsize;
+	font-weight: 300;
+}
+	
+@mixin h1($fontsize) {
+	color: $c-primary;
+	font-size: $fontsize;
+	font-weight: 500;
+	line-height: 1.25;
+	.page & {
+		text-align: left;
+	}
+}
+
+@mixin h2($fontsize) {
+	color: $c-primary;
+	font-family: Karla;
+	font-size: $fontsize;
+	font-weight: normal;
+	line-height: 1.25;
+	.page & {
+		text-align: left;
+	}
+}
+
+@mixin h3($fontsize) {
+	margin-bottom: -.5em;
+	color: $c-primary;
+	font-family: Karla;
+	font-size: $fontsize;
+	font-weight: normal;
+}
+
+@mixin h4($fontsize) {
+	margin-bottom: -.5em;
+	color: $c-tertiary-dark;
+	font-size: $fontsize;
+	font-weight: normal;
+}
+
+@mixin h5($fontsize) {
+	margin-bottom: -.5em;
+	color: $c-tertiary;
+	font-size: $fontsize;
+	font-weight: normal;
+}
+
+@mixin h6($fontsize) {
+	margin-top: 1.5em;
+	margin-bottom: -.5em;
+	color: $c-primary-dark;
+	font-size: $fontsize;
+	font-weight: 300;
+}

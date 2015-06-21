@@ -1,0 +1,166 @@
+.main-navigation {
+	text-align: center;
+}
+
+a.main-navigation-link,
+.main-navigation-toggle {
+	display: block;
+	padding: .25em .5em;
+	color: $link-inverted;
+	font-family: Karla;
+	font-size: .95em;
+	font-weight: 400;
+	&:hover {
+		background: $bg-primary;
+		color: $link-inverted;
+	}
+}
+
+.site-sidebar-list {
+	padding: 0;
+}
+
+.site-sidebar-list-item {
+	margin: 4px 0;
+	list-style: none;
+	a {
+		background: $bg-primary;
+		display: block;
+		padding: .25em .5em;
+		color: $link-inverted;
+		font-family: Karla;
+		&:hover {
+			background: $bg-senary;
+			color: $c-primary;
+		}
+	}
+}
+
+.pagination,
+.post-navigation {
+	overflow: hidden;
+	margin-top: 1em;
+	font-family: Karla;
+	font-size: .85em;
+	text-transform: uppercase;
+}
+
+.post-pagination {
+	padding-bottom: 1em;
+	@include separator(solid, $c-quinary);
+}
+
+.more-link {
+	font-size: .9em;
+}
+
+.more-link,
+.comment-reply-link,
+.car-toggler {
+	display: inline-block;
+	padding: .25em .65em;
+	background: $link;
+	text-decoration: none;
+	&:link,
+	&:visited {
+		color: $link-inverted;
+	}
+	&:hover {
+		background: $bg-primary;
+	}
+}
+
+.prev-link,
+.next-link,
+.post-edit-link {
+	padding: .25em .65em;
+	background: $bg-primary;
+	text-decoration: none;
+	&:link,
+	&:visited {
+		color: $link-inverted;
+	}
+	&:hover {
+		background: $bg-tertiary;
+		color: $c-primary;
+	}
+}
+
+.prev-post-link,
+.next-post-link {
+	display: inline-block;
+	line-height: 1.5;
+}
+
+.post-edit-link {
+	display: inline-block;
+	margin-bottom: 1em;
+}
+
+.cancel-comment-reply {
+	margin-left: .5em;
+	background: $bg-quarternary;
+	color: $c-tertiary-dark;
+	&:hover {
+		background: $bg-tertiary;
+		color: $c-primary;
+	}
+}
+
+.prev-link-wrapper,
+.next-link-wrapper {
+	line-height: 2;
+}
+
+.next-link-wrapper {
+	text-align: right;
+}
+
+.prev-post-link,
+.next-post-link {
+	text-transform: none;
+}
+
+// navigation toggle
+
+.main-navigation-toggle {
+	padding: .85em;
+	line-height: .65;
+	&:hover {
+		span {
+			color: $link-inverted;
+		}
+	}
+}
+
+.main-navigation-toggle-open,
+.main-navigation-toggle-close {
+	display: block;
+	color: $link-inverted;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	&:hover {
+		color: $c-primary;
+	}
+}
+
+.main-navigation-toggle-close {
+	display: none;
+}
+
+.main-navigation-toggle.is-open {
+	.main-navigation-toggle-open {
+		display: none;
+	}
+	.main-navigation-toggle-close {
+		display: block;
+	}
+}
+
+.main-navigation {
+	display: none;
+	&.is-open {
+		display: block;
+	}
+}

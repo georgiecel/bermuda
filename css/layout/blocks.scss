@@ -1,0 +1,30 @@
+.site-body {
+	overflow: hidden;
+}
+
+.site-sidebar {
+	display: none;
+	width: 22%;
+	padding: 1em 2%;
+	font-size: .8em;
+	line-height: 1;
+}
+
+.site-content {
+	padding: 1.25em;
+	background: $bg-quinary;
+}
+
+.site-footer-component {
+	display: inline-block;
+	max-width: 550px;
+	margin-bottom: 1em;
+	padding: 0 1.5em;
+	vertical-align: top;
+	text-align: left;
+}
+
+iframe {
+	max-width: 100%;
+	margin: 0 auto !important;
+}

@@ -1,0 +1,19 @@
+.site-footer {
+	background: $bg-tertiary;
+	padding: .5em 1.25em;
+	color: $c-primary-dark;
+	font-size: .9em;
+	a {
+		color: $c-primary;
+		text-decoration: none;
+		&:hover {
+			color: $c-primary-dark;
+		}
+	}
+}
+
+.site-footer-text {
+	color: $c-primary-dark;
+	font-family: Karla;
+	font-size: 1em;
+}

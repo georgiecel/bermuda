@@ -1,0 +1,83 @@
+img {
+	max-width: 100%;
+	height: auto;
+	&.about-georgie {
+		display: block;
+		margin: 1em auto;
+		padding: 3px;
+		border: 1px solid $c-quinary;
+	}
+}
+
+.site-logo {
+	background: url(images/logo.png);
+	display: block;
+	width: 120px;
+	height: 105px;
+	margin: 1.5em auto;
+	text-indent: -9999em;
+}
+
+.site-logo-mini {
+	background: url(images/logo-mini.png);
+	display: block;
+	width: 60px;
+	height: 53px;
+	margin: 1em auto;
+	text-indent: -9999em;
+}
+
+.post-figure,
+.figure-alignright,
+.figure-alignleft,
+.figure-aligncenter,
+.wp-caption,
+.post-content .aligncenter {
+	margin: 1em auto;
+}
+
+.post-content .aligncenter {
+	display: block;
+}
+
+.post-thumbnail-wrapper {
+	display: none;
+}
+
+.attachment-post-thumbnail {
+	margin: 0;
+	padding: 0;
+	border-radius: 100px;
+}
+
+.wp-smiley {
+	width: 1em;
+}
+
+.post figure,
+.post-figure,
+.wp-caption {
+	img {
+		display: block;
+	}
+}
+
+.post figcaption,
+.post-figcaption,
+.wp-caption-text {
+	background: $bg-tertiary;
+	padding: .5em;
+	color: $c-primary-dark;
+	font-family: Karla;
+	font-size: .85em;
+	text-align: center;
+}
+
+.post-figure,
+.wp-caption {
+	max-width: 100%;
+}
+
+.post-figure + .post-figure {
+	margin-top: 1em;
+}
