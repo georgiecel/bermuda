@@ -211,6 +211,13 @@
 	remove_filter('the_excerpt', 'wpautop');
 	add_filter('the_excerpt', 'remove_br_excerpt' );
 
+	// allowing HTML in category descriptions
+
+	remove_filter( 'pre_term_description', 'wp_filter_kses' );
+	remove_filter( 'pre_link_description', 'wp_filter_kses' );
+	remove_filter( 'pre_link_notes', 'wp_filter_kses' );
+	remove_filter( 'term_description', 'wp_kses_data' );
+
 	// allowing shortcodes to work in excerpts
 
 	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
