@@ -22,7 +22,7 @@
 						</a></p>
 					</footer>
 					<div class="post-content" itemprop="text">
-						<?php the_content('','[...] <p><a href="'.get_permalink().'#more-'.get_the_ID().'" class="btn more-link">Continue reading &raquo;</a></p>'); ?>
+						<?php the_excerpt(); ?>
 					</div>
 				</article>
 			<?php endwhile; ?>
