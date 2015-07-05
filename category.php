@@ -34,8 +34,7 @@
 						</a></p>
 					</footer>
 					<div class="post-content" itemprop="text">
-						<?php the_excerpt('','[...]'); ?>
-						<p><a class="btn more-link" href="<?php the_permalink() ?>">Read more of this post »</a></p>
+						<?php the_excerpt(); ?>
 					</div>
 				</article>
 			<?php endwhile; ?>
