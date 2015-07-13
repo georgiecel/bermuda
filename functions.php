@@ -139,6 +139,25 @@
 		echo $title;
 	}
 
+	// Adding post image URLs to metadata
+
+	function image_url_meta() {
+		global $post;
+		$args = array(
+			'post_type' => 'attachment', 
+			'numberposts' => -1,
+			'post_mime_type' => 'image',
+			'post_status' => null,
+			'post_parent' => $post->ID
+		);
+		$attachments = get_posts($args);
+		if ($attachments) {
+			foreach ( $attachments as $attachment ) {
+				echo '<meta itemprop="image" content="' . $attachment->guid . '">';
+			}
+		}
+	}
+
 	// Adjust HTML for image caption shortcode
 
 	function caption_shortcode($val, $attr, $content = null) {

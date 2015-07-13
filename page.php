@@ -8,9 +8,8 @@
 					}
 				?>
 				<footer class="post-meta" role="contentinfo">
-					<meta itemprop="author" content="Georgie Luhur">
+					<meta itemprop="author" content="<?php the_author(); ?>">
 					<meta itemprop="inLanguage" content="en">
-					<meta itemprop="copyrightYear" content="<?php the_time('Y') ?>">
 					<meta itemprop="url" content="<?php echo get_permalink(); ?>">
 					<meta itemprop="wordCount" content="<?php echo wordcount(); ?>">
 				</footer>

@@ -3,19 +3,11 @@
 	@include separator(solid, $c-quinary);
 }
 
-.post-title + .post-meta {
-	margin-top: -.5em;
-}
-
-.post-meta {
-	line-height: 1.4;
-	text-transform: uppercase;
-}
-
 .post-meta-item {
 	margin: 0;
 	color: $c-tertiary;
-	font-size: .75em;
+	font-family: Karla;
+	font-size: .8rem;
 }
 
 .page,

@@ -35,30 +35,30 @@ dl {
 }
 
 h1 {
-	@include h1(1.4em);
+	@include h1(1.4rem);
 	a {
 		text-decoration: none;
 	}
 }
 
 h2 {
-	@include h2(1.35em);
+	@include h2(1.35rem);
 }
 
 h3 {
-	@include h3(1.2em);
+	@include h3(1.2rem);
 }
 
 h4 {
-	@include h4(1.2em);
+	@include h4(1.2rem);
 }
 
 h5 {
-	@include h5(1.1em);
+	@include h5(1.1rem);
 }
 
 h6 {
-	@include h6(1em);
+	@include h6(1rem);
 }
 
 a,
