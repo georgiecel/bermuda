@@ -11,9 +11,6 @@
 	font-size: $fontsize;
 	font-weight: 500;
 	line-height: 1.25;
-	.page & {
-		text-align: left;
-	}
 }
 
 @mixin h2($fontsize) {
@@ -22,9 +19,6 @@
 	font-size: $fontsize;
 	font-weight: normal;
 	line-height: 1.25;
-	.page & {
-		text-align: left;
-	}
 }
 
 @mixin h3($fontsize) {

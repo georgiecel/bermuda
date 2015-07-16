@@ -89,8 +89,6 @@ h1 {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.25; }
-  .page h1 {
-    text-align: left; }
   h1 a {
     text-decoration: none; }
 
@@ -100,8 +98,6 @@ h2 {
   font-size: 1.35rem;
   font-weight: normal;
   line-height: 1.25; }
-  .page h2 {
-    text-align: left; }
 
 h3 {
   margin-top: 1.5rem;
@@ -683,18 +679,23 @@ blockquote:before {
 .post-list dd {
   margin: 0 0 20px; }
 
-.comments-list .comment-meta {
-  min-height: 55px;
-  margin-left: 65px;
-  font-size: .85em;
-  text-align: left; }
-.comments-list > .comment,
-.comments-list > .pingback {
-  border-bottom: 1px solid #bbb; }
-  .comments-list > .comment .comment-meta,
-  .comments-list > .pingback .comment-meta {
-    min-height: 0;
-    margin-left: 0; }
+.comments {
+  margin-top: 1rem; }
+
+.comments-list {
+  margin-top: 1.5rem; }
+  .comments-list .comment-meta {
+    min-height: 55px;
+    margin-left: 65px;
+    font-size: .85em;
+    text-align: left; }
+  .comments-list > .comment,
+  .comments-list > .pingback {
+    border-bottom: 1px solid #bbb; }
+    .comments-list > .comment .comment-meta,
+    .comments-list > .pingback .comment-meta {
+      min-height: 0;
+      margin-left: 0; }
 
 .comment,
 .pingback {
@@ -703,7 +704,7 @@ blockquote:before {
 
 .comment-gravatar {
   float: left;
-  margin: 0 1em 1em 0;
+  margin: 0 1rem 0.5rem 0;
   padding: 3px;
   border: 1px solid #ddd; }
   .pingback .comment-gravatar {

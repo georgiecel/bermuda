@@ -1,4 +1,9 @@
+.comments {
+	margin-top: 1rem;
+}
+
 .comments-list {
+	margin-top: 1.5rem;
 	.comment-meta {
 		min-height: 55px;
 		margin-left: 65px;
@@ -23,7 +28,7 @@
 
 .comment-gravatar {
 	float: left;
-	margin: 0 1em 1em 0;
+	margin: 0 1rem 0.5rem 0;
 	padding: 3px;
 	border: 1px solid $c-quinary;
 	.pingback & {
