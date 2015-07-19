@@ -127,15 +127,28 @@ input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
-textarea,
-pre {
+textarea {
 	overflow: auto;
 }
 
-code,
+code {
+	font-family: Monaco, Consolas, 'Courier New', monospace;
+	font-size: 1rem;
+}
+
 pre {
-	font-family: monospace;
-	font-size: 1em;
+	background: $bg-quaternary-light;
+	margin: 2rem 0;
+	padding: 1.5rem;
+	font-family: Monaco, Consolas, 'Courier New', monospace;
+	font-size: 0.9rem;
+	line-height: 1.75;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+mark {
+	background: $bg-tertiary;
 }
 
 dt {
@@ -154,7 +167,7 @@ hr {
 	height: 1px;
 	width: 80%;
 	margin: 2em auto;
-	background: $c-quarternary-light;
+	background: $c-quaternary-light;
 	border: 0;
 }
 
