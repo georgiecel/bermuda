@@ -143,17 +143,7 @@
 
 	.post-thumbnail {
 		float: left;
-		margin: 0 1.5em 1em 0;
-	}
-
-	.post figcaption,
-	.post-figcaption,
-	.wp-caption-text {
-		font-size: 1em;
-	}
-
-	.post-figure + .post-figure {
-		margin-top: 1.5em;
+		margin: 0 1.5rem 0 0;
 	}
 
 	.comments-list {
@@ -208,17 +198,21 @@
 
 @media (min-width: 1150px) {
 
-	.search-form-input {
-		width: 75%;
-	}
+	// .search-form-input {
+	// 	width: 75%;
+	// }
 
-	.search-form-submit {
-		width: 25%;
-	}
+	// .search-form-submit {
+	// 	width: 25%;
+	// }
 
 }
 
 @media (min-width: 1400px) {
+
+	.site-body {
+		max-width: 70em;
+	}
 
 	.site-footer-component {
 		width: 365px;

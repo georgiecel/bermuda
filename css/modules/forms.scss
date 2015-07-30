@@ -3,29 +3,20 @@ button,
 .pushbutton-wide,
 .post-edit-link,
 .comment-reply-link {
-	padding: .25em .65em;
+	padding: .35em .85em;
 	font-family: Karla;
-	border-radius: 0;
+	border-radius: 0.25rem;
 }
 
-button,
 input,
 textarea {
+	// width: 100%;
 	background: $bg-senary;
-	font-size: 1em;
 	line-height: 1.5;
 	border: 1px solid $c-quaternary;
-	-webkit-appearance: none;
-}
-
-input,
-textarea {
-	box-sizing: border-box;
-	width: 100%;
-	padding: 7px 10px;
-	&:hover {
-		border-color: $c-primary-light;
-	}
+	// &:hover {
+	// 	border-color: $c-primary-light;
+	// }
 }
 
 button,
@@ -43,25 +34,19 @@ input[type="submit"] {
 
 .search-form,
 .subscribe-form {
-	overflow: hidden;
-	margin-top: 30px;
-}
-
-.subscribe-form {
-	margin-top: 15px;
+	margin-top: 1rem;
 }
 
 .search-form-input,
 .subscribe-form-input {
-	float: left;
-	width: 71%;
-	height: 34px;
-	vertical-align: middle;
-	background: $bg-tertiary;
+	// float: left;
+	// width: 71%;
+	// height: 34px;
+	// vertical-align: middle;
+	// background: $bg-tertiary;
 	color: $c-primary-dark;
 	font-family: Karla;
-	font-size: 1.1em;
-	border: none;
+	// font-size: 1.1em;
 	&:hover,
 	&:focus {
 		background: $bg-senary;
@@ -69,7 +54,7 @@ input[type="submit"] {
 }
 
 .subscribe-form-input {
-	width: 80%;
+	// width: 80%;
 	.site-footer-component & {
 		background: $bg-senary;
 		&:hover {
@@ -80,14 +65,14 @@ input[type="submit"] {
 
 .search-form-submit,
 .subscribe-form-submit {
-	float: right;
-	width: 29%;
-	height: 34px;
-	padding: 5px 10px;
-	vertical-align: middle;
+	// float: right;
+	// width: 29%;
+	// height: 34px;
+	// padding: 5px 10px;
+	// vertical-align: middle;
 	background: $bg-primary;
 	color: $link-inverted;
-	font-size: 1.1em;
+	// font-size: 1.1em;
 	&:hover {
 		background: $bg-senary;
 		color: $c-primary;
@@ -95,7 +80,7 @@ input[type="submit"] {
 }
 
 .subscribe-form-submit {
-	width: 20%;
+	// width: 20%;
 }
 
 .contact-form label {
@@ -103,5 +88,5 @@ input[type="submit"] {
 }
 
 .contact-submit {
-	margin-top: 0;
+	// margin-top: 0;
 }

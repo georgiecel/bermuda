@@ -100,13 +100,27 @@ img {
 button,
 input,
 textarea {
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.35rem 0.85rem;
 	color: inherit;
 	font: inherit;
-	margin: 0;
+}
+
+input,
+textarea {
+	background: $bg-senary;
+	border: 1px solid $c-quinary;
 }
 
 button {
+	min-height: 2.5rem;
 	cursor: pointer;
+}
+
+input {
+	height: 2.5rem;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -120,15 +134,15 @@ textarea {
 
 code {
 	font-family: Monaco, Consolas, 'Courier New', monospace;
-	font-size: 1rem;
+	font-size: .9rem;
 }
 
 pre {
-	background: $bg-quaternary-light;
+	background:  $bg-quinary-dark;
 	margin: 2rem 0;
 	padding: 1.5rem;
 	font-family: Monaco, Consolas, 'Courier New', monospace;
-	font-size: 0.9rem;
+	font-size: .9rem;
 	line-height: 1.75;
 	white-space: pre-wrap;
 	word-wrap: break-word;
