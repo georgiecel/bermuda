@@ -8,7 +8,6 @@ html {
 
 body {
 	margin: 0;
-	background: $bg-secondary-dark;
 }
 
 [hidden] {
@@ -68,30 +67,15 @@ a,
 a:link {
 	color: $link;
 	text-decoration: none;
-	.site-sidebar-text & {
-		margin: 0 2px;
-		padding: 2px 5px;
-		background: $bg-primary;
-		color: $link-inverted !important;
-		font-weight: 500;
-	}
 }
 
 a:visited {
 	color: $link-visited;
-	.site-sidebar-text & {
-		color: $c-primary-dark;
-		font-weight: 500;
-	}
 }
 
 a:hover {
 	color: $link-hover;
 	text-decoration: none;
-	.site-sidebar-text & {
-		background: $link-inverted;
-		color: $c-primary-dark !important;
-	}
 }
 
 a:active {

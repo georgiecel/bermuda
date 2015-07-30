@@ -1,29 +1,14 @@
 // sidebar
 
-.site-sidebar-heading {
-	margin-top: 2em;
-	margin-bottom: .5em;
-	color: $bg-senary;
-	font-family: Karla;
-	& + .site-sidebar-text {
-		margin-top: 0;
-	}
-}
-
-.site-sidebar-icon {
+.social-icon-link {
 	display: inline-block;
-	i {
-		display: block;
-		padding: .25em;
-		color: $c-primary-dark;
-		font-size: 1.5em;
-		&:hover {
-			color: $link-inverted;
-		}
-	}
 }
 
-.site-sidebar-text {
-	color: $c-primary-dark;
-	font-family: Karla;
+.social-icon {
+	padding: .35rem;
+	color: $c-tertiary;
+	font-size: 1.25rem;
+	&:hover {
+		color: $c-tertiary-light;
+	}
 }

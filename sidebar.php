@@ -6,11 +6,11 @@
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">holla@</h3>
 				<p class="site-sidebar-text">I’m Georgie. I code during the day and photograph bands at night. I love waffles, noodles &amp; tea. I write about fashion, music, getting through life, and finding hidden gems in Sydney.</p>
-				<a class="site-sidebar-icon" href="http://twitter.com/georgiecel"><i class="icon-twitter"></i></a>
-				<a class="site-sidebar-icon" href="http://last.fm/user/jazzmoodles"><i class="icon-lastfm"></i></a>
-				<a class="site-sidebar-icon" href="http://instagram.com/hey.georgie/"><i class="icon-instagram"></i></a>
-				<a class="site-sidebar-icon" href="http://linkedin.com/in/gluhur/"><i class="icon-linkedin"></i></a>
-				<a class="site-sidebar-icon" href="http://delicious.com/sashimi/"><i class="icon-delicious"></i></a>
+				<a class="social-icon-link" href="http://twitter.com/georgiecel"><span class="social-icon icon-twitter"></span></a>
+				<a class="social-icon-link" href="http://last.fm/user/jazzmoodles"><span class="social-icon icon-lastfm"></span></a>
+				<a class="social-icon-link" href="http://instagram.com/hey.georgie/"><span class="social-icon icon-instagram"></span></a>
+				<a class="social-icon-link" href="http://linkedin.com/in/gluhur/"><span class="social-icon icon-linkedin"></span></a>
+				<a class="social-icon-link" href="http://delicious.com/sashimi"><span class="social-icon icon-delicious"></span></a>
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">Regularly Updated</h3>

@@ -21,17 +21,15 @@ a.main-navigation-link,
 }
 
 .site-sidebar-list-item {
-	margin: 4px 0;
+	margin: .25rem 0;
 	list-style: none;
 	a {
-		background: $bg-primary;
-		display: block;
-		padding: .25em .5em;
-		color: $link-inverted;
-		font-family: Karla;
+		// background: $bg-primary;
+		// display: block;
+		// padding: .25em .5em;
 		&:hover {
-			background: $bg-senary;
-			color: $c-primary;
+			// background: $bg-senary;
+			// color: $c-primary;
 		}
 	}
 }
