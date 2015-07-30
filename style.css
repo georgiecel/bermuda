@@ -115,7 +115,8 @@ h5 {
 h6 {
   margin-top: 1.5rem;
   margin-bottom: -.5em;
-  color: #3c9493;
+  color: #f16c6c;
+  font-family: Karla;
   font-size: 1rem;
   font-weight: 300; }
 
@@ -247,28 +248,9 @@ iframe {
   max-width: 100%;
   margin: 0 auto !important; }
 
-.site-sidebar {
-  float: right; }
-
-.figure-alignright,
-.figure-alignleft,
-.figure-aligncenter {
-  float: none; }
-
-.prev-link,
-.prev-link-wrapper {
-  float: left;
-  max-width: 45%;
-  margin-right: 1%; }
-
-.next-link,
-.next-link-wrapper {
-  float: right;
-  max-width: 45%;
-  margin-left: 1%; }
-
 .site-header {
-  overflow: hidden; }
+  overflow: hidden;
+  background: #CEF7F4; }
 
 .site-title {
   display: block;
@@ -304,19 +286,44 @@ a.main-navigation-link,
   margin: .25rem 0;
   list-style: none; }
 
-.pagination,
-.post-navigation {
-  overflow: hidden;
+.pagination {
+  display: table;
+  width: 100%;
   margin-top: 1rem;
-  font-family: Karla;
-  text-transform: uppercase; }
-
-.post-pagination {
   padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd; }
+  font-family: Karla;
+  font-size: 1rem;
+  text-transform: uppercase; }
+  .pagination-link {
+    display: table-cell;
+    vertical-align: top; }
+    .pagination-link:first-child {
+      padding-right: 1rem; }
+    .pagination-link-item {
+      display: block;
+      text-transform: none; }
+  .post + .pagination {
+    border-bottom: 1px solid #ddd; }
 
-.more-link {
+.prev-link {
+  box-sizing: border-box;
+  float: left;
+  max-width: 49%;
+  font-size: .9rem; }
+
+.next-link {
+  box-sizing: border-box;
+  float: right;
+  max-width: 49%;
+  font-size: .9rem; }
+
+.more-link,
+.comment-reply-link,
+.post-edit-link {
   font-size: .9em; }
+
+.post-edit-link {
+  display: inline-block; }
 
 .more-link,
 .comment-reply-link {
@@ -350,14 +357,6 @@ a.main-navigation-link,
     background: #CEF7F4;
     color: #50C8C4; }
 
-.prev-post-link,
-.next-post-link {
-  display: inline-block; }
-
-.post-edit-link {
-  display: inline-block;
-  margin-bottom: 1em; }
-
 .cancel-comment-reply {
   margin-left: .5em;
   background: #eee;
@@ -365,17 +364,6 @@ a.main-navigation-link,
   .cancel-comment-reply:hover {
     background: #CEF7F4;
     color: #50C8C4; }
-
-.prev-link-wrapper,
-.next-link-wrapper {
-  line-height: 2; }
-
-.next-link-wrapper {
-  text-align: right; }
-
-.prev-post-link,
-.next-post-link {
-  text-transform: none; }
 
 .main-navigation-toggle {
   padding: .85em;
@@ -406,6 +394,9 @@ a.main-navigation-link,
   display: none; }
   .main-navigation.is-open {
     display: block; }
+
+.site-sidebar {
+  float: right; }
 
 .social-icon-link {
   display: inline-block; }
@@ -461,7 +452,7 @@ input[type="submit"] {
 
 .search-form-input,
 .subscribe-form-input {
-  color: #3c9493;
+  color: #888;
   font-family: Karla; }
   .search-form-input:hover, .search-form-input:focus,
   .subscribe-form-input:hover,
@@ -494,14 +485,6 @@ img {
     padding: 3px;
     border: 1px solid #ddd; }
 
-.site-logo {
-  background: url(images/logo.png);
-  display: block;
-  width: 120px;
-  height: 105px;
-  margin: 1.5rem auto;
-  text-indent: -9999em; }
-
 .site-logo-mini {
   background: url(images/logo-mini.png);
   display: block;
@@ -530,9 +513,14 @@ img {
   .post-figure img {
     display: block; }
 
+.figure-alignright,
+.figure-alignleft,
+.figure-aligncenter {
+  float: none; }
+
 .post-figcaption {
   padding: .5rem 0 0 .25rem;
-  color: #3c9493;
+  color: #888;
   font-family: Karla;
   font-size: .85rem; }
 
@@ -629,8 +617,7 @@ blockquote:before {
 
 .comment-meta-item {
   display: block;
-  margin-top: .25em;
-  text-transform: none; }
+  margin-top: .25em; }
 
 .child-comments {
   margin-top: 1em;
@@ -764,7 +751,7 @@ blockquote:before {
     color: #50C8C4; }
     a.main-navigation-link:hover {
       background: #fff;
-      color: #3c9493; }
+      color: #888; }
 
   .site-content {
     padding: 1.25rem 3rem; }
@@ -787,19 +774,15 @@ blockquote:before {
   .figure-alignright,
   .post-content .alignright {
     float: right;
-    margin: 1em 0 1em 1em; }
+    margin: .5rem 0 1.25rem 1.25rem; }
 
   .figure-alignleft,
   .post-content .alignleft {
     float: left;
-    margin: 1em 1em 1em 0; }
+    margin: .5rem 1.25rem 1.5rem 0; }
 
   .figure-aligncenter {
     margin: 1em auto; }
-
-  .pagination,
-  .post-navigation {
-    font-size: .95em; }
 
   .site-footer {
     text-align: center; } }
@@ -833,9 +816,7 @@ blockquote:before {
     margin: 0 1.5rem 0 0; }
 
   .comments-list .comment-meta {
-    min-height: 75px;
-    margin-left: 75px;
-    font-size: 1em; }
+    font-size: 1rem; }
 
   .avatar {
     width: 65px; } }
@@ -873,13 +854,6 @@ blockquote:before {
   a.external {
     background: url(images/external@2x.png) no-repeat right;
     background-size: 10px 10px; }
-
-  .site-logo {
-    display: block;
-    width: 120px;
-    height: 105px;
-    background: url(images/logo@2x.png);
-    background-size: 100% auto; }
 
   .site-logo-mini {
     display: block;

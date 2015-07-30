@@ -40,7 +40,7 @@
 		color: $c-primary;
 		&:hover {
 			background: $link-inverted;
-			color: $c-primary-dark;
+			color: $c-tertiary;
 		}
 	}
 
@@ -70,22 +70,17 @@
 	.figure-alignright,
 	.post-content .alignright {
 		float: right;
-		margin: 1em 0 1em 1em;
+		margin: .5rem 0 1.25rem 1.25rem;
 	}
 
 	.figure-alignleft,
 	.post-content .alignleft {
 		float: left;
-		margin: 1em 1em 1em 0;
+		margin: .5rem 1.25rem 1.5rem 0;
 	}
 
 	.figure-aligncenter {
 		margin: 1em auto;
-	}
-
-	.pagination,
-	.post-navigation {
-		font-size: .95em;
 	}
 
 	.site-footer {
@@ -148,9 +143,7 @@
 
 	.comments-list {
 		.comment-meta {
-			min-height: 75px;
-			margin-left: 75px;
-			font-size: 1em;
+			font-size: 1rem;
 		}
 	}
 
@@ -230,14 +223,6 @@
 	a.external {
 		background: url(images/external@2x.png) no-repeat right; // overriding plugin default
 		background-size: 10px 10px;
-	}
-
-	.site-logo {
-		display: block;
-		width: 120px;
-		height: 105px;
-		background: url(images/logo@2x.png);
-		background-size: 100% auto;
 	}
 
 	.site-logo-mini {

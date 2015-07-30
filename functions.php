@@ -47,12 +47,12 @@
 	// Add classes to next/previous links in individual posts
 
 	function post_link_attributes_1( $output ) {
-		$code = 'class="next-post-link"';
+		$code = 'class="pagination-link-item next-post-link"';
 		return str_replace('<a href=', '<a ' . $code . ' href=', $output);
 	}
 
 	function post_link_attributes_2( $output ) {
-		$code = 'class="prev-post-link"';
+		$code = 'class="pagination-link-item prev-post-link"';
 		return str_replace('<a href=', '<a ' . $code . ' href=', $output);
 	}
 

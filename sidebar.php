@@ -1,5 +1,4 @@
 		<aside class="site-sidebar">
-			<a href="/" class="site-logo">Hey Georgie</a>
 			<div class="site-search">
 				<?php get_search_form(); ?>
 			</div>
