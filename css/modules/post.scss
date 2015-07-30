@@ -1,5 +1,5 @@
 .post {
-	padding: .5em 0;
+	padding: 1rem 0;
 	@include separator(solid, $c-quinary);
 }
 
@@ -19,13 +19,13 @@
 	display: block;
 	width: 202px;
 	height: 178px;
-	margin: 1em auto 2.5em;
+	margin: 1rem auto 2.5rem;
 	background: url(images/404.png);
 }
 
 .post-list {
 	dd {
-		margin: 0 0 20px;
+		margin: 0 0 1rem;
 	}
 
 }

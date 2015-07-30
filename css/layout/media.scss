@@ -1,31 +1,18 @@
 @media (min-width: 600px) {
 
-	p,
-	li,
-	dl {
-		@include font(1.05em);
-		line-height: 1.65;
+	body {
+		@include font(1.1rem);
+		line-height: 1.67;
 	}
 
 	h1 {
-		margin: .5em auto;
-		font-size: 1.75rem;
+		margin: .5rem auto;
+		font-size: 1.65rem;
 		text-align: center;
 	}
 
-	h2 {
-		font-size: 1.45em;
-	}
-
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-size: 1.3em;
-	}
-
 	blockquote {
-		padding: 1.5em 3em;
+		padding: 2rem 3rem;
 	}
 
 	.site-header {
@@ -58,11 +45,7 @@
 	}
 
 	.site-content {
-		padding: 1.25em 3em;
-	}
-
-	.search-listing .post .post-title {
-		font-size: 1.65em;
+		padding: 1.25rem 3rem;
 	}
 
 	.post-meta {
@@ -113,42 +96,35 @@
 
 @media (min-width: 700px) {
 
-	p,
-	li,
-	dl {
-		@include font(1.175em);
-	}
-
-	input,
-	textarea {
-		width: 40%;
-	}
+	// input,
+	// textarea {
+	// 	width: 40%;
+	// }
 
 	a.main-navigation-link,
 	.main-navigation-toggle { 
 		font-size: 1.05em;
 	}
 
-	.comment-respond,
-	.contact-form textarea {
-		width: 70% !important;
-	}
+	// .comment-respond,
+	// .contact-form textarea {
+	// 	width: 70% !important;
+	// }
 
 }
 
 @media (min-width: 850px) {
 
 	.post {
-		padding: 1.5em 0;
+		padding: 1.5rem 0;
 	}
 
 	.post-title {
-		margin: .5rem 0;
 		text-align: left;
 	}
 
 	.post-meta {
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 		text-align: left;
 	}
 
@@ -196,14 +172,8 @@
 
 @media (min-width: 1000px) {
 
-	p,
-	li,
-	dl {
-		@include font(1.2em);
-	}
-
 	.site-body {
-		max-width: 84em;
+		max-width: 65em;
 		margin: 0 auto;
 	}
 

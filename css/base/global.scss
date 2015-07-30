@@ -1,6 +1,9 @@
 html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	@include font(1em);
+	line-height: 1.5;
 }
 
 body {
@@ -24,15 +27,15 @@ section {
   display: block;
 }
 
-html,
-body,
-p,
-li,
-dl {
-	@include font(1em);
-	line-height: 1.5;
-	text-rendering: optimizeLegibility;
-}
+// html,
+// body,
+// p,
+// li,
+// dl {
+// 	@include font(1em);
+// 	line-height: 1.5;
+// 	text-rendering: optimizeLegibility;
+// }
 
 h1 {
 	@include h1(1.4rem);
@@ -157,16 +160,13 @@ dt {
 
 ul li {
 	list-style: square;
-	li {
-		font-size: 1em;
-	}
 }
 
 hr {
 	box-sizing: content-box;
 	height: 1px;
 	width: 80%;
-	margin: 2em auto;
+	margin: 2rem auto;
 	background: $c-quaternary-light;
 	border: 0;
 }
@@ -176,13 +176,13 @@ abbr[title] {
 }
 
 small {
-	font-size: 80%;
+	display: inline-block;
+	font-size: .8rem;
 }
 
 sup {
 	position: relative;
-	top: -0.5em;
-	font-size: 75%;
-	line-height: 0;
+	top: -.5rem;
+	font-size: .75rem;
 	vertical-align: baseline;
 }

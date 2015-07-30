@@ -39,14 +39,13 @@ a.main-navigation-link,
 .pagination,
 .post-navigation {
 	overflow: hidden;
-	margin-top: 1em;
+	margin-top: 1rem;
 	font-family: Karla;
-	font-size: .85em;
 	text-transform: uppercase;
 }
 
 .post-pagination {
-	padding-bottom: 1em;
+	padding-bottom: 1rem;
 	@include separator(solid, $c-quinary);
 }
 
@@ -55,8 +54,7 @@ a.main-navigation-link,
 }
 
 .more-link,
-.comment-reply-link,
-.car-toggler {
+.comment-reply-link {
 	display: inline-block;
 	padding: .25em .65em;
 	background: $link;
@@ -89,7 +87,6 @@ a.main-navigation-link,
 .prev-post-link,
 .next-post-link {
 	display: inline-block;
-	line-height: 1.5;
 }
 
 .post-edit-link {
