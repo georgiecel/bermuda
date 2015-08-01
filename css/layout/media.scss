@@ -6,7 +6,6 @@
 	}
 
 	h1 {
-		margin: .5rem auto;
 		font-size: 1.65rem;
 		text-align: center;
 	}
@@ -91,20 +90,11 @@
 
 @media (min-width: 700px) {
 
-	// input,
-	// textarea {
-	// 	width: 40%;
-	// }
 
 	a.main-navigation-link,
 	.main-navigation-toggle { 
 		font-size: 1.05em;
 	}
-
-	// .comment-respond,
-	// .contact-form textarea {
-	// 	width: 70% !important;
-	// }
 
 }
 
@@ -151,22 +141,32 @@
 		width: 65px;
 	}
 
+	.site-footer-component {
+		box-sizing: border-box;
+		width: 33%;
+		max-width: 22em;
+		padding: 0 2rem;
+		margin-bottom: 0;
+	}
+
 }
 
 @media (min-width: 1000px) {
 
 	.site-body {
-		max-width: 65em;
+		max-width: 66em;
 		margin: 0 auto;
 	}
 
 	.site-sidebar {
 		display: block;
+		padding: 1.25rem 2rem 1.25rem 0;
 	}
 
 	.site-content {
 		float: left;
-		width: 74%;
+		width: 72%;
+		padding: 1.25rem 2rem;
 	}
 
 	a.main-navigation-link {
@@ -179,40 +179,13 @@
 
 }
 
-@media (min-width: 1100px) {
+// @media (min-width: 1400px) {
 
-	.site-footer-component {
-		width: 29%;
-		padding: 0 2%;
-		margin-bottom: 0;
-	}
+// 	.site-body {
+// 		max-width: 70em;
+// 	}
 
-}
-
-@media (min-width: 1150px) {
-
-	// .search-form-input {
-	// 	width: 75%;
-	// }
-
-	// .search-form-submit {
-	// 	width: 25%;
-	// }
-
-}
-
-@media (min-width: 1400px) {
-
-	.site-body {
-		max-width: 70em;
-	}
-
-	.site-footer-component {
-		width: 365px;
-		padding: 0 3em;
-	}
-
-}
+// }
 
 @media (min--moz-device-pixel-ratio: 1.5),
 (-o-min-device-pixel-ratio: 3/2),

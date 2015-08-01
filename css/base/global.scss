@@ -75,7 +75,7 @@ a:visited {
 
 a:hover {
 	color: $link-hover;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:active {
@@ -100,23 +100,42 @@ img {
 button,
 input,
 textarea {
-	-webkit-appearance: none;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0.35rem 0.85rem;
+	padding: .35rem .85rem;
 	color: inherit;
 	font: inherit;
 }
 
 input,
 textarea {
-	background: $bg-senary;
+	color: $c-tertiary;
 	border: 1px solid $c-quinary;
+	&:hover,
+	&:focus {
+		background: $bg-quinary-dark;
+		color: $c-tertiary;
+	}
+}
+
+button,
+.btn {
+	-webkit-appearance: caret;
+	padding: .35em .85em;
+	background: $bg-primary;
+	color: $link-inverted;
+	font-family: Karla;
+	border: none;
+	border-radius: .25rem;
+	cursor: pointer;
+	&:hover {
+		background: $link;
+		text-decoration: none;
+	}
 }
 
 button {
 	min-height: 2.5rem;
-	cursor: pointer;
 }
 
 input {

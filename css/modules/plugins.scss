@@ -3,11 +3,11 @@
 // contact form
 
 .contact-form {
+	label {
+		font-weight: 500 !important;
+	}
 	textarea {
 		width: 100% !important;
-	}
-	.pushbutton-wide {
-		font-size: .9em;
 	}
 }
 

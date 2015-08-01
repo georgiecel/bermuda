@@ -6,7 +6,7 @@
 }
 	
 @mixin h1($fontsize) {
-	margin: 0.5rem 0;
+	margin: .5rem 0;
 	color: $c-primary;
 	font-size: $fontsize;
 	font-weight: 500;

@@ -6,7 +6,6 @@ a.main-navigation-link,
 .main-navigation-toggle {
 	display: block;
 	padding: .25em .5em;
-	color: $link-inverted;
 	font-family: Karla;
 	font-size: .95em;
 	font-weight: 400;
@@ -24,12 +23,15 @@ a.main-navigation-link,
 	margin: .25rem 0;
 	list-style: none;
 	a {
-		// background: $bg-primary;
-		// display: block;
-		// padding: .25em .5em;
+		display: block;
+		padding: .25rem .5rem .25rem 0;
+		animation: all .3s ease;
 		&:hover {
-			// background: $bg-senary;
-			// color: $c-primary;
+			padding-left: .75rem;
+			background: $bg-quaternary-light;
+			color: $c-tertiary-dark;
+			text-decoration: none;
+			border-radius: .25rem;
 		}
 	}
 }
@@ -69,6 +71,10 @@ a.main-navigation-link,
 	float: left;
 	max-width: 49%;
 	font-size: .9rem;
+	&:link,
+	&:visited {
+		color: $link-inverted;
+	}
 }
 
 .next-link {
@@ -76,24 +82,15 @@ a.main-navigation-link,
 	float: right;
 	max-width: 49%;
 	font-size: .9rem;
+	&:link,
+	&:visited {
+		color: $link-inverted;
+	}
 }
 
-.more-link,
-.comment-reply-link,
-.post-edit-link {
-	font-size: .9em;
-}
-
-.post-edit-link {
-	display: inline-block;
-}
-
-.more-link,
-.comment-reply-link {
-	display: inline-block;
-	padding: .25em .65em;
+.more-link {
 	background: $link;
-	text-decoration: none;
+	font-size: 1rem;
 	&:link,
 	&:visited {
 		color: $link-inverted;
@@ -103,29 +100,18 @@ a.main-navigation-link,
 	}
 }
 
-.prev-link,
-.next-link,
+.comment-reply-link,
 .post-edit-link {
-	padding: .25em .65em;
-	background: $bg-primary;
-	text-decoration: none;
-	&:link,
-	&:visited {
-		color: $link-inverted;
-	}
-	&:hover {
-		background: $bg-tertiary;
-		color: $c-primary;
-	}
+	@extend .more-link;
+	@extend .btn;
 }
 
-.cancel-comment-reply {
-	margin-left: .5em;
+.btn-cancel-reply {
+	margin-left: .5rem;
 	background: $bg-quaternary;
 	color: $c-tertiary-dark;
 	&:hover {
-		background: $bg-tertiary;
-		color: $c-primary;
+		background: $bg-quaternary-light;
 	}
 }
 

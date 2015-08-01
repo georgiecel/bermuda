@@ -72,7 +72,7 @@
 
 	function cancel_comment_reply_button( $html, $link, $text ) {
 		$style = isset($_GET['replytocom']) ? '' : ' style="display:none;"';
-		$button = '<button id="cancel-comment-reply-link" class="btn cancel-comment-reply"' . $style . '>';
+		$button = '<button id="cancel-comment-reply-link" class="btn btn-cancel-reply"' . $style . '>';
 		return $button . $text . '</button>';
 	}
 

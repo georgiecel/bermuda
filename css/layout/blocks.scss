@@ -5,7 +5,7 @@
 .site-sidebar {
 	box-sizing: border-box;
 	display: none;
-	width: 26%;
+	width: 28%;
 	padding: 1.25rem;
 	font-family: Karla;
 	font-size: .9rem;
@@ -18,10 +18,11 @@
 }
 
 .site-footer-component {
+	box-sizing: border-box;
 	display: inline-block;
-	max-width: 550px;
 	margin-bottom: 1rem;
 	padding: 0 1.5rem;
+	width: 100%;
 	vertical-align: top;
 	text-align: left;
 }

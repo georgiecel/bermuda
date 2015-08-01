@@ -1,92 +1,28 @@
-.btn,
-button,
-.pushbutton-wide,
-.post-edit-link,
-.comment-reply-link {
-	padding: .35em .85em;
-	font-family: Karla;
-	border-radius: 0.25rem;
-}
-
-input,
-textarea {
-	// width: 100%;
-	background: $bg-senary;
-	line-height: 1.5;
-	border: 1px solid $c-quaternary;
-	// &:hover {
-	// 	border-color: $c-primary-light;
-	// }
-}
-
-button,
-input[type="submit"] {
-	width: auto;
-	background: $link;
-	color: $link-inverted;
-	border: none;
-	&:hover {
-		background: $bg-primary;
-		color: $link-inverted;
-		cursor: pointer;
-	}
-}
-
 .search-form,
 .subscribe-form {
+	display: table;
+	width: 100%;
 	margin-top: 1rem;
 }
 
 .search-form-input,
 .subscribe-form-input {
-	// float: left;
-	// width: 71%;
-	// height: 34px;
-	// vertical-align: middle;
-	// background: $bg-tertiary;
-	color: $c-tertiary;
+	display: table-cell;
+	width: 70%;
 	font-family: Karla;
-	// font-size: 1.1em;
-	&:hover,
-	&:focus {
-		background: $bg-senary;
-	}
+	vertical-align: middle;
+	border-radius: .25rem 0 0 .25rem;
 }
 
-.subscribe-form-input {
-	// width: 80%;
-	.site-footer-component & {
-		background: $bg-senary;
-		&:hover {
-			background: $bg-quinary;
-		}
-	}
+.search-form-input {
+	-webkit-appearance: none; // removing webkit style of search input
+	float: left; // table-cell doesn’t work, so float.
 }
 
 .search-form-submit,
 .subscribe-form-submit {
-	// float: right;
-	// width: 29%;
-	// height: 34px;
-	// padding: 5px 10px;
-	// vertical-align: middle;
-	background: $bg-primary;
-	color: $link-inverted;
-	// font-size: 1.1em;
-	&:hover {
-		background: $bg-senary;
-		color: $c-primary;
-	}
-}
-
-.subscribe-form-submit {
-	// width: 20%;
-}
-
-.contact-form label {
-	font-weight: 500 !important;
-}
-
-.contact-submit {
-	// margin-top: 0;
+	display: table-cell;
+	width: 30%;
+	vertical-align: middle;
+	border-radius: 0 .25rem .25rem 0;
 }
