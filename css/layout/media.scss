@@ -84,21 +84,16 @@
 
 	.site-footer {
 		text-align: center;
+		padding: .5rem 2rem;
+	}
+
+	.site-footer-component {
+		padding: 0 1rem;
 	}
 
 }
 
-@media (min-width: 700px) {
-
-
-	a.main-navigation-link,
-	.main-navigation-toggle { 
-		font-size: 1.05em;
-	}
-
-}
-
-@media (min-width: 850px) {
+@media (min-width: 900px) {
 
 	.post {
 		padding: 1.5rem 0;
@@ -141,12 +136,25 @@
 		width: 65px;
 	}
 
+	.site-sidebar {
+		display: block;
+		padding: 2rem 2rem 2rem 0;
+	}
+
+	.site-content {
+		float: left;
+		width: 72%;
+		padding: 2rem;
+	}
+
+	.site-footer {
+		padding: .5rem 1rem;
+	}
+
 	.site-footer-component {
 		box-sizing: border-box;
 		width: 33%;
-		max-width: 22em;
-		padding: 0 2rem;
-		margin-bottom: 0;
+		max-width: 23rem;
 	}
 
 }
@@ -154,38 +162,23 @@
 @media (min-width: 1000px) {
 
 	.site-body {
-		max-width: 66em;
+		max-width: 69rem;
 		margin: 0 auto;
 	}
 
 	.site-sidebar {
-		display: block;
-		padding: 1.25rem 2rem 1.25rem 0;
+		padding-right: 1rem;
 	}
 
 	.site-content {
-		float: left;
-		width: 72%;
-		padding: 1.25rem 2rem;
+		padding-left: 1rem;
 	}
 
 	a.main-navigation-link {
 		margin: 0 1em;
 	}
 
-	.site-footer {
-		padding: 1em 1.25em 1.5em;
-	}
-
 }
-
-// @media (min-width: 1400px) {
-
-// 	.site-body {
-// 		max-width: 70em;
-// 	}
-
-// }
 
 @media (min--moz-device-pixel-ratio: 1.5),
 (-o-min-device-pixel-ratio: 3/2),

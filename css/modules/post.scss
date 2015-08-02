@@ -1,6 +1,11 @@
 .post {
 	padding: 1rem 0;
 	@include separator(solid, $c-quinary);
+
+	&:first-child {
+		padding-top: 0;
+	}
+
 }
 
 .post-meta-item {
