@@ -14,52 +14,50 @@
 		padding: 2rem 3rem;
 	}
 
-	.site-header {
-		background: $bg-tertiary;
-		.site-logo-mini {
-			display: none;
-		}
-	}
-
+	a.site-header-logo,
 	.main-navigation-toggle {
 		display: none;
 	}
 
-	#main-navigation {
-		display: block;
-	}
-
 	.main-navigation {
-		margin: .75em auto;
-	}
-
-	a.main-navigation-link {
-		display: inline-block;
-		margin: 0 .5em;
-		color: $c-primary;
-		&:hover {
-			background: $link-inverted;
-			color: $c-tertiary;
-		}
-	}
-
-	.site-content {
-		padding: 1.25rem 3rem;
-	}
-
-	.post-meta {
-		text-align: center;
-	}
-
-	.post-meta-item {
-		font-size: 1rem;
-	}
-
-	.post-thumbnail {
 		display: block;
-		width: 80px;
-		height: 80px;
-		margin: 0 auto;
+		margin: .75rem auto;
+		padding: 0 3rem;
+
+		a {
+			display: inline-block;
+			margin: 0 .5rem;
+			border-radius: .25rem;
+			transition: background-color .15s linear;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.home-link {
+			display: inline-block;
+		}
+
+	}
+
+	.post {
+
+		&-meta {
+			text-align: center;
+
+			&-item {
+				font-size: .9rem;
+			}
+
+		}
+
+		&-thumbnail {
+			display: block;
+			width: 80px;
+			height: 80px;
+			margin: 0 auto;
+		}
+
 	}
 
 	.attachment-post-thumbnail {
@@ -82,7 +80,15 @@
 		margin: 1em auto;
 	}
 
+	.more-link {
+		font-size: 1rem;
+	}
+
 	.site {
+
+		&-content {
+			padding: 1.25rem 3rem;
+		}
 
 		&-footer {
 			text-align: center;
@@ -100,9 +106,13 @@
 
 @media (min-width: 900px) {
 
+	h1 {
+		margin-bottom: .25rem;
+	}
+
 	.main-navigation {
 		max-width: 69rem;
-		padding: 0 1rem;
+		padding: 0 1.5rem;
 		text-align: left;
 	}
 
@@ -119,6 +129,7 @@
 
 			&-item {
 				display: inline-block;
+				font-size: 1rem;
 
 				&:before {
 					content: '·';
@@ -172,6 +183,11 @@
 
 @media (min-width: 1150px) {
 
+	.main-navigation {
+		box-sizing: border-box;
+		padding: 0 .5rem;
+	}
+
 	.site {
 
 		&-body {
@@ -189,10 +205,6 @@
 
 	}
 
-	a.main-navigation-link {
-		margin: 0 1em;
-	}
-
 }
 
 @media (min--moz-device-pixel-ratio: 1.5),
@@ -204,14 +216,6 @@
 	a.external {
 		background: url(images/external@2x.png) no-repeat right; // overriding plugin default
 		background-size: 10px 10px;
-	}
-
-	.site-logo-mini {
-		display: block;
-		width: 60px;
-		height: 53px;
-		background: url(images/logo.png);
-		background-size: 100% auto;
 	}
 
 	.post-404 {

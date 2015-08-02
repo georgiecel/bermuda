@@ -32,18 +32,18 @@
 		</head>
 	<body id="site-top">
 		<header class="site-header" role="banner">
-			<a href="/" class="site-logo-mini">Hey Georgie</a>
+			<a href="/" class="site-header-logo">Hey Georgie</a>
 			<a class="main-navigation-toggle" href="#">
-				<span class="main-navigation-toggle-open">open menu</span>
-				<span class="main-navigation-toggle-close">close menu</span>
+				<span class="main-navigation-toggle-open">(click for menu)</span>
+				<span class="main-navigation-toggle-close">(click to close menu)</span>
 			</a>
 			<nav id="main-navigation" class="main-navigation" role="navigation">
-				<a class="main-navigation-link" href="/">Home</a>
-				<a class="main-navigation-link" href="/about/">About</a>
-				<a class="main-navigation-link" href="/lzrgun-manifesto">The LZRGUN Manifesto</a>
-				<a class="main-navigation-link" href="/poetry/">Poetry</a>
-				<a class="main-navigation-link" href="/links/">Links</a>
-				<a class="main-navigation-link" href="/archives/">Archives</a>
+				<a href="/" class="home-link">Hey Georgie</a>
+				<a href="/about/">About</a>
+				<a href="/lzrgun-manifesto">The LZRGUN Manifesto</a>
+				<a href="/poetry/">Poetry</a>
+				<a href="/links/">Links</a>
+				<a href="/archives/">Archives</a>
 			</nav>
 		</header>
 		<div class="site-body">

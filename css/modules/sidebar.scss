@@ -1,7 +1,11 @@
-// sidebar
-
 .site-sidebar {
+	display: none;
+	box-sizing: border-box;
 	float: right;
+	width: 28%;
+	padding: 1.25rem;
+	font-family: Karla;
+	font-size: .9rem;
 }
 
 .site-sidebar-list {

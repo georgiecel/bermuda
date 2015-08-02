@@ -103,15 +103,16 @@ input,
 textarea {
 	box-sizing: border-box;
 	margin: 0;
-	padding: .35rem .85rem;
 	color: inherit;
 	font: inherit;
 }
 
 input,
 textarea {
+	padding: .65rem .85rem;
 	color: $c-tertiary;
 	border: 1px solid $c-quinary;
+	border-radius: .25rem;
 	&:hover,
 	&:focus {
 		background: $bg-quinary-dark;
@@ -188,6 +189,11 @@ hr {
 	margin: 2rem auto;
 	background: $c-quaternary-light;
 	border: 0;
+}
+
+iframe {
+	max-width: 100%;
+	margin: 0 auto !important;
 }
 
 abbr[title] {

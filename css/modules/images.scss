@@ -9,28 +9,11 @@ img {
 	}
 }
 
-.site-logo-mini {
-	background: url(images/logo-mini.png);
-	display: block;
-	width: 60px;
-	height: 53px;
-	margin: 1rem auto;
-	text-indent: -9999em;
-}
-
 .post-figure {
-// .figure-alignright,
-// .figure-alignleft,
-// .figure-aligncenter,
-// .post-content .aligncenter {
 	margin: 1.25rem auto;
 	padding: .5rem;
 	background: $bg-quinary-dark;
 }
-
-// .post-content .aligncenter {
-// 	display: block;
-// }
 
 .post-thumbnail {
 	display: none;
@@ -41,10 +24,6 @@ img {
 	padding: 0;
 	border-radius: 100px;
 }
-
-// .wp-smiley {
-// 	width: 1em;
-// }
 
 .post-figure {
 	box-sizing: border-box;
@@ -62,12 +41,10 @@ img {
 }
 
 .post-figcaption {
-	// background: $bg-tertiary;
 	padding: .5rem 0 0 .25rem;
 	color: $c-tertiary;
 	font-family: Karla;
 	font-size: .85rem;
-	// text-align: center;
 }
 
 .post-figure + .post-figure {

@@ -153,14 +153,15 @@ input,
 textarea {
   box-sizing: border-box;
   margin: 0;
-  padding: .35rem .85rem;
   color: inherit;
   font: inherit; }
 
 input,
 textarea {
+  padding: .65rem .85rem;
   color: #888;
-  border: 1px solid #ddd; }
+  border: 1px solid #ddd;
+  border-radius: .25rem; }
   input:hover, input:focus,
   textarea:hover,
   textarea:focus {
@@ -231,6 +232,10 @@ hr {
   background: #eee;
   border: 0; }
 
+iframe {
+  max-width: 100%;
+  margin: 0 auto !important; }
+
 abbr[title] {
   border-bottom: 1px dotted; }
 
@@ -247,26 +252,29 @@ sup {
 .site-body {
   overflow: hidden; }
 
-.site-sidebar {
-  box-sizing: border-box;
-  display: none;
-  width: 28%;
-  padding: 1.25rem;
-  font-family: Karla;
-  font-size: .9rem; }
-
 .site-content {
   box-sizing: border-box;
   padding: 1.25rem;
   background: #fefefe; }
 
-iframe {
-  max-width: 100%;
-  margin: 0 auto !important; }
-
 .site-header {
   overflow: hidden;
-  background: #CEF7F4; }
+  background: #7cd7d7;
+  font-family: Karla;
+  text-align: center; }
+
+a.site-header-logo {
+  display: block;
+  padding: 2.5rem .5rem .25rem;
+  color: #fff;
+  padding-top: 2.5rem;
+  background: url(images/hg-logo.png) no-repeat center 0.5rem;
+  background-size: auto 1.5rem;
+  transition: all .1s ease-in; }
+  a.site-header-logo:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #3c9493;
+    text-decoration: none; }
 
 .site-title {
   display: block;
@@ -281,23 +289,25 @@ iframe {
 
 .main-navigation {
   text-align: center; }
-
-a.main-navigation-link,
-.main-navigation-toggle {
-  display: block;
-  padding: .25em .5em;
-  font-family: Karla;
-  font-size: .95em;
-  font-weight: 400; }
-  a.main-navigation-link:hover,
-  .main-navigation-toggle:hover {
-    background: #50C8C4;
-    color: #fff; }
+  .main-navigation a {
+    display: block;
+    padding: .25rem .5rem;
+    color: #fff;
+    transition: all .1s ease-in; }
+    .main-navigation a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #3c9493;
+      text-decoration: none; }
+  .main-navigation .home-link {
+    display: none;
+    padding-left: 2.5rem;
+    background: url(images/hg-logo.png) no-repeat 0.5rem center;
+    background-size: auto 1.5rem; }
 
 .more-link, .comment-reply-link,
 .post-edit-link {
   background: #f16c6c;
-  font-size: 1rem; }
+  font-size: .9rem; }
   .more-link:link, .comment-reply-link:link,
   .post-edit-link:link, .more-link:visited, .comment-reply-link:visited,
   .post-edit-link:visited {
@@ -313,22 +323,19 @@ a.main-navigation-link,
   .btn-cancel-reply:hover {
     background: #f5f5f5; }
 
-.main-navigation-toggle {
-  padding: .85em;
-  line-height: .65; }
-  .main-navigation-toggle:hover span {
-    color: #fff; }
+.main-navigation-toggle:hover {
+  text-decoration: none; }
 
 .main-navigation-toggle-open,
 .main-navigation-toggle-close {
   display: block;
+  padding: .5rem;
   color: #fff;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center; }
+  font-family: Karla; }
   .main-navigation-toggle-open:hover,
   .main-navigation-toggle-close:hover {
-    color: #50C8C4; }
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #3c9493; }
 
 .main-navigation-toggle-close {
   display: none; }
@@ -349,7 +356,7 @@ a.main-navigation-link,
   margin-top: 1rem;
   padding-bottom: 1rem;
   font-family: Karla;
-  font-size: 1rem;
+  font-size: .9rem;
   text-transform: uppercase; }
   .pagination-link {
     display: table-cell;
@@ -379,7 +386,13 @@ a.main-navigation-link,
     color: #fff; }
 
 .site-sidebar {
-  float: right; }
+  display: none;
+  box-sizing: border-box;
+  float: right;
+  width: 28%;
+  padding: 1.25rem;
+  font-family: Karla;
+  font-size: .9rem; }
 
 .site-sidebar-list {
   padding: 0; }
@@ -451,14 +464,6 @@ img {
     margin: 1rem auto;
     padding: 3px;
     border: 1px solid #ddd; }
-
-.site-logo-mini {
-  background: url(images/logo-mini.png);
-  display: block;
-  width: 60px;
-  height: 53px;
-  margin: 1rem auto;
-  text-indent: -9999em; }
 
 .post-figure {
   margin: 1.25rem auto;
@@ -706,37 +711,28 @@ blockquote:before {
   blockquote {
     padding: 2rem 3rem; }
 
-  .site-header {
-    background: #CEF7F4; }
-    .site-header .site-logo-mini {
-      display: none; }
-
+  a.site-header-logo,
   .main-navigation-toggle {
     display: none; }
 
-  #main-navigation {
-    display: block; }
-
   .main-navigation {
-    margin: .75em auto; }
-
-  a.main-navigation-link {
-    display: inline-block;
-    margin: 0 .5em;
-    color: #50C8C4; }
-    a.main-navigation-link:hover {
-      background: #fff;
-      color: #888; }
-
-  .site-content {
-    padding: 1.25rem 3rem; }
+    display: block;
+    margin: .75rem auto;
+    padding: 0 3rem; }
+    .main-navigation a {
+      display: inline-block;
+      margin: 0 .5rem;
+      border-radius: .25rem;
+      transition: background-color .15s linear; }
+      .main-navigation a:hover {
+        text-decoration: none; }
+    .main-navigation .home-link {
+      display: inline-block; }
 
   .post-meta {
     text-align: center; }
-
-  .post-meta-item {
-    font-size: 1rem; }
-
+    .post-meta-item {
+      font-size: .9rem; }
   .post-thumbnail {
     display: block;
     width: 80px;
@@ -759,15 +755,24 @@ blockquote:before {
   .figure-aligncenter {
     margin: 1em auto; }
 
+  .more-link, .comment-reply-link,
+  .post-edit-link {
+    font-size: 1rem; }
+
+  .site-content {
+    padding: 1.25rem 3rem; }
   .site-footer {
     text-align: center;
     padding: .5rem 2rem; }
     .site-footer-component {
       padding: 0 1rem; } }
 @media (min-width: 900px) {
+  h1 {
+    margin-bottom: .25rem; }
+
   .main-navigation {
     max-width: 69rem;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     text-align: left; }
 
   .post {
@@ -778,7 +783,8 @@ blockquote:before {
       margin-bottom: 1rem;
       text-align: left; }
       .post-meta-item {
-        display: inline-block; }
+        display: inline-block;
+        font-size: 1rem; }
         .post-meta-item:before {
           content: '·';
           margin-left: .25rem;
@@ -804,28 +810,22 @@ blockquote:before {
       width: 33%;
       max-width: 23rem; } }
 @media (min-width: 1150px) {
+  .main-navigation {
+    box-sizing: border-box;
+    padding: 0 .5rem; }
+
   .site-body {
     max-width: 69rem;
     margin: 0 auto; }
   .site-sidebar {
     padding-right: 1rem; }
   .site-content {
-    padding-left: 1rem; }
-
-  a.main-navigation-link {
-    margin: 0 1em; } }
+    padding-left: 1rem; } }
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   a.external_icon,
   a.external {
     background: url(images/external@2x.png) no-repeat right;
     background-size: 10px 10px; }
-
-  .site-logo-mini {
-    display: block;
-    width: 60px;
-    height: 53px;
-    background: url(images/logo.png);
-    background-size: 100% auto; }
 
   .post-404 {
     background: url(images/404@2x.png);
