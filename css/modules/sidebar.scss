@@ -4,6 +4,31 @@
 	float: right;
 }
 
+.site-sidebar-list {
+	padding: 0;
+
+	&-item {
+		list-style: none;
+
+		a {
+			display: block;
+			padding: .25rem .5rem .25rem 0;
+			transition: all .1s ease-in;
+
+			&:hover {
+				padding-left: .75rem;
+				background: $bg-quaternary-light;
+				color: $c-tertiary-dark;
+				text-decoration: none;
+				border-radius: .25rem;
+			}
+
+		}
+
+	}
+
+}
+
 .social-icon-link {
 	display: inline-block;
 }
@@ -12,7 +37,10 @@
 	padding: .35rem;
 	color: $c-tertiary;
 	font-size: 1.25rem;
+
 	&:hover {
 		color: $c-tertiary-light;
+		text-decoration: none;
 	}
+
 }

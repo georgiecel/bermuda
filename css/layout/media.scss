@@ -82,96 +82,111 @@
 		margin: 1em auto;
 	}
 
-	.site-footer {
-		text-align: center;
-		padding: .5rem 2rem;
-	}
+	.site {
 
-	.site-footer-component {
-		padding: 0 1rem;
+		&-footer {
+			text-align: center;
+			padding: .5rem 2rem;
+
+			&-component {
+				padding: 0 1rem;
+			}
+
+		}
+
 	}
 
 }
 
 @media (min-width: 900px) {
 
+	.main-navigation {
+		max-width: 69rem;
+		padding: 0 1rem;
+		text-align: left;
+	}
+
 	.post {
-		padding: 1.5rem 0;
-	}
+		padding-top: 1.5rem;
 
-	.post-title {
-		text-align: left;
-	}
-
-	.post-meta {
-		margin-bottom: 1.5rem;
-		text-align: left;
-	}
-
-	.post-meta-item {
-		display: inline-block;
-		&:before {
-			content: '·';
-			margin-left: .25rem;
-			margin-right: .5rem;
-			font-weight: bold;
+		&-title {
+			text-align: left;
 		}
-		&:first-child:before {
-			display: none;
+
+		&-meta {
+			margin-bottom: 1rem;
+			text-align: left;
+
+			&-item {
+				display: inline-block;
+
+				&:before {
+					content: '·';
+					margin-left: .25rem;
+					margin-right: .5rem;
+					font-weight: bold;
+				}
+
+				&:first-child:before {
+					display: none;
+				}
+
+			}
+
 		}
-	}
 
-	.post-thumbnail {
-		float: left;
-		margin: 0 1.5rem 0 0;
-	}
-
-	.comments-list {
-		.comment-meta {
-			font-size: 1rem;
+		&-thumbnail {
+			float: left;
+			margin: 0 1.5rem 0 0;
 		}
+
 	}
 
-	.avatar {
-		width: 65px;
-	}
+	.site {
 
-	.site-sidebar {
-		display: block;
-		padding: 2rem 2rem 2rem 0;
-	}
+		&-sidebar {
+			display: block;
+			padding: 2rem 2rem 2rem 0;
+		}
 
-	.site-content {
-		float: left;
-		width: 72%;
-		padding: 2rem;
-	}
+		&-content {
+			float: left;
+			width: 72%;
+			padding: 2rem;
+		}
 
-	.site-footer {
-		padding: .5rem 1rem;
-	}
+		&-footer {
+			padding: .5rem 1rem;
 
-	.site-footer-component {
-		box-sizing: border-box;
-		width: 33%;
-		max-width: 23rem;
+			&-component {
+				box-sizing: border-box;
+				width: 33%;
+				max-width: 23rem;
+			}
+
+		}
+
 	}
 
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1150px) {
 
-	.site-body {
-		max-width: 69rem;
-		margin: 0 auto;
-	}
+	.site {
 
-	.site-sidebar {
-		padding-right: 1rem;
-	}
+		&-body {
+			max-width: 69rem;
+			margin: 0 auto;
+		}
 
-	.site-content {
-		padding-left: 1rem;
+		&-sidebar {
+			padding-right: 1rem;
+		}
+
+		&-content {
+			padding-left: 1rem;
+		}
+
 	}
 
 	a.main-navigation-link {

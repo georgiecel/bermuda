@@ -1,0 +1,51 @@
+.pagination {
+	display: table;
+	width: 100%;
+	margin-top: 1rem;
+	padding-bottom: 1rem;
+	font-family: Karla;
+	font-size: 1rem;
+	text-transform: uppercase;
+
+	&-link {
+		display: table-cell;
+		vertical-align: top;
+
+		&:first-child {
+			padding-right: 1rem;
+		}
+
+		&-item {
+			display: block;
+			text-transform: none;
+		}
+
+	}
+
+	.post + & {
+		@include separator(solid, $c-quinary);
+	}
+
+}
+
+.prev-link {
+	box-sizing: border-box;
+	float: left;
+	max-width: 49%;
+	font-size: .9rem;
+	&:link,
+	&:visited {
+		color: $link-inverted;
+	}
+}
+
+.next-link {
+	box-sizing: border-box;
+	float: right;
+	max-width: 49%;
+	font-size: .9rem;
+	&:link,
+	&:visited {
+		color: $link-inverted;
+	}
+}

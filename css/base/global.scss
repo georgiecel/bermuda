@@ -67,6 +67,7 @@ a,
 a:link {
 	color: $link;
 	text-decoration: none;
+	transition: color .1s linear;
 }
 
 a:visited {
@@ -128,6 +129,7 @@ button,
 	border: none;
 	border-radius: .25rem;
 	cursor: pointer;
+	transition: background .15s linear;
 	&:hover {
 		background: $link;
 		text-decoration: none;
