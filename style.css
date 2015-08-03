@@ -465,6 +465,9 @@ a.site-header-logo {
   vertical-align: middle;
   border-radius: 0 .25rem .25rem 0; }
 
+.comment-respond {
+  width: 100%; }
+
 img {
   max-width: 100%;
   height: auto; }
