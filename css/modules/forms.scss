@@ -7,16 +7,13 @@
 
 .search-form-input,
 .subscribe-form-input {
+	-webkit-appearance: none; // removing webkit style of search input
+	float: left; // table-cell doesn’t work, so float.
 	display: table-cell;
 	width: 70%;
 	font-family: Karla;
 	vertical-align: middle;
 	border-radius: .25rem 0 0 .25rem;
-}
-
-.search-form-input {
-	-webkit-appearance: none; // removing webkit style of search input
-	float: left; // table-cell doesn’t work, so float.
 }
 
 .search-form-submit,

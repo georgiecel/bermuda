@@ -26,16 +26,6 @@ section {
   display: block;
 }
 
-// html,
-// body,
-// p,
-// li,
-// dl {
-// 	@include font(1em);
-// 	line-height: 1.5;
-// 	text-rendering: optimizeLegibility;
-// }
-
 h1 {
 	@include h1(1.4rem);
 	a {
@@ -122,7 +112,7 @@ textarea {
 
 button,
 .btn {
-	-webkit-appearance: caret;
+	-webkit-appearance: none;
 	padding: .35em .85em;
 	background: $bg-primary;
 	color: $link-inverted;
