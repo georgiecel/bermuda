@@ -3,8 +3,9 @@
 				<?php get_search_form(); ?>
 			</div>
 			<div class="site-sidebar-widget">
-				<h3 class="site-sidebar-heading">holla@</h3>
-				<p class="site-sidebar-text">I’m Georgie. I code during the day and photograph bands at night. I love waffles, noodles &amp; tea. I write about fashion, music, getting through life, and finding hidden gems in Sydney.</p>
+				<h3 class="site-sidebar-heading">Hey there, I’m Georgie!</h3>
+				<figure class="site-sidebar-photo"><img src="<?php bloginfo('template_url'); ?>/images/Georgie.jpg" alt="I’m Georgie!"></figure>
+				<p class="site-sidebar-text">I’m a front-end <a href="/category/webdev/">web developer</a> and a concert photographer. I like dancing, <a href="/category/fashion/">fashion</a>, noodles, and a hot cup of tea. I write about <a href="/tag/relationships/">relationships</a>, <a href="/tag/everyday-life/">everyday life</a> and <a href="/tag/pondering/">ponder lots of stuff</a> (including stuff <a href="/category/things-i-miss/">from days gone by</a>). I have <a href="/tag/amusement/">funny stories</a>, too!</p>
 				<a class="social-icon-link" href="http://twitter.com/georgiecel"><span class="social-icon icon-twitter"></span></a>
 				<a class="social-icon-link" href="http://last.fm/user/jazzmoodles"><span class="social-icon icon-lastfm"></span></a>
 				<a class="social-icon-link" href="http://instagram.com/hey.georgie/"><span class="social-icon icon-instagram"></span></a>
@@ -12,7 +13,7 @@
 				<a class="social-icon-link" href="http://delicious.com/sashimi"><span class="social-icon icon-delicious"></span></a>
 			</div>
 			<div class="site-sidebar-widget">
-				<h3 class="site-sidebar-heading">Regularly Updated</h3>
+				<h3 class="site-sidebar-heading">Regular Segments</h3>
 				<ul class="site-sidebar-list">
 					<li class="site-sidebar-list-item">
 						<a href="/category/2-minutes-40-seconds">2 minutes and 40 seconds</a>
@@ -24,10 +25,7 @@
 						<a href="/category/fashion-friday">Fashion Friday</a>
 					</li>
 					<li class="site-sidebar-list-item">
-						<a href="/category/music">Music</a>
-					</li>
-					<li class="site-sidebar-list-item">
-						<a href="/category/photoblog/">Photoblog</a>
+						<a href="/tag/monthly-review/">Monthly Review</a>
 					</li>
 					<li class="site-sidebar-list-item">
 						<a href="/category/things-i-miss">Things I Miss</a>
@@ -36,7 +34,7 @@
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">A Day in the Life linkup</h3>
-				<p class="site-sidebar-text">Blog about a designated day in your life each month, share your post and make friends. <a href="/day-life/">Take part!</a></p>
+				<p class="site-sidebar-text">Blog about a designated day in your life each month, share your post and make friends. <a href="/day-life/">Check it out!</a></p>
 			</div>
 			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">Subscribe to Hey Georgie</h3>

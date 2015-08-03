@@ -28,10 +28,10 @@
 				</div>
 			</article>
 			<nav class="pagination">
-				<?php next_post_link('<div class="pagination-link">
-					Next post %link</div>', $link='%title'); ?>
 				<?php previous_post_link('<div class="pagination-link">
 					Previous post %link</div>', $link='%title'); ?>
+				<?php next_post_link('<div class="pagination-link">
+					Next post %link</div>', $link='%title'); ?>
 			</nav>
 			<?php comments_template(); ?>
 			<?php endwhile; ?>

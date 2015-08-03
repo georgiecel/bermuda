@@ -393,6 +393,14 @@ a.site-header-logo {
   padding: 1.25rem;
   font-family: Karla;
   font-size: .9rem; }
+  .site-sidebar-photo {
+    box-sizing: border-box;
+    margin: 1.25rem auto;
+    padding: .25rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd; }
+    .site-sidebar-photo img {
+      display: block; }
 
 .site-sidebar-list {
   padding: 0; }
@@ -411,14 +419,15 @@ a.site-header-logo {
 
 .social-icon-link {
   display: inline-block; }
+  .social-icon-link:hover {
+    text-decoration: none; }
 
 .social-icon {
   padding: .35rem;
   color: #888;
   font-size: 1.25rem; }
   .social-icon:hover {
-    color: #bbb;
-    text-decoration: none; }
+    color: #bbb; }
 
 .search-listing-intro,
 .category-listing-intro {
@@ -466,9 +475,14 @@ img {
     border: 1px solid #ddd; }
 
 .post-figure {
+  box-sizing: border-box;
   margin: 1.25rem auto;
   padding: .5rem;
-  background: #f9f9f9; }
+  max-width: 100%;
+  background: #f9f9f9;
+  border: 1px solid #ddd; }
+  .post-figure img {
+    display: block; }
 
 .post-thumbnail {
   display: none; }
@@ -477,13 +491,6 @@ img {
   margin: 0;
   padding: 0;
   border-radius: 100px; }
-
-.post-figure {
-  box-sizing: border-box;
-  max-width: 100%;
-  border: 1px solid #ddd; }
-  .post-figure img {
-    display: block; }
 
 .figure-alignright,
 .figure-alignleft,
