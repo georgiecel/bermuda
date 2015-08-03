@@ -1,12 +1,12 @@
 img {
 	max-width: 100%;
 	height: auto;
-	&.about-georgie {
+
+	&.aligncenter {
 		display: block;
-		margin: 1rem auto;
-		padding: 3px;
-		border: 1px solid $c-quinary;
+		margin: 1.5rem auto;
 	}
+
 }
 
 .post-figure {

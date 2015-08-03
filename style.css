@@ -468,11 +468,9 @@ a.site-header-logo {
 img {
   max-width: 100%;
   height: auto; }
-  img.about-georgie {
+  img.aligncenter {
     display: block;
-    margin: 1rem auto;
-    padding: 3px;
-    border: 1px solid #ddd; }
+    margin: 1.5rem auto; }
 
 .post-figure {
   box-sizing: border-box;
