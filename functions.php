@@ -72,7 +72,7 @@
 
 	function cancel_comment_reply_button( $html, $link, $text ) {
 		$style = isset($_GET['replytocom']) ? '' : ' style="display:none;"';
-		$button = '<button id="cancel-comment-reply-link" class="btn btn-cancel-reply"' . $style . '>';
+		$button = '<button id="cancel-comment-reply-link" class="btn btn-cancel-reply" tabindex="6"' . $style . '>';
 		return $button . $text . '</button>';
 	}
 
@@ -347,14 +347,23 @@
 	add_filter( 'wp_list_categories', 'remove_category_list_rel' );
 	add_filter( 'the_category', 'remove_category_list_rel' );
 
+	// Remove WordPress emoji detection files
+
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 ); // no php needed above it
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' ); // php is not closed in the last line
+
 	// Remove Jetpack plugin CSS
 
-	add_action( 'wp_footer', 'deregister_css_js' );
 	add_filter( 'jetpack_implode_frontend_css', '__return_false' );
 
 	function deregister_css_js () {
+		wp_deregister_style( 'grunion.css' );
 	    wp_deregister_style( 'jetpack-subscriptions' );
 	    wp_deregister_style( 'jetpack_css' );
 	}
+
+	add_action( 'wp_print_styles', 'deregister_css_js' );
 
 ?>
