@@ -26,15 +26,15 @@
 				<?php else : ?>
 					<p class="comments-respond-form-row">
 						<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-						<label for="author"><small>Name <?php if ($req) echo "(required)"; ?></small></label>
+						<label for="author">Name</label>
 					</p>
 					<p class="comments-respond-form-row">
 						<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-						<label for="email"><small>Email (will not be published) <?php if ($req) echo "(required)"; ?></small></label>
+						<label for="email">Email (will not be published)</label>
 					</p>
 					<p class="comments-respond-form-row">
 						<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" />
-						<label for="url"><small>Website</small></label>
+						<label for="url">Website (optional)</label>
 					</p>
 				<?php endif; ?>
 					<?php if ( function_exists(cs_print_smilies) ) {cs_print_smilies();} ?>

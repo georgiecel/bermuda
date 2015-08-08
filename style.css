@@ -171,8 +171,10 @@ textarea {
 button,
 .btn,
 .comment-reply-link,
-.post-edit-link {
+.post-edit-link,
+.pushbutton-wide {
   -webkit-appearance: none;
+  display: inline-block;
   padding: .35em .85em;
   background: #50C8C4;
   color: #fff;
@@ -184,7 +186,8 @@ button,
   button:hover,
   .btn:hover,
   .comment-reply-link:hover,
-  .post-edit-link:hover {
+  .post-edit-link:hover,
+  .pushbutton-wide:hover {
     background: #f16c6c;
     text-decoration: none; }
 
@@ -194,11 +197,18 @@ button {
 input {
   height: 2.5rem; }
 
+input[type="checkbox"] {
+  height: auto; }
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
+label {
+  font-size: 1rem; }
+
 textarea {
+  width: 100%;
   overflow: auto; }
 
 code {
@@ -463,9 +473,6 @@ a.site-header-logo {
   vertical-align: middle;
   border-radius: 0 .25rem .25rem 0; }
 
-.comment-respond {
-  width: 100%; }
-
 img {
   max-width: 100%;
   height: auto; }
@@ -564,13 +571,10 @@ blockquote:before {
     margin-left: 65px;
     font-size: .85em;
     text-align: left; }
-  .comments-list > .comment,
-  .comments-list > .pingback {
-    border-bottom: 1px solid #bbb; }
-    .comments-list > .comment .comment-meta,
-    .comments-list > .pingback .comment-meta {
-      min-height: 0;
-      margin-left: 0; }
+  .comments-list > .comment .comment-meta,
+  .comments-list > .pingback .comment-meta {
+    min-height: 0;
+    margin-left: 0; }
 
 .comment,
 .pingback {
@@ -580,7 +584,7 @@ blockquote:before {
 .comment-gravatar {
   float: left;
   margin: 0 1rem .5rem 0;
-  padding: 3px;
+  padding: .25rem;
   border: 1px solid #ddd; }
   .pingback .comment-gravatar {
     display: none; }
@@ -637,9 +641,11 @@ blockquote:before {
   font-size: 1em; }
 
 .contact-form label {
-  font-weight: 500 !important; }
-.contact-form textarea {
-  width: 100% !important; }
+  display: block;
+  margin: .5rem 0 .25rem; }
+
+.pushbutton-wide:hover {
+  color: #fff; }
 
 .external_icon,
 .external {
@@ -655,19 +661,6 @@ blockquote:before {
 
 .footnotereverse a {
   text-decoration: none; }
-
-.ikaz {
-  margin: 1.5em 0 .5em;
-  padding: 1.5em;
-  background: #FFF6BF;
-  border-bottom: 2px solid #FFD324;
-  border-top: 2px solid #FFD324; }
-
-.ikaz .kapat {
-  float: right;
-  position: relative;
-  top: -15px;
-  right: -5px; }
 
 @font-face {
   font-family: 'icomoon';
@@ -716,6 +709,9 @@ blockquote:before {
 
   blockquote {
     padding: 2rem 3rem; }
+
+  code {
+    font-size: 1rem; }
 
   a.site-header-logo,
   .main-navigation-toggle {
@@ -786,7 +782,7 @@ blockquote:before {
     .post-title {
       text-align: left; }
     .post-meta {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       text-align: left; }
       .post-meta-item {
         display: inline-block;

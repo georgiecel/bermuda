@@ -2,12 +2,15 @@
 
 // contact form
 
-.contact-form {
-	label {
-		font-weight: 500 !important;
-	}
-	textarea {
-		width: 100% !important;
+.contact-form label {
+	display: block;
+	margin: .5rem 0 .25rem;
+}
+
+.pushbutton-wide {
+	@extend .btn;
+	&:hover {
+		color: $link-inverted;
 	}
 }
 
@@ -32,23 +35,6 @@
 
 .footnotereverse a {
 	text-decoration: none;
-}
-
-// old-post-notifier
-
-.ikaz {
-	margin: 1.5em 0 .5em;
-	padding: 1.5em;
-	background: #FFF6BF;
-	border-bottom: 2px solid #FFD324;
-	border-top: 2px solid #FFD324;
-}
-
-.ikaz .kapat {
-	float: right;
-	position: relative;
-	top: -15px;
-	right: -5px;
 }
 
 // icomoon

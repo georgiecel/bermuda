@@ -12,7 +12,7 @@
 	}
 	> .comment,
 	> .pingback {
-		@include separator(solid, $c-quaternary);
+		// @include separator(solid, $c-quaternary);
 		.comment-meta {
 			min-height: 0;
 			margin-left: 0;
@@ -29,7 +29,7 @@
 .comment-gravatar {
 	float: left;
 	margin: 0 1rem .5rem 0;
-	padding: 3px;
+	padding: .25rem;
 	border: 1px solid $c-quinary;
 	.pingback & {
 		display: none;
