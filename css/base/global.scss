@@ -132,10 +132,6 @@ button {
 	min-height: 2.5rem;
 }
 
-input {
-	height: 2.5rem;
-}
-
 input[type="checkbox"] {
 	height: auto;
 }
@@ -146,11 +142,14 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 label {
-	font-size: 1rem;
+	display: block;
+	margin: .5rem 0 .25rem;
+	font-size: .9rem;
 }
 
 textarea {
 	width: 100%;
+	height: 200px;
 	overflow: auto;
 }
 

@@ -194,9 +194,6 @@ button,
 button {
   min-height: 2.5rem; }
 
-input {
-  height: 2.5rem; }
-
 input[type="checkbox"] {
   height: auto; }
 
@@ -205,10 +202,13 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 label {
-  font-size: 1rem; }
+  display: block;
+  margin: .5rem 0 .25rem;
+  font-size: .9rem; }
 
 textarea {
   width: 100%;
+  height: 200px;
   overflow: auto; }
 
 code {
@@ -462,6 +462,7 @@ a.site-header-logo {
   float: left;
   display: table-cell;
   width: 70%;
+  height: 2.5rem;
   font-family: Karla;
   vertical-align: middle;
   border-radius: .25rem 0 0 .25rem; }
@@ -557,9 +558,6 @@ blockquote:before {
   height: 178px;
   margin: 1rem auto 2.5rem;
   background: url(images/404.png); }
-
-.post-list dd {
-  margin: 0 0 1rem; }
 
 .comments {
   margin-top: 1rem; }
