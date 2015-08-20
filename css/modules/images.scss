@@ -1,43 +1,26 @@
 img {
 	max-width: 100%;
 	height: auto;
-	&.about-georgie {
+
+	&.aligncenter {
 		display: block;
-		margin: 1em auto;
-		padding: 3px;
-		border: 1px solid $c-quinary;
+		margin: 1.5rem auto;
 	}
+
 }
 
-.site-logo {
-	background: url(images/logo.png);
-	display: block;
-	width: 120px;
-	height: 105px;
-	margin: 1.5em auto;
-	text-indent: -9999em;
-}
+.post-figure {
+	box-sizing: border-box;
+	margin: 1.25rem auto;
+	padding: .5rem;
+	max-width: 100%;
+	background: $bg-quinary-dark;
+	border: 1px solid $c-quinary;
 
-.site-logo-mini {
-	background: url(images/logo-mini.png);
-	display: block;
-	width: 60px;
-	height: 53px;
-	margin: 1em auto;
-	text-indent: -9999em;
-}
+	img {
+		display: block;
+	}
 
-.post-figure,
-.figure-alignright,
-.figure-alignleft,
-.figure-aligncenter,
-.wp-caption,
-.post-content .aligncenter {
-	margin: 1em auto;
-}
-
-.post-content .aligncenter {
-	display: block;
 }
 
 .post-thumbnail {
@@ -50,34 +33,19 @@ img {
 	border-radius: 100px;
 }
 
-.wp-smiley {
-	width: 1em;
+.figure-alignright,
+.figure-alignleft,
+.figure-aligncenter {
+	float: none;
 }
 
-.post figure,
-.post-figure,
-.wp-caption {
-	img {
-		display: block;
-	}
-}
-
-.post figcaption,
-.post-figcaption,
-.wp-caption-text {
-	background: $bg-tertiary;
-	padding: .5em;
-	color: $c-primary-dark;
+.post-figcaption {
+	padding: .5rem 0 0 .25rem;
+	color: $c-tertiary;
 	font-family: Karla;
-	font-size: .85em;
-	text-align: center;
-}
-
-.post-figure,
-.wp-caption {
-	max-width: 100%;
+	font-size: .85rem;
 }
 
 .post-figure + .post-figure {
-	margin-top: 1em;
+	margin-top: 1.5rem;
 }

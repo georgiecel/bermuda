@@ -1,42 +1,12 @@
-// search results
-
-.search-listing {
-	.post-title {
-		text-align: left;
-	}
-	.post .post-title {
-		font-size: 1.35em;
-	}
-}
-
-.category-listing {
-	.post-thumbnail {
-		display: none;
-	}
-}
-
-.category-title {
-	text-align: left;
-}
-
 .search-listing-intro,
 .category-listing-intro {
 	margin-bottom: 0;
-	padding-bottom: 1em;
+	padding-bottom: 1rem;
 	@include separator(solid, $c-quinary);
-}
-
-.search-listing-intro {
-	mark:first-child {
-		font-weight: 500;
-	}
-}
-
-.category-listing-intro {
-	padding-bottom: 0;
 }
 
 .search-highlight {
 	background: $bg-tertiary;
 	color: $c-primary-dark;
+	font-weight: 500;
 }

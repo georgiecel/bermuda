@@ -27,11 +27,11 @@
 					<?php edit_post_link('Click here to edit this entry (admin).'); ?>
 				</div>
 			</article>
-			<nav class="post-navigation post-pagination pagination">
-				<?php next_post_link('<div class="next-link-wrapper">
-					Next post<br>%link</div>', $link='%title &raquo;'); ?>
-				<?php previous_post_link('<div class="prev-link-wrapper">
-					Previous post<br>%link</div>', $link='&laquo; %title'); ?>
+			<nav class="pagination">
+				<?php previous_post_link('<div class="pagination-link">
+					Previous post %link</div>', $link='%title'); ?>
+				<?php next_post_link('<div class="pagination-link">
+					Next post %link</div>', $link='%title'); ?>
 			</nav>
 			<?php comments_template(); ?>
 			<?php endwhile; ?>

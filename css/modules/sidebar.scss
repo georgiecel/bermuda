@@ -1,29 +1,62 @@
-// sidebar
-
-.site-sidebar-heading {
-	margin-top: 2em;
-	margin-bottom: .5em;
-	color: $bg-senary;
+.site-sidebar {
+	display: none;
+	box-sizing: border-box;
+	float: right;
+	width: 28%;
+	padding: 1.25rem;
 	font-family: Karla;
-	& + .site-sidebar-text {
-		margin-top: 0;
-	}
-}
+	font-size: .9rem;
 
-.site-sidebar-icon {
-	display: inline-block;
-	i {
-		display: block;
-		padding: .25em;
-		color: $c-primary-dark;
-		font-size: 1.5em;
-		&:hover {
-			color: $link-inverted;
+	&-photo {
+		box-sizing: border-box;
+		margin: 1.25rem auto;
+		padding: .25rem;
+		background: $bg-quinary-dark;
+		border: 1px solid $c-quinary;
+
+		img {
+			display: block;
 		}
+
+	}
+
+}
+
+.site-sidebar-list {
+	padding: 0;
+
+	&-item {
+		list-style: none;
+
+		a {
+			display: block;
+			padding: .25rem .5rem .25rem 0;
+			transition: all .1s ease-in;
+			&:hover {
+				padding-left: .75rem;
+				background: $bg-quaternary-light;
+				color: $c-tertiary-dark;
+				text-decoration: none;
+				border-radius: .25rem;
+			}
+		}
+
+	}
+
+}
+
+.social-icon-link {
+	display: inline-block;
+	&:hover {
+		text-decoration: none;
 	}
 }
 
-.site-sidebar-text {
-	color: $c-primary-dark;
-	font-family: Karla;
+.social-icon {
+	padding: .35rem;
+	color: $c-tertiary;
+	font-size: 1.25rem;
+	&:hover {
+		color: $c-tertiary-light;
+	}
 }

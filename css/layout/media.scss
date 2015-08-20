@@ -1,83 +1,67 @@
 @media (min-width: 600px) {
 
-	p,
-	li,
-	dl {
-		@include font(1.05em);
-		line-height: 1.65;
+	body {
+		@include font(1.1rem);
+		line-height: 1.67;
 	}
 
 	h1 {
-		margin: .5em auto;
-		font-size: 1.75rem;
+		font-size: 1.65rem;
 		text-align: center;
 	}
 
-	h2 {
-		font-size: 1.45em;
-	}
-
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-size: 1.3em;
-	}
-
 	blockquote {
-		padding: 1.5em 3em;
+		padding: 2rem 3rem;
 	}
 
-	.site-header {
-		background: $bg-tertiary;
-		.site-logo-mini {
-			display: none;
-		}
+	code {
+		font-size: 1rem;
 	}
 
+	a.site-header-logo,
 	.main-navigation-toggle {
 		display: none;
 	}
 
-	#main-navigation {
-		display: block;
-	}
-
 	.main-navigation {
-		margin: .75em auto;
-	}
-
-	a.main-navigation-link {
-		display: inline-block;
-		margin: 0 .5em;
-		color: $c-primary;
-		&:hover {
-			background: $link-inverted;
-			color: $c-primary-dark;
-		}
-	}
-
-	.site-content {
-		padding: 1.25em 3em;
-	}
-
-	.search-listing .post .post-title {
-		font-size: 1.65em;
-	}
-
-	.post-meta {
-		text-align: center;
-	}
-
-	.post-meta-item {
-		font-size: 1rem;
-	}
-
-	.post-thumbnail {
 		display: block;
-		width: 80px;
-		height: 80px;
-		margin: 0 auto;
+		margin: .75rem auto;
+		padding: 0 3rem;
+
+		a {
+			display: inline-block;
+			margin: 0 .5rem;
+			border-radius: .25rem;
+			transition: background-color .15s linear;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.home-link {
+			display: inline-block;
+		}
+
+	}
+
+	.post {
+
+		&-meta {
+			text-align: center;
+
+			&-item {
+				font-size: .9rem;
+			}
+
+		}
+
+		&-thumbnail {
+			display: block;
+			width: 80px;
+			height: 80px;
+			margin: 0 auto;
+		}
+
 	}
 
 	.attachment-post-thumbnail {
@@ -87,173 +71,142 @@
 	.figure-alignright,
 	.post-content .alignright {
 		float: right;
-		margin: 1em 0 1em 1em;
+		margin: .5rem 0 1.25rem 1.25rem;
 	}
 
 	.figure-alignleft,
 	.post-content .alignleft {
 		float: left;
-		margin: 1em 1em 1em 0;
+		margin: .5rem 1.25rem 1.5rem 0;
 	}
 
 	.figure-aligncenter {
 		margin: 1em auto;
 	}
 
-	.pagination,
-	.post-navigation {
-		font-size: .95em;
+	.more-link {
+		font-size: 1rem;
 	}
 
-	.site-footer {
-		text-align: center;
-	}
+	.site {
 
-}
+		&-content {
+			padding: 1.25rem 3rem;
+		}
 
-@media (min-width: 700px) {
+		&-footer {
+			text-align: center;
+			padding: .5rem 2rem;
 
-	p,
-	li,
-	dl {
-		@include font(1.175em);
-	}
+			&-component {
+				padding: 0 1rem;
+			}
 
-	input,
-	textarea {
-		width: 40%;
-	}
+		}
 
-	a.main-navigation-link,
-	.main-navigation-toggle { 
-		font-size: 1.05em;
-	}
-
-	.comment-respond,
-	.contact-form textarea {
-		width: 70% !important;
 	}
 
 }
 
-@media (min-width: 850px) {
+@media (min-width: 900px) {
+
+	h1 {
+		margin-bottom: .25rem;
+	}
+
+	.main-navigation {
+		max-width: 69rem;
+		padding: 0 1.5rem;
+		text-align: left;
+	}
 
 	.post {
-		padding: 1.5em 0;
-	}
+		padding-top: 1.5rem;
 
-	.post-title {
-		margin: .5rem 0;
-		text-align: left;
-	}
-
-	.post-meta {
-		margin-bottom: 2rem;
-		text-align: left;
-	}
-
-	.post-meta-item {
-		display: inline-block;
-		&:before {
-			content: '·';
-			margin-left: .25rem;
-			margin-right: .5rem;
-			font-weight: bold;
+		&-title {
+			text-align: left;
 		}
-		&:first-child:before {
-			display: none;
+
+		&-meta {
+			margin-bottom: 1.5rem;
+			text-align: left;
+
+			&-item {
+				display: inline-block;
+				font-size: 1rem;
+
+				&:before {
+					content: '·';
+					margin-left: .25rem;
+					margin-right: .5rem;
+					font-weight: bold;
+				}
+
+				&:first-child:before {
+					display: none;
+				}
+
+			}
+
 		}
-	}
 
-	.post-thumbnail {
-		float: left;
-		margin: 0 1.5em 1em 0;
-	}
-
-	.post figcaption,
-	.post-figcaption,
-	.wp-caption-text {
-		font-size: 1em;
-	}
-
-	.post-figure + .post-figure {
-		margin-top: 1.5em;
-	}
-
-	.comments-list {
-		.comment-meta {
-			min-height: 75px;
-			margin-left: 75px;
-			font-size: 1em;
+		&-thumbnail {
+			float: left;
+			margin: 0 1.5rem 0 0;
 		}
+
 	}
 
-	.avatar {
-		width: 65px;
-	}
+	.site {
 
-}
+		&-sidebar {
+			display: block;
+			padding: 2rem 2rem 2rem 0;
+		}
 
-@media (min-width: 1000px) {
+		&-content {
+			float: left;
+			width: 72%;
+			padding: 2rem;
+		}
 
-	p,
-	li,
-	dl {
-		@include font(1.2em);
-	}
+		&-footer {
+			padding: .5rem 1rem;
 
-	.site-body {
-		max-width: 84em;
-		margin: 0 auto;
-	}
+			&-component {
+				box-sizing: border-box;
+				width: 33%;
+				max-width: 23rem;
+			}
 
-	.site-sidebar {
-		display: block;
-	}
+		}
 
-	.site-content {
-		float: left;
-		width: 69%;
-		padding: 1.25em 2.5%;
-	}
-
-	a.main-navigation-link {
-		margin: 0 1em;
-	}
-
-	.site-footer {
-		padding: 1em 1.25em 1.5em;
-	}
-
-}
-
-@media (min-width: 1100px) {
-
-	.site-footer-component {
-		width: 29%;
-		padding: 0 2%;
-		margin-bottom: 0;
 	}
 
 }
 
 @media (min-width: 1150px) {
 
-	.search-form-input {
-		width: 75%;
+	.main-navigation {
+		box-sizing: border-box;
+		padding: 0 .5rem;
 	}
 
-	.search-form-submit {
-		width: 25%;
-	}
+	.site {
 
-}
+		&-body {
+			max-width: 69rem;
+			margin: 0 auto;
+		}
 
-@media (min-width: 1400px) {
+		&-sidebar {
+			padding-right: 1rem;
+		}
 
-	.site-footer-component {
-		width: 365px;
-		padding: 0 3em;
+		&-content {
+			padding-left: 1rem;
+		}
+
 	}
 
 }
@@ -267,22 +220,6 @@
 	a.external {
 		background: url(images/external@2x.png) no-repeat right; // overriding plugin default
 		background-size: 10px 10px;
-	}
-
-	.site-logo {
-		display: block;
-		width: 120px;
-		height: 105px;
-		background: url(images/logo@2x.png);
-		background-size: 100% auto;
-	}
-
-	.site-logo-mini {
-		display: block;
-		width: 60px;
-		height: 53px;
-		background: url(images/logo.png);
-		background-size: 100% auto;
 	}
 
 	.post-404 {

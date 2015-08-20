@@ -1,4 +1,5 @@
 // colours
+$highlight: #67DFD8;
 
 // blue
 $c-primary: #50C8C4;
@@ -6,8 +7,8 @@ $c-primary-dark: #3c9493;
 $c-primary-light: #67dfde;
 $c-primary-lighter: #CEF7F4;
 
-// hot pink
-$c-secondary: #F73992;
+// make it red!
+$c-secondary: #f16c6c;
 
 // a random colour; currently dark grey
 $c-tertiary: #888;
@@ -27,6 +28,7 @@ $c-quinary: #ddd;
 
 // blue to match c-primary
 $bg-primary: #50C8C4;
+$bg-primary-light: #7cd7d7;
 
 // a slightly lighter blue
 $bg-secondary: #67dfde;
@@ -49,13 +51,13 @@ $bg-senary: #fff;
 $text: #444;
 
 // standard pink link
-$link: #F73992;
+$link: #f16c6c;
 
 // inverted pink (white)
 $link-inverted: #fff;
 
-$link-visited: #F73992;
-$link-hover: #000;
+$link-visited: #f16c6c;
+$link-hover: #444;
 $link-active: #000;
 
 // radical mixins 

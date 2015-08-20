@@ -1,107 +1,34 @@
-.btn,
-button,
-.pushbutton-wide,
-.post-edit-link,
-.comment-reply-link {
-	padding: .25em .65em;
-	font-family: Karla;
-	border-radius: 0;
-}
-
-button,
-input,
-textarea {
-	background: $bg-senary;
-	font-size: 1em;
-	line-height: 1.5;
-	border: 1px solid $c-quaternary;
-	-webkit-appearance: none;
-}
-
-input,
-textarea {
-	box-sizing: border-box;
-	width: 100%;
-	padding: 7px 10px;
-	&:hover {
-		border-color: $c-primary-light;
-	}
-}
-
-button,
-input[type="submit"] {
-	width: auto;
-	background: $link;
-	color: $link-inverted;
-	border: none;
-	&:hover {
-		background: $bg-primary;
-		color: $link-inverted;
-		cursor: pointer;
-	}
-}
-
 .search-form,
 .subscribe-form {
-	overflow: hidden;
-	margin-top: 30px;
-}
-
-.subscribe-form {
-	margin-top: 15px;
+	display: table;
+	width: 100%;
+	margin-top: 1rem;
 }
 
 .search-form-input,
 .subscribe-form-input {
-	float: left;
-	width: 71%;
-	height: 34px;
-	vertical-align: middle;
-	background: $bg-tertiary;
-	color: $c-primary-dark;
+	-webkit-appearance: none; // removing webkit style of search input
+	float: left; // table-cell doesn’t work, so float.
+	display: table-cell;
+	width: 70%;
+	height: 2.5rem;
 	font-family: Karla;
-	font-size: 1.1em;
-	border: none;
-	&:hover,
-	&:focus {
-		background: $bg-senary;
-	}
-}
-
-.subscribe-form-input {
-	width: 80%;
-	.site-footer-component & {
-		background: $bg-senary;
-		&:hover {
-			background: $bg-quinary;
-		}
-	}
+	vertical-align: middle;
+	border-radius: .25rem 0 0 .25rem;
 }
 
 .search-form-submit,
 .subscribe-form-submit {
-	float: right;
-	width: 29%;
-	height: 34px;
-	padding: 5px 10px;
+	display: table-cell;
+	width: 30%;
 	vertical-align: middle;
-	background: $bg-primary;
-	color: $link-inverted;
-	font-size: 1.1em;
-	&:hover {
-		background: $bg-senary;
-		color: $c-primary;
-	}
+	border-radius: 0 .25rem .25rem 0;
 }
 
-.subscribe-form-submit {
-	width: 20%;
+.comment-respond {
+	margin-bottom: .5rem;
 }
 
-.contact-form label {
-	font-weight: 500 !important;
-}
-
-.contact-submit {
-	margin-top: 0;
+.subscribe-label {
+	display: inline-block;
 }

@@ -6,7 +6,7 @@
 }
 	
 @mixin h1($fontsize) {
-	margin: 0.5rem 0;
+	margin: .5rem 0;
 	color: $c-primary;
 	font-size: $fontsize;
 	font-weight: 500;
@@ -47,7 +47,8 @@
 @mixin h6($fontsize) {
 	margin-top: 1.5rem;
 	margin-bottom: -.5em;
-	color: $c-primary-dark;
+	color: $c-secondary;
+	font-family: Karla;
 	font-size: $fontsize;
 	font-weight: 300;
 }

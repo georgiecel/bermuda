@@ -1,66 +1,30 @@
 .main-navigation {
 	text-align: center;
-}
 
-a.main-navigation-link,
-.main-navigation-toggle {
-	display: block;
-	padding: .25em .5em;
-	color: $link-inverted;
-	font-family: Karla;
-	font-size: .95em;
-	font-weight: 400;
-	&:hover {
-		background: $bg-primary;
-		color: $link-inverted;
-	}
-}
-
-.site-sidebar-list {
-	padding: 0;
-}
-
-.site-sidebar-list-item {
-	margin: 4px 0;
-	list-style: none;
 	a {
-		background: $bg-primary;
 		display: block;
-		padding: .25em .5em;
+		padding: .25rem .5rem;
 		color: $link-inverted;
-		font-family: Karla;
+		transition: all .1s ease-in;
 		&:hover {
-			background: $bg-senary;
-			color: $c-primary;
+			background-color: rgba(255, 255, 255, 0.2);
+			color: $c-primary-dark;
+			text-decoration: none;
 		}
 	}
-}
 
-.pagination,
-.post-navigation {
-	overflow: hidden;
-	margin-top: 1em;
-	font-family: Karla;
-	font-size: .85em;
-	text-transform: uppercase;
-}
+	.home-link {
+		display: none;
+		padding-left: 2.5rem;
+		background: url(images/hg-logo.png) no-repeat .5rem center;
+		background-size: auto 1.5rem;
+	}
 
-.post-pagination {
-	padding-bottom: 1em;
-	@include separator(solid, $c-quinary);
 }
 
 .more-link {
-	font-size: .9em;
-}
-
-.more-link,
-.comment-reply-link,
-.car-toggler {
-	display: inline-block;
-	padding: .25em .65em;
 	background: $link;
-	text-decoration: none;
+	font-size: .9rem;
 	&:link,
 	&:visited {
 		color: $link-inverted;
@@ -70,78 +34,38 @@ a.main-navigation-link,
 	}
 }
 
-.prev-link,
-.next-link,
+.comment-reply-link,
 .post-edit-link {
-	padding: .25em .65em;
-	background: $bg-primary;
-	text-decoration: none;
-	&:link,
-	&:visited {
-		color: $link-inverted;
-	}
-	&:hover {
-		background: $bg-tertiary;
-		color: $c-primary;
-	}
+	@extend .more-link;
+	@extend .btn;
 }
 
-.prev-post-link,
-.next-post-link {
-	display: inline-block;
-	line-height: 1.5;
-}
-
-.post-edit-link {
-	display: inline-block;
-	margin-bottom: 1em;
-}
-
-.cancel-comment-reply {
-	margin-left: .5em;
+.btn-cancel-reply {
+	margin-left: .5rem;
 	background: $bg-quaternary;
 	color: $c-tertiary-dark;
 	&:hover {
-		background: $bg-tertiary;
-		color: $c-primary;
+		background: $bg-quaternary-light;
 	}
-}
-
-.prev-link-wrapper,
-.next-link-wrapper {
-	line-height: 2;
-}
-
-.next-link-wrapper {
-	text-align: right;
-}
-
-.prev-post-link,
-.next-post-link {
-	text-transform: none;
 }
 
 // navigation toggle
 
 .main-navigation-toggle {
-	padding: .85em;
-	line-height: .65;
 	&:hover {
-		span {
-			color: $link-inverted;
-		}
+		text-decoration: none;
 	}
 }
 
 .main-navigation-toggle-open,
 .main-navigation-toggle-close {
 	display: block;
+	padding: .5rem;
 	color: $link-inverted;
-	font-weight: 500;
-	text-transform: uppercase;
-	text-align: center;
+	font-family: Karla;
 	&:hover {
-		color: $c-primary;
+		background-color: rgba(255, 255, 255, 0.2);
+		color: $c-primary-dark;
 	}
 }
 

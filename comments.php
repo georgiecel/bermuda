@@ -24,27 +24,17 @@
 				<?php if ( $user_ID ) : ?>
 					<p class="comments-respond-form-row">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
 				<?php else : ?>
-					<p class="comments-respond-form-row">
-						<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-						<label for="author"><small>Name <?php if ($req) echo "(required)"; ?></small></label>
-					</p>
-					<p class="comments-respond-form-row">
-						<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-						<label for="email"><small>Email (will not be published) <?php if ($req) echo "(required)"; ?></small></label>
-					</p>
-					<p class="comments-respond-form-row">
-						<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" />
-						<label for="url"><small>Website</small></label>
-					</p>
+					<label  for="author">Name</label>
+					<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
+					<label  for="email">Email (will not be published)</label>
+					<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
+					<label  for="url">Website (optional)</label>
+					<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3">
 				<?php endif; ?>
-					<?php if ( function_exists(cs_print_smilies) ) {cs_print_smilies();} ?>
-					<p class="comments-respond-form-row">
-						<textarea class="comment-respond" name="comment" id="comment" cols="30" rows="10" tabindex="4"></textarea>
-					</p>
-					<p class="comments-respond-form-row">
-						<button name="submit" type="submit" id="submit" tabindex="5" class="btn">Submit Comment</button>
-						<?php cancel_comment_reply_link('Cancel Reply') ?>
-					</p>
+					<label  for="comment">Comment</label>
+					<textarea class="comment-respond" name="comment" id="comment" cols="30" rows="5" tabindex="4"></textarea>
+					<button name="submit" type="submit" id="submit" tabindex="5" class="btn">Submit Comment</button>
+					<?php cancel_comment_reply_link('Cancel Reply') ?>
 					<?php comment_id_fields( $post_id ); ?>
 					<?php do_action( 'comment_form', $post_id ); ?>
 				</form>
