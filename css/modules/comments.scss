@@ -12,7 +12,6 @@
 	}
 	> .comment,
 	> .pingback {
-		// @include separator(solid, $c-quaternary);
 		.comment-meta {
 			min-height: 0;
 			margin-left: 0;
@@ -30,7 +29,7 @@
 	float: left;
 	margin: 0 1rem .5rem 0;
 	padding: .25rem;
-	border: 1px solid $c-quinary;
+	border: 1px solid $border;
 	.pingback & {
 		display: none;
 	}
@@ -57,7 +56,7 @@
 .child-comments {
 	margin-top: 1em;
 	padding-left: 1.5em;
-	border-left: 1px solid $c-quaternary-light;
+	border-left: 1px solid $border;
 	> .comment {
 		margin-bottom: .5em;
 		padding-bottom: 0;

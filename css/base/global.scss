@@ -27,10 +27,7 @@ section {
 }
 
 h1 {
-	@include h1(1.4rem);
-	a {
-		text-decoration: none;
-	}
+	@include h1(1.45rem);
 }
 
 h2 {
@@ -100,13 +97,13 @@ textarea {
 input,
 textarea {
 	padding: .65rem .85rem;
-	color: $c-tertiary;
-	border: 1px solid $c-quinary;
+	color: $text-light;
+	border: 1px solid $border;
 	border-radius: .25rem;
 	&:hover,
 	&:focus {
-		background: $bg-quinary-dark;
-		color: $c-tertiary;
+		background: $bg-primary;
+		color: $text-light;
 	}
 }
 
@@ -115,7 +112,7 @@ button,
 	-webkit-appearance: none;
 	display: inline-block;
 	padding: .35em .85em;
-	background: $bg-primary;
+	background: $primary;
 	color: $link-inverted;
 	font-family: Karla;
 	border: none;
@@ -154,12 +151,12 @@ textarea {
 }
 
 code {
+	color: $code-highlight;
 	font-family: Monaco, Consolas, 'Courier New', monospace;
-	font-size: .9rem;
 }
 
 pre {
-	background:  $bg-quinary-dark;
+	background:  $bg-primary;
 	margin: 2rem 0;
 	padding: 1.5rem;
 	font-family: Monaco, Consolas, 'Courier New', monospace;
@@ -170,7 +167,7 @@ pre {
 }
 
 mark {
-	background: $bg-tertiary;
+	background: $text-highlight;
 }
 
 dt {
@@ -186,7 +183,7 @@ hr {
 	height: 1px;
 	width: 80%;
 	margin: 2rem auto;
-	background: $c-quaternary-light;
+	background: $border;
 	border: 0;
 }
 

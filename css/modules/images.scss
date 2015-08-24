@@ -12,10 +12,10 @@ img {
 .post-figure {
 	box-sizing: border-box;
 	margin: 1.25rem auto;
-	padding: .5rem;
+	padding: .25rem;
 	max-width: 100%;
-	background: $bg-quinary-dark;
-	border: 1px solid $c-quinary;
+	background: $bg-primary;
+	border: 1px solid $border;
 
 	img {
 		display: block;
@@ -40,10 +40,10 @@ img {
 }
 
 .post-figcaption {
-	padding: .5rem 0 0 .25rem;
-	color: $c-tertiary;
+	padding: .5rem 0 .25rem .25rem;
+	color: $text-light;
 	font-family: Karla;
-	font-size: .85rem;
+	font-size: .8rem;
 }
 
 .post-figure + .post-figure {

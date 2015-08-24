@@ -1,21 +1,80 @@
+@media (max-width: 400px) {
+
+	h1,
+	h2 {
+		font-size: 1.2rem;
+	}
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 1.05rem;
+	}
+
+	.post-meta-item {
+		font-size: .9rem;
+	}
+
+	.homepage-listing {
+
+		p {
+			margin: 0;
+
+			&:first-child {
+				margin-top: .75rem;
+			}
+
+		}
+
+		.post {
+			blockquote,
+			blockquote:before,
+			figure,
+			img {
+				display: none;
+			}
+		}
+
+		.post-content {
+			overflow: hidden;
+			display: block;
+			display: -webkit-box;
+			height: 5.25rem;
+			text-overflow: ellipsis;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+
+		.more-link {
+			margin-top: 1rem;
+		}
+
+		.post-meta-item {
+			display: none;
+		}
+
+		time.post-meta-item {
+			display: block;
+		}
+
+	}
+
+}
+
 @media (min-width: 600px) {
 
 	body {
-		@include font(1.1rem);
+		font-size: 1.05rem;
 		line-height: 1.67;
 	}
 
 	h1 {
-		font-size: 1.65rem;
 		text-align: center;
 	}
 
 	blockquote {
 		padding: 2rem 3rem;
-	}
-
-	code {
-		font-size: 1rem;
 	}
 
 	a.site-header-logo,
@@ -48,11 +107,6 @@
 
 		&-meta {
 			text-align: center;
-
-			&-item {
-				font-size: .9rem;
-			}
-
 		}
 
 		&-thumbnail {
@@ -84,10 +138,6 @@
 		margin: 1em auto;
 	}
 
-	.more-link {
-		font-size: 1rem;
-	}
-
 	.site {
 
 		&-content {
@@ -110,10 +160,6 @@
 
 @media (min-width: 900px) {
 
-	h1 {
-		margin-bottom: .25rem;
-	}
-
 	.main-navigation {
 		max-width: 69rem;
 		padding: 0 1.5rem;
@@ -133,7 +179,6 @@
 
 			&-item {
 				display: inline-block;
-				font-size: 1rem;
 
 				&:before {
 					content: '·';
@@ -161,12 +206,12 @@
 
 		&-sidebar {
 			display: block;
-			padding: 2rem 2rem 2rem 0;
+			padding: 2rem 2rem 2rem .5rem;
 		}
 
 		&-content {
 			float: left;
-			width: 72%;
+			width: 70%;
 			padding: 2rem;
 		}
 

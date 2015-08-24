@@ -1,7 +1,7 @@
 blockquote {
 	margin: 1.5rem 0;
 	padding: 1.5rem;
-	background: $bg-quinary-dark;
+	background: $bg-primary;
 	border-left: 10px solid $highlight;
 	quotes: "\201C""\201D""\2018""\2019";
 	p:first-child {
@@ -17,9 +17,9 @@ blockquote:before {
 	margin-right: 1rem;
 	color: $highlight;
 	font-family: Georgia, 'Times New Roman', sans-serif;
-	font-size: 5.5rem;
+	font-size: 5rem;
 	line-height: 0;
-	vertical-align: -2.5rem;
+	vertical-align: -2rem;
 }
 
 blockquote:before {

@@ -1,17 +1,9 @@
 .site-footer {
-	background: $bg-tertiary;
+	background: $bg-primary;
 	padding: .5em 1.25em;
-	color: $c-primary-dark;
+	color: $text-light;
+	font-family: Karla;
 	font-size: .9rem;
-
-	a {
-		color: $c-primary;
-		text-decoration: none;
-		&:hover {
-			color: $c-primary-dark;
-		}
-	}
-
 }
 
 .site-footer-component {
@@ -20,10 +12,4 @@
 	width: 100%;
 	vertical-align: top;
 	text-align: left;
-}
-
-.site-footer-text {
-	color: $c-primary-dark;
-	font-family: Karla;
-	font-size: 1em;
 }

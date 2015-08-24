@@ -1,6 +1,6 @@
 .post {
 	padding: 1rem 0;
-	@include separator(solid, $c-quinary);
+	@include separator(solid);
 
 	&:first-child {
 		padding-top: 0;
@@ -10,9 +10,8 @@
 
 .post-meta-item {
 	margin: 0;
-	color: $c-tertiary;
+	color: $text-light;
 	font-family: Karla;
-	font-size: .8rem;
 }
 
 .page,

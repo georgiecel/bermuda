@@ -1,6 +1,6 @@
 .site-header {
 	overflow: hidden;
-	background: $bg-primary-light;
+	background: $primary-light;
 	font-family: Karla;
 	text-align: center;
 }
@@ -15,7 +15,7 @@ a.site-header-logo {
 	transition: all .1s ease-in;
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.2);
-		color: $c-primary-dark;
+		color: $primary-dark;
 		text-decoration: none;
 	}
 }

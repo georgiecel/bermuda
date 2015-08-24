@@ -79,11 +79,9 @@ section {
 h1 {
   margin: .5rem 0;
   color: #50C8C4;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 500;
   line-height: 1.25; }
-  h1 a {
-    text-decoration: none; }
 
 h2 {
   color: #50C8C4;
@@ -102,7 +100,6 @@ h3 {
 
 h4 {
   margin-bottom: -.5rem;
-  color: #444;
   font-size: 1.2rem;
   font-weight: normal; }
 
@@ -115,7 +112,7 @@ h5 {
 h6 {
   margin-top: 1.5rem;
   margin-bottom: -.5em;
-  color: #f16c6c;
+  color: #888;
   font-family: Karla;
   font-size: 1rem;
   font-weight: 300; }
@@ -160,7 +157,7 @@ input,
 textarea {
   padding: .65rem .85rem;
   color: #888;
-  border: 1px solid #ddd;
+  border: 1px solid #dedede;
   border-radius: .25rem; }
   input:hover, input:focus,
   textarea:hover,
@@ -212,8 +209,8 @@ textarea {
   overflow: auto; }
 
 code {
-  font-family: Monaco, Consolas, 'Courier New', monospace;
-  font-size: .9rem; }
+  color: #4bb5b5;
+  font-family: Monaco, Consolas, 'Courier New', monospace; }
 
 pre {
   background: #f9f9f9;
@@ -239,7 +236,7 @@ hr {
   height: 1px;
   width: 80%;
   margin: 2rem auto;
-  background: #eee;
+  background: #dedede;
   border: 0; }
 
 iframe {
@@ -264,8 +261,7 @@ sup {
 
 .site-content {
   box-sizing: border-box;
-  padding: 1.25rem;
-  background: #fefefe; }
+  padding: 1.25rem; }
 
 .site-header {
   overflow: hidden;
@@ -298,6 +294,7 @@ a.site-header-logo {
   text-indent: -9999em; }
 
 .main-navigation {
+  font-size: 1rem;
   text-align: center; }
   .main-navigation a {
     display: block;
@@ -377,7 +374,7 @@ a.site-header-logo {
       display: block;
       text-transform: none; }
   .post + .pagination {
-    border-bottom: 1px solid #ddd; }
+    border-bottom: 1px solid #dedede; }
 
 .prev-link {
   box-sizing: border-box;
@@ -399,7 +396,7 @@ a.site-header-logo {
   display: none;
   box-sizing: border-box;
   float: right;
-  width: 28%;
+  width: 30%;
   padding: 1.25rem;
   font-family: Karla;
   font-size: .9rem; }
@@ -408,9 +405,12 @@ a.site-header-logo {
     margin: 1.25rem auto;
     padding: .25rem;
     background: #f9f9f9;
-    border: 1px solid #ddd; }
+    border: 1px solid #dedede; }
     .site-sidebar-photo img {
       display: block; }
+  .site-sidebar-text {
+    color: #888;
+    font-size: .9rem; }
 
 .site-sidebar-list {
   padding: 0; }
@@ -423,7 +423,6 @@ a.site-header-logo {
       .site-sidebar-list-item a:hover {
         padding-left: .75rem;
         background: #f5f5f5;
-        color: #444;
         text-decoration: none;
         border-radius: .25rem; }
 
@@ -437,13 +436,13 @@ a.site-header-logo {
   color: #888;
   font-size: 1.25rem; }
   .social-icon:hover {
-    color: #bbb; }
+    color: #444; }
 
 .search-listing-intro,
 .category-listing-intro {
   margin-bottom: 0;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #dedede; }
 
 .search-highlight {
   background: #CEF7F4;
@@ -490,10 +489,10 @@ img {
 .post-figure {
   box-sizing: border-box;
   margin: 1.25rem auto;
-  padding: .5rem;
+  padding: .25rem;
   max-width: 100%;
   background: #f9f9f9;
-  border: 1px solid #ddd; }
+  border: 1px solid #dedede; }
   .post-figure img {
     display: block; }
 
@@ -511,10 +510,10 @@ img {
   float: none; }
 
 .post-figcaption {
-  padding: .5rem 0 0 .25rem;
+  padding: .5rem 0 .25rem .25rem;
   color: #888;
   font-family: Karla;
-  font-size: .85rem; }
+  font-size: .8rem; }
 
 .post-figure + .post-figure {
   margin-top: 1.5rem; }
@@ -535,24 +534,23 @@ blockquote:before {
   margin-right: 1rem;
   color: #67DFD8;
   font-family: Georgia, 'Times New Roman', sans-serif;
-  font-size: 5.5rem;
+  font-size: 5rem;
   line-height: 0;
-  vertical-align: -2.5rem; }
+  vertical-align: -2rem; }
 
 blockquote:before {
   content: "\201C"; }
 
 .post {
   padding: 1rem 0;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #dedede; }
   .post:first-child {
     padding-top: 0; }
 
 .post-meta-item {
   margin: 0;
   color: #888;
-  font-family: Karla;
-  font-size: .8rem; }
+  font-family: Karla; }
 
 .page,
 .error-post {
@@ -589,7 +587,7 @@ blockquote:before {
   float: left;
   margin: 0 1rem .5rem 0;
   padding: .25rem;
-  border: 1px solid #ddd; }
+  border: 1px solid #dedede; }
   .pingback .comment-gravatar {
     display: none; }
 
@@ -610,7 +608,7 @@ blockquote:before {
 .child-comments {
   margin-top: 1em;
   padding-left: 1.5em;
-  border-left: 1px solid #eee; }
+  border-left: 1px solid #dedede; }
   .child-comments > .comment {
     margin-bottom: .5em;
     padding-bottom: 0;
@@ -622,15 +620,11 @@ blockquote:before {
   display: none; }
 
 .site-footer {
-  background: #CEF7F4;
+  background: #f9f9f9;
   padding: .5em 1.25em;
-  color: #3c9493;
+  color: #888;
+  font-family: Karla;
   font-size: .9rem; }
-  .site-footer a {
-    color: #50C8C4;
-    text-decoration: none; }
-    .site-footer a:hover {
-      color: #3c9493; }
 
 .site-footer-component {
   box-sizing: border-box;
@@ -638,11 +632,6 @@ blockquote:before {
   width: 100%;
   vertical-align: top;
   text-align: left; }
-
-.site-footer-text {
-  color: #3c9493;
-  font-family: Karla;
-  font-size: 1em; }
 
 .contact-form label {
   display: block;
@@ -659,7 +648,7 @@ blockquote:before {
 .footnotes {
   padding: .75em 0;
   font-size: .75em;
-  border-top: 1px dashed #ddd; }
+  border-top: 1px dashed #dedede; }
   .footnotes li {
     color: #888; }
 
@@ -699,23 +688,54 @@ blockquote:before {
 .icon-delicious:before {
   content: "\e605"; }
 
+@media (max-width: 400px) {
+  h1,
+  h2 {
+    font-size: 1.2rem; }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.05rem; }
+
+  .post-meta-item {
+    font-size: .9rem; }
+
+  .homepage-listing p {
+    margin: 0; }
+    .homepage-listing p:first-child {
+      margin-top: .75rem; }
+  .homepage-listing .post blockquote,
+  .homepage-listing .post blockquote:before,
+  .homepage-listing .post figure,
+  .homepage-listing .post img {
+    display: none; }
+  .homepage-listing .post-content {
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    height: 5.25rem;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
+  .homepage-listing .more-link, .homepage-listing .comment-reply-link,
+  .homepage-listing .post-edit-link {
+    margin-top: 1rem; }
+  .homepage-listing .post-meta-item {
+    display: none; }
+  .homepage-listing time.post-meta-item {
+    display: block; } }
 @media (min-width: 600px) {
   body {
-    color: #444;
-    font-family: Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.05rem;
     line-height: 1.67; }
 
   h1 {
-    font-size: 1.65rem;
     text-align: center; }
 
   blockquote {
     padding: 2rem 3rem; }
-
-  code {
-    font-size: 1rem; }
 
   a.site-header-logo,
   .main-navigation-toggle {
@@ -737,8 +757,6 @@ blockquote:before {
 
   .post-meta {
     text-align: center; }
-    .post-meta-item {
-      font-size: .9rem; }
   .post-thumbnail {
     display: block;
     width: 80px;
@@ -761,10 +779,6 @@ blockquote:before {
   .figure-aligncenter {
     margin: 1em auto; }
 
-  .more-link, .comment-reply-link,
-  .post-edit-link {
-    font-size: 1rem; }
-
   .site-content {
     padding: 1.25rem 3rem; }
   .site-footer {
@@ -773,9 +787,6 @@ blockquote:before {
     .site-footer-component {
       padding: 0 1rem; } }
 @media (min-width: 900px) {
-  h1 {
-    margin-bottom: .25rem; }
-
   .main-navigation {
     max-width: 69rem;
     padding: 0 1.5rem;
@@ -789,8 +800,7 @@ blockquote:before {
       margin-bottom: 1.5rem;
       text-align: left; }
       .post-meta-item {
-        display: inline-block;
-        font-size: 1rem; }
+        display: inline-block; }
         .post-meta-item:before {
           content: '·';
           margin-left: .25rem;
@@ -804,10 +814,10 @@ blockquote:before {
 
   .site-sidebar {
     display: block;
-    padding: 2rem 2rem 2rem 0; }
+    padding: 2rem 2rem 2rem .5rem; }
   .site-content {
     float: left;
-    width: 72%;
+    width: 70%;
     padding: 2rem; }
   .site-footer {
     padding: .5rem 1rem; }

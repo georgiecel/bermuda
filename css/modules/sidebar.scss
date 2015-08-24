@@ -2,7 +2,7 @@
 	display: none;
 	box-sizing: border-box;
 	float: right;
-	width: 28%;
+	width: 30%;
 	padding: 1.25rem;
 	font-family: Karla;
 	font-size: .9rem;
@@ -11,13 +11,18 @@
 		box-sizing: border-box;
 		margin: 1.25rem auto;
 		padding: .25rem;
-		background: $bg-quinary-dark;
-		border: 1px solid $c-quinary;
+		background: $bg-primary;
+		border: 1px solid $border;
 
 		img {
 			display: block;
 		}
 
+	}
+
+	&-text {
+		color: $text-light;
+		font-size: .9rem;
 	}
 
 }
@@ -34,8 +39,7 @@
 			transition: all .1s ease-in;
 			&:hover {
 				padding-left: .75rem;
-				background: $bg-quaternary-light;
-				color: $c-tertiary-dark;
+				background: $btn-hover;
 				text-decoration: none;
 				border-radius: .25rem;
 			}
@@ -54,9 +58,9 @@
 
 .social-icon {
 	padding: .35rem;
-	color: $c-tertiary;
+	color: $text-light;
 	font-size: 1.25rem;
 	&:hover {
-		color: $c-tertiary-light;
+		color: $text;
 	}
 }

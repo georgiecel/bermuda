@@ -1,4 +1,5 @@
 .main-navigation {
+	font-size: 1rem;
 	text-align: center;
 
 	a {
@@ -8,7 +9,7 @@
 		transition: all .1s ease-in;
 		&:hover {
 			background-color: rgba(255, 255, 255, 0.2);
-			color: $c-primary-dark;
+			color: $primary-dark;
 			text-decoration: none;
 		}
 	}
@@ -30,7 +31,7 @@
 		color: $link-inverted;
 	}
 	&:hover {
-		background: $bg-primary;
+		background: $primary;
 	}
 }
 
@@ -42,10 +43,10 @@
 
 .btn-cancel-reply {
 	margin-left: .5rem;
-	background: $bg-quaternary;
-	color: $c-tertiary-dark;
+	background: $btn;
+	color: $text;
 	&:hover {
-		background: $bg-quaternary-light;
+		background: $btn-hover;
 	}
 }
 
@@ -65,7 +66,7 @@
 	font-family: Karla;
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.2);
-		color: $c-primary-dark;
+		color: $primary-dark;
 	}
 }
 

@@ -7,14 +7,14 @@
 	
 @mixin h1($fontsize) {
 	margin: .5rem 0;
-	color: $c-primary;
+	color: $primary;
 	font-size: $fontsize;
 	font-weight: 500;
 	line-height: 1.25;
 }
 
 @mixin h2($fontsize) {
-	color: $c-primary;
+	color: $primary;
 	font-family: Karla;
 	font-size: $fontsize;
 	font-weight: normal;
@@ -24,7 +24,7 @@
 @mixin h3($fontsize) {
 	margin-top: 1.5rem;
 	margin-bottom: -.5rem;
-	color: $c-primary;
+	color: $primary;
 	font-family: Karla;
 	font-size: $fontsize;
 	font-weight: normal;
@@ -32,14 +32,13 @@
 
 @mixin h4($fontsize) {
 	margin-bottom: -.5rem;
-	color: $c-tertiary-dark;
 	font-size: $fontsize;
 	font-weight: normal;
 }
 
 @mixin h5($fontsize) {
 	margin-bottom: -.5rem;
-	color: $c-tertiary;
+	color: $text-light;
 	font-size: $fontsize;
 	font-weight: normal;
 }
@@ -47,7 +46,7 @@
 @mixin h6($fontsize) {
 	margin-top: 1.5rem;
 	margin-bottom: -.5em;
-	color: $c-secondary;
+	color: $text-light;
 	font-family: Karla;
 	font-size: $fontsize;
 	font-weight: 300;

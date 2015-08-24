@@ -33,6 +33,15 @@
 				</ul>
 			</div>
 			<div class="site-sidebar-widget">
+				<h3 class="site-sidebar-heading">Recent Posts</h3>
+				<ul>
+					<?php $the_query = new WP_Query( 'posts_per_page=5' ); ?>
+					<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+					<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+					<?php endwhile; wp_reset_postdata(); ?>
+				</ul>
+			</div>
+			<div class="site-sidebar-widget">
 				<h3 class="site-sidebar-heading">A Day in the Life linkup</h3>
 				<p class="site-sidebar-text">Blog about a designated day in your life each month, share your post and make friends. <a href="/day-life/">Check it out!</a></p>
 			</div>

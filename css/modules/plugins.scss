@@ -27,9 +27,9 @@
 .footnotes {
 	padding: .75em 0;
 	font-size: .75em;
-	border-top: 1px dashed $c-quinary;
+	border-top: 1px dashed $border;
 	li {
-		color: $c-tertiary;
+		color: $text-light;
 	}
 }
 

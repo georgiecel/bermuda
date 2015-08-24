@@ -23,7 +23,7 @@
 	}
 
 	.post + & {
-		@include separator(solid, $c-quinary);
+		@include separator(solid);
 	}
 
 }

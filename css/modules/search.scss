@@ -2,11 +2,11 @@
 .category-listing-intro {
 	margin-bottom: 0;
 	padding-bottom: 1rem;
-	@include separator(solid, $c-quinary);
+	@include separator(solid);
 }
 
 .search-highlight {
-	background: $bg-tertiary;
-	color: $c-primary-dark;
+	background: $text-highlight;
+	color: $primary-dark;
 	font-weight: 500;
 }

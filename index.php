@@ -1,5 +1,5 @@
 		<?php get_header(); ?>
-			<section class="blog-listing post-listing">
+			<section class="homepage-listing post-listing">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
 				<?php if ( has_post_thumbnail() ) { ?>

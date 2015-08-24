@@ -1,5 +1,5 @@
 		<?php get_header(); ?>
-			<section class="blog-listing post-listing category-listing">
+			<section class="post-listing category-listing">
 				<div class="category-listing-intro">
 					<h1 class="category-title post-title">Category: <?php single_cat_title(); ?></h1>
 					<?php if ( category_description() ) :

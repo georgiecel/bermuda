@@ -2,31 +2,42 @@
 		</div>
 		<footer class="site-footer" role="contentinfo">
 			<div class="site-footer-component">
-				<h3>Subscribed yet?</h3>
-				<p class="site-footer-text">Get new blog posts delivered to your inbox by typing your email address into the box below.</p>
-				<?php $status = isset( $_REQUEST['subscribe'] ) ? $_REQUEST['subscribe'] : false; ?>
-				<?php if ( $status == 'invalid_email' ) : ?>
-					<p class="site-footer-text">You’ve entered an invalid email address, please try again.</p>
-				<?php elseif ( $status == 'success' ) : ?>
-					<p class="site-footer-text">Thank you for subscribing! &hearts; Please check your email to confirm.</p>
-				<?php else : ?>
-					<form class="subscribe-form" method="POST">
-						<input type="hidden" name="my-form-action" value="subscribe" />
-						<input type="email" class="subscribe-form-input" name="my-email" onblur="if (this.value == '') {this.value = 'Type your email address';}" onfocus="if (this.value == 'Type your email address') {this.value = '';}" value="Type your email address" placeholder="Type your email address" />
-						<button class="subscribe-form-submit" type="submit">Go!</button>
-					</form>
-				<?php endif; ?>
-				<p class="site-footer-text">If you wanna say hi, <a href="/contact/">holla@</a> is the way to go.</p>
-			</div>
-			<div class="site-footer-component">
 				<h3>Get interviewed!</h3>
-				<p class="site-footer-text">Want to be featured on Hey Georgie? I’m looking for people from all walks of life to join in my fun interview segment, <em>2 minutes and 40 seconds</em>. <a href="/2-minutes-40-seconds/">Learn more?</a></p>
-				<p class="site-footer-text">&uarr; <a href="#site-top">here’s a cool “jump to top” link</a></p>
+				<p>Want to be featured on Hey Georgie? I’m looking for people from all walks of life to join in my fun interview segment, <em>2 minutes and 40 seconds</em>.</p>
+				<p>Get a handful of questions tailored to <strong>your</strong> location, occupation, interests and hobbies. Not a boring question in sight – I promise! <a href="/2m40s/">Learn more?</a></p>
 			</div>
 			<div class="site-footer-component">
-				<h3>bermuda</h3>
-				<p class="site-footer-text">I’m in love with this little band called Hey Geronimo from the sunny city of Brisbane. This theme was built with a lot of magic &amp; love, and is named <em>bermuda</em> after a funky little song they wrote, the colours inspired by a poster of theirs on my wall. <a href="/bermuda/">Read more?</a></p>
-				<p class="site-footer-text">&copy; Georgie Luhur, 2007-<?php $year = date("Y"); echo $year; ?></p>
+				<h3>What to read</h3>
+				<ul>
+					<li>
+						<a href="/tag/css/">CSS Adventures</a>
+					</li>
+					<li>
+						<a href="/category/nfq">Nick’s Fashion Quarterly (guest segment)</a>
+					</li>
+					<li>
+						<a href="/category/poetry">Poems I’ve written</a>
+					</li>
+					<li>
+						<a href="/tag/pondering/">#pondering - lots of thoughts here</a>
+					</li>
+					<li>
+						<a href="/tag/life-history/">‘life history’: defining moments &amp; lessons</a>
+					</li>
+					<li>
+						<a href="/tag/review/">Reviews of products and things</a>
+					</li>
+					<li>
+						<a href="/category/stories/">Stories about anything and everything</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-footer-component">
+				<h3>Say hey (hey!)</h3>
+				<p>Loved a post? Got a question? Just want to chat to the person behind this blog? <a href="/contact/">Send me a message!</a></p>
+				<p>Follow me on <a href="http://twitter.com/georgiecel/">Twitter</a> to keep up with my posts.</p>
+				<p>Follow my <a href="http://instagram.com/hey.georgie/">Instagram</a> for concert snaps and <a href="/category/fashion-friday/">Fashion Friday</a> previews and outtakes.</p>
+				<p>&copy; Georgie Luhur, 2007-<?php $year = date("Y"); echo $year; ?></p>
 			</div>
 		</footer>
 		<?php wp_footer(); ?>

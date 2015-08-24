@@ -1,67 +1,33 @@
-// colours
-$highlight: #67DFD8;
+// Variables for colours
 
-// blue
-$c-primary: #50C8C4;
-$c-primary-dark: #3c9493;
-$c-primary-light: #67dfde;
-$c-primary-lighter: #CEF7F4;
+// Primary
+$primary: #50C8C4;
+$primary-light: #7cd7d7;
+$primary-dark: #3c9493;
 
-// make it red!
-$c-secondary: #f16c6c;
+// Light background
+$bg-primary: #f9f9f9;
 
-// a random colour; currently dark grey
-$c-tertiary: #888;
-$c-tertiary-dark: #444;
-$c-tertiary-light: #bbb;
-$c-tertiary-lighter: #ddd;
-
-// light grey
-$c-quaternary: #bbb;
-$c-quaternary-light: #eee;
-$c-quaternary-lighter: #fefefe;
-
-// super light grey
-$c-quinary: #ddd;
-
-// backgrounds
-
-// blue to match c-primary
-$bg-primary: #50C8C4;
-$bg-primary-light: #7cd7d7;
-
-// a slightly lighter blue
-$bg-secondary: #67dfde;
-$bg-secondary-dark: #67DFD8;
-
-// a pale blue
-$bg-tertiary: #CEF7F4;
-
-// light grey
-$bg-quaternary: #eee;
-$bg-quaternary-light: #f5f5f5;
-
-// super light grey; almost white
-$bg-quinary-dark: #f9f9f9;
-$bg-quinary: #fefefe;
-
-// just pure white
-$bg-senary: #fff;
-
+// Typography
 $text: #444;
+$text-light: #888;
 
-// standard pink link
+// Interactive elements
 $link: #f16c6c;
-
-// inverted pink (white)
 $link-inverted: #fff;
-
 $link-visited: #f16c6c;
 $link-hover: #444;
 $link-active: #000;
+$btn: #eee;
+$btn-hover: #f5f5f5;
 
-// radical mixins 
+// Visual additions
+$highlight: #67DFD8;
+$code-highlight: #4bb5b5;
+$text-highlight: #CEF7F4;
+$border: #dedede;
 
-@mixin separator($style, $color) {
-	border-bottom: 1px $style $color;
+// Mixins
+@mixin separator($style) {
+	border-bottom: 1px $style $border;
 }
