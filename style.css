@@ -704,7 +704,7 @@ blockquote:before {
 
   .homepage-listing p {
     margin: 0; }
-    .homepage-listing p:first-child {
+    .homepage-listing p:first-of-type {
       margin-top: .75rem; }
   .homepage-listing .post blockquote,
   .homepage-listing .post blockquote:before,
