@@ -13,6 +13,16 @@
 
 	add_action( 'init', 'jquery_in_footer' );
 
+	// Adding widgetised sidebar
+
+	if ( function_exists('register_sidebar') )
+		register_sidebar(array(
+		'before_widget' => '<div class="site-sidebar-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="site-sidebar-heading">',
+		'after_title' => '</h3>',
+	));
+
 	// Add custom “read more” link for excerpt
 
 	function excerpt_read_more_link( $output ) {
