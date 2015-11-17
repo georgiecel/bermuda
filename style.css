@@ -598,7 +598,7 @@ blockquote:before {
 .comment-author {
   margin: 0; }
 
-.bypostauthor .comment-author::after {
+.bypostauthor > .comment-meta > .comment-author::after {
   background-color: #f9f9f9;
   border: 1px solid #dedede;
   border-radius: 0.25em;

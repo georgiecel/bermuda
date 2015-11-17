@@ -44,7 +44,7 @@
 	margin: 0;
 }
 
-.bypostauthor .comment-author::after {
+.bypostauthor > .comment-meta > .comment-author::after {
 	background-color: $bg-primary;
 	border: 1px solid $border;
 	border-radius: 0.25em;
