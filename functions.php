@@ -32,6 +32,20 @@
 
 	add_filter( 'the_excerpt', 'excerpt_read_more_link' );
 
+	// Add custom comment error page
+
+	function custom_comment_error() {
+		$errorTemplate = get_theme_root() . '/' . get_template() . '/commenterror.php';
+		require_once( $errorTemplate );
+		die();
+	}
+
+	add_filter( 'wp_die_handler', 'custom_comment_error' );
+
+	function get_custom_comment_error() {
+	    return 'custom_comment_error';
+	}
+
 	// Add classes to next/previous links
 
 	function posts_link_attributes_1() {
