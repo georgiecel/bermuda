@@ -5,7 +5,6 @@
 	function jquery_in_footer() {
 		if (!is_admin()) {
 			wp_deregister_script('jquery');
-			// load the local copy of jQuery in the footer
 			wp_register_script('jquery', home_url(trailingslashit(WPINC) . 'js/jquery/jquery.js'), false, null, true);
 			wp_enqueue_script('jquery');
 		}
@@ -40,11 +39,11 @@
 		die();
 	}
 
-	add_filter( 'wp_die_handler', 'custom_comment_error' );
-
 	function get_custom_comment_error() {
 	    return 'custom_comment_error';
 	}
+
+	add_filter( 'wp_die_handler', 'get_custom_comment_error' );
 
 	// Add classes to next/previous links
 
@@ -364,10 +363,7 @@
 		// Just to make things a little easier, pad the end.
 		$pee = $pee . "\n";
 
-		/*
-		 * Pre tags shouldn't be touched by autop.
-		 * Replace pre tags with placeholders and bring them back after autop.
-		 */
+		// Replace pre tags with placeholders and bring them back after autop.
 		if ( strpos($pee, '<pre') !== false ) {
 			$pee_parts = explode( '</pre>', $pee );
 			$last_pee = array_pop($pee_parts);
