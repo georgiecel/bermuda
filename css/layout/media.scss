@@ -18,15 +18,6 @@
 
 	.homepage-listing {
 
-		p {
-			margin: 0;
-
-			&:first-of-type {
-				margin-top: .75rem;
-			}
-
-		}
-
 		.post {
 			blockquote,
 			blockquote:before,
@@ -36,26 +27,8 @@
 			}
 		}
 
-		.post-content {
-			overflow: hidden;
-			display: block;
-			display: -webkit-box;
-			height: 5.25rem;
-			text-overflow: ellipsis;
-			-webkit-line-clamp: 3;
-			-webkit-box-orient: vertical;
-		}
-
 		.more-link {
 			margin-top: 1rem;
-		}
-
-		.post-meta-item {
-			display: none;
-		}
-
-		time.post-meta-item {
-			display: block;
 		}
 
 	}
@@ -176,23 +149,6 @@
 		&-meta {
 			margin-bottom: 1.5rem;
 			text-align: left;
-
-			&-item {
-				display: inline-block;
-
-				&:before {
-					content: '·';
-					margin-left: .25rem;
-					margin-right: .5rem;
-					font-weight: bold;
-				}
-
-				&:first-child:before {
-					display: none;
-				}
-
-			}
-
 		}
 
 		&-thumbnail {

@@ -4,7 +4,8 @@
 			<?php if ( has_post_thumbnail() ) { ?>
 				<figure class="post-thumbnail"><?php the_post_thumbnail(); ?></figure>
 			<?php } ?>
-				<h1 class="post-title" itemprop="name" role="heading"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title" itemprop="url"><?php the_title(); ?></a></h1>
+			<?php $html_title = get_post_meta($post->ID, 'html_title', true); ?>
+				<h1 class="post-title" itemprop="name" role="heading"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title" itemprop="url"><?php if ($html_title) { echo $html_title; } else { the_title(); } ?></a></h1>
 				<footer class="post-meta" role="contentinfo">
 					<time class="post-meta-item" datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
 					<div class="post-meta-item">Posted in <span itemprop="keywords"><?php the_category(', '); ?></span></div>

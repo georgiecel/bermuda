@@ -49,6 +49,11 @@
   font-style: italic;
   font-weight: 400;
   src: local("Karla Italic"), local("Karla-Italic"), url(http://themes.googleusercontent.com/static/fonts/karla/v3/ietJ6bjhwzrJL8NSJOc2mgLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Karla Bold"), local("Karla-Bold"), url(https://fonts.gstatic.com/s/karla/v5/6rYv84POalfstX0SkMI-EnYhjbSpvc47ee6xR_80Hnw.ttf) format("truetype"); }
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -548,9 +553,9 @@ blockquote:before {
     padding-top: 0; }
 
 .post-meta-item {
-  margin: 0;
   color: #888;
-  font-family: Karla; }
+  font-size: 0.9rem;
+  margin: 0; }
 
 .page,
 .error-post {
@@ -597,18 +602,6 @@ blockquote:before {
 
 .comment-author {
   margin: 0; }
-
-.bypostauthor > .comment-meta > .comment-author::after {
-  background-color: #f9f9f9;
-  border: 1px solid #dedede;
-  border-radius: 0.25em;
-  color: #888;
-  content: 'Post author';
-  display: inline-block;
-  font-size: 0.7rem;
-  margin-left: 0.5rem;
-  padding: 0.2rem 0.45rem;
-  vertical-align: middle; }
 
 .comment-author-link {
   text-decoration: none; }
@@ -702,7 +695,7 @@ blockquote:before {
 
 /**
  * Error page:
- * Applies to comment error page.
+ * Applies to comment errors and 404 page errors.
  */
 .site-error {
   background-color: #50C8C4;
@@ -744,30 +737,14 @@ a.site-error__link {
   .post-meta-item {
     font-size: .9rem; }
 
-  .homepage-listing p {
-    margin: 0; }
-    .homepage-listing p:first-of-type {
-      margin-top: .75rem; }
   .homepage-listing .post blockquote,
   .homepage-listing .post blockquote:before,
   .homepage-listing .post figure,
   .homepage-listing .post img {
     display: none; }
-  .homepage-listing .post-content {
-    overflow: hidden;
-    display: block;
-    display: -webkit-box;
-    height: 5.25rem;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical; }
   .homepage-listing .more-link, .homepage-listing .comment-reply-link,
   .homepage-listing .post-edit-link {
-    margin-top: 1rem; }
-  .homepage-listing .post-meta-item {
-    display: none; }
-  .homepage-listing time.post-meta-item {
-    display: block; } }
+    margin-top: 1rem; } }
 @media (min-width: 600px) {
   body {
     font-size: 1.05rem;
@@ -841,15 +818,6 @@ a.site-error__link {
     .post-meta {
       margin-bottom: 1.5rem;
       text-align: left; }
-      .post-meta-item {
-        display: inline-block; }
-        .post-meta-item:before {
-          content: '·';
-          margin-left: .25rem;
-          margin-right: .5rem;
-          font-weight: bold; }
-        .post-meta-item:first-child:before {
-          display: none; }
     .post-thumbnail {
       float: left;
       margin: 0 1.5rem 0 0; }
