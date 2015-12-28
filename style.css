@@ -774,13 +774,15 @@ a.site-error__link {
     .main-navigation .home-link {
       display: inline-block; }
 
-  .post-meta {
-    text-align: center; }
   .post-thumbnail {
     display: block;
     width: 80px;
     height: 80px;
     margin: 0 auto; }
+
+  .post-meta-item {
+    display: block;
+    text-align: center; }
 
   .attachment-post-thumbnail {
     margin: 0 auto; }
@@ -815,12 +817,15 @@ a.site-error__link {
     padding-top: 1.5rem; }
     .post-title {
       text-align: left; }
-    .post-meta {
-      margin-bottom: 1.5rem;
-      text-align: left; }
     .post-thumbnail {
       float: left;
       margin: 0 1.5rem 0 0; }
+
+  .post-meta {
+    margin-bottom: 1.5rem; }
+
+  .post-meta-item {
+    text-align: left; }
 
   .site-sidebar {
     display: block;

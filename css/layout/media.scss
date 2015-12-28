@@ -72,19 +72,16 @@
 
 	}
 
-	.post {
+	.post-thumbnail {
+		display: block;
+		width: 80px;
+		height: 80px;
+		margin: 0 auto;
+	}
 
-		&-meta {
-			text-align: center;
-		}
-
-		&-thumbnail {
-			display: block;
-			width: 80px;
-			height: 80px;
-			margin: 0 auto;
-		}
-
+	.post-meta-item {
+		display: block;
+		text-align: center;
 	}
 
 	.attachment-post-thumbnail {
@@ -142,16 +139,19 @@
 			text-align: left;
 		}
 
-		&-meta {
-			margin-bottom: 1.5rem;
-			text-align: left;
-		}
-
 		&-thumbnail {
 			float: left;
 			margin: 0 1.5rem 0 0;
 		}
 
+	}
+
+	.post-meta {
+		margin-bottom: 1.5rem;
+	}
+
+	.post-meta-item {
+		text-align: left;
 	}
 
 	.site {
