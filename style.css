@@ -365,8 +365,8 @@ a.site-header-logo {
 .pagination {
   display: table;
   width: 100%;
-  margin-top: 1rem;
   padding-bottom: 1rem;
+  padding-top: 1rem;
   font-family: Karla;
   font-size: .9rem;
   text-transform: uppercase; }
@@ -379,6 +379,7 @@ a.site-header-logo {
       display: block;
       text-transform: none; }
   .post + .pagination {
+    border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede; }
 
 .prev-link {
@@ -446,8 +447,7 @@ a.site-header-logo {
 .search-listing-intro,
 .category-listing-intro {
   margin-bottom: 0;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #dedede; }
+  padding-bottom: 1rem; }
 
 .search-highlight {
   background: #CEF7F4;
@@ -547,8 +547,7 @@ blockquote:before {
   content: "\201C"; }
 
 .post {
-  padding: 1rem 0;
-  border-bottom: 1px solid #dedede; }
+  padding: 1rem 0; }
   .post:first-child {
     padding-top: 0; }
 

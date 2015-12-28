@@ -27,8 +27,3 @@ $highlight: #67DFD8;
 $code-highlight: #4bb5b5;
 $text-highlight: #CEF7F4;
 $border: #dedede;
-
-// Mixins
-@mixin separator($style) {
-	border-bottom: 1px $style $border;
-}
