@@ -316,15 +316,15 @@ a.site-header-logo {
     background: url(images/hg-logo.png) no-repeat 0.5rem center;
     background-size: auto 1.5rem; }
 
-.more-link, .comment-reply-link,
+.comment-reply-link,
 .post-edit-link {
   background: #f16c6c;
   font-size: .9rem; }
-  .more-link:link, .comment-reply-link:link,
-  .post-edit-link:link, .more-link:visited, .comment-reply-link:visited,
+  .comment-reply-link:link, .comment-reply-link:visited,
+  .post-edit-link:link,
   .post-edit-link:visited {
     color: #fff; }
-  .more-link:hover, .comment-reply-link:hover,
+  .comment-reply-link:hover,
   .post-edit-link:hover {
     background: #50C8C4; }
 
@@ -568,6 +568,9 @@ blockquote:before {
   margin: 1rem auto 2.5rem;
   background: url(images/404.png); }
 
+.post__cta {
+  font-weight: 500; }
+
 .comments {
   margin-top: 1rem; }
 
@@ -741,10 +744,7 @@ a.site-error__link {
   .homepage-listing .post blockquote:before,
   .homepage-listing .post figure,
   .homepage-listing .post img {
-    display: none; }
-  .homepage-listing .more-link, .homepage-listing .comment-reply-link,
-  .homepage-listing .post-edit-link {
-    margin-top: 1rem; } }
+    display: none; } }
 @media (min-width: 600px) {
   body {
     font-size: 1.05rem;

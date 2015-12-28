@@ -11,9 +11,7 @@
 					<h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title"><?php search_title_highlight(); ?></a></h1>
 					<div class="post-content">
 						<?php search_excerpt_highlight(80); ?>
-						<p>
-							<a class="btn more-link" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more of this post &raquo;</a>
-						</p>
+						<div class="post__cta-container"><a class="post__cta" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more of this post &raquo;</a></div>
 					</div>
 				</article>
 			<?php endwhile; ?>

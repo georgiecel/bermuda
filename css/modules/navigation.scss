@@ -23,7 +23,9 @@
 
 }
 
-.more-link {
+.comment-reply-link,
+.post-edit-link {
+	@extend .btn;
 	background: $link;
 	font-size: .9rem;
 	&:link,
@@ -33,12 +35,6 @@
 	&:hover {
 		background: $primary;
 	}
-}
-
-.comment-reply-link,
-.post-edit-link {
-	@extend .more-link;
-	@extend .btn;
 }
 
 .btn-cancel-reply {

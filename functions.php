@@ -26,7 +26,7 @@
 
 	function excerpt_read_more_link( $output ) {
 		global $post;
-		return substr( $output, 0 ) . '<p><a href="' . get_permalink() . '#more-' . get_the_ID() . '" class="btn more-link">Continue reading &raquo;</a></p>';
+		return substr( $output, 0 ) . '<div class="post__cta-container"><a href="' . get_permalink() . '#more-' . get_the_ID() . '" class="post__cta">Read post &raquo;</a></div>';
 	}
 
 	add_filter( 'the_excerpt', 'excerpt_read_more_link' );
