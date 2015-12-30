@@ -44,6 +44,19 @@
 	margin: 0;
 }
 
+.bypostauthor > .comment-meta > .comment-author::after {
+	background-color: $bg-primary;
+	border: 1px solid $border;
+	border-radius: 0.25em;
+	color: $text-light;
+	content: 'Post author';
+	display: inline-block;
+	font-size: 0.7rem;
+	margin-left: 0.5rem;
+	padding: 0.2rem 0.45rem;
+	vertical-align: middle;
+}
+
 .comment-author-link {
 	text-decoration: none;
 }
