@@ -2,9 +2,6 @@
 			<section class="homepage-listing post-listing">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-				<?php if ( has_post_thumbnail() ) { ?>
-					<figure class="post-thumbnail"><?php the_post_thumbnail(); ?></figure>
-				<?php } ?>
 					<h1 class="post-title" itemprop="name" role="heading"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title" itemprop="url"><?php the_title(); ?></a></h1>
 					<time class="post-meta-item" datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
 					<meta itemprop="author" content="<?php the_author(); ?>">
