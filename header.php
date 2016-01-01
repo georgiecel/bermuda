@@ -40,12 +40,9 @@
 			<nav id="main-navigation" class="main-navigation" role="navigation">
 				<a href="/" class="home-link">Hey Georgie</a>
 				<a href="/about/">About</a>
-				<a href="/lzrgun-manifesto">The LZRGUN Manifesto</a>
-				<a href="/poetry/">Poetry</a>
 				<a href="/links/">Links</a>
 				<a href="/archives/">Archives</a>
 			</nav>
 		</header>
 		<div class="site-body">
-		<?php get_sidebar(); ?>
 		<div class="site-content" role="main">

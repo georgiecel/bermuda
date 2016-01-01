@@ -544,12 +544,7 @@ blockquote:before {
 
 .post-meta-item {
   color: #888;
-  font-size: 0.9rem;
-  margin: 0; }
-
-.page,
-.error-post {
-  border-bottom: none; }
+  font-size: 0.9rem; }
 
 .post-404 {
   display: block;
@@ -747,9 +742,6 @@ a.site-error__link {
     font-size: 1.05rem;
     line-height: 1.67; }
 
-  h1 {
-    text-align: center; }
-
   blockquote {
     padding: 2rem 3rem; }
 
@@ -797,27 +789,17 @@ a.site-error__link {
       padding: 0 1rem; } }
 @media (min-width: 900px) {
   .main-navigation {
-    max-width: 69rem;
+    max-width: 52rem;
     padding: 0 1.5rem;
     text-align: left; }
 
   .post {
     padding-top: 1.5rem; }
-    .post-title {
-      text-align: left; }
 
   .post-meta {
     margin-bottom: 1.5rem; }
 
-  .post-meta-item {
-    text-align: left; }
-
-  .site-sidebar {
-    display: block;
-    padding: 2rem 2rem 2rem .5rem; }
   .site-content {
-    float: left;
-    width: 70%;
     padding: 2rem; }
   .site-footer {
     padding: .5rem 1rem; }
@@ -831,12 +813,8 @@ a.site-error__link {
     padding: 0 .5rem; }
 
   .site-body {
-    max-width: 69rem;
-    margin: 0 auto; }
-  .site-sidebar {
-    padding-right: 1rem; }
-  .site-content {
-    padding-left: 1rem; } }
+    max-width: 52rem;
+    margin: 0 auto; } }
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .post-404 {
     background: url(images/404@2x.png);

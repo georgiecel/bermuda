@@ -38,10 +38,6 @@
 		line-height: 1.67;
 	}
 
-	h1 {
-		text-align: center;
-	}
-
 	blockquote {
 		padding: 2rem 3rem;
 	}
@@ -116,38 +112,24 @@
 @media (min-width: 900px) {
 
 	.main-navigation {
-		max-width: 69rem;
+		max-width: 52rem;
 		padding: 0 1.5rem;
 		text-align: left;
 	}
 
 	.post {
 		padding-top: 1.5rem;
-
-		&-title {
-			text-align: left;
-		}
-
 	}
 
 	.post-meta {
 		margin-bottom: 1.5rem;
 	}
 
-	.post-meta-item {
-		text-align: left;
-	}
-
 	.site {
 
-		&-sidebar {
-			display: block;
-			padding: 2rem 2rem 2rem .5rem;
-		}
-
 		&-content {
-			float: left;
-			width: 70%;
+			// float: left;
+			// width: 70%;
 			padding: 2rem;
 		}
 
@@ -173,21 +155,9 @@
 		padding: 0 .5rem;
 	}
 
-	.site {
-
-		&-body {
-			max-width: 69rem;
-			margin: 0 auto;
-		}
-
-		&-sidebar {
-			padding-right: 1rem;
-		}
-
-		&-content {
-			padding-left: 1rem;
-		}
-
+	.site-body {
+		max-width: 52rem;
+		margin: 0 auto;
 	}
 
 }
