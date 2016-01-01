@@ -1,53 +1,52 @@
 @mixin font($fontsize) {
 	color: $text;
-	font-family: Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Fira Sans, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: $fontsize;
 	font-weight: 300;
 }
 	
 @mixin h1($fontsize) {
-	margin: .5rem 0;
 	color: $primary;
 	font-size: $fontsize;
-	font-weight: 500;
+	font-weight: 300;
 	line-height: 1.25;
+	margin: 0.5rem 0;
 }
 
 @mixin h2($fontsize) {
 	color: $primary;
-	font-family: Karla;
 	font-size: $fontsize;
-	font-weight: normal;
+	font-style: italic;
+	font-weight: 300;
 	line-height: 1.25;
+	margin-top: 1.75rem;
 }
 
 @mixin h3($fontsize) {
-	margin-top: 1.5rem;
-	margin-bottom: -.5rem;
 	color: $primary;
 	font-family: Karla;
 	font-size: $fontsize;
 	font-weight: normal;
+	margin-bottom: 0;
+	margin-top: 1.5rem;
 }
 
 @mixin h4($fontsize) {
-	margin-bottom: -.5rem;
 	font-size: $fontsize;
 	font-weight: normal;
+	margin-bottom: 0;
 }
 
 @mixin h5($fontsize) {
-	margin-bottom: -.5rem;
-	color: $text-light;
 	font-size: $fontsize;
+	font-style: italic;
 	font-weight: normal;
+	margin-bottom: 0;
 }
 
 @mixin h6($fontsize) {
-	margin-top: 1.5rem;
-	margin-bottom: -.5em;
-	color: $text-light;
-	font-family: Karla;
 	font-size: $fontsize;
-	font-weight: 300;
+	font-weight: 500;
+	margin-bottom: 0;
+	margin-top: 1.5rem;
 }

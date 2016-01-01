@@ -2,7 +2,7 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="post page" itemscope itemtype="http://schema.org/Article" role="article">
 				<?php if ( is_page('about') ) {
-						echo '<h1 class="post-title" itemprop="name" role="heading">About Georgie</h1>';
+						echo '<h1 class="post__title" itemprop="name" role="heading">About Georgie</h1>';
 					} else {
 						echo '<h1 class="post-title" itemprop="name" role="heading">', the_title(), '</h1>';
 					}

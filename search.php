@@ -3,8 +3,8 @@
 			<?php $posts=query_posts($query_string . '&posts_per_page=20&order=DESC&orderby=date'); ?>
 		<?php if (have_posts()) : ?>
 				<!-- Search results introduction -->
-				<h1 class="post-title">Search Results</h1>
-				<p class="search-listing-intro">Your search for <mark class="search-highlight"><?php echo wp_specialchars($s); ?></mark> returned the following results. Results are displayed newest first, only showing a 80-or-so-word formatting-limited summary of the beginning of the post or page. Instances of your search term are <mark class="search-highlight">highlighted</mark>.</p>
+				<h1 class="post__title">Search Results</h1>
+				<p>Your search for <mark class="search-highlight"><?php echo wp_specialchars($s); ?></mark> returned the following results. Results are displayed newest first, only showing a 80-or-so-word formatting-limited summary of the beginning of the post or page. Instances of your search term are <mark class="search-highlight">highlighted</mark>.</p>
 			<?php while (have_posts()) : the_post(); ?>
 				<!-- HTML for each search result -->
 				<article class="post">
