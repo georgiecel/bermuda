@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Theme Name: bermuda
  * Theme URI: http://hey.georgie.nu/
@@ -172,16 +171,23 @@ textarea {
   overflow: auto; }
 
 code {
-  color: #4bb5b5;
-  font-family: Monaco, Consolas, 'Courier New', monospace; }
+  background-color: #f9f9f9;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  color: #555;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.9rem;
+  padding: 0.1rem 0.25rem; }
 
 pre {
   background: #f9f9f9;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  color: #555;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.9rem;
   margin: 2rem 0;
   padding: 1.5rem;
-  font-family: Monaco, Consolas, 'Courier New', monospace;
-  font-size: .9rem;
-  line-height: 1.75;
   white-space: pre-wrap;
   word-wrap: break-word; }
 
@@ -448,52 +454,56 @@ img {
     display: block;
     margin: 1.5rem auto; }
 
-.post-figure {
-  box-sizing: border-box;
+.figure {
   margin: 1.25rem auto;
-  padding: .25rem;
-  max-width: 100%;
-  background: #f9f9f9;
-  border: 1px solid #dedede; }
-  .post-figure img {
+  max-width: 100%; }
+  .figure img {
     display: block; }
 
-.figure-alignright,
-.figure-alignleft,
-.figure-aligncenter {
+.figure--left,
+.figure--right,
+.figure--alignleft,
+.figure--alignright {
   float: none; }
 
-.post-figcaption {
-  padding: .5rem 0 .25rem .25rem;
+.figure__caption {
   color: #888;
   font-family: Karla;
-  font-size: .8rem; }
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0.5rem; }
 
-.post-figure + .post-figure {
-  margin-top: 1.5rem; }
+.figure__caption--center,
+.figure__caption--aligncenter,
+.figure__caption--center-small {
+  text-align: center; }
+
+.figure__caption--alignright {
+  text-align: right; }
 
 blockquote {
+  background-color: #f9f9f9;
+  border-left: 10px solid #67DFD8;
   margin: 1.5rem 0;
   padding: 1.5rem;
-  background: #f9f9f9;
-  border-left: 10px solid #67DFD8;
-  quotes: "“" "”" "‘" "’"; }
+  quotes: '\201C' '\201D' '\2018' '\2019'; }
   blockquote p:first-child {
     display: inline; }
   blockquote p:last-child {
     margin-bottom: 0; }
 
 blockquote:before {
-  content: open-quote;
-  margin-right: 1rem;
   color: #67DFD8;
-  font-family: Georgia, 'Times New Roman', sans-serif;
+  content: open-quote;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 5rem;
+  font-style: normal;
   line-height: 0;
+  margin-right: 1rem;
   vertical-align: -2rem; }
 
 blockquote:before {
-  content: "\201C"; }
+  content: '\201C'; }
 
 .post {
   padding: 1rem 0; }
@@ -733,17 +743,22 @@ a.site-error__link {
     display: block;
     text-align: center; }
 
-  .figure-alignright,
-  .post-content .alignright {
+  .figure--right,
+  .figure--alignright {
     float: right;
-    margin: .5rem 0 1.25rem 1.25rem; }
+    margin: 1.25rem -2rem 1.25rem 1.75rem; }
 
-  .figure-alignleft,
-  .post-content .alignleft {
+  .figure--left,
+  .figure--alignleft {
     float: left;
-    margin: .5rem 1.25rem 1.5rem 0; }
+    margin: 1.25rem 1.75rem 1.5rem -2rem; }
 
-  .figure-aligncenter {
+  .figure--center,
+  .figure--aligncenter {
+    margin: 1rem -2rem;
+    max-width: calc(100% + 4rem); }
+
+  .figure--center-small {
     margin: 1em auto; }
 
   .site-content {

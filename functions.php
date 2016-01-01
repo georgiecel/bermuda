@@ -209,19 +209,19 @@
 	// Adjust HTML for image caption shortcode
 
 	function caption_shortcode($val, $attr, $content = null) {
-		extract(shortcode_atts(array('id'=> '','align'=> 'aligncenter','width'=> '','caption' => ''), $attr));
+		extract(shortcode_atts(array('id'=> '','align'=> 'center','caption' => ''), $attr));
 
-		if ( 1 > (int) $width || empty($caption) )return $val;
+		if ( empty($caption) )return $val;
 		$capid = '';
 
 		if ( $id ) {
 			$id = esc_attr($id);
 			$capid = 'id="figcaption_'. $id . '" ';
-			$id = 'id="' . $id . '" aria-labelledby="figcaption_' . $id . '" ';
+			$id = 'id="' . $id . '" aria-labelledby="figcaption-' . $id . '" ';
 		}
 
-		$figure = '<figure ' . $id . 'class="post-figure figure-' . esc_attr($align) . '" style="width: '. (int) $width . 'px">';
-		$figure .= do_shortcode( $content ) . '<figcaption ' . $capid . 'class="post-figcaption">' . $caption . '</figcaption></figure>';
+		$figure = '<figure ' . $id . 'class="figure figure--' . esc_attr($align) . '">';
+		$figure .= do_shortcode( $content ) . '<figcaption ' . $capid . 'class="figure__caption figure__caption--' . esc_attr($align) . '">' . $caption . '</figcaption></figure>';
 
 		return $figure;
 	}

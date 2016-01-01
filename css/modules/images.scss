@@ -9,13 +9,9 @@ img {
 
 }
 
-.post-figure {
-	box-sizing: border-box;
+.figure {
 	margin: 1.25rem auto;
-	padding: .25rem;
 	max-width: 100%;
-	background: $bg-primary;
-	border: 1px solid $border;
 
 	img {
 		display: block;
@@ -23,19 +19,27 @@ img {
 
 }
 
-.figure-alignright,
-.figure-alignleft,
-.figure-aligncenter {
+.figure--left,
+.figure--right,
+.figure--alignleft,
+.figure--alignright {
 	float: none;
 }
 
-.post-figcaption {
-	padding: .5rem 0 .25rem .25rem;
+.figure__caption {
 	color: $text-light;
 	font-family: Karla;
-	font-size: .8rem;
+	font-size: 0.9rem;
+	font-style: italic;
+	padding: 0.5rem;
 }
 
-.post-figure + .post-figure {
-	margin-top: 1.5rem;
+.figure__caption--center,
+.figure__caption--aligncenter,
+.figure__caption--center-small {
+	text-align: center;
+}
+
+.figure__caption--alignright {
+	text-align: right;
 }
