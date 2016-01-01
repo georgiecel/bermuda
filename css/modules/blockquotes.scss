@@ -1,27 +1,31 @@
 blockquote {
+	background-color: $bg-primary;
+	border-left: 10px solid $highlight;
 	margin: 1.5rem 0;
 	padding: 1.5rem;
-	background: $bg-primary;
-	border-left: 10px solid $highlight;
-	quotes: "\201C""\201D""\2018""\2019";
+	quotes: '\201C' '\201D' '\2018' '\2019';
+
 	p:first-child {
 		display: inline;
 	}
+
 	p:last-child {
 		margin-bottom: 0;
 	}
+
 }
 
 blockquote:before {
-	content: open-quote;
-	margin-right: 1rem;
 	color: $highlight;
-	font-family: Georgia, 'Times New Roman', sans-serif;
+	content: open-quote;
+	font-family: Georgia, 'Times New Roman', serif;
 	font-size: 5rem;
+	font-style: normal;
 	line-height: 0;
+	margin-right: 1rem;
 	vertical-align: -2rem;
 }
 
 blockquote:before {
-	content: "\201C";
+	content: '\201C';
 }

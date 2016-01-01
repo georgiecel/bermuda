@@ -719,6 +719,7 @@ a.site-error__link {
     line-height: 1.67; }
 
   blockquote {
+    margin: 2rem -1.5rem;
     padding: 2rem 3rem; }
 
   a.site-header-logo,

@@ -155,17 +155,24 @@ textarea {
 }
 
 code {
-	color: $code-highlight;
-	font-family: Monaco, Consolas, 'Courier New', monospace;
+	background-color: $bg-primary;
+	border: 1px solid $border;
+	border-radius: 3px;
+	color: $code-color;
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-size: 0.9rem;
+	padding: 0.1rem 0.25rem;
 }
 
 pre {
-	background:  $bg-primary;
+	background: $bg-primary;
+	border: 1px solid $border;
+	border-radius: 3px;
+	color: $code-color;
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-size: 0.9rem;
 	margin: 2rem 0;
 	padding: 1.5rem;
-	font-family: Monaco, Consolas, 'Courier New', monospace;
-	font-size: .9rem;
-	line-height: 1.75;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
