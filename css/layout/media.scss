@@ -197,12 +197,6 @@
 (-webkit-min-device-pixel-ratio: 1.5),
 (min-resolution: 1.5dppx) {
 
-	a.external_icon,
-	a.external {
-		background: url(images/external@2x.png) no-repeat right; // overriding plugin default
-		background-size: 10px 10px;
-	}
-
 	.post-404 {
 		background: url(images/404@2x.png);
 		background-size: 100% auto;
