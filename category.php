@@ -14,11 +14,11 @@
 				</div>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-					<h1 class="post-title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" class="title" itemprop="url" role="heading"><?php the_title(); ?></a></h1>
-					<footer class="post-meta" role="complementary">
-						<time class="post-meta-item" datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
-						<div class="post-meta-item">Posted in <span itemprop="keywords"><?php the_category(', '); ?></span></div>
-						<div class="post-meta-item">
+					<h1 class="post-summary__title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url" role="heading"><?php the_title(); ?></a></h1>
+					<footer class="post__meta" role="complementary">
+						<time class="post__meta-item" datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
+						<div class="post__meta-item">Posted in <span itemprop="keywords"><?php the_category(', '); ?></span></div>
+						<div class="post__meta-item">
 							<a href="<?php comments_link(); ?>" itemprop="discussionUrl">
 								<span itemprop="interactionCount"><?php comments_number( '0 comments', '1 comment', '% comments' ); ?></span>
 							</a>
@@ -29,7 +29,7 @@
 						<meta itemprop="thumbnailUrl" content="<?php $image_id = get_post_thumbnail_id(); $image_url = wp_get_attachment_image_src($image_id,'large', true); echo $image_url[0]; ?>">
 						<?php image_url_meta(); ?>
 					</footer>
-					<div class="post-content" itemprop="text">
+					<div class="post__content" itemprop="text">
 						<?php the_excerpt(); ?>
 					</div>
 				</article>
