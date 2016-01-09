@@ -31,18 +31,20 @@
 		<![endif]-->
 	</head>
 	<body id="site-top">
-		<header class="site-header" role="banner">
-			<a href="/" class="site-header-logo">Hey Georgie</a>
-			<a class="main-navigation-toggle" href="#">
-				<span class="main-navigation-toggle-open">(click for menu)</span>
-				<span class="main-navigation-toggle-close">(click to close menu)</span>
-			</a>
-			<nav id="main-navigation" class="main-navigation" role="navigation">
-				<a href="/" class="home-link">Hey Georgie</a>
-				<a href="/about/">About</a>
-				<a href="/links/">Links</a>
-				<a href="/archives/">Archives</a>
+		<header class="site-header">
+			<nav class="main-navigation">
+				<ul class="main-navigation__list">
+					<li class="main-navigation__list-item">
+						<a href="/" class="main-navigation__link main-navigation__link--home">Hey Georgie</a>
+					</li>
+					<?php wp_nav_menu( array(
+						'menu' => 'main-navigation',
+						'container' => '',
+						'items_wrap' => '%3$s',
+						'walker' => new menu_walker
+						) ); ?>
+				</ul>
 			</nav>
 		</header>
 		<div class="site-body">
-		<div class="site-content" role="main">
+			<div class="site-content" role="main">

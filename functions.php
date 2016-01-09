@@ -22,6 +22,16 @@
 		endif;
 	}
 
+	// Adding main navigation menu
+
+	add_action( 'after_setup_theme', 'main_navigation' );
+
+	function main_navigation() {
+		register_nav_menu('main-navigation',__( 'Main Navigation Menu', hg-bermuda ));
+	}
+
+	add_action( 'init', 'main_navigation' );
+
 	// Adding widgetised sidebar
 
 	if ( function_exists('register_sidebar') )
@@ -237,6 +247,40 @@
 	}
 
 	add_filter( 'img_caption_shortcode', 'caption_shortcode', 10, 3 );
+
+	// Comment walker for main navigation
+
+	class menu_walker extends Walker_Nav_Menu {
+
+		// add classes to ul sub-menus
+		function start_lvl( &$output, $depth = 0, $args = array() ) {
+			$output .= "\n" . '<ul class="main-navigation__list">' . "\n";
+		}
+
+		// add classes to <li> and <a>
+		function start_el(  &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+			global $wp_query;
+			$output .= $indent . '<li class="main-navigation__list-item">';
+
+			// link attributes
+			$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+			$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+			$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+			$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+			$attributes .= ' class="main-navigation__link"';
+
+			$item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
+				$args->before,
+				$attributes,
+				$args->link_before,
+				apply_filters( 'the_title', $item->title, $item->ID ),
+				$args->link_after,
+				$args->after
+			);
+
+			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+		}
+	}
 
 	// Comment walker for comment list
 

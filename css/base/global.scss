@@ -54,15 +54,10 @@ h6 {
 	@include h6(1rem);
 }
 
-a,
-a:link {
+a {
 	color: $link;
 	text-decoration: none;
-	transition: color .1s linear;
-}
-
-a:visited {
-	color: $link-visited;
+	transition: color 0.1s linear;
 }
 
 a:hover {

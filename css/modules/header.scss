@@ -1,33 +1,5 @@
 .site-header {
 	overflow: hidden;
-	background: $primary-light;
+	background-color: $primary-light;
 	font-family: Karla;
-	text-align: center;
-}
-
-a.site-header-logo {
-	display: block;
-	padding: 2.5rem .5rem .25rem;
-	color: $link-inverted;
-	padding-top: 2.5rem;
-	background: url(images/hg-logo.png) no-repeat center .5rem;
-	background-size: auto 1.5rem;
-	transition: all .1s ease-in;
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.2);
-		color: $primary-dark;
-		text-decoration: none;
-	}
-}
-
-.site-title {
-	display: block;
-	width: 150px;
-	height: 123px;
-	background: url(logo.png);
-	background-size: 100% auto;
-	font-family: Karla;
-	font-size: 3rem;
-	text-align: center;
-	text-indent: -9999em;
 }
