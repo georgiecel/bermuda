@@ -12,6 +12,16 @@
 
 	add_action( 'init', 'jquery_in_footer' );
 
+	// Function for meta description
+
+	function meta_desc() {
+		if ( is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post();
+			echo wp_strip_all_tags( get_the_excerpt() );
+		endwhile; endif; elseif ( is_home() ):
+			echo bloginfo('description');
+		endif;
+	}
+
 	// Adding widgetised sidebar
 
 	if ( function_exists('register_sidebar') )

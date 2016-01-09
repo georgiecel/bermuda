@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="utf-8">
-		<meta name="description" content="The tales of a web designer, photographer, musician, writer – someone who loves everything from A to Z.">
+		<meta name="description" content="<?php meta_desc(); ?>">
 		<meta name="viewport" content="initial-scale=1.0, width=device-width">
 		<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css?<?php echo date('Ymd', filemtime( get_stylesheet_directory() . '/style.min.css' )); ?>" type="text/css" media="screen">
@@ -29,7 +29,7 @@
 		<!--[if lt IE 9]>
 			<script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script>
 		<![endif]-->
-		</head>
+	</head>
 	<body id="site-top">
 		<header class="site-header" role="banner">
 			<a href="/" class="site-header-logo">Hey Georgie</a>
