@@ -455,10 +455,11 @@ img {
     margin: 1.5rem auto; }
 
 .figure {
-  margin: 1.25rem auto;
-  max-width: 100%; }
+  margin: 1.25rem -1.5rem;
+  max-width: calc(100% + 3rem); }
   .figure img {
-    display: block; }
+    display: block;
+    margin: 0 auto; }
 
 .figure--left,
 .figure--right,
@@ -703,16 +704,7 @@ a.site-error__link {
   h4,
   h5,
   h6 {
-    font-size: 1.05rem; }
-
-  .post-meta-item {
-    font-size: .9rem; }
-
-  .homepage-listing .post blockquote,
-  .homepage-listing .post blockquote:before,
-  .homepage-listing .post figure,
-  .homepage-listing .post img {
-    display: none; } }
+    font-size: 1.05rem; } }
 @media (min-width: 600px) {
   body {
     font-size: 1.05rem;

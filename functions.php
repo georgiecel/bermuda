@@ -50,7 +50,7 @@
 	}
 
 	function get_custom_comment_error() {
-	    return 'custom_comment_error';
+		return 'custom_comment_error';
 	}
 
 	add_filter( 'wp_die_handler', 'get_custom_comment_error' );
