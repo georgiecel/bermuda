@@ -2,7 +2,8 @@
 			<section class="homepage-listing post-listing">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-					<h1 class="post-summary__title" itemprop="name" role="heading"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url"><?php the_title(); ?></a></h1>
+					<?php $html_title = get_post_meta($post->ID, 'html_title', true); ?>
+					<h1 class="post-summary__title" itemprop="name" role="heading"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url"><?php if ($html_title) { echo $html_title; } else { the_title(); } ?></a></h1>
 					<div class="post__meta-item">
 						<time datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
 					</div>
