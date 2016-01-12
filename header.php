@@ -35,7 +35,7 @@
 			<nav class="main-navigation">
 				<ul class="main-navigation__list">
 					<li class="main-navigation__list-item">
-						<a href="/" class="main-navigation__link main-navigation__link--home">Hey Georgie</a>
+						<a href="<?php echo site_url(); ?>" class="main-navigation__link main-navigation__link--home">Hey Georgie</a>
 					</li>
 					<?php wp_nav_menu( array(
 						'menu' => 'main-navigation',
