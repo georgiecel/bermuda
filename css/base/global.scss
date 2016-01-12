@@ -149,13 +149,21 @@ textarea {
 	overflow: auto;
 }
 
+/**
+ * Inline code.
+ * 1. This is in `em` units so that it can be scaled relative to the text around it.
+ * 2. If the parent has `font-style` or `font-weight` set, it should be reset.
+ */
+
 code {
 	background-color: $bg-primary;
 	border: 1px solid $border;
 	border-radius: 3px;
 	color: $code-color;
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-	font-size: 0.9rem;
+	font-size: 0.9em; // [1]
+	font-style: normal; // [2]
+	font-weight: normal; // [2]
 	padding: 0.1rem 0.25rem;
 }
 
@@ -166,6 +174,8 @@ pre {
 	color: $code-color;
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 	font-size: 0.9rem;
+	font-style: normal;
+	font-weight: normal;
 	margin: 2rem 0;
 	padding: 1.5rem;
 	white-space: pre-wrap;
