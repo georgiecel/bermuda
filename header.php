@@ -47,5 +47,17 @@
 				</ul>
 			</nav>
 		</header>
+		<?php if (is_home() && !is_paged() ) : ?>
+		<div class="intro-container">
+			<aside class="intro">
+				<div class="intro__text">
+					<?php echo get_the_author_meta( 'description', 1 ); ?>
+				</div>
+				<div class="intro__image-container">
+					<img class="intro__image" src="<?php bloginfo('template_url'); ?>/images/Georgie-avatar.jpg" alt="A photo of me, Georgie.">
+				</div>
+			</aside>
+		</div>
+		<?php endif; ?>
 		<div class="site-body">
 			<div class="site-content" role="main">

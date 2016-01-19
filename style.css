@@ -242,6 +242,45 @@ sup {
   background-color: #7cd7d7;
   font-family: Karla; }
 
+/**
+ * Intro:
+ * Introductory panel at the top of the homepage only.
+ */
+.intro-container {
+  background: #f9f9f9; }
+
+.intro {
+  align-items: center;
+  color: #888;
+  display: flex;
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: 1.25rem; }
+
+.intro__text {
+  font-size: 0.9rem; }
+
+/**
+ * Removes margins from paragraphs within the component.
+ */
+.intro__text p {
+  margin: 0; }
+
+/**
+ * Container for image.
+ */
+.intro__image-container {
+  display: none;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: 1rem; }
+
+.intro__image {
+  border-radius: 50%;
+  display: block;
+  height: 75px;
+  width: 75px; }
+
 .main-navigation {
   font-size: 1rem;
   margin: 0.5rem 1.25rem;
@@ -338,52 +377,6 @@ sup {
     text-align: right; }
   .pagination--home .pagination__link-container {
     display: inline-block; }
-
-.site-sidebar {
-  display: none;
-  box-sizing: border-box;
-  float: right;
-  width: 30%;
-  padding: 1.25rem;
-  font-family: Karla;
-  font-size: .9rem; }
-  .site-sidebar-photo {
-    box-sizing: border-box;
-    margin: 1.25rem auto;
-    padding: .25rem;
-    background: #f9f9f9;
-    border: 1px solid #dedede; }
-    .site-sidebar-photo img {
-      display: block; }
-  .site-sidebar-text {
-    color: #888;
-    font-size: .9rem; }
-
-.site-sidebar-list {
-  padding: 0; }
-  .site-sidebar-list-item {
-    list-style: none; }
-    .site-sidebar-list-item a {
-      display: block;
-      padding: .25rem .5rem .25rem 0;
-      transition: all .1s ease-in; }
-      .site-sidebar-list-item a:hover {
-        padding-left: .75rem;
-        background: #f5f5f5;
-        text-decoration: none;
-        border-radius: .25rem; }
-
-.social-icon-link {
-  display: inline-block; }
-  .social-icon-link:hover {
-    text-decoration: none; }
-
-.social-icon {
-  padding: .35rem;
-  color: #888;
-  font-size: 1.25rem; }
-  .social-icon:hover {
-    color: #444; }
 
 /**
  * Search:
@@ -722,8 +715,12 @@ a.site-error__link {
   .figure--center-small {
     margin: 1em auto; }
 
+  .intro,
   .site-content {
     padding: 1.25rem 3rem; }
+
+  .intro__text {
+    font-size: 1rem; }
 
   .pagination {
     background-color: #f9f9f9;
@@ -751,6 +748,9 @@ a.site-error__link {
 
   .main-navigation__list {
     padding: 0 1rem; }
+
+  .intro__image-container {
+    display: block; }
 
   .site-body {
     margin: 0 auto;

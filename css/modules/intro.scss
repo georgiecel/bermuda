@@ -1,0 +1,47 @@
+/**
+ * Intro:
+ * Introductory panel at the top of the homepage only.
+ */
+
+.intro-container {
+	background: $bg-primary;
+}
+
+.intro {
+	align-items: center;
+	color: $text-light;
+	display: flex;
+	margin: 0 auto;
+	max-width: 48rem;
+	padding: 1.25rem;
+}
+
+.intro__text {
+	font-size: 0.9rem;
+}
+
+/**
+ * Removes margins from paragraphs within the component.
+ */
+
+.intro__text p {
+	margin: 0;
+}
+
+/**
+ * Container for image.
+ */
+
+.intro__image-container {
+	display: none;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-left: 1rem;
+}
+
+.intro__image {
+	border-radius: 50%;
+	display: block;
+	height: 75px;
+	width: 75px;
+}

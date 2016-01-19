@@ -65,8 +65,13 @@
 		margin: 1em auto;
 	}
 
+	.intro,
 	.site-content {
 		padding: 1.25rem 3rem;
+	}
+
+	.intro__text {
+		font-size: 1rem;
 	}
 
 	.pagination {
@@ -106,6 +111,10 @@
 
 	.main-navigation__list {
 		padding: 0 1rem;
+	}
+
+	.intro__image-container {
+		display: block;
 	}
 
 	.site-body {
