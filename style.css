@@ -39,7 +39,7 @@ section {
 
 h1 {
   color: #50C8C4;
-  font-size: 1.45rem;
+  font-size: 1.65rem;
   font-weight: 300;
   line-height: 1.25;
   margin: 0.5rem 0; }
@@ -571,19 +571,20 @@ blockquote:before {
 .pingback .comment-reply-link {
   display: none; }
 
-.site-footer {
-  background: #f9f9f9;
-  padding: .5em 1.25em;
-  color: #888;
-  font-family: Karla;
-  font-size: .9rem; }
+.footer-container {
+  background-color: #f9f9f9; }
 
-.site-footer-component {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-  vertical-align: top;
-  text-align: left; }
+.footer {
+  color: #888;
+  margin: 0 auto;
+  max-width: 52rem;
+  padding: 1.25rem; }
+
+.footer-item {
+  vertical-align: top; }
+
+.footer-item__title {
+  margin-top: 0; }
 
 .contact-form label {
   display: block;
@@ -667,8 +668,11 @@ a.site-error__link {
 
 @media (max-width: 400px) {
   h1,
+  .post__title {
+    font-size: 1.65rem; }
+
   h2 {
-    font-size: 1.2rem; }
+    font-size: 1.3rem; }
 
   h3,
   h4,
@@ -716,7 +720,8 @@ a.site-error__link {
     margin: 1em auto; }
 
   .intro,
-  .site-content {
+  .site-content,
+  .footer {
     padding: 1.25rem 3rem; }
 
   .intro__text {
@@ -758,6 +763,10 @@ a.site-error__link {
 
   .site-content {
     padding: 2rem; }
+
+  .footer {
+    padding: 2rem;
+    max-width: 48rem; }
 
   .pagination {
     border: 0;

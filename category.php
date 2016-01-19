@@ -1,7 +1,7 @@
 		<?php get_header(); ?>
-			<section class="post-listing category-listing">
-				<div class="category-listing-intro">
-					<h1 class="category-title post-title">Category: <?php single_cat_title(); ?></h1>
+			<section class="post-listing post-listing--category">
+				<div class="post-listing__intro">
+					<h1 class="post__title">Category: <?php single_cat_title(); ?></h1>
 					<?php if ( category_description() ) :
 						echo category_description();
 						else : ?>

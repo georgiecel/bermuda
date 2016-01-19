@@ -1,8 +1,12 @@
 @media (max-width: 400px) {
 
 	h1,
+	.post__title {
+		font-size: 1.65rem;
+	}
+
 	h2 {
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 	}
 
 	h3,
@@ -66,7 +70,8 @@
 	}
 
 	.intro,
-	.site-content {
+	.site-content,
+	.footer {
 		padding: 1.25rem 3rem;
 	}
 
@@ -124,6 +129,11 @@
 
 	.site-content {
 		padding: 2rem;
+	}
+
+	.footer {
+		padding: 2rem;
+		max-width: 48rem;
 	}
 
 	.pagination {

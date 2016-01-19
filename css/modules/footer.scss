@@ -1,15 +1,18 @@
-.site-footer {
-	background: $bg-primary;
-	padding: .5em 1.25em;
-	color: $text-light;
-	font-family: Karla;
-	font-size: .9rem;
+.footer-container {
+	background-color: $bg-primary;
 }
 
-.site-footer-component {
-	box-sizing: border-box;
-	display: inline-block;
-	width: 100%;
+.footer {
+	color: $text-light;
+	margin: 0 auto;
+	max-width: 52rem;
+	padding: 1.25rem;
+}
+
+.footer-item {
 	vertical-align: top;
-	text-align: left;
+}
+
+.footer-item__title {
+	margin-top: 0;
 }
