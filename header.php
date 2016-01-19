@@ -5,6 +5,7 @@
 		<meta name="description" content="<?php meta_desc(); ?>">
 		<meta name="viewport" content="initial-scale=1.0, width=device-width">
 		<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.019/css/hack.min.css">
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css?<?php echo date('Ymd', filemtime( get_stylesheet_directory() . '/style.min.css' )); ?>" type="text/css" media="screen">
 		<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/favicons/144.png">
 		<!-- For iPhone 4 Retina display: -->

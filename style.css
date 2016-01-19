@@ -82,7 +82,7 @@ h6 {
 a {
   color: #f16c6c;
   text-decoration: none;
-  transition: color 0.1s linear; }
+  transition: color .1s linear; }
 
 a:hover {
   color: #444;
@@ -174,25 +174,27 @@ code {
   border: 1px solid #dedede;
   border-radius: 3px;
   color: #555;
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: Hack, Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 0.9em;
   font-style: normal;
   font-weight: normal;
   padding: 0.1rem 0.25rem; }
 
 pre {
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   border: 1px solid #dedede;
   border-radius: 3px;
   color: #555;
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: Hack, Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 0.9rem;
-  font-style: normal;
-  font-weight: normal;
   margin: 2rem 0;
   padding: 1.5rem;
   white-space: pre-wrap;
   word-wrap: break-word; }
+  pre > code {
+    background: none;
+    border: none;
+    padding: 0; }
 
 mark {
   background: #CEF7F4; }

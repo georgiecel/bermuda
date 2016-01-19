@@ -57,7 +57,7 @@ h6 {
 a {
 	color: $link;
 	text-decoration: none;
-	transition: color 0.1s linear;
+	transition: color .1s linear;
 }
 
 a:hover {
@@ -160,7 +160,7 @@ code {
 	border: 1px solid $border;
 	border-radius: 3px;
 	color: $code-color;
-	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: Hack, Menlo, Monaco, Consolas, 'Courier New', monospace;
 	font-size: 0.9em; // [1]
 	font-style: normal; // [2]
 	font-weight: normal; // [2]
@@ -168,18 +168,22 @@ code {
 }
 
 pre {
-	background: $bg-primary;
+	background-color: $bg-primary;
 	border: 1px solid $border;
 	border-radius: 3px;
 	color: $code-color;
-	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: Hack, Menlo, Monaco, Consolas, 'Courier New', monospace;
 	font-size: 0.9rem;
-	font-style: normal;
-	font-weight: normal;
 	margin: 2rem 0;
 	padding: 1.5rem;
 	white-space: pre-wrap;
 	word-wrap: break-word;
+
+	& > code {
+		background: none;
+		border: none;
+		padding: 0;
+	}
 }
 
 mark {
