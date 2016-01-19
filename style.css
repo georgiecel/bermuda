@@ -283,41 +283,59 @@ sup {
   .btn-cancel-reply:hover {
     background: #f5f5f5; }
 
+/**
+ * Pagination:
+ * In-post and homepage navigation to navigate between posts, and between post listings, respectively.
+ */
 .pagination {
-  display: table;
-  width: 100%;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  font-family: Karla;
-  font-size: .9rem;
-  text-transform: uppercase; }
-  .pagination-link {
-    display: table-cell;
-    vertical-align: top; }
-    .pagination-link:first-child {
-      padding-right: 1rem; }
-    .pagination-link-item {
-      display: block;
-      text-transform: none; }
-  .post + .pagination {
-    border-top: 1px solid #dedede;
-    border-bottom: 1px solid #dedede; }
+  font-size: 0.9rem;
+  margin-bottom: 2rem; }
 
-.prev-link {
-  box-sizing: border-box;
-  float: left;
-  max-width: 49%;
-  font-size: .9rem; }
-  .prev-link:link, .prev-link:visited {
-    color: #fff; }
+.pagination__item-container {
+  margin-bottom: 1.5rem; }
 
-.next-link {
-  box-sizing: border-box;
-  float: right;
-  max-width: 49%;
-  font-size: .9rem; }
-  .next-link:link, .next-link:visited {
-    color: #fff; }
+/**
+ * Hide arrow indicator for link on smaller displays.
+ */
+.pagination__arrow {
+  display: none; }
+
+/**
+ * Adjusting `text-decoration` properties when the link is hovered.
+ */
+.pagination__link:hover {
+  text-decoration: none; }
+  .pagination__link:hover .pagination__link-text {
+    text-decoration: underline; }
+
+.pagination__link-label {
+  color: #444; }
+
+.pagination__link-text {
+  display: block; }
+
+/**
+ * Modifier for pagination on homepage.
+ */
+.pagination--home {
+  display: flex;
+  /**
+   * Setting each link to half the width of the parent.
+   */
+  /**
+   * Changing the link text colour on hover.
+   */ }
+  .pagination--home .pagination__link {
+    width: 50%; }
+  .pagination--home .pagination__link:hover .pagination__link-label {
+    color: #f16c6c; }
+  .pagination--home .pagination__item-container {
+    margin-bottom: 0;
+    width: auto; }
+  .pagination--home .pagination__item-container--right {
+    text-align: right; }
+  .pagination--home .pagination__link-container {
+    display: inline-block; }
 
 .site-sidebar {
   display: none;
@@ -704,23 +722,33 @@ a.site-error__link {
 
   .site-content {
     padding: 1.25rem 3rem; }
-  .site-footer {
-    text-align: center;
-    padding: .5rem 2rem; }
-    .site-footer-component {
-      padding: 0 1rem; } }
+
+  .pagination {
+    background-color: #f9f9f9;
+    display: flex;
+    padding: 1.5rem; }
+
+  .pagination__item-container {
+    margin-bottom: 0;
+    width: 50%; }
+
+  /**
+   * Adding spacing between the links by targeting the link on the left.
+   */
+  .pagination__item-container--left {
+    padding-right: 2rem; }
+
+  /**
+   * Removing margin on homepage navigation.
+   */
+  .pagination--home {
+    margin: 0; } }
 @media (min-width: 900px) {
   .main-navigation {
     max-width: 52rem; }
 
   .main-navigation__list {
     padding: 0 1rem; }
-
-  .post {
-    padding-top: 1.5rem; }
-
-  .post-meta {
-    margin-bottom: 1.5rem; }
 
   .site-body {
     margin: 0 auto;
@@ -729,13 +757,100 @@ a.site-error__link {
   .site-content {
     padding: 2rem; }
 
-  .site-footer {
-    padding: .5rem 1rem; }
+  .pagination {
+    border: 0;
+    padding: 0; }
 
-  .site-footer-component {
-    box-sizing: border-box;
-    width: 33%;
-    max-width: 23rem; } }
+  /**
+   * Positioning container for individual prev/next trigger and link.
+   */
+  .pagination__item-container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: auto; }
+
+  /**
+   * Modifier for left-hand-side.
+   */
+  .pagination__item-container--left {
+    left: 0; }
+    .pagination__item-container--left .pagination__item:hover .pagination__arrow {
+      background-color: transparent;
+      margin-left: 0;
+      transform: rotate(180deg); }
+    .pagination__item-container--left .pagination__item:hover .pagination__link-container {
+      margin-left: 0; }
+    .pagination__item-container--left .pagination__arrow {
+      left: 0; }
+    .pagination__item-container--left .pagination__link-container {
+      border-radius: 0 0.25rem 0.25rem 0;
+      margin-left: -12rem;
+      padding-left: 2rem; }
+
+  /**
+   * Modifier for right-hand-side.
+   */
+  .pagination__item-container--right {
+    right: 0;
+    text-align: right; }
+    .pagination__item-container--right .pagination__item:hover .pagination__arrow {
+      background-color: transparent;
+      margin-right: 0;
+      transform: rotate(-180deg); }
+    .pagination__item-container--right .pagination__item:hover .pagination__link-container {
+      margin-right: 0; }
+    .pagination__item-container--right .pagination__arrow {
+      right: 0; }
+    .pagination__item-container--right .pagination__link-container {
+      border-radius: 0.25rem 0 0 0.25rem;
+      margin-right: -12rem;
+      padding-right: 2rem; }
+
+  /**
+   * Arrow trigger.
+   */
+  .pagination__arrow {
+    background-color: rgba(200, 200, 200, 0.2);
+    border-radius: 50%;
+    color: #888;
+    cursor: pointer;
+    display: block;
+    font-size: 1.25rem;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0.5rem;
+    width: 2rem;
+    position: absolute;
+    text-align: center;
+    transform-origin: 50% 50%;
+    transition: background-color 0.1s, margin 0.15s, transform 0.3s;
+    vertical-align: middle;
+    z-index: 2; }
+
+  .pagination__link-container {
+    background-color: #f9f9f9;
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    padding: 0.75rem;
+    transition: margin 0.4s ease-out;
+    vertical-align: middle;
+    width: 8rem; }
+
+  .pagination__link:hover .pagination__link-text {
+    color: #f16c6c;
+    text-decoration: none; }
+
+  /**
+   * Modifier for homepage version of pagination.
+   */
+  .pagination--home .pagination__link-container {
+    display: block;
+    line-height: 2;
+    width: auto; } }
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .post-404 {
     background: url(images/404@2x.png);

@@ -68,11 +68,11 @@
 	// Add classes to next/previous links
 
 	function posts_link_attributes_1() {
-		return 'class="btn prev-link"';
+		return 'class="pagination__link"';
 	}
 
 	function posts_link_attributes_2() {
-		return 'class="btn next-link"';
+		return 'class="pagination__link"';
 	}
 
 	add_filter( 'next_posts_link_attributes', 'posts_link_attributes_1' );
@@ -81,26 +81,17 @@
 	// Add classes to next/previous links in individual posts
 
 	function post_link_attributes_1( $output ) {
-		$code = 'class="pagination-link-item next-post-link"';
+		$code = 'class="pagination__link"';
 		return str_replace('<a href=', '<a ' . $code . ' href=', $output);
 	}
 
 	function post_link_attributes_2( $output ) {
-		$code = 'class="pagination-link-item prev-post-link"';
+		$code = 'class="pagination__link"';
 		return str_replace('<a href=', '<a ' . $code . ' href=', $output);
 	}
 
 	add_filter( 'next_post_link', 'post_link_attributes_1' );
 	add_filter( 'previous_post_link', 'post_link_attributes_2' );
-
-	// Add class to “edit comment” link
-
-	function custom_edit_comment_link( $output ) {
-		$editcomment = 'comment-meta-item';
-		return preg_replace('/comment-edit-link/', 'comment-edit-link ' . $editcomment, $output, 1);
-	}
-
-	add_filter( 'edit_comment_link', 'custom_edit_comment_link' );
 
 	// Change “cancel reply” link to a button
 

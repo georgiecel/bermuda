@@ -1,52 +1,80 @@
+/**
+ * Pagination:
+ * In-post and homepage navigation to navigate between posts, and between post listings, respectively.
+ */
+
 .pagination {
-	display: table;
-	width: 100%;
-	padding-bottom: 1rem;
-	padding-top: 1rem;
-	font-family: Karla;
-	font-size: .9rem;
-	text-transform: uppercase;
-
-	&-link {
-		display: table-cell;
-		vertical-align: top;
-
-		&:first-child {
-			padding-right: 1rem;
-		}
-
-		&-item {
-			display: block;
-			text-transform: none;
-		}
-
-	}
-
-	.post + & {
-		border-top: 1px solid $border;
-		border-bottom: 1px solid $border;
-	}
-
+	font-size: 0.9rem;
+	margin-bottom: 2rem;
 }
 
-.prev-link {
-	box-sizing: border-box;
-	float: left;
-	max-width: 49%;
-	font-size: .9rem;
-	&:link,
-	&:visited {
-		color: $link-inverted;
+.pagination__item-container {
+	margin-bottom: 1.5rem;
+}
+
+/**
+ * Hide arrow indicator for link on smaller displays.
+ */
+
+.pagination__arrow {
+	display: none;
+}
+
+/**
+ * Adjusting `text-decoration` properties when the link is hovered.
+ */
+
+.pagination__link:hover {
+	text-decoration: none;
+
+	.pagination__link-text {
+		text-decoration: underline;
 	}
 }
 
-.next-link {
-	box-sizing: border-box;
-	float: right;
-	max-width: 49%;
-	font-size: .9rem;
-	&:link,
-	&:visited {
-		color: $link-inverted;
+.pagination__link-label {
+	color: $text;
+}
+
+.pagination__link-text {
+	display: block;
+}
+
+/**
+ * Modifier for pagination on homepage.
+ */
+
+.pagination--home {
+	display: flex;
+
+	/**
+	 * Setting each link to half the width of the parent.
+	 */
+
+	.pagination__link {
+		width: 50%;
+	}
+
+	/**
+	 * Changing the link text colour on hover.
+	 */
+
+	.pagination__link:hover {
+		.pagination__link-label {
+			color: $link;
+		}
+	}
+
+	.pagination__item-container {
+		margin-bottom: 0;
+		width: auto;
+	}
+
+	.pagination__item-container--right {
+		text-align: right;
+	}
+
+	.pagination__link-container {
+		display: inline-block;
 	}
 }
