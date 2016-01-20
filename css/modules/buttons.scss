@@ -1,0 +1,17 @@
+/**
+ * Buttons:
+ * Styling for buttons.
+ */
+
+.btn {
+	@extend button;
+}
+
+.btn-cancel-reply {
+	margin-left: 0.5rem;
+	background: $btn;
+	color: $text;
+	&:hover {
+		background: $btn-hover;
+	}
+}

@@ -20,6 +20,7 @@
 }
 
 .main-navigation__link {
+	border-radius: 0.25rem;
 	display: block;
 	color: $link-inverted;
 	padding: 0.25rem 0.5rem;
@@ -40,13 +41,4 @@
 	background: url(images/hg-logo.png) no-repeat 0.5rem center;
 	background-size: auto 1.5rem;
 	padding-left: 2.5rem;
-}
-
-.btn-cancel-reply {
-	margin-left: .5rem;
-	background: $btn;
-	color: $text;
-	&:hover {
-		background: $btn-hover;
-	}
 }

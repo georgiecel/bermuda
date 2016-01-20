@@ -54,7 +54,6 @@ h2 {
 
 h3 {
   color: #50C8C4;
-  font-family: Karla;
   font-size: 1.3rem;
   font-weight: normal;
   margin-bottom: 0;
@@ -103,7 +102,7 @@ em {
 img {
   border: 0; }
 
-button,
+button, .btn, .pushbutton-wide,
 input,
 textarea {
   box-sizing: border-box;
@@ -123,26 +122,22 @@ textarea {
     background: #f9f9f9;
     color: #888; }
 
-button,
-.btn,
-.pushbutton-wide {
+button, .btn, .pushbutton-wide {
   -webkit-appearance: none;
   display: inline-block;
-  padding: .35em .85em;
-  background: #50C8C4;
+  padding: 0.35rem 0.85rem;
+  background-color: #50C8C4;
   color: #fff;
   font-family: Karla;
   border: none;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   cursor: pointer;
-  transition: background .15s linear; }
-  button:hover,
-  .btn:hover,
-  .pushbutton-wide:hover {
-    background: #f16c6c;
+  transition: background-color 0.15s linear; }
+  button:hover, .btn:hover, .pushbutton-wide:hover {
+    background-color: #3c9493;
     text-decoration: none; }
 
-button {
+button, .btn, .pushbutton-wide {
   min-height: 2.5rem; }
 
 input[type="checkbox"] {
@@ -296,6 +291,7 @@ sup {
   list-style: none; }
 
 .main-navigation__link {
+  border-radius: 0.25rem;
   display: block;
   color: #fff;
   padding: 0.25rem 0.5rem;
@@ -312,13 +308,6 @@ sup {
   background: url(images/hg-logo.png) no-repeat 0.5rem center;
   background-size: auto 1.5rem;
   padding-left: 2.5rem; }
-
-.btn-cancel-reply {
-  margin-left: .5rem;
-  background: #eee;
-  color: #444; }
-  .btn-cancel-reply:hover {
-    background: #f5f5f5; }
 
 /**
  * Pagination:
@@ -407,11 +396,19 @@ sup {
   vertical-align: middle;
   border-radius: 0 .25rem .25rem 0; }
 
-.comment-respond {
-  margin-bottom: .5rem; }
-
 .subscribe-label {
   display: inline-block; }
+
+/**
+ * Buttons:
+ * Styling for buttons.
+ */
+.btn-cancel-reply {
+  margin-left: 0.5rem;
+  background: #eee;
+  color: #444; }
+  .btn-cancel-reply:hover {
+    background: #ddd; }
 
 img {
   height: auto;
@@ -548,8 +545,8 @@ blockquote:before {
   margin-top: 0.5rem; }
 
 .comment__reply-link {
-  font-style: italic;
-  font-weight: 500; }
+  font-size: 1rem;
+  font-style: italic; }
 
 .footer-container {
   background-color: #f9f9f9; }

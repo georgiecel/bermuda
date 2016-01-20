@@ -106,20 +106,19 @@ textarea {
 	}
 }
 
-button,
-.btn {
+button {
 	-webkit-appearance: none;
 	display: inline-block;
-	padding: .35em .85em;
-	background: $primary;
+	padding: 0.35rem 0.85rem;
+	background-color: $primary;
 	color: $link-inverted;
 	font-family: Karla;
 	border: none;
-	border-radius: .25rem;
+	border-radius: 0.25rem;
 	cursor: pointer;
-	transition: background .15s linear;
+	transition: background-color 0.15s linear;
 	&:hover {
-		background: $link;
+		background-color: $primary-dark;
 		text-decoration: none;
 	}
 }
