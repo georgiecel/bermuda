@@ -490,8 +490,7 @@ blockquote:before {
 
 .post__title {
   font-family: Fira Sans;
-  font-size: 2.5rem;
-  margin-top: 1.5rem; }
+  font-size: 2.5rem; }
 
 .post__meta-item, .comment__meta-item {
   color: #888;
@@ -610,7 +609,7 @@ a.site-error__link {
   color: #fff;
   font-size: 1rem; }
 
-@media (max-width: 400px) {
+@media (max-width: 25rem) {
   h1,
   .post__title {
     font-size: 1.65rem; }
@@ -623,7 +622,7 @@ a.site-error__link {
   h5,
   h6 {
     font-size: 1.05rem; } }
-@media (min-width: 600px) {
+@media (min-width: 38rem) {
   body {
     font-size: 1.05rem;
     line-height: 1.67; }
@@ -680,6 +679,9 @@ a.site-error__link {
     margin-bottom: 0;
     width: 50%; }
 
+  .post__title {
+    margin-top: 1.5rem; }
+
   /**
    * Adding spacing between the links by targeting the link on the left.
    */
@@ -691,7 +693,7 @@ a.site-error__link {
    */
   .pagination--home {
     margin: 0; } }
-@media (min-width: 900px) {
+@media (min-width: 58rem) {
   .main-navigation {
     max-width: 52rem; }
 

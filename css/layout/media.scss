@@ -1,4 +1,4 @@
-@media (max-width: 400px) {
+@media (max-width: 25rem) {
 
 	h1,
 	.post__title {
@@ -18,7 +18,7 @@
 
 }
 
-@media (min-width: 600px) {
+@media (min-width: 38rem) {
 
 	body {
 		font-size: 1.05rem;
@@ -90,6 +90,10 @@
 		width: 50%;
 	}
 
+	.post__title {
+		margin-top: 1.5rem;
+	}
+
 	/**
 	 * Adding spacing between the links by targeting the link on the left.
 	 */
@@ -108,7 +112,7 @@
 
 }
 
-@media (min-width: 900px) {
+@media (min-width: 58rem) {
 
 	.main-navigation {
 		max-width: 52rem;
