@@ -110,6 +110,14 @@
 	add_filter( 'next_post_link', 'post_link_attributes_1' );
 	add_filter( 'previous_post_link', 'post_link_attributes_2' );
 
+	// Add class to reply link
+
+	function comment_reply( $content ) {
+		return '<p class="comment__reply-link">' . $content . '</p>';
+	}
+
+	add_filter('comment_reply_link', 'comment_reply', 99);
+
 	// Change “cancel reply” link to a button
 
 	function cancel_comment_reply_button( $html, $link, $text ) {
@@ -304,7 +312,7 @@
 		// start_lvl – wrapper for child comments list
 		function start_lvl( &$output, $depth = 0, $args = array() ) {
 			$GLOBALS['comment_depth'] = $depth + 2; ?>
-			<section class="child-comments comments-list">
+			<section class="comments-list comments-list--child">
 		<?php }
 
 		// end_lvl – closing wrapper for child comments list
@@ -318,8 +326,8 @@
 			$depth++;
 			$GLOBALS['comment_depth'] = $depth;
 			$GLOBALS['comment'] = $comment;
-			$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' ); 
-	
+			$parent_class = ( empty( $args['has_children'] ) ? '' : 'comment--parent' );
+
 			if ( 'article' == $args['style'] ) {
 				$tag = 'article';
 				$add_below = 'comment';
@@ -328,20 +336,25 @@
 				$add_below = 'comment';
 			} ?>
 
-			<article <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>" itemscope itemtype="http://schema.org/Comment">
-				<figure class="comment-gravatar"><?php echo get_avatar( $comment, 65, 'http://hey.georgie.nu/wp-content/themes/hg-bermuda/favicons/small.png', 'Author’s gravatar' ); ?></figure>
-				<div class="comment-meta post-meta" role="complementary">
-					<h2 class="comment-author">
-						<a class="comment-author-link" href="<?php comment_author_url(); ?>" rel="nofollow" itemprop="author"><?php comment_author(); ?></a>
+			<?php $PostAuthor = false;
+				if( $comment->comment_author_email == get_the_author_email() ) {
+					$PostAuthor = true;
+				}
+			?>
+
+			<article class="comment<?php if($PostAuthor) { echo ' comment--author'; } ?>" id="comment-<?php comment_ID() ?>" itemscope itemtype="http://schema.org/Comment">
+				<div class="comment__meta" role="complementary">
+					<h2 class="comment__author">
+						<a class="comment__author-link" href="<?php comment_author_url(); ?>" rel="nofollow" itemprop="author"><?php comment_author(); ?></a>
 					</h2>
-					<time class="comment-meta-item" datetime="<?php comment_date('Y-m-d') ?>T<?php comment_time('H:iP') ?>" itemprop="datePublished"><?php comment_date('jS F Y') ?>, <a href="#comment-<?php comment_ID() ?>" itemprop="url"><?php comment_time() ?></a></time>
+					<p class="comment__meta-item"><time datetime="<?php comment_date('Y-m-d') ?>T<?php comment_time('H:iP') ?>" itemprop="datePublished"><?php comment_date('jS F Y') ?>, <a href="#comment-<?php comment_ID() ?>" itemprop="url"><?php comment_time() ?></a></time></p>
 					<?php if ($comment->comment_approved == '0') : ?>
-					<p class="comment-meta-item">Your comment is awaiting moderation.</p>
+					<p class="comment__meta-item">Your comment is awaiting moderation.</p>
 					<?php endif; ?>
 				</div>
-				<div class="comment-content post-content" itemprop="text">
+				<div class="comment__text" itemprop="text">
 					<?php comment_text() ?>
-					<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+					<?php comment_reply_link(array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'], 'reply_text' => 'Reply to this &raquo;' ) )) ?>
 				</div>
 
 		<?php }

@@ -1,86 +1,49 @@
 .comments {
-	margin-top: 1rem;
+	margin-top: 3rem;
 }
 
-.comments-list {
+.comments-list--child {
+	border-left: 0.5rem solid $bg-primary;
+	margin-bottom: 1rem;
 	margin-top: 1.5rem;
-	.comment-meta {
-		min-height: 55px;
-		margin-left: 65px;
-		font-size: .85em;
-		text-align: left;
-	}
-	> .comment,
-	> .pingback {
-		.comment-meta {
-			min-height: 0;
-			margin-left: 0;
-		}
+	padding-left: 1.5rem;
+
+	> .comment {
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 }
 
-.comment,
-.pingback {
-	margin-bottom: 1.5em;
-	padding-bottom: 1.5em;
+.comment {
+	margin: 1rem 0;
+	padding: 1rem 0 0;
 }
 
-.comment-gravatar {
-	float: left;
-	margin: 0 1rem .5rem 0;
-	padding: .25rem;
-	border: 1px solid $border;
-	.pingback & {
-		display: none;
-	}
-}
-
-.avatar {
-	display: block;
-	width: 45px;
-}
-
-.comment-author {
+.comment__author {
+	font-style: normal;
 	margin: 0;
 }
 
-.bypostauthor > .comment-meta > .comment-author::after {
+.comment--author .comment__author::after {
 	background-color: $bg-primary;
 	border: 1px solid $border;
-	border-radius: 0.25em;
+	border-radius: 0.25rem;
 	color: $text-light;
 	content: 'Post author';
 	display: inline-block;
-	font-size: 0.7rem;
+	font-size: 0.8rem;
+	line-height: 1;
 	margin-left: 0.5rem;
-	padding: 0.2rem 0.45rem;
+	padding: 0.35rem 0.5rem;
 	vertical-align: middle;
 }
 
-.comment-author-link {
-	text-decoration: none;
+.comment__meta-item {
+	@extend .post__meta-item;
+	margin-top: 0.5rem;
 }
 
-.comment-meta-item {
-	display: block;
-	margin-top: .25em;
-}
-
-.child-comments {
-	margin-top: 1em;
-	padding-left: 1.5em;
-	border-left: 1px solid $border;
-	> .comment {
-		margin-bottom: .5em;
-		padding-bottom: 0;
-		padding-top: 1em;
-		border-bottom: none;
-	}
-}
-
-.pingback {
-	.comment-meta-item,
-	.comment-reply-link {
-		display: none;
-	}
+.comment__reply-link {
+	font-style: italic;
+	font-weight: 500;
 }

@@ -125,7 +125,6 @@ textarea {
 
 button,
 .btn,
-.comment-reply-link,
 .pushbutton-wide {
   -webkit-appearance: none;
   display: inline-block;
@@ -139,7 +138,6 @@ button,
   transition: background .15s linear; }
   button:hover,
   .btn:hover,
-  .comment-reply-link:hover,
   .pushbutton-wide:hover {
     background: #f16c6c;
     text-decoration: none; }
@@ -234,7 +232,6 @@ sup {
   overflow: hidden; }
 
 .site-content {
-  box-sizing: border-box;
   padding: 1.25rem; }
 
 .site-header {
@@ -281,6 +278,10 @@ sup {
   height: 75px;
   width: 75px; }
 
+/**
+ * Navigation:
+ * Main navigation bar at top of website.
+ */
 .main-navigation {
   font-size: 1rem;
   margin: 0.5rem 1.25rem;
@@ -304,18 +305,13 @@ sup {
     color: #3c9493;
     text-decoration: none; }
 
+/**
+ * Modifier for home link.
+ */
 .main-navigation__link--home {
   background: url(images/hg-logo.png) no-repeat 0.5rem center;
   background-size: auto 1.5rem;
   padding-left: 2.5rem; }
-
-.comment-reply-link {
-  background: #f16c6c;
-  font-size: .9rem; }
-  .comment-reply-link:link, .comment-reply-link:visited {
-    color: #fff; }
-  .comment-reply-link:hover {
-    background: #50C8C4; }
 
 .btn-cancel-reply {
   margin-left: .5rem;
@@ -418,8 +414,8 @@ sup {
   display: inline-block; }
 
 img {
-  max-width: 100%;
-  height: auto; }
+  height: auto;
+  max-width: 100%; }
   img.aligncenter {
     display: block;
     margin: 1.5rem auto; }
@@ -452,12 +448,22 @@ img {
 .figure__caption--alignright {
   text-align: right; }
 
+/**
+ * Blockquotes:
+ * Styling for the `blockquote` element.
+ */
 blockquote {
   background-color: #f9f9f9;
   border-left: 10px solid #67DFD8;
   margin: 1.5rem 0;
   padding: 1.5rem;
-  quotes: '\201C' '\201D' '\2018' '\2019'; }
+  quotes: '\201C' '\201D' '\2018' '\2019';
+  /**
+   * Allowing the first paragraph in the blockquote to sit next to the quotation mark.
+   */
+  /**
+   * Removing the bottom margin on the last child in the blockquote.
+   */ }
   blockquote p:first-child {
     display: inline; }
   blockquote p:last-child {
@@ -477,19 +483,20 @@ blockquote:before {
   content: '\201C'; }
 
 .post {
-  padding: 1rem 0; }
-  .post:first-child {
-    padding-top: 0; }
+  padding-bottom: 1rem; }
 
-.post-summary__title {
-  font-family: Karla;
-  font-style: italic; }
+.post-listing .post {
+  padding-bottom: 1.5rem; }
+
+.post-listing__intro {
+  margin-bottom: 3rem; }
 
 .post__title {
   font-family: Fira Sans;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  margin-top: 1.5rem; }
 
-.post-meta-item {
+.post__meta-item, .comment__meta-item {
   color: #888;
   font-size: 0.9rem; }
 
@@ -501,75 +508,48 @@ blockquote:before {
   background: url(images/404.png); }
 
 .post__cta {
+  font-style: italic;
   font-weight: 500; }
 
 .comments {
-  margin-top: 1rem; }
+  margin-top: 3rem; }
 
-.comments-list {
-  margin-top: 1.5rem; }
-  .comments-list .comment-meta {
-    min-height: 55px;
-    margin-left: 65px;
-    font-size: .85em;
-    text-align: left; }
-  .comments-list > .comment .comment-meta,
-  .comments-list > .pingback .comment-meta {
-    min-height: 0;
-    margin-left: 0; }
+.comments-list--child {
+  border-left: 0.5rem solid #f9f9f9;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  padding-left: 1.5rem; }
+  .comments-list--child > .comment {
+    margin-bottom: 0;
+    padding-bottom: 0; }
 
-.comment,
-.pingback {
-  margin-bottom: 1.5em;
-  padding-bottom: 1.5em; }
+.comment {
+  margin: 1rem 0;
+  padding: 1rem 0 0; }
 
-.comment-gravatar {
-  float: left;
-  margin: 0 1rem .5rem 0;
-  padding: .25rem;
-  border: 1px solid #dedede; }
-  .pingback .comment-gravatar {
-    display: none; }
-
-.avatar {
-  display: block;
-  width: 45px; }
-
-.comment-author {
+.comment__author {
+  font-style: normal;
   margin: 0; }
 
-.bypostauthor > .comment-meta > .comment-author::after {
+.comment--author .comment__author::after {
   background-color: #f9f9f9;
   border: 1px solid #dedede;
-  border-radius: 0.25em;
+  border-radius: 0.25rem;
   color: #888;
   content: 'Post author';
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1;
   margin-left: 0.5rem;
-  padding: 0.2rem 0.45rem;
+  padding: 0.35rem 0.5rem;
   vertical-align: middle; }
 
-.comment-author-link {
-  text-decoration: none; }
+.comment__meta-item {
+  margin-top: 0.5rem; }
 
-.comment-meta-item {
-  display: block;
-  margin-top: .25em; }
-
-.child-comments {
-  margin-top: 1em;
-  padding-left: 1.5em;
-  border-left: 1px solid #dedede; }
-  .child-comments > .comment {
-    margin-bottom: .5em;
-    padding-bottom: 0;
-    padding-top: 1em;
-    border-bottom: none; }
-
-.pingback .comment-meta-item,
-.pingback .comment-reply-link {
-  display: none; }
+.comment__reply-link {
+  font-style: italic;
+  font-weight: 500; }
 
 .footer-container {
   background-color: #f9f9f9; }
