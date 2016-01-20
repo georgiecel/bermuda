@@ -59,6 +59,40 @@
 
 	add_action( 'widgets_init', 'widgets' );
 
+	// Allowing PHP in widget
+
+	add_filter( 'widget_text', 'execute_php', 100);
+
+	function execute_php($html) {
+		if( strpos( $html, '<' . '?php' ) !== false ){
+			ob_start();
+			eval( '?' . '>' . $html );
+			$html = ob_get_contents();
+			ob_end_clean();
+		}
+		return $html;
+	}
+
+	// Removing `textwidget` div
+
+	add_action( 'widgets_init', 'register_my_widgets' );
+
+	function register_my_widgets() {
+		register_widget( 'My_Text_Widget' );
+	}
+
+	class My_Text_Widget extends WP_Widget_Text {
+		function widget( $args, $instance ) {
+			extract($args);
+			$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+			$text = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
+			echo $before_widget;
+			if ( !empty( $title ) ) { echo $before_title . $title . $after_title; } ?>
+			<?php echo !empty( $instance['filter'] ) ? wpautop( $text ) : $text; ?>
+			<?php echo $after_widget;
+		}
+	}
+
 	// Add custom “read more” link for excerpt
 
 	function excerpt_read_more_link( $output ) {

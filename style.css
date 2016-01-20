@@ -547,6 +547,10 @@ blockquote:before {
   font-size: 1rem;
   font-style: italic; }
 
+/**
+ * Footer:
+ * The footer area, which contains widgets.
+ */
 .footer-container {
   background-color: #f9f9f9; }
 
@@ -557,10 +561,27 @@ blockquote:before {
   padding: 1.25rem; }
 
 .footer-item {
+  font-size: 0.9rem;
   vertical-align: top; }
+  .footer-item + .footer-item {
+    margin-top: 2rem; }
 
 .footer-item__title {
   margin-top: 0; }
+
+/**
+ * Random quote in footer.
+ */
+.footer__quote {
+  background: none;
+  border: 0;
+  color: #50C8C4;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 1rem 0 1.5rem;
+  padding: 0; }
+  .footer__quote::before {
+    display: none; }
 
 .contact-form label {
   display: block;
@@ -713,6 +734,9 @@ a.site-error__link {
   .footer {
     padding: 2rem;
     max-width: 48rem; }
+
+  .footer__quote {
+    margin-top: 0; }
 
   .pagination {
     border: 0;
