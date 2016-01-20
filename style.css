@@ -508,7 +508,11 @@ blockquote:before {
   font-weight: 500; }
 
 .comments {
-  margin-top: 3rem; }
+  padding-top: 3rem; }
+
+.comments-respond {
+  border-top: 1px solid #dedede;
+  padding-top: 3rem; }
 
 .comments-list--child {
   border-left: 0.5rem solid #f9f9f9;

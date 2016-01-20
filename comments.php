@@ -14,11 +14,11 @@
 	if ('open' == $post->comment_status) :
 
 ?>
-	<section class="respond" id="respond">
-		<h1 class="respond__title"><?php comment_form_title( 'Leave a Comment', 'Reply to %s' ); ?></h1>
-		<form class="respond__form" id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" role="form">
+	<section class="comments-respond" id="respond">
+		<h1 class="comments-respond__title"><?php comment_form_title( 'Leave a Comment', 'Reply to %s' ); ?></h1>
+		<form class="comments-respond__form" id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" role="form">
 		<?php if ( $user_ID ) : ?>
-			<p class="respond__form-row">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
+			<p class="comments-respond__form-row">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
 		<?php else : ?>
 			<label for="author">Name</label>
 			<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
@@ -28,7 +28,7 @@
 			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3">
 		<?php endif; ?>
 			<label for="comment">Comment</label>
-			<textarea class="respond__text" name="comment" id="comment" cols="30" rows="5" tabindex="4"></textarea>
+			<textarea class="comments-respond__text" name="comment" id="comment" cols="30" rows="5" tabindex="4"></textarea>
 			<button name="submit" type="submit" id="submit" tabindex="5" class="btn">Submit Comment</button>
 			<?php cancel_comment_reply_link('Cancel Reply') ?>
 			<?php comment_id_fields( $post_id ); ?>

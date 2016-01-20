@@ -1,5 +1,10 @@
 .comments {
-	margin-top: 3rem;
+	padding-top: 3rem;
+}
+
+.comments-respond {
+	border-top: 1px solid $border;
+	padding-top: 3rem;
 }
 
 .comments-list--child {
