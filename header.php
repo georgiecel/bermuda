@@ -44,6 +44,9 @@
 						'items_wrap' => '%3$s',
 						'walker' => new menu_walker
 						) ); ?>
+					<li class="main-navigation__list-item main-navigation__list-item--search">
+						<?php get_search_form(); ?>
+					</li>
 				</ul>
 			</nav>
 		</header>

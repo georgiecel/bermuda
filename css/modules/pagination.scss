@@ -56,6 +56,14 @@
 	}
 
 	/**
+	 * Giving the element full width if it is the only child.
+	 */
+
+	.pagination__link:only-child {
+		width: 100%;
+	}
+
+	/**
 	 * Changing the link text colour on hover.
 	 */
 

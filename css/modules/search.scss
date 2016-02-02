@@ -8,3 +8,34 @@
 	color: $primary-dark;
 	font-weight: 500;
 }
+
+/**
+ * Search form.
+ */
+
+.search-form {
+	margin: 1rem 0.5rem;
+}
+
+.search-form__input {
+	-webkit-appearance: none; // removing webkit style of search input
+	background-color: rgba(255, 255, 255, 0.2);
+	border: 0;
+	border-radius: 0.25rem;
+	color: $text-alt;
+	font-family: Karla;
+	padding: 0.25rem 0.5rem;
+	transition: background-color 1s ease;
+	vertical-align: middle;
+	width: 100%;
+
+	&:hover,
+	&:focus {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+}
+
+.search-form__label,
+.search-form__submit {
+	display: none;
+}

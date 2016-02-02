@@ -246,7 +246,6 @@ sup {
   color: #888;
   display: flex;
   margin: 0 auto;
-  max-width: 48rem;
   padding: 1.25rem; }
 
 .intro__text {
@@ -278,7 +277,7 @@ sup {
  * Main navigation bar at top of website.
  */
 .main-navigation {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0.5rem 1.25rem;
   text-align: left; }
 
@@ -289,6 +288,10 @@ sup {
 .main-navigation__list-item {
   display: inline-block;
   list-style: none; }
+
+.main-navigation__list-item--search {
+  display: block;
+  vertical-align: middle; }
 
 .main-navigation__link {
   border-radius: 0.25rem;
@@ -349,10 +352,15 @@ sup {
    * Setting each link to half the width of the parent.
    */
   /**
+   * Giving the element full width if it is the only child.
+   */
+  /**
    * Changing the link text colour on hover.
    */ }
   .pagination--home .pagination__link {
     width: 50%; }
+  .pagination--home .pagination__link:only-child {
+    width: 100%; }
   .pagination--home .pagination__link:hover .pagination__link-label {
     color: #f16c6c; }
   .pagination--home .pagination__item-container {
@@ -372,13 +380,35 @@ sup {
   color: #3c9493;
   font-weight: 500; }
 
-.search-form,
+/**
+ * Search form.
+ */
+.search-form {
+  margin: 1rem 0.5rem; }
+
+.search-form__input {
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-family: Karla;
+  padding: 0.25rem 0.5rem;
+  transition: background-color 1s ease;
+  vertical-align: middle;
+  width: 100%; }
+  .search-form__input:hover, .search-form__input:focus {
+    background-color: rgba(255, 255, 255, 0.7); }
+
+.search-form__label,
+.search-form__submit {
+  display: none; }
+
 .subscribe-form {
   display: table;
   width: 100%;
   margin-top: 1rem; }
 
-.search-form-input,
 .subscribe-form-input {
   -webkit-appearance: none;
   float: left;
@@ -389,7 +419,6 @@ sup {
   vertical-align: middle;
   border-radius: .25rem 0 0 .25rem; }
 
-.search-form-submit,
 .subscribe-form-submit {
   display: table-cell;
   width: 30%;
@@ -745,6 +774,9 @@ a.site-error__link {
   .pagination {
     border: 0;
     padding: 0; }
+
+  .pagination--home {
+    margin: 0; }
 
   /**
    * Positioning container for individual prev/next trigger and link.

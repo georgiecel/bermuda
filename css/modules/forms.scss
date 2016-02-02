@@ -1,11 +1,9 @@
-.search-form,
 .subscribe-form {
 	display: table;
 	width: 100%;
 	margin-top: 1rem;
 }
 
-.search-form-input,
 .subscribe-form-input {
 	-webkit-appearance: none; // removing webkit style of search input
 	float: left; // table-cell doesn’t work, so float.
@@ -17,7 +15,6 @@
 	border-radius: .25rem 0 0 .25rem;
 }
 
-.search-form-submit,
 .subscribe-form-submit {
 	display: table-cell;
 	width: 30%;

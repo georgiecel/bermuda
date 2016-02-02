@@ -4,7 +4,7 @@
  */
 
 .main-navigation {
-	font-size: 1rem;
+	font-size: 0.9rem;
 	margin: 0.5rem 1.25rem;
 	text-align: left;
 }
@@ -17,6 +17,11 @@
 .main-navigation__list-item {
 	display: inline-block;
 	list-style: none;
+}
+
+.main-navigation__list-item--search {
+	display: block;
+	vertical-align: middle;
 }
 
 .main-navigation__link {
