@@ -4,16 +4,15 @@
 				<?php if ( is_page('about') ) {
 						echo '<h1 class="post__title" itemprop="name" role="heading">About Georgie</h1>';
 					} else {
-						echo '<h1 class="post-title" itemprop="name" role="heading">', the_title(), '</h1>';
+						echo '<h1 class="post__title" itemprop="name" role="heading">', the_title(), '</h1>';
 					}
 				?>
 				<meta itemprop="author" content="<?php the_author(); ?>">
 				<meta itemprop="inLanguage" content="en">
 				<meta itemprop="url" content="<?php echo get_permalink(); ?>">
 				<meta itemprop="wordCount" content="<?php echo wordcount(); ?>">
-				<div class="post-content" itemprop="articleBody">
+				<div class="post__content" itemprop="articleBody">
 					<?php the_content(); ?>
-					<?php edit_post_link('Click here to edit this page (admin).'); ?>
 				</div>
 			</article>
 			<?php endwhile; ?>
