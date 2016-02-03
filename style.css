@@ -393,7 +393,9 @@ sup {
   border-radius: 0.25rem;
   color: #fff;
   font-family: Karla;
-  padding: 0.25rem 0.5rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  padding: 0 0.5rem;
   transition: background-color 1s ease;
   vertical-align: middle;
   width: 100%; }
@@ -687,6 +689,7 @@ a.site-error__link {
 
   .main-navigation {
     display: block;
+    font-size: 1rem;
     margin: 0.75rem auto;
     padding: 0 2rem; }
 
@@ -733,6 +736,9 @@ a.site-error__link {
     margin-bottom: 0;
     width: 50%; }
 
+  .homepage-listing {
+    margin-top: 1rem; }
+
   .post__title {
     margin-top: 1.5rem; }
 
@@ -746,9 +752,22 @@ a.site-error__link {
    * Removing margin on homepage navigation.
    */
   .pagination--home {
-    margin: 0; } }
+    margin: 0 0 1rem; } }
+@media (min-width: 44rem) {
+  .main-navigation__list-item--search {
+    float: right; }
+
+  .search-form {
+    margin: 0; }
+
+  .search-form__input {
+    width: auto; }
+
+  .intro__image-container {
+    display: inline-block; } }
 @media (min-width: 58rem) {
   .main-navigation {
+    margin: 1.25rem auto;
     max-width: 52rem; }
 
   .main-navigation__list {
