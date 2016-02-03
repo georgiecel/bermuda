@@ -801,11 +801,8 @@ a.site-error__link {
    * Positioning container for individual prev/next trigger and link.
    */
   .pagination__item-container {
-    align-items: center;
-    display: flex;
-    height: 100%;
     position: fixed;
-    top: 0;
+    top: 49vh;
     width: auto; }
 
   /**
