@@ -340,19 +340,19 @@
  
 		// constructor – wrapper for the comments list
 		function __construct() { ?>
-			<section class="comments-list">
+			<div class="comments-list">
 		<?php }
 
 		// start_lvl – wrapper for child comments list
 		function start_lvl( &$output, $depth = 0, $args = array() ) {
 			$GLOBALS['comment_depth'] = $depth + 2; ?>
-			<section class="comments-list comments-list--child">
+			<div class="comments-list comments-list--child">
 		<?php }
 
 		// end_lvl – closing wrapper for child comments list
 		function end_lvl( &$output, $depth = 0, $args = array() ) {
 			$GLOBALS['comment_depth'] = $depth + 2; ?>
-			</section>
+			</div>
 		<?php }
 
 		// start_el – HTML for comment template
@@ -400,7 +400,7 @@
 
 		// destructor – closing wrapper for the comments list
 		function __destruct() { ?>
-			</section>
+			</div>
 		<?php }
 
 	}

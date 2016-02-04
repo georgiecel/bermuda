@@ -17,12 +17,6 @@
 					<h1 class="post-summary__title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url" role="heading"><?php the_title(); ?></a></h1>
 					<footer class="post__meta" role="complementary">
 						<time class="post__meta-item" datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
-						<div class="post__meta-item">Posted in <span itemprop="keywords"><?php the_category(', '); ?></span></div>
-						<div class="post__meta-item">
-							<a href="<?php comments_link(); ?>" itemprop="discussionUrl">
-								<span itemprop="interactionCount"><?php comments_number( '0 comments', '1 comment', '% comments' ); ?></span>
-							</a>
-						</div>
 						<meta itemprop="author" content="<?php the_author(); ?>">
 						<meta itemprop="inLanguage" content="en">
 						<meta itemprop="copyrightYear" content="<?php the_time('Y'); ?>">
