@@ -27,9 +27,6 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
-		<!--[if lt IE 9]>
-			<script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script>
-		<![endif]-->
 	</head>
 	<body id="site-top">
 		<header class="site-header">
