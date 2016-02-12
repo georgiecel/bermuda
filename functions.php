@@ -212,7 +212,7 @@
 		$keys = implode('|', explode(' ', get_search_query()));
 		$excerpt = trim(preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt));
 	
-		echo '<p>' . $excerpt . ' [...]</p>';
+		echo '<p>' . $excerpt . ' [&hellip;]</p>';
 	}
 
 	function search_title_highlight() {
@@ -235,7 +235,7 @@
 			$limit = 75;
 			$excerpt_length = apply_filters( 'excerpt_length', $limit );
 
-			$excerpt_end = '[...]';
+			$excerpt_end = '[&hellip;]';
 			$excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
 
 			$words = preg_split('/[\n\r\t ]+/', $excerpt, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
@@ -256,6 +256,29 @@
 
 	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 	add_filter('get_the_excerpt', 'pretty_excerpt');
+
+	// Adding short excerpt
+
+	function short_excerpt( $limit ) {
+		$excerpt = get_the_excerpt();
+		$excerpt = explode(' ', get_the_excerpt(), $limit);
+
+		if ( count( $excerpt ) >= $limit ) {
+			array_pop( $excerpt );
+			$excerpt = implode(' ', $excerpt);
+		} else {
+			$excerpt = implode(' ', $excerpt);
+		}
+
+		$excerpt = apply_filters( 'get_the_excerpt', $excerpt );
+
+		$allowed_tags = '<p>,<br>';
+		$excerpt = strip_tags( $excerpt, $allowed_tags );
+
+		$excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
+
+		echo '<p>' . $excerpt . ' [&hellip;]</p>';
+	}
 
 	// Adding post image URLs to metadata
 

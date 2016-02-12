@@ -14,7 +14,7 @@
 				</div>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-					<h1 class="post-summary__title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url" role="heading"><?php the_title(); ?></a></h1>
+					<h1 class="post-summary__title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url"><?php the_title(); ?></a></h1>
 					<footer class="post__meta" role="complementary">
 						<time class="post__meta-item" datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
 						<meta itemprop="author" content="<?php the_author(); ?>">
