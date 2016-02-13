@@ -16,9 +16,25 @@
 		</article>
 	<?php endwhile; ?>
 	</section>
-	<nav class="pagination">
-		<?php next_posts_link('&laquo; Older Entries') ?>
-		<?php previous_posts_link('Newer Entries &raquo;') ?>
+	<nav class="pagination pagination--home">
+		<?php previous_posts_link('<div class="pagination__item-container pagination__item-container--left">
+				<div class="pagination__item">
+					<span class="pagination__arrow" role="presentation" aria-hidden="true">&laquo;</span>
+					<div class="pagination__link-container">
+						<span class="pagination__link-label">Newer posts</span>
+					</div>
+				</div>
+			</div>');
+		?>
+		<?php next_posts_link('<div class="pagination__item-container pagination__item-container--right">
+				<div class="pagination__item">
+					<span class="pagination__arrow" role="presentation" aria-hidden="true">&raquo;</span>
+					<div class="pagination__link-container">
+						<span class="pagination__link-label">Older posts</span>
+					</div>
+				</div>
+			</div>');
+		?>
 	</nav>
 	<?php else : ?>
 		<article class="post error-post">
