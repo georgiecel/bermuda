@@ -83,6 +83,7 @@
 	.pagination {
 		background-color: $bg-primary;
 		display: flex;
+		margin-bottom: 1rem;
 		padding: 1.5rem;
 	}
 
@@ -171,6 +172,7 @@
 
 	.pagination {
 		border: 0;
+		margin: 0;
 		padding: 0;
 	}
 
@@ -306,18 +308,6 @@
 			line-height: 2;
 			width: auto;
 		}
-	}
-
-}
-
-@media (min--moz-device-pixel-ratio: 1.5),
-(-o-min-device-pixel-ratio: 3/2),
-(-webkit-min-device-pixel-ratio: 1.5),
-(min-resolution: 1.5dppx) {
-
-	.post-404 {
-		background: url(images/404@2x.png);
-		background-size: 100% auto;
 	}
 
 }

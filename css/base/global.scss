@@ -82,6 +82,8 @@ em {
 
 img {
 	border: 0;
+	height: auto;
+	max-width: 100%;
 }
 
 button,
@@ -193,10 +195,6 @@ dt {
 	font-weight: 500;
 }
 
-ul li {
-	list-style: square;
-}
-
 hr {
 	box-sizing: content-box;
 	height: 1px;
@@ -207,8 +205,9 @@ hr {
 }
 
 iframe {
+	display: block;
 	max-width: 100%;
-	margin: 0 auto !important;
+	margin: 0 auto;
 }
 
 abbr[title] {
