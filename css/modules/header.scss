@@ -1,5 +1,10 @@
-.site-header {
-	overflow: hidden;
+/**
+ * Header
+ * The top panel of the whole site.
+ */
+
+.site-header-container {
 	background-color: $primary-light;
-	font-family: Karla;
+	overflow: hidden;
+	text-align: center;
 }

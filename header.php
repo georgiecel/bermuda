@@ -30,23 +30,31 @@
 		<?php wp_head(); ?>
 	</head>
 	<body id="site-top">
-		<header class="site-header">
-			<nav class="main-navigation">
-				<ul class="main-navigation__list">
-					<li class="main-navigation__list-item">
-						<a href="<?php echo site_url(); ?>" class="main-navigation__link main-navigation__link--home">Hey Georgie</a>
-					</li>
-					<?php wp_nav_menu( array(
-						'menu' => 'main-navigation',
-						'container' => '',
-						'items_wrap' => '%3$s',
-						'walker' => new menu_walker
-						) ); ?>
-					<li class="main-navigation__list-item main-navigation__list-item--search">
-						<?php get_search_form(); ?>
-					</li>
-				</ul>
-			</nav>
+		<header class="site-header-container">
+			<div class="site-header">
+				<nav class="main-navigation">
+					<ul class="main-navigation__list">
+						<li class="main-navigation__list-item main-navigation__list-item--logo">
+							<a href="<?php echo site_url(); ?>" class="main-navigation__logo">
+								<img src="<?php bloginfo('template_url'); ?>/images/logo.png"
+									 srcset="<?php bloginfo('template_url'); ?>/images/logo.png,
+											 <?php bloginfo('template_url'); ?>/images/logo@2x.png 2x"
+									 alt="Hey Georgie"
+									 class="main-navigation__logo-image">
+							</a>
+						</li>
+						<?php wp_nav_menu( array(
+							'menu' => 'main-navigation',
+							'container' => '',
+							'items_wrap' => '%3$s',
+							'walker' => new menu_walker
+							) ); ?>
+					</ul>
+				</nav>
+				<div class="search-form-container">
+					<?php get_search_form(); ?>
+				</div>
+			</div>
 		</header>
 		<?php if (is_home() && !is_paged() ) : ?>
 		<div class="intro-container">
@@ -58,7 +66,7 @@
 					<img class="intro__image"
 						 src="<?php bloginfo('template_url'); ?>/images/Georgie-avatar.jpg"
 						 srcset="<?php bloginfo('template_url'); ?>/images/Georgie-avatar.jpg,
-						 		 <?php bloginfo('template_url'); ?>/images/Georgie-avatar@2x.jpg 2x" 
+								 <?php bloginfo('template_url'); ?>/images/Georgie-avatar@2x.jpg 2x"
 						 alt="A photo of me, Georgie.">
 				</div>
 			</aside>

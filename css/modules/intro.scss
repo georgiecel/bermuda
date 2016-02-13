@@ -10,6 +10,7 @@
 .intro {
 	align-items: center;
 	color: $text-light;
+	display: -ms-flexbox;
 	display: flex;
 	margin: 0 auto;
 	padding: 1.25rem;

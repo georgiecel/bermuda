@@ -160,10 +160,11 @@ textarea {
 button, .btn, .pushbutton-wide {
   -webkit-appearance: none;
   display: inline-block;
-  padding: 0.35rem 0.85rem;
+  padding: 0.5rem 1rem 0.25rem;
   background-color: #50C8C4;
   color: #fff;
-  font-family: Karla;
+  font-family: Fira Sans;
+  font-weight: 400;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -171,9 +172,6 @@ button, .btn, .pushbutton-wide {
   button:hover, .btn:hover, .pushbutton-wide:hover {
     background-color: #3c9493;
     text-decoration: none; }
-
-button, .btn, .pushbutton-wide {
-  min-height: 2.5rem; }
 
 input[type="checkbox"] {
   height: auto; }
@@ -259,13 +257,18 @@ sup {
 .site-body {
   overflow: hidden; }
 
+.site-header,
 .site-content {
   padding: 1.25rem; }
 
-.site-header {
-  overflow: hidden;
+/**
+ * Header
+ * The top panel of the whole site.
+ */
+.site-header-container {
   background-color: #7cd7d7;
-  font-family: Karla; }
+  overflow: hidden;
+  text-align: center; }
 
 /**
  * Intro:
@@ -277,6 +280,7 @@ sup {
 .intro {
   align-items: center;
   color: #888;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   padding: 1.25rem; }
@@ -310,28 +314,47 @@ sup {
  * Navigation:
  * Main navigation bar at top of website.
  */
-.main-navigation {
-  font-size: 0.9rem;
-  margin: 0.5rem 1.25rem;
-  text-align: left; }
-
 .main-navigation__list {
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0; }
 
 .main-navigation__list-item {
-  display: inline-block;
-  list-style: none; }
-
-.main-navigation__list-item--search {
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
   vertical-align: middle; }
+
+/**
+ * Modifier for the element containing the logo.
+ */
+.main-navigation__list-item--logo {
+  align-items: center;
+  cursor: pointer;
+  flex-basis: 100%;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: opacity 0.15s; }
+  .main-navigation__list-item--logo:hover {
+    opacity: 0.8; }
+
+/**
+ * Logo inside list item.
+ */
+.main-navigation__logo {
+  display: block;
+  height: 25px;
+  width: 25px; }
 
 .main-navigation__link {
   border-radius: 0.25rem;
   display: block;
   color: #fff;
-  padding: 0.25rem 0.5rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem 0.35rem;
   transition: all 0.1s ease-in; }
   .main-navigation__link:hover {
     background-color: rgba(255, 255, 255, 0.2);
@@ -339,12 +362,37 @@ sup {
     text-decoration: none; }
 
 /**
- * Modifier for home link.
+ * Search form.
+ * The search form appears at the top of the page in the header.
  */
-.main-navigation__link--home {
-  background: url(images/hg-logo.png) no-repeat 0.5rem center;
-  background-size: auto 1.5rem;
-  padding-left: 2.5rem; }
+.search-form {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem; }
+
+.search-form__label {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute; }
+
+.search-form__input {
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  border-radius: 0.25rem 0 0 0.25rem;
+  color: #fff;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 0.75rem;
+  transition: background-color 1s ease;
+  width: 90%; }
+  .search-form__input:hover, .search-form__input:focus {
+    background-color: rgba(255, 255, 255, 0.7); }
+
+.search-form__submit {
+  border-radius: 0 0.25rem 0.25rem 0;
+  height: 2.5rem;
+  padding-top: 0.35rem; }
 
 /**
  * Pagination:
@@ -412,56 +460,6 @@ sup {
   background: #CEF7F4;
   color: #3c9493;
   font-weight: 500; }
-
-/**
- * Search form.
- */
-.search-form {
-  margin: 1rem 0.5rem; }
-
-.search-form__input {
-  -webkit-appearance: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 0;
-  border-radius: 0.25rem;
-  color: #fff;
-  font-family: Karla;
-  height: 2.2rem;
-  line-height: 2.2rem;
-  padding: 0 0.5rem;
-  transition: background-color 1s ease;
-  vertical-align: middle;
-  width: 100%; }
-  .search-form__input:hover, .search-form__input:focus {
-    background-color: rgba(255, 255, 255, 0.7); }
-
-.search-form__label,
-.search-form__submit {
-  display: none; }
-
-.subscribe-form {
-  display: table;
-  width: 100%;
-  margin-top: 1rem; }
-
-.subscribe-form-input {
-  -webkit-appearance: none;
-  float: left;
-  display: table-cell;
-  width: 70%;
-  height: 2.5rem;
-  font-family: Karla;
-  vertical-align: middle;
-  border-radius: .25rem 0 0 .25rem; }
-
-.subscribe-form-submit {
-  display: table-cell;
-  width: 30%;
-  vertical-align: middle;
-  border-radius: 0 .25rem .25rem 0; }
-
-.subscribe-label {
-  display: inline-block; }
 
 /**
  * Buttons:
@@ -678,6 +676,7 @@ blockquote:before {
   font-family: Karla;
   font-size: 1.2rem;
   height: 100%;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center; }
 
@@ -706,6 +705,13 @@ blockquote:before {
   h5,
   h6 {
     font-size: 1.05rem; } }
+@media (min-width: 25rem) {
+  .main-navigation__list {
+    flex-wrap: nowrap; }
+
+  .main-navigation__list-item--logo {
+    flex-basis: auto;
+    margin-bottom: 0; } }
 @media (min-width: 38rem) {
   body {
     font-size: 1.05rem;
@@ -714,20 +720,6 @@ blockquote:before {
   blockquote {
     margin: 2rem -1.5rem;
     padding: 2rem 3rem; }
-
-  .main-navigation {
-    display: block;
-    font-size: 1rem;
-    margin: 0.75rem auto;
-    padding: 0 2rem; }
-
-  .main-navigation__link {
-    border-radius: 0.25rem;
-    display: inline-block;
-    margin: 0 0.5rem;
-    transition: background-color 0.15s linear; }
-    .main-navigation__link:hover {
-      text-decoration: none; }
 
   .figure--right,
   .figure--alignright {
@@ -747,6 +739,7 @@ blockquote:before {
   .figure--center-small {
     margin: 1em auto; }
 
+  .site-header,
   .intro,
   .site-content,
   .footer {
@@ -782,9 +775,19 @@ blockquote:before {
    */
   .pagination--home {
     margin: 0 0 1rem; } }
-@media (min-width: 44rem) {
-  .main-navigation__list-item--search {
-    float: right; }
+@media (min-width: 48rem) {
+  .site-header {
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+
+  .main-navigation__list-item {
+    margin: 0 0.25rem; }
+
+  .main-navigation__link {
+    padding: 0.25rem 0.5rem 0.15rem; }
 
   .search-form {
     margin: 0; }
@@ -792,18 +795,26 @@ blockquote:before {
   .search-form__input {
     width: auto; }
 
+  .intro {
+    padding: 2rem 3rem; }
+
   .intro__image-container {
     display: inline-block; } }
 @media (min-width: 58rem) {
-  .main-navigation {
-    margin: 1.25rem auto;
-    max-width: 52rem; }
+  /**
+   * 1. This hack stops IE10 from making the element overflow out of the parent, since `flex-grow` and `flex-shrink` do not work.
+   */
+  .main-navigation__list-item {
+    margin: 0 0.5rem; }
 
-  .main-navigation__list {
-    padding: 0 1rem; }
+  .search-form__input {
+    max-width: 12rem; }
 
   .intro {
     max-width: 48rem; }
+
+  .intro__text {
+    max-width: 85%; }
 
   .site-body {
     margin: 0 auto;
@@ -812,8 +823,10 @@ blockquote:before {
   .site-content {
     padding: 2rem; }
 
+  .site-header,
   .footer {
     padding: 2rem;
+    margin: 0 auto;
     max-width: 48rem; }
 
   .footer__quote {

@@ -3,32 +3,55 @@
  * Main navigation bar at top of website.
  */
 
-.main-navigation {
-	font-size: 0.9rem;
-	margin: 0.5rem 1.25rem;
-	text-align: left;
-}
-
 .main-navigation__list {
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 }
 
 .main-navigation__list-item {
-	display: inline-block;
+	display: -ms-flexbox;
+	display: flex;
 	list-style: none;
+	vertical-align: middle;
 }
 
-.main-navigation__list-item--search {
+/**
+ * Modifier for the element containing the logo.
+ */
+
+.main-navigation__list-item--logo {
+	align-items: center;
+	cursor: pointer;
+	flex-basis: 100%;
+	justify-content: center;
+	margin-bottom: 1rem;
+	transition: opacity 0.15s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+/**
+ * Logo inside list item.
+ */
+
+.main-navigation__logo {
 	display: block;
-	vertical-align: middle;
+	height: 25px;
+	width: 25px;
 }
 
 .main-navigation__link {
 	border-radius: 0.25rem;
 	display: block;
 	color: $link-inverted;
-	padding: 0.25rem 0.5rem;
+	font-weight: 400;
+	padding: 0.5rem 1rem 0.35rem;
 	transition: all 0.1s ease-in;
 
 	&:hover {
@@ -36,14 +59,4 @@
 		color: $primary-dark;
 		text-decoration: none;
 	}
-}
-
-/**
- * Modifier for home link.
- */
-
-.main-navigation__link--home {
-	background: url(images/hg-logo.png) no-repeat 0.5rem center;
-	background-size: auto 1.5rem;
-	padding-left: 2.5rem;
 }

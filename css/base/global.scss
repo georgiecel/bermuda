@@ -111,10 +111,11 @@ textarea {
 button {
 	-webkit-appearance: none;
 	display: inline-block;
-	padding: 0.35rem 0.85rem;
+	padding: 0.5rem 1rem 0.25rem;
 	background-color: $primary;
 	color: $link-inverted;
-	font-family: Karla;
+	font-family: Fira Sans;
+	font-weight: 400;
 	border: none;
 	border-radius: 0.25rem;
 	cursor: pointer;
@@ -123,10 +124,6 @@ button {
 		background-color: $primary-dark;
 		text-decoration: none;
 	}
-}
-
-button {
-	min-height: 2.5rem;
 }
 
 input[type="checkbox"] {

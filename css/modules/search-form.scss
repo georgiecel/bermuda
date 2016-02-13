@@ -1,0 +1,40 @@
+/**
+ * Search form.
+ * The search form appears at the top of the page in the header.
+ */
+
+.search-form {
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 0.5rem;
+	margin-top: 1.5rem;
+}
+
+.search-form__label {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+}
+
+.search-form__input {
+	-webkit-appearance: none; // removing webkit style of search input
+	background-color: rgba(255, 255, 255, 0.2);
+	border: 0;
+	border-radius: 0.25rem 0 0 0.25rem;
+	color: $text-alt;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	padding: 0 0.75rem;
+	transition: background-color 1s ease;
+	width: 90%;
+
+	&:hover,
+	&:focus {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+}
+
+.search-form__submit {
+	border-radius: 0 0.25rem 0.25rem 0;
+	height: 2.5rem;
+	padding-top: 0.35rem;
+}
