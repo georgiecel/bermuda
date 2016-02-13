@@ -645,7 +645,8 @@ blockquote:before {
   height: 100%; }
 
 .site-error__inner {
-  height: 100%; }
+  height: 100%;
+  padding: 0 1rem; }
 
 .site-error__content {
   align-items: center;
@@ -655,16 +656,20 @@ blockquote:before {
   font-family: Karla;
   font-size: 1.2rem;
   height: 100%;
-  justify-content: center; }
+  justify-content: center;
+  text-align: center; }
 
 .site-error__title {
   color: #fff;
   font-size: 1.5rem;
   font-weight: bold; }
 
-a.site-error__link {
-  color: #fff;
-  font-size: 1rem; }
+.site-error__link {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  color: #fff; }
+  .site-error__link:hover {
+    border-bottom-color: #444;
+    text-decoration: none; }
 
 @media (max-width: 25rem) {
   h1,
