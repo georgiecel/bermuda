@@ -2,7 +2,10 @@
 	overflow: hidden;
 }
 
-.site-header,
+.site-header {
+	padding: 0.75rem 1.25rem;
+}
+
 .site-content {
 	padding: 1.25rem;
 }

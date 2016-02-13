@@ -257,7 +257,9 @@ sup {
 .site-body {
   overflow: hidden; }
 
-.site-header,
+.site-header {
+  padding: 0.75rem 1.25rem; }
+
 .site-content {
   padding: 1.25rem; }
 
@@ -336,7 +338,7 @@ sup {
   cursor: pointer;
   flex-basis: 100%;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   transition: opacity 0.15s; }
   .main-navigation__list-item--logo:hover {
     opacity: 0.8; }
@@ -368,8 +370,9 @@ sup {
 .search-form {
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
   margin-bottom: 0.5rem;
-  margin-top: 1.5rem; }
+  margin-top: 0.5rem; }
 
 .search-form__label {
   clip: rect(1px, 1px, 1px, 1px);
@@ -381,11 +384,12 @@ sup {
   border: 0;
   border-radius: 0.25rem 0 0 0.25rem;
   color: #fff;
+  flex-grow: 1;
   height: 2.5rem;
   line-height: 2.5rem;
   padding: 0 0.75rem;
   transition: background-color 1s ease;
-  width: 90%; }
+  width: 75%; }
   .search-form__input:hover, .search-form__input:focus {
     background-color: rgba(255, 255, 255, 0.7); }
 
