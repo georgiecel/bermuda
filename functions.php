@@ -1,16 +1,16 @@
 <?php
-
 	// Move jQuery to footer
 
-	function jquery_in_footer() {
-		if (!is_admin()) {
-			wp_deregister_script('jquery');
-			wp_register_script('jquery', home_url(trailingslashit(WPINC) . 'js/jquery/jquery.js'), false, null, true);
-			wp_enqueue_script('jquery');
-		}
+	function footer_enqueue_scripts() {
+	   remove_action('wp_head', 'wp_print_scripts');
+		remove_action('wp_head', 'wp_print_head_scripts', 9);
+		remove_action('wp_head', 'wp_enqueue_scripts', 1);
+		add_action('wp_footer', 'wp_print_scripts', 5);
+		add_action('wp_footer', 'wp_enqueue_scripts', 5);
+		add_action('wp_footer', 'wp_print_head_scripts', 5);
 	}
 
-	add_action( 'init', 'jquery_in_footer' );
+	add_action('after_setup_theme', 'footer_enqueue_scripts');
 
 	// Function for meta description
 
