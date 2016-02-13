@@ -55,7 +55,11 @@
 					<?php echo get_the_author_meta( 'description', 1 ); ?>
 				</div>
 				<div class="intro__image-container">
-					<img class="intro__image" src="<?php bloginfo('template_url'); ?>/images/Georgie-avatar.jpg" alt="A photo of me, Georgie.">
+					<img class="intro__image"
+						 src="<?php bloginfo('template_url'); ?>/images/Georgie-avatar.jpg"
+						 srcset="<?php bloginfo('template_url'); ?>/images/Georgie-avatar.jpg,
+						 		 <?php bloginfo('template_url'); ?>/images/Georgie-avatar@2x.jpg 2x" 
+						 alt="A photo of me, Georgie.">
 				</div>
 			</aside>
 		</div>
