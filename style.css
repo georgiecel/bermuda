@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Theme Name: bermuda
  * Theme URI: http://hey.georgie.nu/
@@ -113,16 +114,15 @@ h6 {
 
 a {
   color: #f16c6c;
+  position: relative;
   text-decoration: none;
   transition: color .1s linear; }
 
 a:hover {
-  color: #444;
-  text-decoration: underline; }
+  color: #444; }
 
 a:active {
-  color: #444;
-  text-decoration: none; }
+  background-color: rgba(200, 200, 200, 0.2); }
 
 b,
 strong {
@@ -140,6 +140,7 @@ img {
 button, .btn, .pushbutton-wide,
 input,
 textarea {
+  -webkit-appearance: none;
   box-sizing: border-box;
   margin: 0;
   color: inherit;
@@ -158,7 +159,6 @@ textarea {
     color: #888; }
 
 button, .btn, .pushbutton-wide {
-  -webkit-appearance: none;
   display: inline-block;
   padding: 0.5rem 1rem 0.25rem;
   background-color: #50C8C4;
@@ -170,8 +170,7 @@ button, .btn, .pushbutton-wide {
   cursor: pointer;
   transition: background-color 0.15s linear; }
   button:hover, .btn:hover, .pushbutton-wide:hover {
-    background-color: #3c9493;
-    text-decoration: none; }
+    background-color: #3c9493; }
 
 input[type="checkbox"] {
   height: auto; }
@@ -262,6 +261,18 @@ sup {
 
 .site-content {
   padding: 1.25rem; }
+  .site-content a:hover {
+    /**
+     * Styled underline for link hover state within this section.
+     */ }
+    .site-content a:hover::after {
+      border-bottom: 0.3rem solid rgba(124, 215, 215, 0.5);
+      bottom: 1px;
+      content: '';
+      height: 0;
+      left: 0;
+      position: absolute;
+      width: 100%; }
 
 /**
  * Header
@@ -360,8 +371,7 @@ sup {
   transition: all 0.1s ease-in; }
   .main-navigation__link:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #3c9493;
-    text-decoration: none; }
+    color: #3c9493; }
 
 /**
  * Search form.
@@ -403,30 +413,68 @@ sup {
  * In-post and homepage navigation to navigate between posts, and between post listings, respectively.
  */
 .pagination {
-  font-size: 0.9rem; }
-
-.pagination__item-container {
-  margin-bottom: 1.5rem; }
+  background-color: #f9f9f9;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0 -1.25rem 1rem;
+  padding: 1.5rem; }
 
 /**
- * Hide arrow indicator for link on smaller displays.
+ * Containing element for individual pagination item.
+ */
+.pagination__item-container {
+  margin: 1rem 0; }
+  .pagination__item-container:first-child {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 1.5rem; }
+  .pagination__item-container:last-child {
+    padding-top: 1rem; }
+
+/**
+ * Removing arrow indicator for link on smaller displays.
  */
 .pagination__arrow {
   display: none; }
 
 /**
- * Adjusting `text-decoration` properties when the link is hovered.
+ * Adding underline to inner text when the parent link is hovered.
  */
 .pagination__link:hover {
-  text-decoration: none; }
-  .pagination__link:hover .pagination__link-text {
-    text-decoration: underline; }
+  /**
+   * Removing the default link underline.
+   */
+  /**
+   * Apply the link underline on a more suitable element.
+   */ }
+  .pagination__link:hover::after {
+    display: none; }
+  .pagination__link:hover .pagination__link-text::after {
+    border-bottom: 0.3rem solid rgba(124, 215, 215, 0.5);
+    bottom: 1px;
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 100%; }
 
+/**
+ * Text label.
+ * This is used for the label ‘Next Post’ or ‘Previous Post’.
+ */
 .pagination__link-label {
-  color: #444; }
+  color: #444;
+  display: block;
+  margin-bottom: 0.5rem; }
 
+/**
+ * Link text.
+ * For the index view, this is ‘Older Posts’ or ‘Newer Posts’.
+ * For the single post view, this is the title of the next or previous post.
+ */
 .pagination__link-text {
-  display: block; }
+  font-style: italic;
+  margin-top: 0.5rem;
+  position: relative; }
 
 /**
  * Modifier for pagination on homepage.
@@ -449,7 +497,9 @@ sup {
   .pagination--home .pagination__link:hover .pagination__link-label {
     color: #f16c6c; }
   .pagination--home .pagination__item-container {
-    margin-bottom: 0;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
     width: auto; }
   .pagination--home .pagination__item-container--right {
     text-align: right; }
@@ -539,34 +589,77 @@ blockquote:before {
   margin-right: 1rem;
   vertical-align: -2rem; }
 
+/**
+ * Post.
+ * Styles associated with an individual post view.
+ * Includes summaries on homepage, search results, or category view.
+ */
+/**
+ * Individual post.
+ * Also includes post summary.
+ */
 .post {
   padding-bottom: 1rem; }
 
+/**
+ * Post summary.
+ * Usually on homepage, search results, or category view.
+ */
 .post-listing .post {
   padding-bottom: 1.5rem; }
 
+/**
+ * Introductory paragraph.
+ * Only appears on search results and category/tag view.
+ */
 .post-listing__intro {
   margin-bottom: 3rem; }
 
+/**
+ * Individual post title.
+ * Appears on individiually linked post.
+ */
 .post__title {
   font-family: Fira Sans;
   font-size: 2.5rem; }
 
+/**
+ * Post summary title.
+ * Appears on the homepage, search results, category view.
+ */
 .post-summary__title {
   font-size: 1.65rem;
   font-style: normal;
   margin: 0.5rem 0; }
 
+/**
+ * Single line for post metadata.
+ */
 .post__meta-item, .comment__meta-item {
   color: #888;
   font-size: 0.9rem; }
 
+/**
+ * Make links `inline-block`.
+ * The links will remain in a single block instead of breaking on two lines.
+ * This ensures that the underline in the hover state is still visible.
+ */
+.post-summary__content a,
+.post__content a {
+  display: inline-block; }
+
+/**
+ * Post call-to-action link.
+ * Appears as the last item in any post summary.
+ */
 .post__cta {
   font-style: italic;
   font-weight: 500; }
 
 .comments {
   padding-top: 3rem; }
+  .comments a {
+    display: inline-block; }
 
 .comments-respond {
   padding-top: 1rem; }
@@ -693,8 +786,7 @@ blockquote:before {
   border-bottom: 3px solid rgba(255, 255, 255, 0.5);
   color: #fff; }
   .site-error__link:hover {
-    border-bottom-color: #444;
-    text-decoration: none; }
+    border-bottom-color: #444; }
 
 @media (max-width: 25rem) {
   h1,
@@ -710,9 +802,15 @@ blockquote:before {
   h6 {
     font-size: 1.05rem; } }
 @media (min-width: 25rem) {
+  /**
+   * Stop wrapping the navigation items on multiple lines.
+   */
   .main-navigation__list {
     flex-wrap: nowrap; }
 
+  /**
+   * Restore the logo’s container to its original size.
+   */
   .main-navigation__list-item--logo {
     flex-basis: auto;
     margin-bottom: 0; } }
@@ -753,33 +851,20 @@ blockquote:before {
     font-size: 1rem; }
 
   .pagination {
-    background-color: #f9f9f9;
-    display: flex;
-    margin-bottom: 1rem;
-    padding: 1.5rem; }
-
-  .pagination__item-container {
-    margin-bottom: 0;
-    width: 50%; }
+    margin-left: -3rem;
+    margin-right: -3rem;
+    padding-left: 3rem;
+    padding-right: 3rem; }
 
   .homepage-listing {
     margin-top: 1rem; }
 
   .post__title {
-    margin-top: 1.5rem; }
-
-  /**
-   * Adding spacing between the links by targeting the link on the left.
-   */
-  .pagination__item-container--left {
-    padding-right: 2rem; }
-
-  /**
-   * Removing margin on homepage navigation.
-   */
-  .pagination--home {
-    margin: 0 0 1rem; } }
+    margin-top: 1.5rem; } }
 @media (min-width: 48rem) {
+  /**
+   * 1. Allows IE10 to display flexbox elements properly.
+   */
   .site-header {
     align-items: center;
     display: -ms-flexbox;
@@ -837,7 +922,6 @@ blockquote:before {
     margin-top: 0; }
 
   .pagination {
-    border: 0;
     margin: 0;
     padding: 0; }
 
@@ -849,8 +933,14 @@ blockquote:before {
    */
   .pagination__item-container {
     position: fixed;
-    top: 49vh;
-    width: auto; }
+    top: 48vh;
+    width: auto;
+    /**
+     * Removing border and padding from first child.
+     */ }
+    .pagination__item-container:first-child {
+      border-bottom: none;
+      padding-bottom: 0; }
 
   /**
    * Modifier for left-hand-side.
@@ -922,12 +1012,15 @@ blockquote:before {
 
   .pagination__link:hover .pagination__link-text {
     color: #f16c6c;
-    text-decoration: none; }
+    /**
+     * Removing underline that was applied on smaller widths.
+     */ }
+    .pagination__link:hover .pagination__link-text::after {
+      display: none; }
 
   /**
-   * Modifier for homepage version of pagination.
+   * Modifier for pagination on homepage.
    */
   .pagination--home .pagination__link-container {
-    display: block;
     line-height: 2;
     width: auto; } }

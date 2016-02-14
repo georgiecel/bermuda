@@ -20,9 +20,17 @@
 
 @media (min-width: 25rem) {
 
+	/**
+	 * Stop wrapping the navigation items on multiple lines.
+	 */
+
 	.main-navigation__list {
 		flex-wrap: nowrap;
 	}
+
+	/**
+	 * Restore the logo’s container to its original size.
+	 */
 
 	.main-navigation__list-item--logo {
 		flex-basis: auto;
@@ -76,15 +84,10 @@
 	}
 
 	.pagination {
-		background-color: $bg-primary;
-		display: flex;
-		margin-bottom: 1rem;
-		padding: 1.5rem;
-	}
-
-	.pagination__item-container {
-		margin-bottom: 0;
-		width: 50%;
+		margin-left: -3rem;
+		margin-right: -3rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
 	}
 
 	.homepage-listing {
@@ -95,31 +98,19 @@
 		margin-top: 1.5rem;
 	}
 
-	/**
-	 * Adding spacing between the links by targeting the link on the left.
-	 */
-
-	.pagination__item-container--left {
-		padding-right: 2rem;
-	}
-
-	/**
-	 * Removing margin on homepage navigation.
-	 */
-
-	.pagination--home {
-		margin: 0 0 1rem;
-	}
-
 }
 
 @media (min-width: 48rem) {
 
+	/**
+	 * 1. Allows IE10 to display flexbox elements properly.
+	 */
+
 	.site-header {
 		align-items: center;
-		display: -ms-flexbox;
+		display: -ms-flexbox; // [1]
 		display: flex;
-		-ms-flex-pack: justify;
+		-ms-flex-pack: justify; // [1]
 		justify-content: space-between;
 	}
 
@@ -191,7 +182,6 @@
 	}
 
 	.pagination {
-		border: 0;
 		margin: 0;
 		padding: 0;
 	}
@@ -206,8 +196,17 @@
 
 	.pagination__item-container {
 		position: fixed;
-		top: 49vh;
+		top: 48vh;
 		width: auto;
+
+		/**
+		 * Removing border and padding from first child.
+		 */
+
+		&:first-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
 	}
 
 	/**
@@ -313,18 +312,23 @@
 
 		.pagination__link-text {
 			color: $link;
-			text-decoration: none;
-		}
 
+			/**
+			 * Removing underline that was applied on smaller widths.
+			 */
+
+			&::after {
+				display: none;
+			}
+		}
 	}
 
 	/**
-	 * Modifier for homepage version of pagination.
+	 * Modifier for pagination on homepage.
 	 */
 
 	.pagination--home {
 		.pagination__link-container {
-			display: block;
 			line-height: 2;
 			width: auto;
 		}

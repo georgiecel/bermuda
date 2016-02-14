@@ -56,18 +56,17 @@ h6 {
 
 a {
 	color: $link;
+	position: relative;
 	text-decoration: none;
 	transition: color .1s linear;
 }
 
 a:hover {
 	color: $link-hover;
-	text-decoration: underline;
 }
 
 a:active {
-	color: $link-hover;
-	text-decoration: none;
+	background-color: $link-active;
 }
 
 b,
@@ -89,6 +88,7 @@ img {
 button,
 input,
 textarea {
+	-webkit-appearance: none;
 	box-sizing: border-box;
 	margin: 0;
 	color: inherit;
@@ -109,7 +109,6 @@ textarea {
 }
 
 button {
-	-webkit-appearance: none;
 	display: inline-block;
 	padding: 0.5rem 1rem 0.25rem;
 	background-color: $primary;
@@ -122,7 +121,6 @@ button {
 	transition: background-color 0.15s linear;
 	&:hover {
 		background-color: $primary-dark;
-		text-decoration: none;
 	}
 }
 

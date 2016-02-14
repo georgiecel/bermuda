@@ -8,4 +8,21 @@
 
 .site-content {
 	padding: 1.25rem;
+
+	a:hover {
+
+		/**
+		 * Styled underline for link hover state within this section.
+		 */
+
+		&::after {
+			border-bottom: 0.3rem solid $link-border;
+			bottom: 1px;
+			content: '';
+			height: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+	}
 }
