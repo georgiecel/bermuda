@@ -1,6 +1,6 @@
 @mixin font($fontsize) {
 	color: $text;
-	font-family: Fira Sans, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Fira Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: $fontsize;
 	font-weight: 300;
 }

@@ -49,7 +49,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   color: #444;
-  font-family: Fira Sans, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Fira Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: 300;
   line-height: 1.5; }
@@ -116,7 +116,7 @@ a {
   color: #f16c6c;
   position: relative;
   text-decoration: none;
-  transition: color .1s linear; }
+  transition: color 0.1s linear; }
 
 a:hover {
   color: #444; }
@@ -142,16 +142,16 @@ input,
 textarea {
   -webkit-appearance: none;
   box-sizing: border-box;
-  margin: 0;
   color: inherit;
-  font: inherit; }
+  font: inherit;
+  margin: 0; }
 
 input,
 textarea {
-  padding: .65rem .85rem;
-  color: #888;
   border: 1px solid #dedede;
-  border-radius: .25rem; }
+  border-radius: 0.25rem;
+  color: #888;
+  padding: 0.65rem 0.85rem; }
   input:hover, input:focus,
   textarea:hover,
   textarea:focus {
@@ -159,15 +159,15 @@ textarea {
     color: #888; }
 
 button, .btn, .pushbutton-wide {
-  display: inline-block;
-  padding: 0.5rem 1rem 0.25rem;
   background-color: #50C8C4;
-  color: #fff;
-  font-family: Fira Sans;
-  font-weight: 400;
   border: none;
   border-radius: 0.25rem;
+  color: #fff;
   cursor: pointer;
+  display: inline-block;
+  font-family: 'Fira Sans';
+  font-weight: 400;
+  padding: 0.5rem 1rem 0.25rem;
   transition: background-color 0.15s linear; }
   button:hover, .btn:hover, .pushbutton-wide:hover {
     background-color: #3c9493; }
@@ -181,13 +181,13 @@ input[type="search"]::-webkit-search-decoration {
 
 label {
   display: block;
-  margin: .5rem 0 .25rem;
-  font-size: .9rem; }
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0.25rem; }
 
 textarea {
-  width: 100%;
   height: 200px;
-  overflow: auto; }
+  overflow: auto;
+  width: 100%; }
 
 /**
  * Inline code.
@@ -228,29 +228,29 @@ dt {
   font-weight: 500; }
 
 hr {
+  background: #dedede;
+  border: 0;
   box-sizing: content-box;
   height: 1px;
-  width: 80%;
   margin: 2rem auto;
-  background: #dedede;
-  border: 0; }
+  width: 80%; }
 
 iframe {
   display: block;
-  max-width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 100%; }
 
 abbr[title] {
   border-bottom: 1px dotted; }
 
 small {
   display: inline-block;
-  font-size: .8rem; }
+  font-size: 0.8rem; }
 
 sup {
+  font-size: 0.75rem;
   position: relative;
-  top: -.5rem;
-  font-size: .75rem;
+  top: -0.5rem;
   vertical-align: baseline; }
 
 .site-body {
@@ -620,7 +620,7 @@ blockquote:before {
  * Appears on individiually linked post.
  */
 .post__title {
-  font-family: Fira Sans;
+  font-family: 'Fira Sans';
   font-size: 2.5rem; }
 
 /**
