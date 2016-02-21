@@ -321,7 +321,7 @@
 
 	add_filter( 'img_caption_shortcode', 'caption_shortcode', 10, 3 );
 
-	// Comment walker for main navigation
+	// Navigation walker for main navigation
 
 	class menu_walker extends Walker_Nav_Menu {
 

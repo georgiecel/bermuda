@@ -9,12 +9,8 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css?<?php echo date('Ymd', filemtime( get_stylesheet_directory() . '/style.min.css' )); ?>" type="text/css" media="screen">
 		<link rel="prefetch" href="//cdn.jsdelivr.net/font-hack/2.019/css/hack.min.css">
 		<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/favicons/144.png">
-		<!-- For iPhone 4 Retina display: -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_url'); ?>/favicons/114-icon.png">
-		<!-- For iPad: -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_url'); ?>/favicons/114.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_url'); ?>/favicons/72.png">
-		<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/favicons/195.png">
-		<!-- For Windows 8 -->
 		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicons/favicon.ico">
 		<meta name="application-name" content="Hey Georgie">
 		<meta name="msapplication-TileColor" content="#ffffff">
