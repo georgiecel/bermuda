@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1.0, width=device-width">
 		<title>Oops. | <?php bloginfo('name'); ?></title>
-		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css?<?php echo date('Ymd', filemtime( get_stylesheet_directory() . '/style.min.css' )); ?>" type="text/css" media="screen">
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/error.css?<?php echo date('Ymd', filemtime( get_stylesheet_directory() . '/error.css' )); ?>" type="text/css" media="screen">
 	</head>
 	<body class="site-error__inner">
 		<div class="site-error__content">

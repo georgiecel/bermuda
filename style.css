@@ -753,41 +753,6 @@ blockquote:before {
 .footnotereverse a {
   text-decoration: none; }
 
-/**
- * Error page:
- * Applies to comment errors and 404 page errors.
- */
-.site-error {
-  background-color: #50C8C4;
-  height: 100%; }
-
-.site-error__inner {
-  height: 100%;
-  padding: 0 1rem; }
-
-.site-error__content {
-  align-items: center;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  font-family: Karla;
-  font-size: 1.2rem;
-  height: 100%;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center; }
-
-.site-error__title {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold; }
-
-.site-error__link {
-  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-  color: #fff; }
-  .site-error__link:hover {
-    border-bottom-color: #444; }
-
 @media (max-width: 25rem) {
   h1,
   .post__title {

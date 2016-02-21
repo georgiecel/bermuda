@@ -3,6 +3,16 @@
  * Applies to comment errors and 404 page errors.
  */
 
+$primary: #50c8c4;
+$text-alt: #fff;
+$link-inverted: #fff;
+$link-hover: #444;
+
+body {
+    line-height: 1.67;
+    margin: 0;
+}
+
 .site-error {
     background-color: $primary;
     height: 100%;
@@ -35,6 +45,7 @@
 .site-error__link {
     border-bottom: 3px solid rgba(255, 255, 255, 0.5);
     color: $link-inverted;
+    text-decoration: none;
 
     &:hover {
         border-bottom-color: $link-hover;
