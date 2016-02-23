@@ -36,6 +36,10 @@
 	display: none;
 }
 
+.pagination__link {
+	cursor: pointer;
+}
+
 /**
  * Adding underline to inner text when the parent link is hovered.
  */

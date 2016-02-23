@@ -1,4 +1,5 @@
 <?php
+
 	// Move jQuery to footer
 
 	function footer_enqueue_scripts() {

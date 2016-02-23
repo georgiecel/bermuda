@@ -17,6 +17,9 @@
 						<?php the_excerpt(); ?>
 					</div>
 				</article>
+				<?php if(!$show_ads) { ?>
+					<p class="advertisement">Visit: <a href="http://www.rateaquote.com/">Rate a Quote</a></p>
+				<?php $show_ads = 1; } ?>
 			<?php endwhile; ?>
 			</section>
 			<nav class="pagination pagination--home">

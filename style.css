@@ -1,24 +1,14 @@
 @charset "UTF-8";
 /*!
- * Theme Name: bermuda
+ * Theme Name: bermuda – ‘Flores’
  * Theme URI: http://hey.georgie.nu/
- * Description: Responsive, clean web design for personal blog Hey Georgie. Inspired by Hey Geronimo, postcards and minimalism.
- * Version: 1.0
+ * Description: Design for personal blog Hey Georgie.
+ * Version: 1.2
  * Author: Georgie Luhur
  * Author URI: http://hey.georgie.nu/
- * Copyright Georgie Luhur 2014-2015, not to be redistributed. Please respect my work and do not copy parts of my layout directly.
+ * Copyright Georgie Luhur 2014-2016, not to be redistributed. Please respect my work and do not copy parts of my layout directly.
  *
  */
-@font-face {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Karla"), local("Karla-Regular"), url(https://fonts.gstatic.com/s/karla/v5/QT0qO2FiFD03cwUe_t62t6CWcynf_cDxXwCLxiixG1c.woff) format("woff"); }
-@font-face {
-  font-family: 'Karla';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Karla Italic"), local("Karla-Italic"), url(https://fonts.gstatic.com/s/karla/v5/ietJ6bjhwzrJL8NSJOc2mgLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
@@ -436,6 +426,9 @@ sup {
 .pagination__arrow {
   display: none; }
 
+.pagination__link {
+  cursor: pointer; }
+
 /**
  * Adding underline to inner text when the parent link is hovered.
  */
@@ -620,7 +613,6 @@ blockquote:before {
  * Appears on individiually linked post.
  */
 .post__title {
-  font-family: 'Fira Sans';
   font-size: 2.5rem; }
 
 /**
@@ -654,7 +646,16 @@ blockquote:before {
  */
 .post__cta {
   font-style: italic;
-  font-weight: 500; }
+  font-weight: 400; }
+
+/**
+ * Temporary advertisement.
+ * Appears after the first post on the homepage.
+ */
+.advertisement {
+  font-style: italic;
+  margin-bottom: 2rem;
+  margin-top: 0; }
 
 .comments {
   padding-top: 3rem; }
@@ -744,14 +745,11 @@ blockquote:before {
   color: #fff; }
 
 .footnotes {
-  padding: .75em 0;
-  font-size: .75em;
-  border-top: 1px dashed #dedede; }
-  .footnotes li {
-    color: #888; }
-
-.footnotereverse a {
-  text-decoration: none; }
+  border-top: 1px dashed #dedede;
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 0; }
 
 @media (max-width: 25rem) {
   h1,
