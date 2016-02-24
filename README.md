@@ -3,14 +3,41 @@ bermuda
 
 Theme build for blog [Hey Georgie](http://hey.georgie.nu). Built by Georgie Luhur. Please respect my work and do not copy ginormous amounts of it without credit. This is the main website I work on, both content and coding wise. Coding wise, I know that the performance, UX and UI can be improved and I am always looking to improve. I appreciate suggestions and am always looking for new tricks to make WordPress less bloated and to let it do what I want it to do, so let me know if you have anything to add. :smile:
 
-### v.1.1 ‘Atlantis’ – August 2015
+### v1.2 ‘Flores’ – February 2016
+
+[Release blog post](http://hey.georgie.nu/flores/).
+
+*Flores* includes the following changes from around the 30th December 2015, along with miscellaneous other updates in between.
+
+* Converted to single column layout.
+* Reduced the use of button-link links, using link-looking links instead!
+* Completely rolled out [BEM](https://en.bem.info/) naming convention.
+* Updated display of post metadata.
+* Updated `figure` element to visually expand slightly beyond the width of the text content.
+* Updated main navigation to use WordPress’ `wp_nav_menu` function, and removed use of JavaScript.
+* Updated post titles to be able to use custom HTML.
+* Adjusted styles for `code` element to have a pale background and subtle outline.
+* Utilised more WordPress functions instead of hard-coding text in.
+* Added creative animation to in-post navigation controls.
+* Added blog introduction component to homepage (only displays on homepage).
+* Converted media queries to use `rem` instead of `px`.
+* Added rotating quote to footer.
+* Added function to replace appropriate text such as ‘(:’ with emoji such as ‘🙃’.
+* Restyled search bar and added it to the header, also allowing it to be visible on smaller screens (finally).
+* Updated favicons to use the `#7cd7d7` teal rather than the much older bright turquoise.
+* Removed a lot of unused code.
+* Minor performance improvements.
+
+*Atlantis* is named for hilarious enough reasons that the lost city of Atlantis is a story just like the myth of the Bermuda triangle.
+
+### v1.1 ‘Atlantis’ – August 2015
 
 [Release blog post](http://hey.georgie.nu/atlantis/).
 
 *Atlantis* includes the following changes:
 
 * Change from hot pink and teal branding to coral and a less bright teal, also introducing grey for the footer.
-* Unified logo design from a complicated triangle outline and text to a white triangle on a teal background. 
+* Unified logo design from a complicated triangle outline and text to a white triangle on a teal background.
 * Swapped out square, ‘blocky’ elements with rounded corners for prominent elements and a smoother design.
 * [Converted from Stylus to Sass](http://hey.georgie.nu/stylus-sass/).
 * Converted from `em` to `rem` units.
