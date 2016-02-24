@@ -28,7 +28,7 @@ Theme build for blog [Hey Georgie](http://hey.georgie.nu). Built by Georgie Luhu
 * Removed a lot of unused code.
 * Minor performance improvements.
 
-*Atlantis* is named for hilarious enough reasons that the lost city of Atlantis is a story just like the myth of the Bermuda triangle.
+*Flores* is named after the Indonesian island of the same name, where remains of short (a metre tall) humans and unusually small elephants were found.
 
 ### v1.1 ‘Atlantis’ – August 2015
 
