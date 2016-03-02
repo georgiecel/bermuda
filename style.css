@@ -419,6 +419,8 @@ sup {
     padding-bottom: 1.5rem; }
   .pagination__item-container:last-child {
     padding-top: 1rem; }
+  .pagination__item-container:only-child {
+    border-bottom: 0; }
 
 /**
  * Removing arrow indicator for link on smaller displays.

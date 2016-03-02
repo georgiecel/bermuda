@@ -26,6 +26,10 @@
 	&:last-child {
 		padding-top: 1rem;
 	}
+
+	&:only-child {
+		border-bottom: 0;
+	}
 }
 
 /**
