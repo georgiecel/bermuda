@@ -34,7 +34,7 @@
 						<div class="pagination__item">
 							<span class="pagination__arrow" role="presentation" aria-hidden="true">&laquo;</span>
 							<div class="pagination__link-container">
-								<span class="pagination__link-label">Newer posts</span>
+								<span class="pagination__link-text">Newer posts</span>
 							</div>
 						</div>
 					</div>');
@@ -43,7 +43,7 @@
 						<div class="pagination__item">
 							<span class="pagination__arrow" role="presentation" aria-hidden="true">&raquo;</span>
 							<div class="pagination__link-container">
-								<span class="pagination__link-label">Older posts</span>
+								<span class="pagination__link-text">Older posts</span>
 							</div>
 						</div>
 					</div>');
