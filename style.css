@@ -752,6 +752,37 @@ blockquote:before {
   margin-top: 1.5rem;
   padding: 0.75rem 0; }
 
+/**
+ * InLinkz plugin.
+ */
+.InLinkzContainer a {
+  display: inline;
+  position: static; }
+  .InLinkzContainer a::after {
+    display: none; }
+
+[id^="linkContainer"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%; }
+
+._inlinkzLUI {
+  border-radius: 3px; }
+
+._InLinkzDiv {
+  box-shadow: none !important;
+  margin: 0.5rem !important; }
+
+._InLinkzLUA {
+  font-family: inherit !important; }
+
+._ILLinkBar,
+[id^="pagingContainer"],
+[id^="extraContainer"] {
+  display: none !important; }
+
 @media (max-width: 25rem) {
   h1,
   .post__title {
