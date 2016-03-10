@@ -3,7 +3,7 @@
 	// Move jQuery to footer
 
 	function footer_enqueue_scripts() {
-	   remove_action('wp_head', 'wp_print_scripts');
+		remove_action('wp_head', 'wp_print_scripts');
 		remove_action('wp_head', 'wp_print_head_scripts', 9);
 		remove_action('wp_head', 'wp_enqueue_scripts', 1);
 		add_action('wp_footer', 'wp_print_scripts', 5);
@@ -11,7 +11,7 @@
 		add_action('wp_footer', 'wp_print_head_scripts', 5);
 	}
 
-	add_action('after_setup_theme', 'footer_enqueue_scripts');
+	add_action('wp_enqueue_scripts', 'footer_enqueue_scripts');
 
 	// Function for meta description
 
@@ -212,7 +212,7 @@
 
 		$keys = implode('|', explode(' ', get_search_query()));
 		$excerpt = trim(preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt));
-	
+
 		echo '<p>' . $excerpt . ' [&hellip;]</p>';
 	}
 
@@ -310,7 +310,7 @@
 
 		if ( $id ) {
 			$id = esc_attr($id);
-			$capid = 'id="figcaption_'. $id . '" ';
+			$capid = 'id="figcaption-'. $id . '" ';
 			$id = 'id="' . $id . '" aria-labelledby="figcaption-' . $id . '" ';
 		}
 
@@ -524,7 +524,7 @@
 		// Change multiple <br>s into two line breaks, which will turn into paragraphs.
 		$pee = preg_replace('|<br\s*/?>\s*<br\s*/?>|', "\n\n", $pee);
 
-		$allblocks = '(?:dl|dd|dt|ul|ol|li|pre|blockquote|p|h[1-6]|hr|section|figure)';
+		$allblocks = '(?:dl|dd|dt|ul|ol|li|pre|blockquote|p|h[1-6]|hr|section)';
 
 		// Add a single line break above block-level opening tags.
 		$pee = preg_replace('!(<' . $allblocks . '[^>]*>)!', "\n$1", $pee);
@@ -638,13 +638,6 @@
 	add_filter( 'wp_list_categories', 'remove_category_list_rel' );
 	add_filter( 'the_category', 'remove_category_list_rel' );
 
-	// Remove WordPress emoji detection files
-
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 ); // no php needed above it
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
-	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	remove_action( 'admin_print_styles', 'print_emoji_styles' ); // php is not closed in the last line
-
 	// Remove Jetpack plugin CSS
 
 	add_filter( 'jetpack_implode_frontend_css', '__return_false' );
@@ -662,108 +655,111 @@
 	function replace_custom_word($text) {
 
 		$replace = array(
-			' :s' => '🙁',
-			' ;p' => '😜',
-			' ;P' => '😜',
-			' /angry' => '😡',
-			' /argh' => '😠',
-			' /asdfgh' => '😤',
-			' /bash' => '🙁',
-			' /blush' => '😳',
-			' /bomb' => '💣',
-			' /bounce' => '😁',
-			' /brow' => '😏',
-			' /clap' => '👏',
-			' /cool' => '😎',
-			' /cry' => '😢',
-			' /drool' => '😋',
-			' /eee' => '☺️',
-			' /ehe' => '😜',
-			' /ehh' => '😓',
-			' /faw' => '😚',
-			' /finger' => '🤐',
-			' /glare' => '😒',
-			' /heart' => '💗',
-			' /hehe' => '😅',
-			' /hmph' => '😐',
-			' /ho' => '👽',
-			' /huh' => '🙁',
-			' /kiss' => '😚',
-			' /look' => '🙄',
-			' /love' => '😍',
-			' /mwah' => '😘',
-			' /oh' => '😔',
-			' /peace' => '✌️',
-			' /pirate' => '💀',
-			' /pow' => '👊',
-			' /puke' => '😷',
-			' /rose' => '🌹',
-			' /snort' => '😤',
-			' /sus' => '😒',
-			' /sweat' => '😰',
-			' /wah' => '😭',
-			' /x3' => '😝',
-			' /zzz' => '😴',
-			' 8)' => '😎',
-			' o:' => '😮',
-			'&lt;3' => '❤️',
-			'(:' => '🙃',
-			'(H)' => '😎',
-			'(Y)' => '👍',
-			'-.-' => '😑',
-			'-_-' => '😑',
-			'0:)' => '😇',
-			'0=)' => '😇',
-			'8D' => '😀',
-			':(' => '😞',
-			':)' => '🙂',
-			':-)' => '🙂',
-			':-|' => '😐',
-			':b' => '😛',
-			':B' => '🤓',
-			':c' => '☹️',
-			':C' => '☹️',
-			':D' => '😄',
-			':O' => '😧',
-			':o' => '😮',
-			':P' => '😛',
-			':p' => '😛',
-			':S' => '🙁',
-			':thumbsup:' => '👍',
-			':x' => '😶',
-			':X' => '😶',
-			':|' => '😐',
-			';)' => '😉',
-			';b' => '😜',
-			'<3' => '❤️',
-			'=)' => '🙂',
-			'=D' => '😄',
-			'=O' => '😧',
-			'=o' => '😮',
-			'=P' => '😛',
-			'=p' => '😛',
-			'=|' => '😐',
-			'@_@' => '😕',
-			'^.^' => '😊',
-			'^.^;;' => '😅',
-			'^^' => '😊',
-			'^^;;' => '😅',
-			'^_^' => '😊',
-			'^_^;;' => '😅',
-			'^__^' => '😊',
-			'B)' => '😎',
-			'D:' => '😦',
-			'D=' => '😦',
-			'O:)' => '😇',
-			'O=)' => '😇',
-			'xD' => '😆',
-			'XD' => '😆',
-			'xDD' => '😂',
-			'XDD' => '😂',
-			'xDDD' => '😂',
-			'XDDD' => '😂',
-			'xP' => '😝',
-			'XP' => '😝'
+			' :s' => ' 🙁',
+			' ;p' => ' 😜',
+			' ;P' => ' 😜',
+			' /angry' => ' 😡',
+			' /argh' => ' 😠',
+			' /asdfgh' => ' 😤',
+			' /bash' => ' 🙁',
+			' /blush' => ' 😳',
+			' /bomb' => ' 💣',
+			' /bounce' => ' 😁',
+			' /brow' => ' 😏',
+			' /clap' => ' 👏',
+			' /cool' => ' 😎',
+			' /cry' => ' 😢',
+			' /drool' => ' 😋',
+			' /eee' => ' ☺️',
+			' /ehe' => ' 😜',
+			' /ehh' => ' 😓',
+			' /faw' => ' 😚',
+			' /finger' => ' 🤐',
+			' /glare' => ' 😒',
+			' /heart' => ' 💗',
+			' /hehe' => ' 😅',
+			' /hmph' => ' 😐',
+			' /ho' => ' 👽',
+			' /huh' => ' 🙁',
+			' /kiss' => ' 😚',
+			' /look' => ' 🙄',
+			' /love' => ' 😍',
+			' /mwah' => ' 😘',
+			' /oh' => ' 😔',
+			' /peace' => ' ✌️',
+			' /pirate' => ' 💀',
+			' /poo' => ' 💩',
+			' /pow' => ' 👊',
+			' /puke' => ' 😷',
+			' /rose' => ' 🌹',
+			' /snort' => ' 😤',
+			' /sus' => ' 😒',
+			' /sweat' => ' 😰',
+			' /wah' => ' 😭',
+			' /x3' => ' 😝',
+			' /zzz' => ' 😴',
+			' 8)' => ' 😎',
+			' o:' => ' 😮',
+			' &lt;3' => ' ❤️',
+			' :love:' => ' ❤️',
+			' (:' => ' 🙃',
+			' (H)' => ' 😎',
+			' (Y)' => ' 👍',
+			' -.-' => ' 😑',
+			' -_-' => ' 😑',
+			' 0:)' => ' 😇',
+			' 0=)' => ' 😇',
+			' 8D' => ' 😀',
+			' :(' => ' 😞',
+			' :)' => ' 🙂',
+			' :-)' => ' 🙂',
+			' :-|' => ' 😐',
+			' :b' => ' 😛',
+			' :B' => ' 🤓',
+			' :c' => ' ☹️',
+			' :C' => ' ☹️',
+			' :D' => ' 😄',
+			' :love:' => ' 💗',
+			' :O' => ' 😧',
+			' :o' => ' 😮',
+			' :P' => ' 😛',
+			' :p' => ' 😛',
+			' :S' => ' 🙁',
+			' :thumbsup:' => ' 👍',
+			' :x' => ' 😶',
+			' :X' => ' 😶',
+			' :|' => ' 😐',
+			' ;)' => ' 😉',
+			' ;b' => ' 😜',
+			' <3' => ' ❤️',
+			' =)' => ' 🙂',
+			' =D' => ' 😄',
+			' =O' => ' 😧',
+			' =o' => ' 😮',
+			' =P' => ' 😛',
+			' =p' => ' 😛',
+			' =|' => ' 😐',
+			' @_@' => ' 😕',
+			' ^.^' => ' 😊',
+			' ^.^;;' => ' 😅',
+			' ^^' => ' 😊',
+			' ^^;;' => ' 😅',
+			' ^_^' => ' 😊',
+			' ^_^;;' => ' 😅',
+			' ^__^' => ' 😊',
+			' B)' => ' 😎',
+			' D:' => ' 😦',
+			' D=' => ' 😦',
+			' O:)' => ' 😇',
+			' O=)' => ' 😇',
+			' xD' => ' 😆',
+			' XD' => ' 😆',
+			' xDD' => ' 😂',
+			' XDD' => ' 😂',
+			' xDDD' => ' 😂',
+			' XDDD' => ' 😂',
+			' xP' => ' 😝',
+			' XP' => ' 😝'
 		);
 
 		$text = str_replace(array_keys($replace), $replace, $text);
