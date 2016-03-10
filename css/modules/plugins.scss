@@ -8,8 +8,16 @@
 }
 
 .pushbutton-wide {
-	@extend button;
+	background-color: $primary;
+	border: none;
+	color: $link-inverted;
+	cursor: pointer;
+	padding: 0.5rem 1rem 0.25rem;
+	transition: background-color 0.15s linear;
+	font-weight: 400;
+
 	&:hover {
+		background-color: $primary-dark;
 		color: $link-inverted;
 	}
 }
