@@ -46,7 +46,8 @@
 }
 
 .comment__meta-item {
-	@extend .post__meta-item;
+	color: $text-light;
+	font-size: 0.9rem;
 	margin-top: 0.5rem;
 }
 

@@ -127,40 +127,21 @@ img {
   height: auto;
   max-width: 100%; }
 
-button, .btn,
 input,
 textarea {
   -webkit-appearance: none;
-  box-sizing: border-box;
-  color: inherit;
-  font: inherit;
-  margin: 0; }
-
-input,
-textarea {
   border: 1px solid #dedede;
   border-radius: 0.25rem;
+  box-sizing: border-box;
   color: #888;
-  padding: 0.65rem 0.85rem; }
+  font: inherit;
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  transition: background-color 0.15s linear; }
   input:hover, input:focus,
   textarea:hover,
   textarea:focus {
-    background: #f9f9f9;
-    color: #888; }
-
-button, .btn {
-  background-color: #50C8C4;
-  border: none;
-  border-radius: 0.25rem;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Fira Sans';
-  font-weight: 400;
-  padding: 0.5rem 1rem 0.25rem;
-  transition: background-color 0.15s linear; }
-  button:hover, .btn:hover {
-    background-color: #3c9493; }
+    background: #f9f9f9; }
 
 input[type="checkbox"] {
   height: auto; }
@@ -263,6 +244,35 @@ sup {
       left: 0;
       position: absolute;
       width: 100%; }
+
+/**
+ * Buttons:
+ * Styling for buttons.
+ */
+.btn {
+  -webkit-appearance: none;
+  background-color: #50C8C4;
+  border: none;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Fira Sans';
+  font-size: inherit;
+  font-weight: 400;
+  margin: 0;
+  padding: 0.5rem 1rem 0.25rem;
+  transition: background-color 0.15s linear; }
+  .btn:hover {
+    background-color: #3c9493; }
+
+.btn-cancel-reply {
+  margin-left: 0.5rem;
+  background: #eee;
+  color: #444; }
+  .btn-cancel-reply:hover {
+    background: #ddd; }
 
 /**
  * Header
@@ -510,17 +520,6 @@ sup {
   color: #3c9493;
   font-weight: 500; }
 
-/**
- * Buttons:
- * Styling for buttons.
- */
-.btn-cancel-reply {
-  margin-left: 0.5rem;
-  background: #eee;
-  color: #444; }
-  .btn-cancel-reply:hover {
-    background: #ddd; }
-
 .aligncenter {
   display: block;
   margin: 1.5rem auto; }
@@ -628,7 +627,7 @@ blockquote:before {
 /**
  * Single line for post metadata.
  */
-.post__meta-item, .comment__meta-item {
+.post__meta-item {
   color: #888;
   font-size: 0.9rem; }
 
@@ -696,6 +695,8 @@ blockquote:before {
   vertical-align: middle; }
 
 .comment__meta-item {
+  color: #888;
+  font-size: 0.9rem;
   margin-top: 0.5rem; }
 
 .comment__reply-link {

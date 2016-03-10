@@ -85,42 +85,21 @@ img {
 	max-width: 100%;
 }
 
-button,
 input,
 textarea {
 	-webkit-appearance: none;
-	box-sizing: border-box;
-	color: inherit;
-	font: inherit;
-	margin: 0;
-}
-
-input,
-textarea {
 	border: 1px solid $border;
 	border-radius: 0.25rem;
+	box-sizing: border-box;
 	color: $text-light;
+	font: inherit;
+	margin: 0;
 	padding: 0.65rem 0.85rem;
+	transition: background-color 0.15s linear;
+
 	&:hover,
 	&:focus {
 		background: $bg-primary;
-		color: $text-light;
-	}
-}
-
-button {
-	background-color: $primary;
-	border: none;
-	border-radius: 0.25rem;
-	color: $link-inverted;
-	cursor: pointer;
-	display: inline-block;
-	font-family: 'Fira Sans';
-	font-weight: 400;
-	padding: 0.5rem 1rem 0.25rem;
-	transition: background-color 0.15s linear;
-	&:hover {
-		background-color: $primary-dark;
 	}
 }
 

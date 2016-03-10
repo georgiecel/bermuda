@@ -4,7 +4,24 @@
  */
 
 .btn {
-	@extend button;
+	-webkit-appearance: none;
+	background-color: $primary;
+	border: none;
+	border-radius: 0.25rem;
+	box-sizing: border-box;
+	color: $link-inverted;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Fira Sans';
+	font-size: inherit;
+	font-weight: 400;
+	margin: 0;
+	padding: 0.5rem 1rem 0.25rem;
+	transition: background-color 0.15s linear;
+
+	&:hover {
+		background-color: $primary-dark;
+	}
 }
 
 .btn-cancel-reply {

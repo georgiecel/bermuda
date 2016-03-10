@@ -1,7 +1,6 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 	<head>
-		<meta http-equiv="Cache-control" content="public">
 		<meta charset="utf-8">
 		<meta name="description" content="<?php meta_desc(); ?>">
 		<meta name="viewport" content="initial-scale=1.0, width=device-width">
