@@ -21,9 +21,9 @@
 			<p class="comments-respond__form-row">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
 		<?php else : ?>
 			<label for="author">Name</label>
-			<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
+			<input type="text" autocorrect="off" autocomplete="name" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
 			<label for="email">Email (will not be published)</label>
-			<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
+			<input type="email" autocapitalize="off" autocorrect="off" autocomplete="email" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
 			<label for="url">Website (optional)</label>
 			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3">
 		<?php endif; ?>
