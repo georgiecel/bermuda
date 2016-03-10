@@ -12,14 +12,8 @@
 
 .comments-list--child {
 	border-left: 0.5rem solid $bg-primary;
-	margin-bottom: 1rem;
 	margin-top: 1.5rem;
 	padding-left: 1.5rem;
-
-	> .comment {
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
 }
 
 .comment {
@@ -31,7 +25,7 @@
 	margin: 0;
 }
 
-.comment--author .comment__author::after {
+.comment--author > .comment__meta .comment__author::after {
 	background-color: $bg-primary;
 	border: 1px solid $border;
 	border-radius: 0.25rem;

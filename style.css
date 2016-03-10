@@ -138,9 +138,6 @@ textarea {
   textarea:focus {
     background: #f9f9f9; }
 
-input[type="checkbox"] {
-  height: auto; }
-
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -663,12 +660,8 @@ blockquote:before {
 
 .comments-list--child {
   border-left: 0.5rem solid #f9f9f9;
-  margin-bottom: 1rem;
   margin-top: 1.5rem;
   padding-left: 1.5rem; }
-  .comments-list--child > .comment {
-    margin-bottom: 0;
-    padding-bottom: 0; }
 
 .comment {
   padding: 1.5rem 0 0; }
@@ -677,7 +670,7 @@ blockquote:before {
   font-style: normal;
   margin: 0; }
 
-.comment--author .comment__author::after {
+.comment--author > .comment__meta .comment__author::after {
   background-color: #f9f9f9;
   border: 1px solid #dedede;
   border-radius: 0.25rem;
@@ -913,10 +906,13 @@ blockquote:before {
   .site-content {
     padding: 2rem; }
 
-  .site-header,
-  .footer {
+  .site-header {
     padding: 2rem;
     margin: 0 auto;
+    max-width: 48rem; }
+
+  .footer {
+    padding: 2rem;
     max-width: 48rem; }
 
   .footer__quote {

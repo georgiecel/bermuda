@@ -23,7 +23,7 @@ header,
 main,
 nav,
 section {
-  display: block;
+	display: block;
 }
 
 h1 {
@@ -101,10 +101,6 @@ textarea {
 	&:focus {
 		background: $bg-primary;
 	}
-}
-
-input[type="checkbox"] {
-	height: auto;
 }
 
 input[type="search"]::-webkit-search-cancel-button,

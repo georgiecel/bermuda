@@ -170,10 +170,14 @@
 		padding: 2rem;
 	}
 
-	.site-header,
-	.footer {
+	.site-header {
 		padding: 2rem;
 		margin: 0 auto;
+		max-width: 48rem;
+	}
+
+	.footer {
+		padding: 2rem;
 		max-width: 48rem;
 	}
 
