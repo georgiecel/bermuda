@@ -67,7 +67,27 @@
 }
 
 ._ILLinkBar,
-[id^="pagingContainer"],
-[id^="extraContainer"] {
+._ILInfoText,
+[id^="pagingContainer"] {
 	display: none !important;
+}
+
+._ILAddLinkButton {
+	-webkit-appearance: none;
+	background: $primary !important;
+	border: none !important;
+	border-radius: 0.25rem;
+	display: block !important;
+	font-family: 'Fira Sans' !important;
+	font-size: inherit !important;
+	height: auto !important;
+	margin: 0 auto !important;
+	padding: 0.5rem 1rem 0.25rem !important;
+	transition: background-color 0.15s linear;
+	text-shadow: none !important;
+	width: 8rem;
+
+	&:hover {
+		background-color: $primary-dark !important;
+	}
 }
