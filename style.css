@@ -784,7 +784,7 @@ blockquote:before {
 
 ._ILAddLinkButton {
   -webkit-appearance: none;
-  background-color: #50C8C4 !important;
+  background: #50C8C4 !important;
   border: none !important;
   border-radius: 0.25rem;
   display: block !important;
