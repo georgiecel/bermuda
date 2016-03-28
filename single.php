@@ -24,7 +24,7 @@
 					<?php the_content(); ?>
 				</div>
 			</article>
-			<nav class="pagination">
+			<nav class="pagination" role="navigation">
 				<?php previous_post_link('<div class="pagination__item-container pagination__item-container--left">%link</div>',
 					$link='<div class="pagination__item">
 						<span class="pagination__arrow" role="presentation" aria-hidden="true">&laquo;</span>

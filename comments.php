@@ -16,7 +16,7 @@
 ?>
 	<section class="comments-respond" id="respond">
 		<h1 class="comments-respond__title"><?php comment_form_title( 'Leave a Comment', 'Reply to %s' ); ?></h1>
-		<form class="comments-respond__form" id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
+		<form class="comments-respond__form" id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" role="form">
 		<?php if ( $user_ID ) : ?>
 			<p class="comments-respond__form-row">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
 		<?php else : ?>

@@ -24,9 +24,9 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css?<?php echo date('Ymd', filemtime( get_stylesheet_directory() . '/style.min.css' )); ?>" type="text/css" media="screen">
 	</head>
 	<body id="site-top">
-		<header class="site-header-container">
+		<header class="site-header-container" role="banner">
 			<div class="site-header">
-				<nav class="main-navigation">
+				<nav class="main-navigation" role="navigation">
 					<ul class="main-navigation__list">
 						<li class="main-navigation__list-item main-navigation__list-item--logo">
 							<a href="<?php echo site_url(); ?>" class="main-navigation__logo">

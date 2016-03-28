@@ -1,7 +1,7 @@
 		</div>
 		</div>
 		<div class="footer-container">
-			<footer class="footer">
+			<footer class="footer" role="contentinfo">
 				<?php dynamic_sidebar('footer'); ?>
 			</footer>
 		</div>
