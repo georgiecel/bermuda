@@ -22,7 +22,7 @@
 				<?php $show_ads = 1; } ?>
 			<?php endwhile; ?>
 			</section>
-			<nav class="pagination pagination--home" role="navigation">
+			<nav class="pagination pagination--home" role="navigation" aria-label="Post archive by page">
 				<?php previous_posts_link('<div class="pagination__item-container pagination__item-container--left">
 						<div class="pagination__item">
 							<span class="pagination__arrow" role="presentation" aria-hidden="true">&laquo;</span>
