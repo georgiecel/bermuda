@@ -118,7 +118,7 @@
 	// Exclude category from homepage or archive page
 
 	function exclude_category( $query ) {
-		if ( $query->is_home() || $query->is_archive() || $query->is_author() ) {
+		if ( $query->is_home() || $query->is_archive() || $query->is_author() || is_feed() ) {
 			$query->set('cat', '-261');
 		}
 		return $query;
