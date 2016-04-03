@@ -94,6 +94,38 @@
 		}
 	}
 
+	// Exclude categories from category display
+
+	function the_category_filter( $thelist, $separator=' ') {
+
+		if(!defined('WP_ADMIN')) {
+			$exclude = array('Poetry Archive');
+			$cats = explode( $separator, $thelist );
+			$newlist = array();
+			foreach( $cats as $cat ) {
+				$catname = trim( strip_tags( $cat ) );
+				if(!in_array( $catname, $exclude ))
+					$newlist[] = $cat;
+			}
+			return implode( $separator, $newlist );
+		} else
+		return $thelist;
+
+	}
+
+	add_filter('the_category','the_category_filter', 10, 2);
+
+	// Exclude category from homepage or archive page
+
+	function exclude_category( $query ) {
+		if ( $query->is_home() || $query->is_archive() || $query->is_author() ) {
+			$query->set('cat', '-261');
+		}
+		return $query;
+	}
+
+	add_filter('pre_get_posts', 'exclude_category');
+
 	// Add custom “read more” link for excerpt
 
 	function excerpt_read_more_link( $output ) {

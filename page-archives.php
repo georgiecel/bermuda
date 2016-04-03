@@ -17,7 +17,7 @@
 			</ul>
 			<h2>Archives by year</h2>
 			<ul>
-				<?php wp_get_archives('type=yearly'); ?>
+				<?php wp_get_archives('type=yearly&show_post_count=1'); ?>
 			</ul>
 			<h2>Archives by month</h2>
 			<ul>
@@ -25,7 +25,7 @@
 			</ul>
 			<h2>Categories</h2>
 			<ul>
-				<?php wp_list_categories('title_li=&hierarchical=1'); ?>
+				<?php wp_list_categories('title_li=&hierarchical=1&exclude=261'); ?>
 			</ul>
 		</div>
 	</article>

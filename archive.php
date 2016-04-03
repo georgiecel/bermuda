@@ -3,8 +3,8 @@
 <?php if ( have_posts() ) : ?>
 		<div class="post-listing__intro">
 			<h1 class="post__title">Archives for <?php echo get_the_archive_title(); ?></h1>
-			<?php while ( have_posts() ) : the_post(); ?>
 		</div>
+		<?php while ( have_posts() ) : the_post(); ?>
 		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 			<?php $html_title = get_post_meta($post->ID, 'html_title', true); ?>
 			<h2 class="post-summary__title" itemprop="name"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url"><?php if ($html_title) { echo $html_title; } else { the_title(); } ?></a></h2>
