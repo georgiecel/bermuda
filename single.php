@@ -4,7 +4,7 @@
 				<?php $html_title = get_post_meta($post->ID, 'html_title', true); ?>
 				<h1 class="post__title" itemprop="name"><?php if ($html_title) { echo $html_title; } else { the_title(); } ?></h1>
 				<footer class="post__meta">
-					<div class="post__meta-item"><time datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time></div>
+					<div class="post__meta-item"><time aria-label="Date post was published" datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('j F Y'); ?></time></div>
 					<div class="post__meta-item">Posted in <span itemprop="keywords"><?php the_category(', '); ?></span></div>
 					<div class="post__meta-item">
 						<a href="<?php comments_link(); ?>" itemprop="discussionUrl">
