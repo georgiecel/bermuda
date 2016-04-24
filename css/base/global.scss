@@ -69,6 +69,13 @@ a:active {
 	background-color: $link-active;
 }
 
+a:focus {
+	background-color: $link-active;
+	color: $link-dark;
+	font-weight: 400;
+	outline: 0;
+}
+
 b,
 strong {
 	font-weight: 400;

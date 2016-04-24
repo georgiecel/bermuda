@@ -109,6 +109,12 @@ a:hover {
 a:active {
   background-color: rgba(200, 200, 200, 0.2); }
 
+a:focus {
+  background-color: rgba(200, 200, 200, 0.2);
+  color: #111;
+  font-weight: 400;
+  outline: 0; }
+
 b,
 strong {
   font-weight: 400; }
@@ -265,6 +271,22 @@ sup {
   color: #444; }
   .btn-cancel-reply:hover {
     background: #ddd; }
+
+/**
+ * Skip link:
+ * The skip link at the top of the webpage, before the header.
+ */
+.site-skip-link {
+  background-color: #50C8C4;
+  clip: rect(1px, 1px, 1px, 1px);
+  color: #fff;
+  display: block;
+  font-weight: 400;
+  padding: 0.5rem;
+  position: absolute;
+  text-align: center; }
+  .site-skip-link:focus {
+    position: relative; }
 
 /**
  * Header

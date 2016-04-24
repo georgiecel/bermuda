@@ -24,6 +24,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css?<?php echo date('Ymd', filemtime( get_stylesheet_directory() . '/style.min.css' )); ?>" type="text/css" media="screen">
 	</head>
 	<body id="site-top">
+		<a class="site-skip-link" href="#main-content">Skip to content</a>
 		<header class="site-header-container" role="banner">
 			<div class="site-header">
 				<nav class="main-navigation" role="navigation" aria-label="Site">
@@ -66,5 +67,5 @@
 			</aside>
 		</div>
 		<?php endif; ?>
-		<div class="site-body">
+		<div id="main-content" class="site-body">
 			<div class="site-content" role="main">

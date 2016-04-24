@@ -1,0 +1,19 @@
+/**
+ * Skip link:
+ * The skip link at the top of the webpage, before the header.
+ */
+
+.site-skip-link {
+    background-color: $primary;
+    clip: rect(1px, 1px, 1px, 1px);
+    color: $link-inverted;
+    display: block;
+    font-weight: 400;
+    padding: 0.5rem;
+    position: absolute;
+    text-align: center;
+
+    &:focus {
+        position: relative;
+    }
+}
