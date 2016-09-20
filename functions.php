@@ -33,19 +33,9 @@
 
 	add_action( 'init', 'main_navigation' );
 
-	// Adding widgetised sidebar and footer
+	// Adding widgetised footer
 
 	function widgets() {
-
-		register_sidebar( array(
-			'name' => __( 'Sidebar' ),
-			'id' => 'sidebar',
-			'description' => __( 'Sidebar widgets.' ),
-			'before_widget' => '<div class="site-sidebar-widget">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="site-sidebar-heading">',
-			'after_title' => '</h3>',
-		) );
 
 		register_sidebar( array(
 			'name' => __( 'Footer' ),
