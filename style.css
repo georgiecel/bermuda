@@ -540,7 +540,6 @@ sup {
 
 .figure--left,
 .figure--right,
-.figure--alignleft,
 .figure--alignright {
   float: none; }
 
@@ -854,8 +853,7 @@ blockquote:before {
     float: right;
     margin: 1.25rem -2rem 1.25rem 1.75rem; }
 
-  .figure--left,
-  .figure--alignleft {
+  .figure--left {
     float: left;
     margin: 1.25rem 1.75rem 1.5rem -2rem; }
 
