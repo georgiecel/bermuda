@@ -230,18 +230,6 @@ sup {
 
 .site-content {
   padding: 1.25rem; }
-  .site-content a:hover {
-    /**
-     * Styled underline for link hover state within this section.
-     */ }
-    .site-content a:hover::after {
-      border-bottom: 0.3rem solid rgba(124, 215, 215, 0.5);
-      bottom: 1px;
-      content: '';
-      height: 0;
-      left: 0;
-      position: absolute;
-      width: 100%; }
 
 /**
  * Buttons:
@@ -879,6 +867,19 @@ blockquote:before {
   .site-content,
   .footer {
     padding: 1.25rem 3rem; }
+
+  .site-content a:hover {
+    /**
+     * Styled underline for link hover state within this section.
+     */ }
+    .site-content a:hover::after {
+      border-bottom: 0.3rem solid rgba(124, 215, 215, 0.5);
+      bottom: 1px;
+      content: '';
+      height: 0;
+      left: 0;
+      position: absolute;
+      width: 100%; }
 
   .intro__text {
     font-size: 1rem; }
