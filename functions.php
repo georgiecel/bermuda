@@ -175,6 +175,19 @@
 
 	add_filter('comment_reply_link', 'comment_reply', 99);
 
+	// Add If Modified Since HTTP Header
+
+	function mod_header( $headers ) {
+		if( is_singular() ) {
+			$post_id = get_queried_object_id();
+			if( $post_id ) {
+				header("Last-Modified: " . get_the_modified_time( "D, d M Y H:i:s", $post_id ) );
+			}
+		}
+	}
+
+	add_action( 'template_redirect', 'mod_header' );
+
 	// Change “cancel reply” link to a button
 
 	function cancel_comment_reply_button( $html, $link, $text ) {
@@ -210,9 +223,9 @@
 		}
 	}
 
-	add_action( 'template_redirect', 'change_search_url_rewrite' );	
+	add_action( 'template_redirect', 'change_search_url_rewrite' );
 
-	// Highlight search terms 
+	// Highlight search terms
 
 	function search_excerpt_highlight( $limit ) {
 		$excerpt = get_the_excerpt();
@@ -308,7 +321,7 @@
 	function image_url_meta() {
 		global $post;
 		$args = array(
-			'post_type' => 'attachment', 
+			'post_type' => 'attachment',
 			'numberposts' => -1,
 			'post_mime_type' => 'image',
 			'post_status' => null,
@@ -383,7 +396,7 @@
 	class comment_walker extends Walker_Comment {
 		var $tree_type = 'comment';
 		var $db_fields = array( 'parent' => 'comment_parent', 'id' => 'comment_ID' );
- 
+
 		// constructor – wrapper for the comments list
 		function __construct() { ?>
 			<div class="comments-list">
@@ -451,7 +464,7 @@
 
 	}
 
-	// Subscribe to posts form 
+	// Subscribe to posts form
 
 	add_action( 'init', 'process_my_subscription_form' );
 	function process_my_subscription_form() {
@@ -641,7 +654,7 @@
 	add_filter( 'jetpack_enable_open_graph', '__return_false' );
 
 	// Remove unnecessary self-closing tags
-	
+
 	function remove_self_closing_tags($input) {
 		return str_replace(' />', '>', $input);
 	}
