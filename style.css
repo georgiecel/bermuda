@@ -250,6 +250,7 @@ sup {
   font-family: 'Fira Sans';
   font-size: inherit;
   font-weight: 400;
+  line-height: inherit;
   margin: 0;
   padding: 0.5rem 1rem 0.25rem;
   transition: background-color 0.15s linear; }
@@ -804,6 +805,7 @@ blockquote:before {
   font-family: 'Fira Sans' !important;
   font-size: inherit !important;
   height: auto !important;
+  line-height: inherit !important;
   margin: 0 auto !important;
   padding: 0.5rem 1rem 0.25rem !important;
   transition: background-color 0.15s linear;
