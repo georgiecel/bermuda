@@ -1,29 +1,8 @@
 <?php
 
-	// Move jQuery to footer
-
-	function footer_enqueue_scripts() {
-		remove_action('wp_head', 'wp_print_scripts');
-		remove_action('wp_head', 'wp_print_head_scripts', 9);
-		remove_action('wp_head', 'wp_enqueue_scripts', 1);
-		add_action('wp_footer', 'wp_print_scripts', 5);
-		add_action('wp_footer', 'wp_enqueue_scripts', 5);
-		add_action('wp_footer', 'wp_print_head_scripts', 5);
-	}
-
-	add_action('wp_enqueue_scripts', 'footer_enqueue_scripts');
-
-	// Function for meta description
-
-	function meta_desc() {
-		if ( is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post();
-			echo wp_strip_all_tags( get_the_excerpt() );
-		endwhile; endif; elseif ( is_home() ):
-			echo bloginfo('description');
-		endif;
-	}
-
-	// Adding main navigation menu
+	/**
+	 * Add: Menu: Main Navigation
+	 */
 
 	add_action( 'after_setup_theme', 'main_navigation' );
 
@@ -33,7 +12,9 @@
 
 	add_action( 'init', 'main_navigation' );
 
-	// Adding widgetised footer
+	/**
+	 * Add: Footer – Widgetised
+	 */
 
 	function widgets() {
 
@@ -50,73 +31,24 @@
 
 	add_action( 'widgets_init', 'widgets' );
 
-	// Allowing PHP in widget
+	/**
+	 * Add: If Modified Since HTTP Header
+	 */
 
-	add_filter( 'widget_text', 'execute_php', 100);
-
-	function execute_php($html) {
-		if( strpos( $html, '<' . '?php' ) !== false ){
-			ob_start();
-			eval( '?' . '>' . $html );
-			$html = ob_get_contents();
-			ob_end_clean();
-		}
-		return $html;
-	}
-
-	// Removing `textwidget` div
-
-	add_action( 'widgets_init', 'register_my_widgets' );
-
-	function register_my_widgets() {
-		register_widget( 'My_Text_Widget' );
-	}
-
-	class My_Text_Widget extends WP_Widget_Text {
-		function widget( $args, $instance ) {
-			extract($args);
-			$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-			$text = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
-			echo $before_widget;
-			if ( !empty( $title ) ) { echo $before_title . $title . $after_title; } ?>
-			<?php echo !empty( $instance['filter'] ) ? wpautop( $text ) : $text; ?>
-			<?php echo $after_widget;
-		}
-	}
-
-	// Exclude categories from category display
-
-	function the_category_filter( $thelist, $separator=' ') {
-
-		if(!defined('WP_ADMIN')) {
-			$exclude = array('Poetry Archive');
-			$cats = explode( $separator, $thelist );
-			$newlist = array();
-			foreach( $cats as $cat ) {
-				$catname = trim( strip_tags( $cat ) );
-				if(!in_array( $catname, $exclude ))
-					$newlist[] = $cat;
+	function mod_header( $headers ) {
+		if( is_singular() ) {
+			$post_id = get_queried_object_id();
+			if( $post_id ) {
+				header("Last-Modified: " . get_the_modified_time( "D, d M Y H:i:s", $post_id ) );
 			}
-			return implode( $separator, $newlist );
-		} else
-		return $thelist;
-
-	}
-
-	add_filter('the_category','the_category_filter', 10, 2);
-
-	// Exclude category from homepage or archive page
-
-	function exclude_category( $query ) {
-		if ( $query->is_home() || $query->is_archive() || $query->is_author() || is_feed() ) {
-			$query->set('cat', '-261');
 		}
-		return $query;
 	}
 
-	add_filter('pre_get_posts', 'exclude_category');
+	add_action( 'template_redirect', 'mod_header' );
 
-	// Add custom “read more” link for excerpt
+	/**
+	 * Add: Custom “read more” Link for Excerpt
+	 */
 
 	function excerpt_read_more_link( $output ) {
 		global $post;
@@ -125,7 +57,9 @@
 
 	add_filter( 'the_excerpt', 'excerpt_read_more_link' );
 
-	// Add custom comment error page
+	/**
+	 * Add: Custom Comment Error Page
+	 */
 
 	function custom_comment_error() {
 		$errorTemplate = get_theme_root() . '/' . get_template() . '/commenterror.php';
@@ -139,7 +73,9 @@
 
 	add_filter( 'wp_die_handler', 'get_custom_comment_error' );
 
-	// Add classes to next/previous links
+	/**
+	 * Add: Classes for Next/Previous Links
+	 */
 
 	function posts_link_attributes_1() {
 		return 'class="pagination__link"';
@@ -152,7 +88,9 @@
 	add_filter( 'next_posts_link_attributes', 'posts_link_attributes_1' );
 	add_filter( 'previous_posts_link_attributes', 'posts_link_attributes_2' );
 
-	// Add classes to next/previous links in individual posts
+	/**
+	 * Add: Classes for Next/Previous Links in Individual Posts
+	 */
 
 	function post_link_attributes_1( $output ) {
 		$code = 'class="pagination__link"';
@@ -167,7 +105,9 @@
 	add_filter( 'next_post_link', 'post_link_attributes_1' );
 	add_filter( 'previous_post_link', 'post_link_attributes_2' );
 
-	// Add class to reply link
+	/**
+	 * Add: Class for Comment Reply Link
+	 */
 
 	function comment_reply( $content ) {
 		return '<p class="comment__reply-link">' . $content . '</p>';
@@ -175,20 +115,164 @@
 
 	add_filter('comment_reply_link', 'comment_reply', 99);
 
-	// Add If Modified Since HTTP Header
+	/**
+	 * Add: Post Image URLs to Metadata
+	 */
 
-	function mod_header( $headers ) {
-		if( is_singular() ) {
-			$post_id = get_queried_object_id();
-			if( $post_id ) {
-				header("Last-Modified: " . get_the_modified_time( "D, d M Y H:i:s", $post_id ) );
+	function image_url_meta() {
+		global $post;
+		$args = array(
+			'post_type' => 'attachment',
+			'numberposts' => -1,
+			'post_mime_type' => 'image',
+			'post_status' => null,
+			'post_parent' => $post->ID
+		);
+		$attachments = get_posts($args);
+		if ($attachments) {
+			foreach ( $attachments as $attachment ) {
+				echo '<meta itemprop="image" content="' . $attachment->guid . '">';
 			}
 		}
 	}
 
-	add_action( 'template_redirect', 'mod_header' );
+	/**
+	 * Add: Short Excerpt
+	 */
 
-	// Change “cancel reply” link to a button
+	function short_excerpt( $limit ) {
+		$excerpt = get_the_excerpt();
+		$excerpt = explode(' ', get_the_excerpt(), $limit);
+
+		if ( count( $excerpt ) >= $limit ) {
+			array_pop( $excerpt );
+			$excerpt = implode(' ', $excerpt);
+		} else {
+			$excerpt = implode(' ', $excerpt);
+		}
+
+		$excerpt = apply_filters( 'get_the_excerpt', $excerpt );
+
+		$allowed_tags = '<p>,<br>';
+		$excerpt = strip_tags( $excerpt, $allowed_tags );
+
+		$excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
+
+		echo '<p>' . $excerpt . ' [&hellip;]</p>';
+	}
+
+	/**
+	 * Allow: HTML in Category Descriptions
+	 */
+
+	remove_filter( 'pre_term_description', 'wp_filter_kses' );
+	remove_filter( 'pre_link_description', 'wp_filter_kses' );
+	remove_filter( 'pre_link_notes', 'wp_filter_kses' );
+	remove_filter( 'term_description', 'wp_kses_data' );
+
+	/**
+	 * Allow: HTML in Excerpts
+	 */
+
+	function pretty_excerpt( $excerpt ) {
+		$raw = $excerpt;
+		if ( '' == $excerpt ) {
+			$excerpt = get_the_content();
+
+			$excerpt = apply_filters( 'the_content', $excerpt );
+
+			$limit = 75;
+			$excerpt_length = apply_filters( 'excerpt_length', $limit );
+
+			$excerpt_end = '[&hellip;]';
+			$excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
+
+			$words = preg_split('/[\n\r\t ]+/', $excerpt, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+			if ( count($words) > $excerpt_length ) {
+				array_pop($words);
+				$excerpt = implode(' ', $words);
+				$excerpt = $excerpt . $excerpt_more;
+			} else {
+				$excerpt = implode(' ', $words);
+			}
+
+			$allowed_tags = '<p>,<a>,<em>,<strong>,<img>,<br>';
+			$excerpt = strip_tags($excerpt, $allowed_tags);
+		}
+
+		return apply_filters( 'wp_trim_excerpt', $excerpt, $raw );
+	}
+
+	remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
+	add_filter( 'get_the_excerpt', 'pretty_excerpt' );
+
+	/**
+	 * Allow: PHP in Widget
+	 */
+
+	add_filter( 'widget_text', 'execute_php', 100);
+
+	function execute_php($html) {
+		if( strpos( $html, '<' . '?php' ) !== false ){
+			ob_start();
+			eval( '?' . '>' . $html );
+			$html = ob_get_contents();
+			ob_end_clean();
+		}
+		return $html;
+	}
+
+	/**
+	 * Allow: WordPress Shortcodes in Excerpts
+	 */
+
+	add_filter( 'get_the_excerpt','do_shortcode' );
+
+	/**
+	 * Function: Meta Description from Post Excerpt
+	 */
+
+    function meta_desc() {
+        if ( is_single() || is_page() ) {
+            if ( have_posts() ) {
+                while ( have_posts() ) {
+                    the_post();
+                    echo wp_strip_all_tags( get_the_excerpt() );
+                }
+            }
+        }
+        elseif ( is_home() ) {
+            echo bloginfo( 'description' );
+        }
+    }
+
+	/**
+	 * Function: Move jQuery to Footer
+	 */
+
+	function footer_enqueue_scripts() {
+		remove_action( 'wp_head', 'wp_print_scripts' );
+		remove_action( 'wp_head', 'wp_print_head_scripts', 9 );
+		remove_action( 'wp_head', 'wp_enqueue_scripts', 1 );
+		add_action( 'wp_footer', 'wp_print_scripts', 5 );
+		add_action( 'wp_footer', 'wp_enqueue_scripts', 5 );
+		add_action( 'wp_footer', 'wp_print_head_scripts', 5 );
+	}
+
+	add_action( 'wp_enqueue_scripts', 'footer_enqueue_scripts' );
+
+	/**
+	 * Include: Post Thumbnails
+	 */
+
+	if ( function_exists( 'add_theme_support' ) ) {
+		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 150, 150, false );
+	}
+
+	/**
+	 * Change: “cancel reply” Link to Button
+	 */
 
 	function cancel_comment_reply_button( $html, $link, $text ) {
 		$style = isset($_GET['replytocom']) ? '' : ' style="display:none;"';
@@ -198,7 +282,9 @@
 
 	add_action( 'cancel_comment_reply_link', 'cancel_comment_reply_button', 10, 3 );
 
-	// Use “nice” search URL
+	/**
+	 * Function: Search: Use “nice” Search URL
+	 */
 
 	function roots_nice_search_redirect() {
 		global $wp_rewrite;
@@ -225,7 +311,9 @@
 
 	add_action( 'template_redirect', 'change_search_url_rewrite' );
 
-	// Highlight search terms
+	/**
+	 * Function: Search: Highlight Search Terms
+	 */
 
 	function search_excerpt_highlight( $limit ) {
 		$excerpt = get_the_excerpt();
@@ -259,105 +347,9 @@
 		echo $title;
 	}
 
-	// Preserve HTML in excerpts
-
-	function pretty_excerpt( $excerpt ) {
-		$raw = $excerpt;
-		if ( '' == $excerpt ) {
-			$excerpt = get_the_content();
-
-			$excerpt = apply_filters( 'the_content', $excerpt );
-
-			$limit = 75;
-			$excerpt_length = apply_filters( 'excerpt_length', $limit );
-
-			$excerpt_end = '[&hellip;]';
-			$excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
-
-			$words = preg_split('/[\n\r\t ]+/', $excerpt, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
-			if ( count($words) > $excerpt_length ) {
-				array_pop($words);
-				$excerpt = implode(' ', $words);
-				$excerpt = $excerpt . $excerpt_more;
-			} else {
-				$excerpt = implode(' ', $words);
-			}
-
-			$allowed_tags = '<p>,<a>,<em>,<strong>,<img>,<br>';
-			$excerpt = strip_tags($excerpt, $allowed_tags);
-		}
-
-		return apply_filters( 'wp_trim_excerpt', $excerpt, $raw );
-	}
-
-	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-	add_filter('get_the_excerpt', 'pretty_excerpt');
-
-	// Adding short excerpt
-
-	function short_excerpt( $limit ) {
-		$excerpt = get_the_excerpt();
-		$excerpt = explode(' ', get_the_excerpt(), $limit);
-
-		if ( count( $excerpt ) >= $limit ) {
-			array_pop( $excerpt );
-			$excerpt = implode(' ', $excerpt);
-		} else {
-			$excerpt = implode(' ', $excerpt);
-		}
-
-		$excerpt = apply_filters( 'get_the_excerpt', $excerpt );
-
-		$allowed_tags = '<p>,<br>';
-		$excerpt = strip_tags( $excerpt, $allowed_tags );
-
-		$excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
-
-		echo '<p>' . $excerpt . ' [&hellip;]</p>';
-	}
-
-	// Adding post image URLs to metadata
-
-	function image_url_meta() {
-		global $post;
-		$args = array(
-			'post_type' => 'attachment',
-			'numberposts' => -1,
-			'post_mime_type' => 'image',
-			'post_status' => null,
-			'post_parent' => $post->ID
-		);
-		$attachments = get_posts($args);
-		if ($attachments) {
-			foreach ( $attachments as $attachment ) {
-				echo '<meta itemprop="image" content="' . $attachment->guid . '">';
-			}
-		}
-	}
-
-	// Adjust HTML for image caption shortcode
-
-	function caption_shortcode($val, $attr, $content = null) {
-		extract(shortcode_atts(array('id'=> '','align'=> 'center','caption' => ''), $attr));
-
-		if ( empty($caption) )return $val;
-		$capid = '';
-
-		if ( $id ) {
-			$id = esc_attr($id);
-			$capid = 'id="figcaption-'. $id . '" ';
-			$id = 'id="' . $id . '" aria-labelledby="figcaption-' . $id . '" ';
-		}
-
-		$figure = '<figure ' . $id . 'class="figure figure--' . esc_attr($align) . '">';
-		$figure .= do_shortcode( $content ) . '<figcaption ' . $capid . 'class="figure__caption figure__caption--' . esc_attr($align) . '">' . $caption . '</figcaption></figure>';
-
-		return $figure;
-	}
-
-	add_filter( 'img_caption_shortcode', 'caption_shortcode', 10, 3 );
-
-	// Navigation walker for main navigation
+	/**
+	 * Function: Walker for Main Navigation
+	 */
 
 	class menu_walker extends Walker_Nav_Menu {
 
@@ -391,7 +383,9 @@
 		}
 	}
 
-	// Comment walker for comment list
+	/**
+	 * Function: Walker for Comment List
+	 */
 
 	class comment_walker extends Walker_Comment {
 		var $tree_type = 'comment';
@@ -464,54 +458,9 @@
 
 	}
 
-	// Subscribe to posts form
-
-	add_action( 'init', 'process_my_subscription_form' );
-	function process_my_subscription_form() {
-		if ( isset( $_POST['my-form-action'] ) && $_POST['my-form-action'] == 'subscribe' ) {
-			$email = $_POST['my-email'];
-			$subscribe = Jetpack_Subscriptions::subscribe( $email, 0, false );
-			// check subscription status
-			if ( is_wp_error( $subscribe ) ) {
-				$error = $subscribe->get_error_code();
-			} else {
-				$error = false;
-				foreach ( $subscribe as $response ) {
-					if ( is_wp_error( $response ) ) {
-						$error = $response->get_error_code();
-						break;
-					}
-				}
-			}
-
-			if ( $error ) {
-				switch( $error ) {
-					case 'invalid_email':
-						$redirect = add_query_arg( 'subscribe', 'invalid_email' );
-						break;
-					case 'active': case 'pending':
-						$redirect = add_query_arg( 'subscribe', 'already' );
-						break;
-					default:
-						$redirect = add_query_arg( 'subscribe', 'error' );
-						break;
-				}
-			} else {
-				$redirect = add_query_arg( 'subscribe', 'success' );
-			}
-
-			wp_safe_redirect( $redirect );
-		}
-	}
-
-	// Include post thumbnails
-
-	if ( function_exists( 'add_theme_support' ) ) {
-		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 150, 150, false );
-	}
-
-	// Word Count
+	/**
+	 * Function: Word Count
+	 */
 
 	function wordcount() {
 		ob_start();
@@ -520,126 +469,93 @@
 		return sizeof(explode(" ", $postcontent));
 	}
 
-	// Undoing the insanity of the $pee in core formatting.php
+	/**
+	 * Remove: `rel` Attribute From Category List
+	 */
 
-	function dodge_default_formatting( $pee, $br = true ) {
-		$pre_tags = array();
-
-		if ( trim($pee) === '' )
-			return '';
-
-		// Just to make things a little easier, pad the end.
-		$pee = $pee . "\n";
-
-		// Replace pre tags with placeholders and bring them back after autop.
-		if ( strpos($pee, '<pre') !== false ) {
-			$pee_parts = explode( '</pre>', $pee );
-			$last_pee = array_pop($pee_parts);
-			$pee = '';
-			$i = 0;
-
-			foreach ( $pee_parts as $pee_part ) {
-				$start = strpos($pee_part, '<pre');
-
-				// Malformed html?
-				if ( $start === false ) {
-					$pee .= $pee_part;
-					continue;
-				}
-
-				$name = "<pre wp-pre-tag-$i></pre>";
-				$pre_tags[$name] = substr( $pee_part, $start ) . '</pre>';
-
-				$pee .= substr( $pee_part, 0, $start ) . $name;
-				$i++;
-			}
-
-			$pee .= $last_pee;
-		}
-		// Change multiple <br>s into two line breaks, which will turn into paragraphs.
-		$pee = preg_replace('|<br\s*/?>\s*<br\s*/?>|', "\n\n", $pee);
-
-		$allblocks = '(?:dl|dd|dt|ul|ol|li|pre|blockquote|p|h[1-6]|hr|section)';
-
-		// Add a single line break above block-level opening tags.
-		$pee = preg_replace('!(<' . $allblocks . '[^>]*>)!', "\n$1", $pee);
-
-		// Add a double line break below block-level closing tags.
-		$pee = preg_replace('!(</' . $allblocks . '>)!', "$1\n\n", $pee);
-
-		// Split up the contents into an array of strings, separated by double line breaks.
-		$pees = preg_split('/\n\s*\n/', $pee, -1, PREG_SPLIT_NO_EMPTY);
-
-		// Reset $pee prior to rebuilding.
-		$pee = '';
-
-		// Rebuild the content as a string, wrapping every bit with a <p>.
-		foreach ( $pees as $tinkle ) {
-			$pee .= '<p>' . trim($tinkle, "\n") . "</p>\n";
-		}
-
-		// If an opening or closing block element tag is wrapped in a <p>, unwrap it.
-		$pee = preg_replace('!<p>\s*(</?' . $allblocks . '[^>]*>)\s*</p>!', "$1", $pee);
-
-		// If a <blockquote> is wrapped with a <p>, move it inside the <blockquote>.
-		$pee = preg_replace('|<p><blockquote([^>]*)>|i', "<blockquote$1><p>", $pee);
-		$pee = str_replace('</blockquote></p>', '</p></blockquote>', $pee);
-
-		// If an opening or closing block element tag is preceded by an opening <p> tag, remove it.
-		$pee = preg_replace('!<p>\s*(</?' . $allblocks . '[^>]*>)!', "$1", $pee);
-
-		// If an opening or closing block element tag is followed by a closing <p> tag, remove it.
-		$pee = preg_replace('!(</?' . $allblocks . '[^>]*>)\s*</p>!', "$1", $pee);
-
-		// Optionally insert line breaks.
-		if ( $br ) {
-			// Replace newlines that shouldn't be touched with a placeholder.
-			$pee = preg_replace_callback('/<(script|style).*?<\/\\1>/s', '_autop_newline_preservation_helper', $pee);
-
-			// Normalize <br>
-			$pee = str_replace( array( '<br>', '<br/>' ), '<br />', $pee );
-
-			// Replace any new line characters that aren't preceded by a <br /> with a <br />.
-			$pee = preg_replace('|(?<!<br />)\s*\n|', "<br />\n", $pee);
-
-			// Replace newline placeholders with newlines.
-			$pee = str_replace('<WPPreserveNewline />', "\n", $pee);
-		}
-
-		// If a <br /> tag is after an opening or closing block tag, remove it.
-		$pee = preg_replace('!(</?' . $allblocks . '[^>]*>)\s*<br />!', "$1", $pee);
-
-		// If a <br /> tag is before a subset of opening or closing block tags, remove it.
-		$pee = preg_replace('!<br />(\s*</?(?:p|li|div|dl|dd|dt|th|pre|td|ul|ol)[^>]*>)!', '$1', $pee);
-		$pee = preg_replace( "|\n</p>$|", '</p>', $pee );
-
-		// Replace placeholder <pre> tags with their original content.
-		if ( !empty($pre_tags) )
-			$pee = str_replace(array_keys($pre_tags), array_values($pre_tags), $pee);
-
-		// Restore newlines in all elements.
-		if ( false !== strpos( $pee, '<!-- wpnl -->' ) ) {
-			$pee = str_replace( array( ' <!-- wpnl --> ', '<!-- wpnl -->' ), "\n", $pee );
-		}
-
-		return $pee;
+	function remove_category_list_rel( $output ){
+		$output = str_replace(' rel="category tag"', '', $output);
+		return $output;
 	}
 
-	remove_filter( 'the_excerpt', 'wpautop' );
-	add_filter( 'the_excerpt', 'dodge_default_formatting', 10, 3 );
+	add_filter( 'wp_list_categories', 'remove_category_list_rel' );
+	add_filter( 'the_category', 'remove_category_list_rel' );
 
-	// Allow HTML in category descriptions
+	/**
+	 * Remove: `textwidget` div
+	 */
 
-	remove_filter( 'pre_term_description', 'wp_filter_kses' );
-	remove_filter( 'pre_link_description', 'wp_filter_kses' );
-	remove_filter( 'pre_link_notes', 'wp_filter_kses' );
-	remove_filter( 'term_description', 'wp_kses_data' );
+	add_action( 'widgets_init', 'register_my_widgets' );
 
-	// Allow WordPress shortcodes to work in excerpts
+	function register_my_widgets() {
+		register_widget( 'My_Text_Widget' );
+	}
 
-	add_filter( 'get_the_excerpt','do_shortcode' );
+	class My_Text_Widget extends WP_Widget_Text {
+		function widget( $args, $instance ) {
+			extract($args);
+			$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+			$text = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
+			echo $before_widget;
+			if ( !empty( $title ) ) { echo $before_title . $title . $after_title; } ?>
+			<?php echo !empty( $instance['filter'] ) ? wpautop( $text ) : $text; ?>
+			<?php echo $after_widget;
+		}
+	}
 
-	// Remove unnecessary bloaty things in the header
+	/**
+	 * Remove: Certain Categories from Category Page
+	 */
+
+	function the_category_filter( $thelist, $separator=' ') {
+
+		if(!defined('WP_ADMIN')) {
+			$exclude = array('Poetry Archive');
+			$cats = explode( $separator, $thelist );
+			$newlist = array();
+			foreach( $cats as $cat ) {
+				$catname = trim( strip_tags( $cat ) );
+				if(!in_array( $catname, $exclude ))
+					$newlist[] = $cat;
+			}
+			return implode( $separator, $newlist );
+		} else
+		return $thelist;
+
+	}
+
+	add_filter( 'the_category', 'the_category_filter', 10, 2 );
+
+	/**
+	 * Remove: Certain Categories from Homepage/Archive Page
+	 */
+
+	function exclude_category( $query ) {
+		if ( $query->is_home() || $query->is_archive() || $query->is_author() || is_feed() ) {
+			$query->set('cat', '-261');
+		}
+		return $query;
+	}
+
+	add_filter( 'pre_get_posts', 'exclude_category' );
+
+	/**
+	 * Remove: Jetpack CSS
+	 */
+
+	add_filter( 'jetpack_implode_frontend_css', '__return_false' );
+
+	function deregister_css_js () {
+		wp_deregister_style( 'grunion.css' );
+		wp_deregister_style( 'jetpack-subscriptions' );
+		wp_deregister_style( 'jetpack_css' );
+	}
+
+	add_action( 'wp_print_styles', 'deregister_css_js' );
+
+	/**
+	 * Remove: Unnecessary Calls in Header
+	 */
 
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
 	remove_action( 'wp_head', 'feed_links', 2 );
@@ -653,9 +569,11 @@
 	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 	add_filter( 'jetpack_enable_open_graph', '__return_false' );
 
-	// Remove unnecessary self-closing tags
+	/**
+	 * Remove: Unnecessary Self-Closing Tags
+	 */
 
-	function remove_self_closing_tags($input) {
+	function remove_self_closing_tags( $input ) {
 		return str_replace(' />', '>', $input);
 	}
 
@@ -663,31 +581,35 @@
 	add_filter( 'comment_id_fields', 'remove_self_closing_tags' ); // <input />
 	add_filter( 'post_thumbnail_html', 'remove_self_closing_tags' ); // <img />
 
-	// Remove rel attribute from the category list
+	/**
+	 * Replace: HTML for Image Caption Shortcode
+	 */
 
-	function remove_category_list_rel( $output ){
-		$output = str_replace(' rel="category tag"', '', $output);
-		return $output;
+	function caption_shortcode( $val, $attr, $content = null ) {
+		extract(shortcode_atts(array('id'=> '','align'=> 'center','caption' => ''), $attr));
+
+		if ( empty($caption) )return $val;
+		$capid = '';
+
+		if ( $id ) {
+			$id = esc_attr($id);
+			$capid = 'id="figcaption-'. $id . '" ';
+			$id = 'id="' . $id . '" aria-labelledby="figcaption-' . $id . '" ';
+		}
+
+		$figure = '<figure ' . $id . 'class="figure figure--' . esc_attr($align) . '">';
+		$figure .= do_shortcode( $content ) . '<figcaption ' . $capid . 'class="figure__caption figure__caption--' . esc_attr($align) . '">' . $caption . '</figcaption></figure>';
+
+		return $figure;
 	}
 
-	add_filter( 'wp_list_categories', 'remove_category_list_rel' );
-	add_filter( 'the_category', 'remove_category_list_rel' );
+	add_filter( 'img_caption_shortcode', 'caption_shortcode', 10, 3 );
 
-	// Remove Jetpack plugin CSS
+	/**
+	 * Replace: Custom Text With Emoji
+	 */
 
-	add_filter( 'jetpack_implode_frontend_css', '__return_false' );
-
-	function deregister_css_js () {
-		wp_deregister_style( 'grunion.css' );
-		wp_deregister_style( 'jetpack-subscriptions' );
-		wp_deregister_style( 'jetpack_css' );
-	}
-
-	add_action( 'wp_print_styles', 'deregister_css_js' );
-
-	// Replace text with emoji
-
-	function replace_custom_word($text) {
+	function replace_custom_word( $text ) {
 
 		$replace = array(
 			' :s' => ' 🙁',
@@ -800,8 +722,118 @@
 		return $text;
 	}
 
-	add_filter('the_content', 'replace_custom_word');
-	add_filter('the_excerpt', 'replace_custom_word');
-	add_filter('comment_text', 'replace_custom_word');
+	add_filter( 'the_content', 'replace_custom_word' );
+	add_filter( 'the_excerpt', 'replace_custom_word' );
+	add_filter( 'comment_text', 'replace_custom_word' );
+
+	/**
+	 * Kill: $pee in core formatting.php
+	 */
+
+	function dodge_default_formatting( $pee, $br = true ) {
+		$pre_tags = array();
+
+		if ( trim($pee) === '' )
+			return '';
+
+		// Just to make things a little easier, pad the end.
+		$pee = $pee . "\n";
+
+		// Replace pre tags with placeholders and bring them back after autop.
+		if ( strpos($pee, '<pre') !== false ) {
+			$pee_parts = explode( '</pre>', $pee );
+			$last_pee = array_pop($pee_parts);
+			$pee = '';
+			$i = 0;
+
+			foreach ( $pee_parts as $pee_part ) {
+				$start = strpos($pee_part, '<pre');
+
+				// Malformed html?
+				if ( $start === false ) {
+					$pee .= $pee_part;
+					continue;
+				}
+
+				$name = "<pre wp-pre-tag-$i></pre>";
+				$pre_tags[$name] = substr( $pee_part, $start ) . '</pre>';
+
+				$pee .= substr( $pee_part, 0, $start ) . $name;
+				$i++;
+			}
+
+			$pee .= $last_pee;
+		}
+		// Change multiple <br>s into two line breaks, which will turn into paragraphs.
+		$pee = preg_replace('|<br\s*/?>\s*<br\s*/?>|', "\n\n", $pee);
+
+		$allblocks = '(?:dl|dd|dt|ul|ol|li|pre|blockquote|p|h[1-6]|hr|section)';
+
+		// Add a single line break above block-level opening tags.
+		$pee = preg_replace('!(<' . $allblocks . '[^>]*>)!', "\n$1", $pee);
+
+		// Add a double line break below block-level closing tags.
+		$pee = preg_replace('!(</' . $allblocks . '>)!', "$1\n\n", $pee);
+
+		// Split up the contents into an array of strings, separated by double line breaks.
+		$pees = preg_split('/\n\s*\n/', $pee, -1, PREG_SPLIT_NO_EMPTY);
+
+		// Reset $pee prior to rebuilding.
+		$pee = '';
+
+		// Rebuild the content as a string, wrapping every bit with a <p>.
+		foreach ( $pees as $tinkle ) {
+			$pee .= '<p>' . trim($tinkle, "\n") . "</p>\n";
+		}
+
+		// If an opening or closing block element tag is wrapped in a <p>, unwrap it.
+		$pee = preg_replace('!<p>\s*(</?' . $allblocks . '[^>]*>)\s*</p>!', "$1", $pee);
+
+		// If a <blockquote> is wrapped with a <p>, move it inside the <blockquote>.
+		$pee = preg_replace('|<p><blockquote([^>]*)>|i', "<blockquote$1><p>", $pee);
+		$pee = str_replace('</blockquote></p>', '</p></blockquote>', $pee);
+
+		// If an opening or closing block element tag is preceded by an opening <p> tag, remove it.
+		$pee = preg_replace('!<p>\s*(</?' . $allblocks . '[^>]*>)!', "$1", $pee);
+
+		// If an opening or closing block element tag is followed by a closing <p> tag, remove it.
+		$pee = preg_replace('!(</?' . $allblocks . '[^>]*>)\s*</p>!', "$1", $pee);
+
+		// Optionally insert line breaks.
+		if ( $br ) {
+			// Replace newlines that shouldn't be touched with a placeholder.
+			$pee = preg_replace_callback('/<(script|style).*?<\/\\1>/s', '_autop_newline_preservation_helper', $pee);
+
+			// Normalize <br>
+			$pee = str_replace( array( '<br>', '<br/>' ), '<br />', $pee );
+
+			// Replace any new line characters that aren't preceded by a <br /> with a <br />.
+			$pee = preg_replace('|(?<!<br />)\s*\n|', "<br />\n", $pee);
+
+			// Replace newline placeholders with newlines.
+			$pee = str_replace('<WPPreserveNewline />', "\n", $pee);
+		}
+
+		// If a <br /> tag is after an opening or closing block tag, remove it.
+		$pee = preg_replace('!(</?' . $allblocks . '[^>]*>)\s*<br />!', "$1", $pee);
+
+		// If a <br /> tag is before a subset of opening or closing block tags, remove it.
+		$pee = preg_replace('!<br />(\s*</?(?:p|li|div|dl|dd|dt|th|pre|td|ul|ol)[^>]*>)!', '$1', $pee);
+		$pee = preg_replace( "|\n</p>$|", '</p>', $pee );
+
+		// Replace placeholder <pre> tags with their original content.
+		if ( !empty($pre_tags) )
+			$pee = str_replace(array_keys($pre_tags), array_values($pre_tags), $pee);
+
+		// Restore newlines in all elements.
+		if ( false !== strpos( $pee, '<!-- wpnl -->' ) ) {
+			$pee = str_replace( array( ' <!-- wpnl --> ', '<!-- wpnl -->' ), "\n", $pee );
+		}
+
+		return $pee;
+	}
+
+	remove_filter( 'the_excerpt', 'wpautop' );
+	add_filter( 'the_excerpt', 'dodge_default_formatting', 10, 3 );
 
 ?>
