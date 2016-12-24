@@ -741,22 +741,6 @@ blockquote:before {
   .footer__quote::before {
     display: none; }
 
-.contact-form label {
-  display: block;
-  margin: .5rem 0 .25rem; }
-
-.pushbutton-wide {
-  background-color: #50C8C4;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.5rem 1rem 0.25rem;
-  transition: background-color 0.15s linear;
-  font-weight: 400; }
-  .pushbutton-wide:hover {
-    background-color: #3c9493;
-    color: #fff; }
-
 .footnotes {
   border-top: 1px dashed #dedede;
   color: #888;
