@@ -57,14 +57,14 @@ section {
   display: block; }
 
 h1 {
-  color: #50C8C4;
+  color: #50c8c4;
   font-size: 1.65rem;
   font-weight: 300;
   line-height: 1.25;
   margin: 0.5rem 0; }
 
 h2 {
-  color: #50C8C4;
+  color: #50c8c4;
   font-size: 1.35rem;
   font-style: italic;
   font-weight: 300;
@@ -72,7 +72,7 @@ h2 {
   margin-top: 1.75rem; }
 
 h3 {
-  color: #50C8C4;
+  color: #50c8c4;
   font-size: 1.3rem;
   font-weight: normal;
   margin-bottom: 0;
@@ -194,7 +194,7 @@ pre {
     padding: 0; }
 
 mark {
-  background: #CEF7F4; }
+  background: #cef7f4; }
 
 dt {
   font-weight: 400; }
@@ -240,7 +240,7 @@ sup {
  */
 .btn {
   -webkit-appearance: none;
-  background-color: #50C8C4;
+  background-color: #50c8c4;
   border: none;
   border-radius: 0.25rem;
   box-sizing: border-box;
@@ -269,7 +269,7 @@ sup {
  * The skip link at the top of the webpage, before the header.
  */
 .site-skip-link {
-  background-color: #50C8C4;
+  background-color: #50c8c4;
   clip: rect(1px, 1px, 1px, 1px);
   color: #fff;
   display: block;
@@ -523,7 +523,7 @@ sup {
  * Applies to search page.
  */
 .search-highlight {
-  background: #CEF7F4;
+  background: #cef7f4;
   color: #3c9493;
   font-weight: 400; }
 
@@ -563,7 +563,7 @@ sup {
  */
 blockquote {
   background-color: #f9f9f9;
-  border-left: 10px solid #67DFD8;
+  border-left: 10px solid #67dfd8;
   margin: 1.5rem 0;
   padding: 1.5rem;
   quotes: '\201C' '\201D' '\2018' '\2019';
@@ -579,7 +579,7 @@ blockquote {
     margin-bottom: 0; }
 
 blockquote:before {
-  color: #67DFD8;
+  color: #67dfd8;
   content: open-quote;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 5rem;
@@ -733,7 +733,7 @@ blockquote:before {
 .footer__quote {
   background: none;
   border: 0;
-  color: #50C8C4;
+  color: #50c8c4;
   font-size: 1.5rem;
   font-style: italic;
   margin: 1rem 0 1.5rem;
@@ -781,7 +781,7 @@ blockquote:before {
 
 ._ILAddLinkButton {
   -webkit-appearance: none;
-  background: #50C8C4 !important;
+  background: #50c8c4 !important;
   border: none !important;
   border-radius: 0.25rem;
   display: block !important;
