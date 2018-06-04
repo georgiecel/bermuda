@@ -1,0 +1,40 @@
+/**
+ * Logo:
+ * 
+ * Main navigational logo for the website.
+ */
+
+.c-logo-wrapper {
+    align-items: center;
+    border-radius: 50%;
+    background-color: $primary-translucent;
+    display: flex;
+    height: 15rem;
+    justify-content: center;
+    left: -6rem;
+    position: absolute;
+    top: -5rem;
+    width: 15rem;
+    z-index: 1;
+}
+
+.c-logo-wrapper a {
+    display: block;
+    transition: opacity 0.25s;
+}
+
+.c-logo-wrapper a:hover {
+    opacity: 0.85;
+}
+
+.c-logo {
+    height: 3rem;
+    margin-left: 2.5rem;
+    margin-top: 2.5rem;
+    width: auto;
+
+    @media screen and (min-width: 65rem) {
+        margin-left: 4rem;
+        margin-top: 3.5rem;
+    }
+}

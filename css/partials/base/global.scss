@@ -1,0 +1,122 @@
+/**
+ * Global:
+ *
+ * Relatively non-complex modifications to base elements.
+ */
+
+html {
+    background-color: $bg;
+    @include font(1rem);
+    line-height: 1.8;
+}
+
+body {
+    @media screen and (min-width: 65rem) {
+        font-size: 1.15rem;
+    }
+}
+
+a {
+    color: $link;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $link-hover;
+}
+
+/**
+ * 1. Aligns a list item bullet with the top of a link if it spans multiple lines.
+ */
+
+li > a {
+    vertical-align: top;
+}
+
+/**
+ * 1. Override navigation-specific and post-specific link styles.
+ */
+
+a:focus {
+    background-color: $text-highlight;
+    color: $text-dark !important; // [1]
+    outline: none;
+}
+
+a:hover:focus::before {
+    content: none;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+h1 {
+    @include h1(1.65rem);
+}
+
+h2 {
+    @include h2(1.5rem);
+}
+
+h3 {
+    @include h3(1.35rem);
+}
+
+h4 {
+    @include h4(1.1rem);
+
+    & + p {
+        margin-top: 0.25rem;
+    }
+}
+
+h5 {
+    @include h5(1.2rem);
+}
+
+h6 {
+    @include h6(1rem);
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid $border-line;
+    height: 1px;
+    margin: 2rem auto;
+    width: 5rem;
+}
+
+small {
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+dt {
+    font-weight: 500;
+}
+
+sup {
+    font-size: 0.75rem;
+    position: relative;
+    top: -0.5rem;
+    vertical-align: baseline;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

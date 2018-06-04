@@ -1,54 +1,49 @@
-		<?php get_header(); ?>
-			<section class="post-listing post-listing--category">
-				<div class="post-listing__intro">
-					<h1 class="post__title">Category: <?php single_cat_title(); ?></h1>
-					<?php if ( category_description() ) :
-						echo category_description();
-						else : ?>
-						<p>You are currently viewing the <strong><?php single_cat_title(); ?></strong> category. This category doesn’t have a fancy custom description yet, probably because:</p>
-						<ul>
-							<li>It doesn’t really need one because it’s self-explanatory.</li>
-							<li>I haven’t gotten around to it yet because it’s new.</li>
-						</ul>
-					<?php endif; ?>
-				</div>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-					<h1 class="post-summary__title" itemprop="name"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url"><?php the_title(); ?></a></h1>
-					<footer class="post__meta" role="contentinfo">
-						<time class="post__meta-item" datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
-						<meta itemprop="author" content="<?php the_author(); ?>">
-						<meta itemprop="inLanguage" content="en">
-						<meta itemprop="copyrightYear" content="<?php the_time('Y'); ?>">
-						<meta itemprop="thumbnailUrl" content="<?php $image_id = get_post_thumbnail_id(); $image_url = wp_get_attachment_image_src($image_id,'large', true); echo $image_url[0]; ?>">
-						<?php image_url_meta(); ?>
-					</footer>
-					<div class="post__content" itemprop="text">
-						<?php the_excerpt(); ?>
-					</div>
-				</article>
-			<?php endwhile; ?>
-			</section>
-			<nav class="pagination pagination--home" role="navigation" aria-label="Category archive">
-				<?php previous_posts_link('<div class="pagination__item-container pagination__item-container--left">
-						<div class="pagination__item">
-							<span class="pagination__arrow" role="presentation" aria-hidden="true">&laquo;</span>
-							<div class="pagination__link-container">
-								<span class="pagination__link-text">Newer posts</span>
-							</div>
-						</div>
-					</div>');
-				?>
-				<?php next_posts_link('<div class="pagination__item-container pagination__item-container--right">
-						<div class="pagination__item">
-							<span class="pagination__arrow" role="presentation" aria-hidden="true">&raquo;</span>
-							<div class="pagination__link-container">
-								<span class="pagination__link-text">Older posts</span>
-							</div>
-						</div>
-					</div>');
-				?>
-			</nav>
-			<?php else : ?>
-		<?php endif; ?>
-		<?php get_footer(); ?>
+<?php get_header(); ?>
+<section class="l-listing l-spacing-outer">
+<?php if ( have_posts() ) : ?>
+    <div class="l-listing__intro">
+        <h1 class="l-listing__heading"><?php single_cat_title(); ?></h1>
+        <?php
+            if ( category_description() ) :
+                echo category_description();
+                echo '<i>Each image links to a different post in this category.</i>';
+            else :
+        ?>
+            <p>You are currently viewing the <strong><?php single_cat_title(); ?></strong> category. This category doesn’t have a fancy custom description yet, probably because:</p>
+            <ul>
+                <li>It doesn’t really need one because it’s self-explanatory.</li>
+                <li>I haven’t gotten around to it yet because it’s new.</li>
+            </ul>
+        <?php endif; ?>
+    </div>
+    <div class="c-box-listing">
+    <?php
+        while ( have_posts() ) : the_post();
+        if ( is_category('Fashion Friday') ) { 
+            $title = get_the_title($post->id);
+            $trimmed_title = str_replace('Fashion Friday: ', '', $title);
+        }
+        if ( is_category('Hey Girlfriend!') ) { 
+            $title = get_the_title($post->id);
+            $trimmed_title = str_replace('Hey Girlfriend!: ', '', $title);
+        }
+        if ( is_category('Timeless Thoughts') ) { 
+            $title = get_the_title($post->id);
+            $trimmed_title = str_replace('Timeless Thoughts: ', '', $title);
+        }
+        get_template_part( 'listing-card' );
+        endwhile;
+    ?>
+    </div>
+</section>
+<?php
+    if (get_next_posts_link() || get_previous_posts_link()) :
+    echo '<nav class="c-pagination l-spacing-inner--large">';
+    $link = ' posts <span class="c-pagination-item__label">in <span class="c-pagination-item__title">' . get_the_archive_title() . '</span></span>';
+    next_posts_link('Older' . $link);
+    previous_posts_link('Newer' . $link);
+    echo '</nav>';
+    endif;
+    endif;
+    get_footer();
+?>

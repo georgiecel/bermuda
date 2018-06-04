@@ -1,0 +1,27 @@
+/**
+ * Skip link:
+ *
+ * “Skip to content” link at top of website for accessbility.
+ */
+
+.c-skip-link {
+    align-items: center;
+    clip: rect(1px, 1px, 1px, 1px);
+    color: $text;
+    display: flex;
+    font-weight: 600;
+    height: 4rem;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+}
+
+.c-skip-link:focus {
+    background-color: $text-highlight;
+    position: relative;
+}
+
+.c-skip-link:focus + .c-logo-wrapper {
+    margin-top: 4rem;
+}

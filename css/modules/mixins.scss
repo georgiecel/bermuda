@@ -1,0 +1,80 @@
+@mixin font($fontsize) {
+    color: $text;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: $fontsize;
+    font-weight: 300;
+}
+    
+@mixin h1($fontsize) {
+    font-family: Poppins, sans-serif;
+    font-size: $fontsize;
+    line-height: 1.25;
+}
+
+@mixin h2($fontsize) {
+    font-family: Poppins, sans-serif;
+    font-size: $fontsize;
+    line-height: 1.5;
+}
+
+@mixin h3($fontsize) {
+    font-family: Poppins, sans-serif;
+    font-size: $fontsize;
+    margin-bottom: 0;
+}
+
+@mixin h4($fontsize) {
+    font-family: Poppins, sans-serif;
+    font-size: $fontsize;
+}
+
+@mixin h5($fontsize) {
+    font-family: Poppins, sans-serif;
+    font-size: $fontsize;
+}
+
+@mixin h6($fontsize) {
+    font-family: Poppins, sans-serif;
+    font-size: $fontsize;
+    margin-bottom: 0;
+}
+
+@mixin linkeffect() {
+    display: inline-block;
+    margin-left: 0.05rem;
+    margin-right: 0.05rem;
+    position: relative;
+    transition: transform 0.2s;
+
+    &::after {
+        content: '';
+        opacity: 0;
+    }
+
+    &::before {
+        background-color: $link-bg;
+        border-radius: 0.25rem;
+        content: '';
+        height: 50%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(-0.2em, 0.8em);
+        transition: transform 0.3s;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &:hover {
+        transform: translate(-0.05em, 0.05em);
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+
+    &:hover::before {
+        background-color: $link-hover-bg;
+        transform: translate(0.05em, 0.4em) scale(1.05);
+    }
+}

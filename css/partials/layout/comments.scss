@@ -1,0 +1,149 @@
+/**
+ * Comments:
+ *
+ * Styles associated with the comment form and comment display.
+ */
+
+.comments {
+    grid-column: 2;
+    padding-top: 2rem;
+}
+
+/**
+ * 1. To render the comment form properly in comment threads.
+ */
+
+.c-comment-form-container {
+    background-color: $primary-translucent-dark;
+    border-radius: 0.25rem;
+    grid-column: 2;
+    grid-row: 3;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 1.5rem 1.5rem 3rem;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (min-width: 45rem) {
+        background-color: transparent;
+        border: 3px solid $primary-translucent-dark;
+        margin: 0;
+        padding: 2rem 3.5rem 2rem 2rem;
+
+        &::after {
+            background-color: $primary-translucent;
+            border-radius: 0.25rem;
+            content: '';
+            display: inline-block;
+            height: 100%;
+            position: absolute;
+            left: -1.5rem;
+            top: 1rem;
+            width: 100%;
+            z-index: 0; // [1]
+        }
+    }
+}
+
+.c-comment-form {
+    position: relative; // [1]
+    z-index: 1; // [1]
+}
+
+/**
+ * 1. Puts a space between elements when replying to a comment.
+ */
+
+.c-comment-form + .comment {
+    margin-top: 3rem; // [1]
+}
+
+.c-cancel-link {
+    background-color: transparent;
+    border: 0;
+    color: $link;
+    font-size: $font-size-small;
+}
+
+.c-cancel-link:hover {
+    color: $link-hover;
+}
+
+.c-comment-form__item {
+    margin-bottom: 1rem;
+}
+
+.comments-list--child {
+    border-left: 0.5rem solid $comment-border-color;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+
+    > .comment {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.comments-list--child:last-child:not(:first-child) {
+    margin-bottom: 0;
+}
+
+.comment {
+    margin-bottom: 2rem;
+    word-break: break-word; // [1]
+
+    @media screen and (min-width: 45rem) {
+        background-color: $comment-background-color;
+        border: 3px solid $comment-border-color;
+        border-left-width: 1rem;
+        border-radius: 0.5rem;
+        padding: 3rem;
+    }
+}
+
+.comment + .c-comment-form-container {
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: 45rem) {
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+/**
+ * 1. Breaks URLs and other nonsense in users’ comments (which can be common).
+ */
+
+.comment a {
+    color: $link-secondary;
+    font-weight: 600;
+}
+
+.comment a:hover {
+    color: $link-secondary-hover;
+}
+
+.comment__author {
+    margin: 0;
+}
+
+.comment--author .comment__author::after {
+    background-color: $link-ternary-hover;
+    border-radius: 0.25rem;
+    color: $text-alt;
+    content: 'Post author';
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    vertical-align: middle;
+}
+
+.comment__meta-item {
+    color: $text-light;
+    font-size: $font-size-small;
+    margin-top: 0.5rem;
+}

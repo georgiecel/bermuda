@@ -1,0 +1,77 @@
+/**
+ * Box:
+ *
+ * A box/card component used as a preview to link to other content.
+ */
+
+@supports (display: grid) {
+    .c-box-listing {
+        display: grid;
+        grid-gap: 1.5rem;
+
+        @media screen and (min-width: 40rem) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 60rem) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .c-box-listing--home {
+        @media screen and (min-width: 60rem) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+.c-box {
+    align-items: flex-end;
+    background-color: $primary-translucent;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.25rem;
+    display: flex;
+    grid-column-start: initial;
+    justify-content: center;
+    min-height: 40vh;
+    transition: transform 0.2s ease-out;
+
+    @media screen and (min-width: 40rem) {
+        height: 60vh;
+        min-height: 0;
+    }
+    @media screen and (min-width: 60rem) {
+        height: 65vh;
+        max-height: 26rem;
+    }
+}
+
+.c-box:hover {
+    transform: scale(1.01);
+}
+
+.c-box-info {
+    background-color: $bg-translucent;
+    color: $text;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    @media screen and (min-width: 40rem) {
+        padding: 1rem 1.5rem;
+    }
+}
+
+.c-box-info__subtitle {
+    display: block;
+    font-size: $font-size-small;
+    margin-bottom: 0.5rem;
+}
+
+.c-box-info__title {
+    @include h2(1rem);
+    font-weight: bold;
+    margin-bottom: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.25rem;
+    }
+}

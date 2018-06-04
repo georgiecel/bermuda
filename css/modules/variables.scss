@@ -1,0 +1,78 @@
+// Variables for colours
+
+$bg: #fefefe;
+$bg-dark: #f9f9f9;
+$bg-translucent: rgba(255, 255, 255, 0.75);
+
+// Primary
+
+$primary: #0e7ea2;
+$primary-medium: #108c98;
+$primary-dark: #006586;
+$primary-translucent: rgba(80, 200, 196, 0.05);
+$primary-translucent-dark: rgba(124, 215, 215, 0.4);
+
+// Secondary
+
+$secondary: peachpuff;
+$secondary-translucent: rgba(255, 186, 167, 0.1);
+$secondary-light: #ffe8e2;
+
+// Typography
+
+$text: #343434; // alternate #54514d
+$text-dark: #000;
+$text-light: #585858;
+$text-alt: #fff;
+
+// Links
+
+$link: $primary;
+$link-hover: $primary-dark; // dark blue
+
+$link-secondary: #6b34a7; // purple
+$link-secondary-hover: #751be0; // purple
+
+$link-ternary-hover: #dc0d47; // pink
+
+$link-bg: $primary-translucent;
+$link-hover-bg: $primary-translucent-dark;
+
+// Borders
+
+$border-line: $secondary;
+$border: #dedede;
+
+// Blockquote
+
+$blockquote-quote: #ffbaa7;
+$blockquote-border: $secondary-light;
+$blockquote-text: #a75534;
+$blockquote-bg: $secondary-translucent;
+
+// Forms
+
+$btn-bg: $primary;
+$btn-hover-bg: $primary-medium;
+
+$input-text: $primary-medium;
+$input-bg: $bg-translucent;
+
+// Code block
+
+$text-highlight: $secondary;
+
+$code-block-border: #68d4d1;
+$code-block-background: rgba(67, 204, 201, 0.2);
+$code-block-color: #4a4a4a;
+
+// Comments
+
+$comment-background-color: #fffaf8;
+$comment-border-color: $secondary;
+
+// Font sizes
+
+$font-size-small: 0.85rem;
+$font-size-large: 2rem;
+$font-size-x-large: 3rem;

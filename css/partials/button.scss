@@ -1,0 +1,27 @@
+/**
+ * Buttons:
+ * 
+ * Styling for buttons.
+ */
+
+.btn {
+    background-color: $btn-bg;
+    border: none;
+    border-radius: 0.25rem;
+    color: $text-alt;
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $btn-hover-bg;
+    }
+
+    &:focus {
+        background-color: $text-highlight;
+        color: $text-dark;
+        outline: none;
+    }
+}

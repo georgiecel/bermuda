@@ -1,0 +1,40 @@
+/**
+ * Input:
+ * 
+ * Styling for the `input` and `textarea` elements.
+ * Used on comment forms.
+ */
+
+.c-input {
+    background-color: $input-bg;
+    border: none;
+    border-radius: 0.25rem;
+    color: $input-text;
+    display: block;
+    font: normal 1.1rem Poppins, sans-serif;
+    padding: 1rem;
+    width: 100%;
+}
+
+.c-input-label {
+    color: $text-light;
+    font-size: $font-size-small;
+}
+
+.c-textarea {
+    background-color: $input-bg;
+    border: none;
+    border-radius: 0.25rem;
+    color: $input-text;
+    font: normal 1em Poppins, sans-serif;   
+    height: 15rem;
+    padding: 1rem;
+}
+
+.c-input:focus,
+.c-textarea:focus {
+    background-color: $text-highlight;
+    color: $text-dark;
+    font-weight: bold;
+    outline: 2px solid $link;
+}

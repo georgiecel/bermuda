@@ -1,0 +1,26 @@
+/**
+ * Layout for listings:
+ *
+ * Grid layouts for listing pages, e.g. category and tag views.
+ */
+
+.l-listing-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    grid-column: 2 / span 1;
+    margin-top: 2rem;
+
+    @media screen and (min-width: 65rem) {
+        max-width: 60rem;
+    }
+}
+
+.l-listing__intro {
+    margin: 0 auto;
+    max-width: 48rem;
+}
+
+.l-listing__heading {
+    font-size: $font-size-x-large;
+    text-align: center;
+}

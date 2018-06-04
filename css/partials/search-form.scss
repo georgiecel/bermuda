@@ -1,0 +1,80 @@
+/**
+ * Search form.
+ */
+
+.c-search {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/**
+ * 1. Places the search form or trigger on top of other elements (navigation).
+ */
+
+.c-search__trigger {
+    background: transparent;
+    border-width: 0;
+    color: $primary;
+    line-height: 1;
+    padding: 1.5rem 1.5rem 1.5rem 1rem;
+    transition: opacity 0.25s;
+    z-index: 3; // [1]
+
+    &:hover {
+        opacity: 0.85;
+    }
+
+    &:focus {
+        color: $text-dark;
+        outline: none;
+    }
+}
+
+.c-search__trigger-icon {
+    display: block;
+    pointer-events: none;
+}
+
+.c-search-form-wrapper {
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+    transition: opacity 0.25s;
+
+    &.is-visible {
+        clip: auto;
+        opacity: 1;
+        z-index: 3; // [1]
+    }
+}
+
+.c-search__form {
+    display: flex;
+    max-width: 35rem;
+}
+
+.c-search__form-input {
+    -webkit-appearance: none;
+    background-color: rgba(124, 215, 215, 0.4);
+    border: none;
+    border-radius: 0.25rem 0 0 0.25rem;
+    color: $primary-dark;
+    display: block;
+    font: bold 1rem Poppins, sans-serif;
+    padding: 0.75rem 1rem;
+    width: 100%;
+
+    &:focus {
+        background-color: $bg-translucent;
+        color: $text-dark;
+        outline: 2px solid $primary;
+    }
+}
+
+.c-search__form-submit {
+    border-radius: 0 0.25rem 0.25rem 0;
+    font-size: 1rem;
+}

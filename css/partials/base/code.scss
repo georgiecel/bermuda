@@ -1,0 +1,44 @@
+/**
+ * Code:
+ *
+ * Styling for the `code` and `pre` elements.
+ * 
+ * 1. This is in `em` units so that it can be scaled relative to the text around it, when the element is in a paragraph.
+ * 2. If the parent has `font-style` or `font-weight` set, it should be reset.
+ */
+
+code {
+    background-color: $primary;
+    border-radius: 0.25rem;
+    color: $text-alt;
+    font-family: Hack, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.9em; // [1]
+    font-style: normal; // [2]
+    font-weight: normal; // [2]
+    padding: 0.25rem 0.5rem;
+}
+
+pre {
+    background-color: $code-block-background;
+    border: 2px solid $code-block-border;
+    border-left-width: 1rem;
+    border-radius: 0.5rem;
+    color: $code-block-color;
+    font-family: Hack, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.9rem; // [1]
+    margin: 2rem 0;
+    padding: 1.5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/**
+ * 1. Sets the font size of `code` to be the same as that set in `pre` if contained within a `pre`.
+ */
+
+pre > code {
+    background: none;
+    color: $code-block-color;
+    font-size: 1em; // [1]
+    padding: 0;
+}

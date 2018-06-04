@@ -1,0 +1,13 @@
+/**
+ * Spacing:
+ *
+ * Inner and outer spacing for elements.
+ */
+
+.l-spacing-inner--large > * {
+    padding: 2.5rem;
+}
+
+.l-spacing-outer > * {
+    margin-top: 3rem;
+}

@@ -1,0 +1,20 @@
+/**
+ * Mark:
+ *
+ * Styling for the `mark` element, used to highlight text.
+ *
+ * 1. Stops the containing grid element from expanding beyond its desired max-width.
+ */
+
+mark {
+    background: $text-highlight;
+    padding: 0.25rem;
+}
+
+mark > code {
+    margin-left: -0.25rem;
+}
+
+code > mark {
+    word-break: break-all; // [1]
+}

@@ -1,0 +1,28 @@
+/**
+ * Broken images:
+ *
+ * Adjust styling for broken images.
+ */
+
+img {
+    color: $text-light;
+    position: relative;
+}
+
+img::before { 
+    content: 'Broken image of: ';
+}
+
+img::after {
+    background-color: $bg-dark;
+    border: 1px dashed $border-line;
+    border-radius: 0.25rem;
+    content: '';
+    height: 100%;
+    left: -0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: -0.5rem;
+    width: 100%;
+    z-index: -1;
+}

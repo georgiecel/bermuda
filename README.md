@@ -3,7 +3,24 @@ bermuda
 
 Theme build for blog [Hey Georgie](http://hey.georgie.nu). Built by Georgie Luhur. Please respect my work and do not copy ginormous amounts of it without credit. This is the main website I work on, both content and coding wise. Coding wise, I know that the performance, UX and UI can be improved and I am always looking to improve. I appreciate suggestions and am always looking for new tricks to make WordPress less bloated and to let it do what I want it to do, so let me know if you have anything to add. :smile:
 
-### v1.2 ‘Flores’ – February 2016
+### v5.0 ‘Honolulu’ – June 2018
+
+[Release blog post](http://hey.georgie.nu/honolulu/).
+
+*Honolulu* was an overhaul of the entire blog design. Previous designs are now version numbered in a more semantic way.
+
+* Use of CSS grid.
+* More visual layout for homepage, category pages, tag pages, archive pages, and search pages.
+* Introduced brand new logo.
+* Added logomark.
+* Fun 404 page.
+* Restructured SASS files.
+* Made use of WordPress `get_template_part()` function.
+* Updated branding colour for improved colour contrast.
+* Introduced new colour scheme.
+* Bumped up font size in general for easier readability.
+
+### v4.0 ‘Flores’ – February 2016
 
 [Release blog post](http://hey.georgie.nu/flores/).
 
@@ -30,7 +47,7 @@ Theme build for blog [Hey Georgie](http://hey.georgie.nu). Built by Georgie Luhu
 
 *Flores* is named after the Indonesian island of the same name, where remains of short (a metre tall) humans and unusually small elephants were found.
 
-### v1.1 ‘Atlantis’ – August 2015
+### v3.0 ‘Atlantis’ – August 2015
 
 [Release blog post](http://hey.georgie.nu/atlantis/).
 
@@ -47,7 +64,7 @@ Theme build for blog [Hey Georgie](http://hey.georgie.nu). Built by Georgie Luhu
 
 *Atlantis* is named for hilarious enough reasons that the lost city of Atlantis is a story just like the myth of the Bermuda triangle.
 
-### v1.0 – May 2014
+### v2.0 – May 2014
 
 [Release blog post](http://hey.georgie.nu/bermuda-wasnt-built-in-a-day/).
 

@@ -1,48 +1,27 @@
 <?php get_header(); ?>
-	<section class="homepage-listing post-listing">
+<section class="l-listing l-spacing-outer">
 <?php if ( have_posts() ) : ?>
-		<div class="post-listing__intro">
-			<h1 class="post__title">Archives for <?php echo get_the_archive_title(); ?></h1>
-		</div>
-		<?php while ( have_posts() ) : the_post(); ?>
-		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-			<?php $html_title = get_post_meta($post->ID, 'html_title', true); ?>
-			<h2 class="post-summary__title" itemprop="name"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>" itemprop="url"><?php if ($html_title) { echo $html_title; } else { the_title(); } ?></a></h2>
-			<div class="post__meta-item">
-				<time datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('jS F Y'); ?></time>
-			</div>
-			<meta itemprop="author" content="<?php the_author(); ?>">
-			<meta itemprop="inLanguage" content="en">
-			<meta itemprop="copyrightYear" content="<?php the_time('Y'); ?>">
-			<meta itemprop="commentCount" content="<?php echo get_comments_number(); ?>">
-			<meta itemprop="thumbnailUrl" content="<?php $image_id = get_post_thumbnail_id(); $image_url = wp_get_attachment_image_src($image_id,'large', true); echo $image_url[0]; ?>">
-			<?php image_url_meta(); ?>
-			<div class="post-summary__content" itemprop="text">
-				<?php the_excerpt(); ?>
-			</div>
-		</article>
-	<?php endwhile; ?>
-	</section>
-	<nav class="pagination pagination--home" role="navigation" aria-label="Post archive by page">
-		<?php previous_posts_link('<div class="pagination__item-container pagination__item-container--left">
-				<div class="pagination__item">
-					<span class="pagination__arrow" role="presentation" aria-hidden="true">&laquo;</span>
-					<div class="pagination__link-container">
-						<span class="pagination__link-text">Newer posts</span>
-					</div>
-				</div>
-			</div>');
-		?>
-		<?php next_posts_link('<div class="pagination__item-container pagination__item-container--right">
-				<div class="pagination__item">
-					<span class="pagination__arrow" role="presentation" aria-hidden="true">&raquo;</span>
-					<div class="pagination__link-container">
-						<span class="pagination__link-text">Older posts</span>
-					</div>
-				</div>
-			</div>');
-		?>
-	</nav>
-	<?php else : ?>
-<?php endif; ?>
-<?php get_footer(); ?>
+    <div class="l-listing__intro">
+        <h1 class="l-listing__heading">Archives for <?php echo get_the_archive_title(); ?></h1>
+    </div>
+    <div class="c-box-listing">
+    <?php
+        while ( have_posts() ) : the_post();
+        get_template_part( 'listing-card' );
+        endwhile;
+    ?>
+    </div>
+</section>
+<nav class="c-pagination l-spacing-inner--large">
+    <?php
+        if (get_next_posts_link() || get_previous_posts_link()) :
+        next_posts_link('Older posts');
+        previous_posts_link('Newer posts');
+        endif;
+    ?>
+</nav>
+<?php
+    else :
+    endif;
+    get_footer();
+?>

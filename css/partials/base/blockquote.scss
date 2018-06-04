@@ -1,0 +1,55 @@
+/**
+ * Blockquotes:
+ * 
+ * Styling for the `blockquote` element.
+ */
+
+blockquote {
+    border: 3px solid $blockquote-border;
+    border-radius: 0.25rem;
+    color: $blockquote-text;
+    left: -2rem;
+    margin: 4rem 0;
+    padding: 1.5rem 1.5rem 2.5rem 4rem;
+    position: relative;
+    quotes: '\201C' '\201D' '\2018' '\2019';
+
+    /**
+     * Allowing the first paragraph in the blockquote to sit next to the quotation mark.
+     */
+
+    p:first-child {
+        display: inline;
+    }
+
+    /**
+     * Removing the bottom margin on the last child in the blockquote.
+     */
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+blockquote::before {
+    color: $blockquote-quote;
+    content: open-quote;
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 11rem;
+    line-height: 0;
+    margin-top: 1.5rem;
+}
+
+blockquote::after {
+    background-color: $blockquote-bg;
+    border-radius: 0.25rem;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    right: -2rem;
+    top: -0.5rem;
+    width: 100%;
+    z-index: -1;
+}
