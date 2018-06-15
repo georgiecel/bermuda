@@ -360,7 +360,7 @@
 
     add_filter( 'img_caption_shortcode', 'caption_shortcode', 10, 3 );
 
-    // Comment walker for main navigation
+    // Menu walker for main navigation
 
     class menu_walker extends Walker_Nav_Menu {
 
@@ -389,7 +389,7 @@
                 $args->after
             );
 
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth = 0, $args = array(), $id = 0 );
         }
     }
 
@@ -417,7 +417,7 @@
         <?php }
 
         // start_el – HTML for comment template
-        function start_el( &$output, $comment, $depth, $args, $id = 0 ) {
+        function start_el( &$output, $comment, $depth = 0, $args = array(), $id = 0 ) {
             $depth++;
             $GLOBALS['comment_depth'] = $depth;
             $GLOBALS['comment'] = $comment;
@@ -467,7 +467,7 @@
         <?php }
 
         // end_el – closing HTML for comment template
-        function end_el(&$output, $comment, $depth = 0, $args = array() ) { ?>
+        function end_el(&$output, $comment, $depth = 0, $args = array(), $id = 0 ) { ?>
             </article>
         <?php }
 
