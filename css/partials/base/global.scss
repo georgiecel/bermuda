@@ -96,7 +96,8 @@ hr {
     border-top: 2px solid $border-line;
     height: 1px;
     margin: 2rem auto;
-    width: 5rem;
+    max-width: 5rem;
+    width: 100%;
 }
 
 small {
@@ -106,13 +107,6 @@ small {
 
 dt {
     font-weight: 500;
-}
-
-sup {
-    font-size: 0.75rem;
-    position: relative;
-    top: -0.5rem;
-    vertical-align: baseline;
 }
 
 iframe {
