@@ -423,15 +423,15 @@
             $GLOBALS['comment'] = $comment;
             $parent_class = ( empty( $args['has_children'] ) ? '' : 'comment--parent' );
 
-            if ( 'article' == $args['style'] ) {
+            if ( 'article' === $args['style'] ) {
                 $tag = 'article';
                 $add_below = 'comment';
             } else {
                 $tag = 'article';
                 $add_below = 'comment';
-            } ?>
+            }
 
-            <?php $PostAuthor = false;
+            $PostAuthor = false;
                 if( $comment->comment_author_email == get_the_author_email() ) {
                     $PostAuthor = true;
                 }
@@ -455,12 +455,12 @@
                     <?php endif; ?>
                     </h2>
                     <p class="comment__meta-item"><time datetime="<?php comment_date('Y-m-d') ?>T<?php comment_time('H:iP') ?>" itemprop="datePublished"><?php comment_date('j F Y') ?>, <a href="#comment-<?php comment_ID() ?>" itemprop="url"><?php comment_time() ?></a></time></p>
-                    <?php if ($comment->comment_approved == '0') : ?>
-                    <p class="comment__meta-item">Your comment is awaiting moderation.</p>
+                    <?php if ( '0' == $comment->comment_approved ) : ?>
+                    <mark><strong>Your comment is awaiting moderation.</strong> It will be published if it has been approved.</mark>
                     <?php endif; ?>
                 </div>
                 <div class="comment__text" itemprop="text">
-                    <?php comment_text() ?>
+                    <?php comment_text(); ?>
                 </div>
                 <?php comment_reply_link(array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'], 'reply_text' => 'Reply to this &raquo;' ) )) ?>
 

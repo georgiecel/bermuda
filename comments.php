@@ -32,6 +32,13 @@
             <label class="c-input-label" for="comment">Comment</label>
             <textarea class="c-textarea" name="comment" id="comment" cols="30" rows="5"></textarea>
         </div>
+        <div class="c-comment-form__item">
+            <label class="c-input-label c-checkbox" for="remember">
+                Remember my name, email address, and website for future visits.
+                <input id="remember" type="checkbox" name="wp-comment-cookies-consent"<?php if ( ! empty( $commenter['comment_author_email'] ) ) echo ' checked'; ?>>
+                <div class="c-checkbox__indicator"></div>
+            </label>
+        </div>
         <button name="submit" type="submit" id="submit" class="btn">Submit Comment</button>
         <?php cancel_comment_reply_link('Cancel Reply') ?>
         <?php comment_id_fields( $post_id ); ?>
