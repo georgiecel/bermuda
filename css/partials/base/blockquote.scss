@@ -5,30 +5,28 @@
  */
 
 blockquote {
-    border: 3px solid $blockquote-border;
     border-radius: 0.25rem;
     color: $blockquote-text;
-    left: -2rem;
-    margin: 4rem 0;
-    padding: 1.5rem 1.5rem 2.5rem 4rem;
+    margin: 2rem 0;
+    padding: 2rem 0 2rem 4rem;
     position: relative;
     quotes: '\201C' '\201D' '\2018' '\2019';
+}
 
-    /**
-     * Allowing the first paragraph in the blockquote to sit next to the quotation mark.
-     */
+/**
+ * Allowing the first paragraph in the blockquote to sit next to the quotation mark.
+ */
 
-    p:first-child {
-        display: inline;
-    }
+blockquote p:first-child {
+    display: inline;
+}
 
-    /**
-     * Removing the bottom margin on the last child in the blockquote.
-     */
+/**
+ * Removing the bottom margin on the last child in the blockquote.
+ */
 
-    p:last-child {
-        margin-bottom: 0;
-    }
+blockquote p:last-child {
+    margin-bottom: 0;
 }
 
 blockquote::before {
@@ -36,9 +34,11 @@ blockquote::before {
     content: open-quote;
     display: block;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 11rem;
+    font-size: 8rem;
     line-height: 0;
-    margin-top: 1.5rem;
+    margin-left: -4rem;
+    margin-top: 3rem;
+    position: absolute;
 }
 
 blockquote::after {
@@ -49,7 +49,27 @@ blockquote::after {
     height: 100%;
     position: absolute;
     right: -2rem;
-    top: -0.5rem;
+    top: 0;
     width: 100%;
     z-index: -1;
+}
+
+@media screen and (min-width: 65rem) {
+    .post__content blockquote {
+        border: 3px solid $blockquote-border;
+        left: -2rem;
+        margin: 4rem 0;
+        padding: 1.5rem 1.5rem 2.5rem 5rem;
+    }
+
+    .post__content blockquote::before {
+        font-size: 11rem;
+        margin-left: 0;
+        margin-top: 1.5rem;
+        position: static;
+    }
+
+    .post__content blockquote::after {
+        top: -0.5rem;
+    }
 }
