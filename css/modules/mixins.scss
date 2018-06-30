@@ -39,7 +39,7 @@
     margin-bottom: 0;
 }
 
-@mixin linkeffect() {
+%linkeffect {
     display: inline-block;
     margin-left: 0.05rem;
     margin-right: 0.05rem;

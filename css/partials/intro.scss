@@ -14,5 +14,5 @@
 }
 
 .c-intro a {
-    @include linkeffect();
+    @extend %linkeffect;
 }

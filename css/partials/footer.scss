@@ -14,5 +14,5 @@
 }
 
 .c-footer a {
-    @include linkeffect();
+    @extend %linkeffect;
 }
