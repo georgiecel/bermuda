@@ -31,7 +31,11 @@
 
     // Site logo
 
-    $sitelogo = get_template_directory_uri() . '/images/logo-raster.png';
+    function return_site_logo() {
+        return get_template_directory_uri() . '/images/logo-raster.png';
+    }
+
+    add_filter( 'site_logo', 'return_site_logo' );
 
     // Move jQuery to footer
 
