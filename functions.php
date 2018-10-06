@@ -141,11 +141,11 @@
         $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
         $first_img = $matches [1] [0];
 
-        if(empty($first_img)){
+        if (empty($first_img)) {
             $first_img =  get_bloginfo('template_directory') . '/images/card.png';
         }
 
-        return $first_img;
+        return site_url() . $first_img;
     }
 
     // Add custom “read more” link for excerpt
