@@ -142,7 +142,7 @@
         $first_img = $matches [1] [0];
 
         if (empty($first_img)) {
-            $first_img =  get_bloginfo('template_directory') . '/images/card.png';
+            return get_bloginfo('template_directory') . '/images/card.png';
         }
 
         return site_url() . $first_img;
