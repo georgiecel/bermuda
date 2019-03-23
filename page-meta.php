@@ -9,7 +9,7 @@
     itemscope itemtype="http://schema.org/Organization"
 >
     <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-        <meta itemprop="url" content="<?php echo apply_filters('site_logo'); ?>">
+        <meta itemprop="url" content="<?php echo apply_filters('site_logo', 'return_site_logo'); ?>">
     </span>
     <meta itemprop="name" content="<?php bloginfo('name'); ?>">
     <meta itemprop="url" content="<?php bloginfo('url'); ?>">
