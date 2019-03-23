@@ -65,7 +65,7 @@
     add_action( 'after_setup_theme', 'main_navigation' );
 
     function main_navigation() {
-        register_nav_menu('main-navigation',__( 'Main Navigation Menu', hg-bermuda ));
+        register_nav_menu('main-navigation',__( 'Main Navigation Menu', 'hg-bermuda' ));
     }
 
     add_action( 'init', 'main_navigation' );
