@@ -1,13 +1,13 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> id="html">
     <head>
         <meta http-equiv="Cache-control" content="public">
         <meta charset="utf-8">
         <meta name="description" content="<?php meta_desc(); ?>">
         <meta name="viewport" content="initial-scale=1.0, width=device-width">
         <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css?<?php echo date('Ymdhi', filemtime( get_stylesheet_directory() . '/style.min.css' )); ?>" type="text/css" media="screen">
         <link rel="dns-prefetch" href="//fonts.googleapis.com/">
+        <link rel="dns-prefetch" href="//hey.georgie.nu/img/">
         <link rel="prefetch" href="//cdn.jsdelivr.net/font-hack/2.019/css/hack.min.css">
         <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/icon.png">
         <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/images/icon.png">
@@ -22,6 +22,7 @@
         <meta name="msapplication-square310x310logo" content="<?php bloginfo('template_url'); ?>/images/large.png">
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
         <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>">       
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.min.css?<?php echo date('Ymdhi', filemtime( get_stylesheet_directory() . '/style.min.css' )); ?>" type="text/css" media="screen">
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
@@ -39,7 +40,16 @@
                 >
             </a>
         </div>
-        <?php get_search_form(); ?>
+        <div class="l-tools">
+            <?php get_search_form(); ?>
+            <div class="c-toggle-wrapper">
+                <div class="c-toggle">
+                    <input class="c-toggle__input" type="checkbox" id="theme-switch">
+                    <label aria-hidden="true" class="c-toggle__label" for="theme-switch">On</label>
+                    <div aria-hidden="true" class="c-toggle__marker"></div>
+                </div>
+            </div>
+        </div>
         <div class="l-main-grid">
             <div class="l-sidebar">
                 <nav>

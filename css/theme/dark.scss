@@ -1,0 +1,127 @@
+/**
+ * Aw yeah dark mode!
+ */
+
+$bg: $text;
+$bg-translucent: rgba(0, 0, 0, 0.75);
+$text: #fefefe;
+$text-light: #ccc;
+
+$secondary-translucent: rgba(255, 255, 255, 0.1);
+
+$code-block-color: $text;
+
+$link: #5bccf1;
+$link-hover: #86e1ff;
+$link-bg: rgba(105, 163, 203, 0.1);
+$link-hover-bg: rgba(125, 178, 215, 0.25);
+
+$link-secondary: #c5a9e4;
+$link-secondary-hover: #a77bd6;
+
+$link-ternary-hover: #f66e94;
+
+.dark {
+    background-color: $bg;
+    color: $text;
+
+    a {
+        color: $link;
+    }
+
+    a:hover {
+        color: $link-hover;
+    }
+
+    blockquote {
+        color: $secondary;
+    }
+
+    blockquote::after {
+        background-color: $secondary-translucent;
+    }
+
+    pre,
+    pre > code {
+        color: $code-block-color;
+    }
+
+    .c-toggle-wrapper {
+        border-left-color: $secondary-translucent;
+    }
+
+    .c-navigation a:hover {
+        color: $link-ternary-hover;
+    }
+
+    .c-box {
+        overflow: hidden;
+    }
+
+    .c-box-info {
+        background-color: $bg-translucent;
+        color: $text;
+    }
+
+    .post__meta a,
+    .comment a {
+        color: $link-secondary;
+    }
+
+    .comment a:hover,
+    .post__meta a:hover {
+        color: $link-secondary-hover;
+    }
+
+    .comment,
+    .c-input,
+    .c-textarea,
+    .c-search__form-input {
+        background-color: $secondary-translucent;
+    }
+
+    .c-logo-wrapper,
+    .comment .comment {
+        background-color: transparent;
+    }
+
+    .comment--author .coment__author::after {
+        color: $link-ternary-hover;
+    }
+
+    img,
+    .figure__caption,
+    .c-input-label,
+    .comment__meta-item,
+    .post__meta {
+        color: $text-light;
+    }
+
+    .c-intro a,
+    .post__content a,
+    .c-footer a {
+        &::before {
+            background-color: $link-bg;
+        }
+
+        &:hover::before {
+            background-color: $link-hover-bg;
+        }
+    }
+
+    .c-input,
+    .c-textarea,
+    .c-search__form-input {
+        color: $text;
+
+        &:focus {
+            background-color: $link-hover-bg;
+            color: $text;
+        }
+    }
+
+    .c-pagination--post .c-pagination-item:hover {
+        background-color: $secondary-translucent;
+        color: $link-ternary-hover;
+    }
+}

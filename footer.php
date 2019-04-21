@@ -7,26 +7,50 @@
             </footer>
         </div>
         <script type="text/javascript">
-            var form = document.getElementById('search-form');
-            var searchButton = document.querySelector('.c-search__trigger');
-            var formInput = document.querySelector('.c-search__form-input');
+            const form = document.getElementById('search-form');
+            const searchButton = document.querySelector('.c-search__trigger');
+            const formInput = document.querySelector('.c-search__form-input');
 
-            function showSearchForm(event) {
+            function showSearchForm(e) {
                 form.classList.add('is-visible');
                 formInput.focus();
             }
 
             searchButton.addEventListener('click', showSearchForm, false);
 
-            function closeAll(event) {
-                if(!event.target.classList.contains('js-exclude-close')) {
+            function closeAll(e) {
+                if(!e.target.classList.contains('js-exclude-close')) {
                     form.classList.remove('is-visible');
                     formInput.blur();
                 }
             }
 
-            window.addEventListener('touchstart', closeAll, false);
-            window.addEventListener('click', closeAll, false);
+            window.addEventListener('touchstart', closeAll, false);
+            window.addEventListener('click', closeAll, false);
+
+            const toggleTheme = document.getElementById('theme-switch');
+            const currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme) {
+                document.getElementById('html').classList.add(currentTheme);
+
+                if (document.getElementById('html').classList.contains('dark')) {
+                    toggleTheme.checked = true;
+                }
+            }
+
+            function switchTheme(e) {
+                if (e.target.checked) {
+                    document.getElementById('html').classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+                else {
+                    document.getElementById('html').classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            toggleTheme.addEventListener('change', switchTheme, false);
         </script>
         <?php wp_footer(); ?>
         <?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>

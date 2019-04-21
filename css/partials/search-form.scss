@@ -6,9 +6,6 @@
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 /**
@@ -58,7 +55,7 @@
 
 .c-search__form-input {
     -webkit-appearance: none;
-    background-color: rgba(124, 215, 215, 0.4);
+    background-color: $primary-translucent-dark;
     border: none;
     border-radius: 0.25rem 0 0 0.25rem;
     color: $primary-dark;

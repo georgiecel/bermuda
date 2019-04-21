@@ -48,7 +48,7 @@ blockquote::after {
     display: inline-block;
     height: 100%;
     position: absolute;
-    right: -2rem;
+    right: -1.25rem;
     top: 0;
     width: 100%;
     z-index: -1;
@@ -70,6 +70,6 @@ blockquote::after {
     }
 
     .post__content blockquote::after {
-        top: -0.5rem;
+        top: -1rem;
     }
 }

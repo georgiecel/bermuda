@@ -1,11 +1,11 @@
 /*!
  * Theme Name: Honolulu
- * Theme URI: http://hey.georgie.nu/
+ * Theme URI: https://hey.georgie.nu/
  * Description: Design for personal blog Hey Georgie.
  * Version: 1.0
  * Author: Georgie Cooke (née Luhur)
- * Author URI: http://hey.georgie.nu/
- * Copyright Georgie Cooke 2014–2018, not to be redistributed. Please respect my work and do not copy parts of my layout directly.
+ * Author URI: https://hey.georgie.nu/
+ * Copyright Georgie Cooke 2014–2019, not to be redistributed. Please respect my work and do not copy parts of my layout directly.
  *
  */
 
@@ -25,6 +25,7 @@
 @import 'partials/checkbox';
 @import 'partials/figure';
 @import 'partials/input';
+@import 'partials/toggle';
 @import 'partials/intro';
 @import 'partials/logo';
 @import 'partials/post-link';
@@ -35,8 +36,10 @@
 @import 'partials/layout/spacing';
 @import 'partials/layout/grid';
 @import 'partials/layout/sidebar';
+@import 'partials/layout/tools';
 @import 'partials/layout/listing';
 @import 'partials/layout/post';
 @import 'partials/layout/comments';
 @import 'partials/footer';
+@import 'theme/dark';
 @import 'nope/shame';
