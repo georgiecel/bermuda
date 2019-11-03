@@ -12,6 +12,14 @@
     padding-right: 1.5rem;
 }
 
+.l-listing-wrapper--homepage {
+    max-width: 68rem;
+
+    @media screen and (min-width: 130rem) {
+        max-width: 88rem;
+    }
+}
+
 .l-listing__intro {
     margin: 0 auto;
     max-width: 48rem;
