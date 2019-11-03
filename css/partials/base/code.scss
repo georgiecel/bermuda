@@ -32,13 +32,9 @@ pre {
     word-wrap: break-word;
 }
 
-/**
- * 1. Sets the font size of `code` to be the same as that set in `pre` if contained within a `pre`.
- */
-
 pre > code {
     background: none;
     color: $code-block-color;
-    font-size: 1em; // [1]
+    font-size: 110%;
     padding: 0;
 }

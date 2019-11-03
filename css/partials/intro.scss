@@ -11,6 +11,10 @@
     line-height: 1.6;
     margin: 2rem auto 4rem;
     max-width: 48rem;
+
+    @media screen and (min-width: 130rem) {
+    	max-width: 56rem;
+    }
 }
 
 .c-intro a {

@@ -6,8 +6,8 @@
 
 :root {
     // style
-    --toggle-width: 3.5rem;
-    --toggle-height: 2rem;
+    --toggle-width: 3.25rem;
+    --toggle-height: 1.75rem;
     --toggle-padding: 0.2rem;
 
     // animation
@@ -15,8 +15,7 @@
 }
 
 .c-toggle-wrapper {
-    border-left: 3px solid $border;
-    padding: 0.25rem 1.25rem;
+    padding: 1rem 1rem 0 0;
 }
 
 .c-toggle {
@@ -52,29 +51,33 @@
     &:checked + .c-toggle__label + .c-toggle__marker {
         left: calc(100% - var(--toggle-height) + var(--toggle-padding));
     }
+    &:checked + .c-toggle__label + .c-toggle__marker::after {
+        content: '🌒';
+    }
 
     &:focus + .c-toggle__label,
     &:active + .c-toggle__label {
-        box-shadow: 0 0 0 3px var(--color-shadow);
+        background-color: peachpuff;
+        // box-shadow: 0 0 0 3px var(--color-shadow);
     }
 }
 
 .c-toggle__label {
-    background-color: $text-light;
+    background-color: $primary-translucent-dark;
     border-radius: inherit;
     color: transparent;
     height: 100%;
     transition: background var(--toggle-animation-duration);
     user-select: none;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .c-toggle__marker {
-    background-color: $bg;
-    border-radius: 50%;
-    box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.25);
+    align-items: center;
+    display: flex;
     height: calc(var(--toggle-height) - var(--toggle-padding) * 2);
+    justify-content: center;
     left: var(--toggle-padding);
     pointer-events: none;
     position: relative;
@@ -82,4 +85,8 @@
     width: calc(var(--toggle-height) - var(--toggle-padding) * 2);
     will-change: left;
     z-index: 2;
+}
+
+.c-toggle__marker::after {
+    content: '🌞';
 }

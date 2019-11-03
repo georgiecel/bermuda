@@ -6,13 +6,21 @@
 
 html {
     background-color: $bg;
-    @include font(1rem);
+    color: $text;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
     line-height: 1.8;
 }
 
 body {
     @media screen and (min-width: 65rem) {
         font-size: 1.15rem;
+    }
+
+    @media screen and (min-width: 130rem) {
+        font-size: 1.25rem;
+        line-height: 2;
     }
 }
 
@@ -54,19 +62,26 @@ strong {
 }
 
 h1 {
-    @include h1(1.65rem);
+    font-family: Poppins, sans-serif;
+    font-size: 240%;
+    line-height: 1.5;
 }
 
 h2 {
-    @include h2(1.5rem);
+    font-family: Poppins, sans-serif;
+    font-size: 175%;
+    line-height: 1.6;
 }
 
 h3 {
-    @include h3(1.35rem);
+    font-family: Poppins, sans-serif;
+    font-size: 140%;
+    margin-bottom: 0;
 }
 
 h4 {
-    @include h4(1.1rem);
+    font-family: Poppins, sans-serif;
+    font-size: 125%;
 
     & + p {
         margin-top: 0.25rem;
@@ -74,11 +89,14 @@ h4 {
 }
 
 h5 {
-    @include h5(1.2rem);
+    font-family: Poppins, sans-serif;
+    font-size: 110%;
 }
 
 h6 {
-    @include h6(1rem);
+    font-family: Poppins, sans-serif;
+    font-size: 100%;
+    margin-bottom: 0;
 }
 
 img {
@@ -102,7 +120,7 @@ hr {
 
 small {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: $font-size-small;
 }
 
 dt {

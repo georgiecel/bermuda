@@ -19,6 +19,7 @@
     background-color: $input-bg;
     border: 2px solid $primary-translucent-dark;
     border-radius: 0.25rem;
+    flex-shrink: 0;
     height: 1.5rem;
     margin-right: 1rem;
     position: relative;

@@ -5,8 +5,11 @@
  */
 
 .l-sidebar {
-    @media screen and (min-width: 65rem) {
+    @media screen and (min-width: 75rem) {
+        align-items: center;
+        display: flex;
         left: 0;
         position: absolute;
+        top: 0;
     }
 }

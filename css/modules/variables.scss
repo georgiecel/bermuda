@@ -38,6 +38,11 @@ $link-ternary-hover: #dc0d47; // pink
 $link-bg: $primary-translucent;
 $link-hover-bg: $primary-translucent-dark;
 
+// Search background
+
+$search-takeover-light: $bg-translucent;
+$search-takeover-dark: rgba(0, 0, 0, 0.95);
+
 // Borders
 
 $border-line: $secondary;
@@ -73,6 +78,7 @@ $comment-border-color: $secondary;
 
 // Font sizes
 
-$font-size-small: 0.85rem;
-$font-size-large: 2rem;
-$font-size-x-large: 3rem;
+$font-size-small: 90%;
+$font-size-medium: 150%;
+$font-size-large: 200%;
+$font-size-x-large: 300%;

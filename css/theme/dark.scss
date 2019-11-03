@@ -2,7 +2,7 @@
  * Aw yeah dark mode!
  */
 
-$bg: $text;
+$bg: #081a2b;
 $bg-translucent: rgba(0, 0, 0, 0.75);
 $text: #fefefe;
 $text-light: #ccc;
@@ -46,11 +46,12 @@ $link-ternary-hover: #f66e94;
         color: $code-block-color;
     }
 
-    .c-toggle-wrapper {
-        border-left-color: $secondary-translucent;
+    .c-search-form-wrapper {
+        background-color: $search-takeover-dark;
     }
 
-    .c-navigation a:hover {
+    .c-navigation a:hover,
+    .c-search__trigger:hover {
         color: $link-ternary-hover;
     }
 
@@ -61,6 +62,10 @@ $link-ternary-hover: #f66e94;
     .c-box-info {
         background-color: $bg-translucent;
         color: $text;
+    }
+
+    .c-comment-form-container {
+        background-color: transparent;
     }
 
     .post__meta a,
@@ -80,7 +85,6 @@ $link-ternary-hover: #f66e94;
         background-color: $secondary-translucent;
     }
 
-    .c-logo-wrapper,
     .comment .comment {
         background-color: transparent;
     }

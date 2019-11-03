@@ -20,16 +20,11 @@
 }
 
 .l-post-wrapper {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-
-    @media screen and (min-width: 30rem) {
-        padding-left: 8vw;
-        padding-right: 8vw;
-        padding-top: 2vw;
-    }
+    padding-left: 6vw;
+    padding-right: 6vw;
 
     @media screen and (min-width: 55rem) {
+        margin: 0 auto;
         max-width: 48rem;
         padding: 0;
 

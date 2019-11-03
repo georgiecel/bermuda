@@ -8,25 +8,30 @@
         </div>
         <script type="text/javascript">
             const form = document.getElementById('search-form');
-            const searchButton = document.querySelector('.c-search__trigger');
-            const formInput = document.querySelector('.c-search__form-input');
+            const searchTrigger = document.querySelector('.c-search__trigger');
+            const searchInput = document.querySelector('.c-search__form-input');
+            const searchButton = document.querySelector('.c-search__form-submit');
 
-            function showSearchForm(e) {
+            showSearchForm = e => {
                 form.classList.add('is-visible');
-                formInput.focus();
+                searchInput.focus();
+                searchInput.tabIndex = 0;
+                searchButton.tabIndex = 0;
             }
 
-            searchButton.addEventListener('click', showSearchForm, false);
+            searchTrigger.addEventListener('click', showSearchForm, false);
 
-            function closeAll(e) {
-                if(!e.target.classList.contains('js-exclude-close')) {
+            closeAll = e => {
+                if (!e.target.classList.contains('js-exclude-close')) {
                     form.classList.remove('is-visible');
-                    formInput.blur();
+                    searchInput.blur();
+                    searchButton.tabIndex = -1;
                 }
             }
 
-            window.addEventListener('touchstart', closeAll, false);
-            window.addEventListener('click', closeAll, false);
+            window.addEventListener('touchstart', closeAll, false);
+            window.addEventListener('click', closeAll, false);
+            window.addEventListener('focusin', closeAll, false);
 
             const toggleTheme = document.getElementById('theme-switch');
             const currentTheme = localStorage.getItem('theme');
@@ -39,7 +44,7 @@
                 }
             }
 
-            function switchTheme(e) {
+            switchTheme = e => {
                 if (e.target.checked) {
                     document.getElementById('html').classList.add('dark');
                     localStorage.setItem('theme', 'dark');

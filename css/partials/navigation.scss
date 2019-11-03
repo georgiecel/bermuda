@@ -2,65 +2,47 @@
  * Navigation:
  * 
  * Main navigation for the website.
- * 
- * 1. Sets stacking context.
- * 2. Sits the navigation on top of the logo.
+ *
  */
 
 .c-navigation {
     font-family: Poppins;
     list-style: none;
-    margin: 1.5rem 0 0 4.25rem;
-    padding: 0;
-    position: relative; // [1]
-    z-index: 2; // [2]
+    margin: 0;
+    padding: 1rem 0 0 2vw;
 
-    @media screen and (min-width: 30rem) {
-        margin-bottom: 1vw;
-        margin-top: 2.25rem;
+    @media screen and (min-width: 45rem) {
+        align-items: center;
+        display: flex;
     }
 
-    @media screen and (min-width: 65rem) {
-        margin-left: 2.25rem;
-        margin-top: 6.5rem;
+    @media screen and (min-width: 75rem) {
+        display: block;
+        padding-top: 2rem;
     }
 }
 
 .c-navigation li {
-    @media screen and (min-width: 30rem) {
-        display: inline-block;
+    @media screen and (min-width: 45rem) {
+        flex-shrink: 0;
     }
 
-    @media screen and (min-width: 65rem) {
+    @media screen and (min-width: 75rem) {
         display: block;
         padding-bottom: 0.25rem;
     }
 }
 
 .c-navigation a {
-    display: inline-block;
     font-weight: 700;
     padding: 0.25rem 1rem;
     position: relative;
 
-    @media screen and (min-width: 65rem) {
-        display: inline;
+    @media screen and (min-width: 75rem) {
         padding: 0;
     }
 }
 
 .c-navigation a:hover {
     color: $link-ternary-hover;
-}
-
-.c-navigation a:hover::before {
-    @media screen and (min-width: 65rem) {
-        bottom: 0;
-        content: '•';
-        font-size: 1.5rem;
-        line-height: 1;
-        margin-left: -1rem;
-        position: absolute;
-        top: 0;
-    }
 }

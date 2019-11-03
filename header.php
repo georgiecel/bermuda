@@ -30,39 +30,39 @@
     </head>
     <body id="site-top">
         <a class="c-skip-link" href="#main-content">Skip to content</a>
-        <div class="c-logo-wrapper">
-            <a href="<?php echo site_url(); ?>">
-                <span class="u-visually-hidden">Go to homepage</span>
-                <img
-                    class="c-logo"
-                    src="<?php bloginfo('template_url'); ?>/images/site-logo.svg"
-                    alt="Logo for <?php bloginfo('name'); ?>"
-                >
-            </a>
+        <div class="l-sidebar">
+            <nav>
+                <ul aria-label="Navigation for this blog" class="c-navigation">
+                    <li>
+                        <a href="<?php echo site_url(); ?>" class="c-logo-wrapper">
+                            <span class="u-visually-hidden">Go to homepage</span>
+                            <img
+                                class="c-logo"
+                                src="<?php bloginfo('template_url'); ?>/images/site-logo.svg"
+                                alt="Logo for <?php bloginfo('name'); ?>"
+                            >
+                        </a>
+                    </li>
+                    <?php wp_nav_menu( array(
+                        'menu' => 'main-navigation',
+                        'container' => '',
+                        'items_wrap' => '%3$s',
+                        'walker' => new menu_walker
+                    ) ); ?>
+                    <li><?php get_search_form(); ?></li>
+                </ul>
+            </nav>
         </div>
         <div class="l-tools">
-            <?php get_search_form(); ?>
             <div class="c-toggle-wrapper">
                 <div class="c-toggle">
                     <input class="c-toggle__input" type="checkbox" id="theme-switch">
-                    <label aria-hidden="true" class="c-toggle__label" for="theme-switch">On</label>
+                    <label aria-hidden="true" class="c-toggle__label" for="theme-switch">Dark mode on</label>
                     <div aria-hidden="true" class="c-toggle__marker"></div>
                 </div>
             </div>
         </div>
         <div class="l-main-grid">
-            <div class="l-sidebar">
-                <nav>
-                    <ul aria-label="The main sub-pages of this blog" class="c-navigation">
-                        <?php wp_nav_menu( array(
-                            'menu' => 'main-navigation',
-                            'container' => '',
-                            'items_wrap' => '%3$s',
-                            'walker' => new menu_walker
-                        ) ); ?>
-                    </ul>
-                </nav>
-            </div>
             <div
                 <?php if (is_home()) : ?>
                 class="l-listing-wrapper l-listing-wrapper--homepage"

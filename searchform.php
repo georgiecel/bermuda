@@ -17,8 +17,13 @@
                 placeholder="Type a few words to search"
                 name="s"
                 id="s"
+                tabindex="-1"
             >
-            <button type="submit" class="btn c-search__form-submit">Search</button>
+            <button
+                tabindex="-1"
+                type="submit"
+                class="btn c-search__form-submit js-exclude-close"
+            >Search</button>
         </form>
     </div>
 </div>

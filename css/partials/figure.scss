@@ -8,7 +8,7 @@
  */
 
 .post__content > .figure {
-    margin: 2rem -1.5rem;
+    margin: 2rem -6vw;
 
     @media screen and (min-width: 60rem) {
         align-items: flex-end;
@@ -46,7 +46,7 @@
     color: $text-light;
     font-family: Poppins;
     font-size: $font-size-small;
-    line-height: 1.5;
+    line-height: 1.6;
     padding: 0 1.5rem;
     padding-top: 0.75rem;
     text-align: center;

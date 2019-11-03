@@ -22,12 +22,10 @@
 }
 
 .post__title {
-    font-size: 1.75rem;
-    line-height: 1.5;
+    font-size: 240%;
     margin-top: 1.5rem;
 
     @media screen and (min-width: 55rem) {
-        font-size: 2.5rem;
         grid-column-start: 2;
         margin-top: 3rem;
     }
