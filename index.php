@@ -10,7 +10,11 @@
     $postCount = 0;
     while ( have_posts() ) :
     the_post();
-    $image = get_first_image();
+    if ( has_post_thumbnail() ) :
+        $image = get_the_post_thumbnail_url( $post, 'full' );
+    else :
+        $image = get_first_image();
+    endif;
     $postCount++;
 ?>
     <a
