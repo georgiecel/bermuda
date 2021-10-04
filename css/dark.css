@@ -1,0 +1,134 @@
+.dark {
+    --bg: #081a2b;
+    --bg-translucent: rgba(0, 0, 0, 0.75);
+    --text: #fefefe;
+    --text-light: #ccc;
+
+    --secondary-translucent: rgba(255, 255, 255, 0.1);
+
+    --code-block-color: var(--text);
+
+    --link: #5bccf1;
+    --link-hover: #86e1ff;
+    --link-bg: rgba(105, 163, 203, 0.1);
+    --link-hover-bg: rgba(125, 178, 215, 0.25);
+
+    --link-secondary: #c5a9e4;
+    --link-secondary-hover: #a77bd6;
+
+    --link-ternary-hover: #f66e94;
+}
+
+.dark {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.dark a {
+    color: var(--link);
+}
+
+.dark a:hover {
+    color: var(--link-hover);
+}
+
+.dark blockquote {
+    color: var(--secondary);
+}
+
+.dark blockquote::after {
+    background-color: var(--secondary-translucent);
+}
+
+.dark pre,
+.dark pre > code {
+    color: var(--code-block-color);
+}
+
+.dark .c-search-form-wrapper {
+    background-color: var(--search-takeover-dark);
+}
+
+.dark .c-navigation a:hover,
+.dark .c-search__trigger:hover {
+    color: var(--link-ternary-hover);
+}
+
+.dark .c-box {
+    overflow: hidden;
+}
+
+.dark .c-box-info {
+    background-color: var(--bg-translucent);
+    color: var(--text);
+}
+
+.dark .c-comment-form-container {
+    background-color: transparent;
+}
+
+.dark .post__meta a,
+.dark .comment a {
+    color: var(--link-secondary);
+}
+
+.dark .comment a:hover,
+.dark .post__meta a:hover {
+    color: var(--link-secondary-hover);
+}
+
+.dark .c-input,
+.dark .c-textarea,
+.dark .c-search__form-input {
+    background-color: var(--secondary-translucent);
+}
+
+.dark .comment {
+    background-color: transparent;
+}
+
+.dark .comment .comment {
+    background-color: transparent;
+}
+
+.dark .comment--author .coment__author::after {
+    color: var(--link-ternary-hover);
+}
+
+.dark img,
+.dark .figure__caption,
+.dark .c-input-label,
+.dark .comment__meta-item,
+.dark .post__meta {
+    color: var(--text-light);
+}
+
+.dark .c-intro a::before,
+.dark .post__content a::before,
+.dark .c-footer a::before {
+    background-color: var(--link-bg);
+}
+
+.dark .c-intro a:hover::before,
+.dark .post__content a:hover::before,
+.dark .c-footer a:hover::before {
+    background-color: var(--link-hover-bg);
+}
+
+.dark .c-input,
+.dark .c-textarea,
+.dark .c-search__form-input {
+    color: var(--text);
+}
+
+.dark .c-input:focus,
+.dark .c-textarea:focus,
+.dark .c-search__form-input:focus {
+    background-color: var(--link-hover-bg);
+    color: var(--text);
+}
+
+.dark .c-pagination--post .c-pagination-item:hover {
+    background-color: var(--secondary-translucent);
+    color: var(--link-ternary-hover);
+}

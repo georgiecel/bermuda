@@ -1,0 +1,1018 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Lexend:wght@400;600&display=swap');
+@import 'normalise.css';
+@import 'post.css';
+@import 'comments.css';
+@import 'box.css';
+@import 'figure.css';
+@import 'forms.css';
+@import 'search-form.css';
+@import 'shame.css';
+
+/*!
+ * Theme Name: Honolulu
+ * Theme URI: https://hey.georgie.nu/
+ * Description: Design for personal blog Hey Georgie.
+ * Version: 1.0
+ * Author: Georgie Cooke (née Luhur)
+ * Author URI: https://hey.georgie.nu/
+ * Copyright Georgie Cooke 2014–2021, not to be redistributed. Please respect my work and do not copy parts of my layout directly.
+ *
+ */
+
+:root {
+    --bg: #fefefe;
+    --bg-dark: #f9f9f9;
+    --bg-translucent: rgba(255, 255, 255, 0.75);
+
+    --primary: #0e7ea2;
+    --primary-medium: #108c98;
+    --primary-dark: #006586;
+    --primary-translucent: rgba(80, 200, 196, 0.05);
+    --primary-translucent-dark: rgba(124, 215, 215, 0.4);
+
+    --secondary: peachpuff;
+    --secondary-translucent: rgba(255, 186, 167, 0.1);
+    --secondary-light: #ffe8e2;
+
+    --text: #343434;
+    --text-dark: #000;
+    --text-light: #585858;
+    --text-alt: #fff;
+    --text-highlight: var(--secondary);
+
+    --link: var(--primary);
+    --link-hover: var(--primary-dark);
+
+    --link-secondary: #6b34a7;
+    --link-secondary-hover: #751be0;
+
+    --link-ternary-hover: #dc0d47;
+
+    --link-bg: var(--primary-translucent);
+    --link-hover-bg: var(--primary-translucent-dark);
+
+    --search-takeover-light: var(--bg-translucent);
+    --dark-search-takeover: rgba(0, 0, 0, 0.95);
+
+    --input-text: var(--primary-medium);
+    --input-bg: var(--bg-translucent);
+
+    --code-block-border: #68d4d1;
+    --code-block-background: rgba(67, 204, 201, 0.2);
+    --code-block-color: #4a4a4a;
+
+    --blockquote-quote: #ffbaa7;
+    --blockquote-border: var(--secondary-light);
+    --blockquote-text: #a75534;
+    --blockquote-bg: var(--secondary-translucent);
+
+    --border-line: var(--secondary);
+    --border: #dedede;
+
+    --comment-background-color: #fffaf8;
+    --comment-border-color: var(--secondary);
+
+    --toggle-width: 3.25rem;
+    --toggle-height: 1.75rem;
+    --toggle-padding: 0.2rem;
+
+    --toggle-animation-duration: 0.2s;
+}
+
+html {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Assistant, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+body {
+    font-size: 110%;
+}
+
+@media screen and (min-width: 50rem) {
+    body {
+        font-size: 125%;
+    }
+}
+
+@media screen and (min-width: 130rem) {
+    body {
+        font-size: 145%;
+    }
+}
+
+a {
+    color: var(--link);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/**
+ * 1. Aligns a list item bullet with the top of a link if it spans multiple lines.
+ */
+
+li > a {
+    vertical-align: top;
+}
+
+/**
+ * 1. Override navigation-specific and post-specific link styles.
+ */
+
+a:focus {
+    background-color: var(--text-highlight);
+    color: var(--text-dark) !important;
+    outline: none;
+}
+
+a:hover:focus::before {
+    content: none;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+h1 {
+    font-family: Lexend, sans-serif;
+    font-size: 190%;
+    line-height: 1.4;
+}
+
+h2 {
+    font-family: Lexend, sans-serif;
+    font-size: 175%;
+    line-height: 1.4;
+}
+
+h3 {
+    font-family: Lexend, sans-serif;
+    font-size: 140%;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+h2 + h3 {
+    margin-top: 0;
+}
+
+h4 {
+    font-family: Lexend, sans-serif;
+    font-size: 125%;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+h4 + p {
+    margin-top: 0;
+}
+
+h5 {
+    font-family: Lexend, sans-serif;
+    font-size: 110%;
+}
+
+h6 {
+    font-family: Lexend, sans-serif;
+    font-size: 100%;
+    margin-bottom: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid var(--border-line);
+    height: 1px;
+    margin: 2rem auto;
+    max-width: 5rem;
+    width: 100%;
+}
+
+small {
+    display: inline-block;
+    font-size: 90%;
+}
+
+dt {
+    font-weight: 500;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/**
+ * Broken images:
+ *
+ * Adjust styling for broken images.
+ */
+
+img {
+    color: var(--text-light);
+    position: relative;
+}
+
+img::before {
+    content: 'Broken image of: ';
+}
+
+img::after {
+    background-color: var(--bg-dark);
+    border: 1px dashed var(--border-line);
+    border-radius: 0.25rem;
+    content: '';
+    height: 100%;
+    left: -0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: -0.5rem;
+    width: 100%;
+    z-index: -1;
+}
+
+/**
+ * Utilities
+ */
+
+.u-visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.u-visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/**
+ * Blockquotes:
+ *
+ * Styling for the `blockquote` element.
+ */
+
+blockquote {
+    border-radius: 0.25rem;
+    color: var(--blockquote-text);
+    margin: 2rem 0;
+    padding: 2rem 0 2rem 4rem;
+    position: relative;
+    quotes: '\201C' '\201D' '\2018' '\2019';
+}
+
+/**
+ * Allowing the first paragraph in the blockquote to sit next to the quotation mark.
+ */
+
+blockquote p:first-child {
+    display: inline;
+}
+
+/**
+ * Removing the bottom margin on the last child in the blockquote.
+ */
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote::before {
+    color: var(--blockquote-quote);
+    content: open-quote;
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 8rem;
+    line-height: 0;
+    margin-left: -4rem;
+    margin-top: 3rem;
+    position: absolute;
+}
+
+blockquote::after {
+    background-color: var(--blockquote-bg);
+    border-radius: 0.25rem;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    right: -1.25rem;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+@media screen and (min-width: 75rem) {
+    .post__content blockquote {
+        border: 3px solid var(--blockquote-border);
+        left: -2rem;
+        margin: 4rem 0;
+        padding: 1.5rem 1.5rem 2.5rem 5rem;
+    }
+
+    .post__content blockquote::before {
+        font-size: 11rem;
+        margin-left: 0;
+        margin-top: 1.5rem;
+        position: static;
+    }
+
+    .post__content blockquote::after {
+        top: -1rem;
+    }
+}
+
+@media screen and (min-width: 130rem) {
+    .post__content blockquote {
+        border-width: 5px;
+        padding: 2.5rem 2.5rem 3.5rem 6rem;
+    }
+}
+
+code {
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    color: var(--text-alt);
+    font-family: Hack, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: normal;
+    padding: 0.25rem 0.5rem;
+}
+
+pre {
+    background-color: var(--code-block-background);
+    border: 2px solid var(--code-block-border);
+    border-left-width: 1rem;
+    border-radius: 0.5rem;
+    color: var(--code-block-color);
+    font-family: Hack, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.9rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+pre > code {
+    background: none;
+    color: var(--code-block-color);
+    font-size: 110%;
+    padding: 0;
+}
+
+mark {
+    background: var(--text-highlight);
+    padding: 0.25rem;
+}
+
+mark > code {
+    margin-left: -0.25rem;
+}
+
+/**
+ * Stops the containing grid element from expanding beyond its desired max-width.
+ */
+
+code > mark {
+    word-break: break-all;
+}
+
+/**
+ * Grid layout:
+ *
+ * Main grid layouts and wrappers.
+ */
+
+.l-post-wrapper {
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+@media screen and (min-width: 55rem) {
+    .l-post-wrapper {
+        margin: 0 auto;
+        max-width: 48rem;
+        padding: 0;
+    }
+}
+
+@supports (display: grid) {
+    @media screen and (min-width: 55rem) {
+        .l-post-wrapper {
+            display: grid;
+            grid-column: 2 / span 1;
+            grid-gap: 1.5rem;
+            grid-template-columns: minmax(10rem, 1fr) 4fr minmax(10rem, 1fr);
+            max-width: 64rem;
+        }
+    }
+
+    @media screen and (min-width: 100rem) {
+        .l-post-wrapper {
+            max-width: 90rem;
+        }
+    }
+}
+
+@media screen and (min-width: 65rem) {
+    @supports (display: grid) {
+        .l-main-grid {
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-columns: 1fr auto 1fr;
+        }
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .l-main-grid {
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+}
+
+/**
+ * Layout for listings:
+ *
+ * Grid layouts for listing pages, e.g. category and tag views.
+ */
+
+.l-listing-wrapper {
+    grid-column: 1 / -1;
+    margin: 2vw auto 0;
+    max-width: 100rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.l-listing-wrapper--homepage {
+    max-width: 68rem;
+}
+
+@media screen and (min-width: 130rem) {
+    .l-listing-wrapper--homepage {
+        max-width: 88rem;
+    }
+}
+
+.l-listing__intro {
+    margin: 0 auto;
+    max-width: 48rem;
+}
+
+.l-listing__heading {
+    font-size: 300%;
+    text-align: center;
+}
+
+/**
+ * Sidebar:
+ *
+ * Positioning for the sidebar with the navigation.
+ */
+
+@media screen and (min-width: 90rem) {
+    .l-sidebar {
+        align-items: center;
+        display: flex;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+}
+
+/**
+ * Tools:
+ *
+ * Toolbox with search and dark mode switcher.
+ */
+
+.l-tools {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/**
+ * Spacing:
+ *
+ * Inner and outer spacing for elements.
+ */
+
+.l-spacing-inner--large > * {
+    padding: 2.5rem;
+}
+
+.l-spacing-outer > * {
+    margin-top: 3rem;
+}
+
+.c-logo-wrapper {
+    display: flex;
+    transition: opacity 0.25s;
+}
+
+.c-navigation .c-logo-wrapper {
+    display: inline-flex;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+
+.c-logo-wrapper:hover {
+    opacity: 0.85;
+}
+
+.c-logo {
+    height: 1.5rem;
+    width: auto;
+}
+
+@media screen and (min-width: 65rem) {
+    .c-logo {
+        height: 2rem;
+    }
+}
+
+.c-skip-link {
+    align-items: center;
+    clip: rect(1px, 1px, 1px, 1px);
+    color: var(--text);
+    display: flex;
+    font-weight: 600;
+    height: 4rem;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+}
+
+.c-skip-link:focus {
+    background-color: var(--text-highlight);
+    position: relative;
+}
+
+.c-skip-link:focus + .c-logo-wrapper {
+    margin-top: 4rem;
+}
+
+.c-navigation {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Lexend;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 6vw;
+}
+
+.c-navigation li {
+    flex-shrink: 0;
+}
+
+.c-navigation li:first-child {
+    width: 100%;
+}
+
+.c-navigation li:not(:first-child) + li {
+    margin-left: 0.15rem;
+}
+
+.c-navigation li:last-child {
+    margin-left: -0.15rem;
+}
+
+.c-navigation a {
+    font-weight: 600;
+    padding: 0.25rem;
+    transition: box-shadow 0.1s ease;
+}
+
+.c-navigation a:hover {
+    color: var(--primary-dark);
+    box-shadow: inset 0 -15px 0 0 var(--link-hover-bg);
+}
+
+@media screen and (min-width: 40rem) {
+    .c-navigation {
+        padding-top: 1rem;
+    }
+
+    .c-navigation .c-logo-wrapper {
+        padding-bottom: 1rem;
+    }
+
+    .c-navigation li:first-child {
+        width: auto;
+    }
+
+    .c-navigation li:not(:first-child) + li,
+    .c-navigation li + li {
+        margin-left: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .c-navigation {
+        display: block;
+        padding: 2rem 0 0 2rem;
+    }
+
+    .c-navigation li {
+        display: block;
+        padding-bottom: 0.25rem;
+    }
+
+    .c-navigation li:not(:first-child) + li,
+    .c-navigation li + li {
+        margin-left: 0;
+    }
+
+    .c-navigation a {
+        padding: 0;
+    }
+}
+
+.c-intro {
+    font-family: Lexend, sans-serif;
+    font-size: 130%;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 2rem auto 3rem;
+    max-width: 48rem;
+}
+
+@media screen and (min-width: 120rem) {
+    .c-intro {
+        font-size: 175%;
+        margin-bottom: 4rem;
+        max-width: 60rem;
+    }
+}
+
+.c-footer {
+    text-align: center;
+}
+
+.c-footer p {
+    font-size: 90%;
+    margin: 0;
+}
+
+.post__content a,
+.c-footer a,
+.c-intro a {
+    display: inline-block;
+    margin-left: 0.05rem;
+    margin-right: 0.05rem;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.post__content a::after,
+.c-footer a::after,
+.c-intro a::after {
+    content: '';
+    opacity: 0;
+}
+
+.post__content a::before,
+.c-footer a::before,
+.c-intro a::before {
+    background-color: var(--link-bg);
+    border-radius: 0.25rem;
+    content: '';
+    height: 50%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(-0.2em, 0.8em);
+    transition: transform 0.3s;
+    width: 100%;
+    z-index: -1;
+}
+
+.post__content a:hover,
+.c-footer a:hover,
+.c-intro a:hover {
+    transform: translate(-0.05em, 0.05em);
+}
+
+.post__content a:hover::after,
+.c-footer a:hover::after,
+.c-intro a:hover::after {
+    opacity: 1;
+}
+
+.post__content a:hover::before,
+.c-footer a:hover::before,
+.c-intro a:hover::before {
+    background-color: var(--link-hover-bg);
+    transform: translate(0.05em, 0.4em) scale(1.05);
+}
+
+.c-pagination {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.c-pagination-item {
+    border: 3px solid var(--primary-translucent-dark);
+    border-radius: 0.25rem;
+    color: var(--primary);
+    font: normal 1.5rem Lexend;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.c-pagination-item::after {
+    background-color: var(--primary-translucent);
+    border-radius: 0.25rem;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: -0.5rem;
+    top: 0;
+    transform: translate(-0.2em, 0.8em);
+    transition: transform 0.3s;
+    width: 100%;
+}
+
+.c-pagination-item:focus {
+    background-color: initial;
+}
+
+.c-pagination-item:hover {
+    transform: translate(-0.1em, 0.1em);
+}
+
+.c-pagination-item:hover::after {
+    transform: translate(0.75em, -0.5em);
+}
+
+/**
+ * Add a bottom margin for smaller viewports.
+ */
+
+.c-pagination-item:first-child {
+    margin-bottom: 3rem;
+}
+
+@supports (display: grid) {
+    .c-pagination {
+        display: grid;
+        grid-column: 1 / span 3;
+        grid-row-gap: 3rem;
+    }
+
+    .c-pagination-item:first-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 55rem) {
+    .c-pagination {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /**
+     * Let each item take up half the space when using the flexbox fallback.
+     */
+
+    .c-pagination-item {
+        width: calc(50% - 0.75rem);
+    }
+
+    /**
+     * Remove styles associated with the flexbox fallback.
+     */
+
+    .c-pagination-item:first-child {
+        margin-bottom: 0;
+    }
+
+    @supports (display: grid) {
+        .c-pagination {
+            grid-gap: 1.5rem;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .c-pagination-item {
+            width: auto;
+        }
+    }
+}
+
+/**
+ * Pagination on an individual post.
+ * Remove styles from default pagination item.
+ */
+
+.c-pagination--post .c-pagination-item {
+    border: 0;
+    font: inherit;
+    transform: none;
+}
+
+.c-pagination--post .c-pagination-item:hover {
+    background-color: var(--secondary-translucent);
+    color: var(--link-ternary-hover);
+}
+
+.c-pagination--post .c-pagination-item:hover:focus {
+    background-color: var(--secondary-light);
+}
+
+.c-pagination--post .c-pagination-item::after {
+    content: none;
+}
+
+/**
+ * Pagination label and title.
+ */
+
+.c-pagination-item__label {
+    display: block;
+}
+
+.c-pagination-item__title {
+    font: bold 1.5rem Lexend;
+}
+
+.dark {
+    --dark-bg: #081a2b;
+    --dark-bg-translucent: rgba(0, 0, 0, 0.75);
+    --dark-text: #fefefe;
+    --dark-text-light: #ccc;
+
+    --dark-secondary-translucent: rgba(255, 255, 255, 0.1);
+
+    --dark-code-block-color: var(--text);
+
+    --dark-link: #5bccf1;
+    --dark-link-hover: #86e1ff;
+    --dark-link-bg: rgba(105, 163, 203, 0.1);
+    --dark-link-hover-bg: rgba(125, 178, 215, 0.25);
+
+    --dark-link-secondary: #c5a9e4;
+    --dark-link-secondary-hover: #a77bd6;
+
+    --dark-link-ternary-hover: #f66e94;
+}
+
+.dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark a {
+    color: var(--dark-link);
+}
+
+.dark a:hover {
+    color: var(--dark-link-hover);
+}
+
+.dark blockquote {
+    color: var(--dark-secondary);
+}
+
+.dark blockquote::after {
+    background-color: var(--dark-secondary-translucent);
+}
+
+.dark pre,
+.dark pre > code {
+    color: var(--dark-code-block-color);
+}
+
+.dark .c-search-form-wrapper {
+    background-color: var(--dark-search-takeover);
+}
+
+.dark .c-navigation a:hover,
+.dark .c-search__trigger:hover {
+    color: var(--dark-link-hover);
+    box-shadow: inset 0 -15px 0 0 var(--dark-link-hover-bg);
+}
+
+.dark .c-box {
+    overflow: hidden;
+}
+
+.dark .c-box-info {
+    background-color: var(--dark-bg-translucent);
+    color: var(--dark-text);
+}
+
+.dark .c-comment-form-container {
+    background-color: transparent;
+}
+
+.dark .comment a {
+    color: var(--dark-link-secondary);
+}
+
+.dark .comment a:hover,
+.dark .post__meta a:hover {
+    color: var(--dark-link-secondary-hover);
+}
+
+.dark .c-input,
+.dark .c-textarea,
+.dark .c-search__form-input {
+    background-color: var(--dark-secondary-translucent);
+}
+
+.dark .comment {
+    background-color: transparent;
+}
+
+.dark .comment .comment {
+    background-color: transparent;
+}
+
+.dark .comment--author .coment__author::after {
+    color: var(--dark-link-ternary-hover);
+}
+
+.dark img,
+.dark .figure__caption,
+.dark .c-input-label,
+.dark .comment__meta-item,
+.dark .post__meta {
+    color: var(--dark-text-light);
+}
+
+.dark .c-intro a::before,
+.dark .post__content a::before,
+.dark .c-footer a::before {
+    background-color: var(--dark-link-bg);
+}
+
+.dark .c-intro a:hover::before,
+.dark .post__content a:hover::before,
+.dark .c-footer a:hover::before {
+    background-color: var(--dark-link-hover-bg);
+}
+
+.dark .c-input,
+.dark .c-textarea,
+.dark .c-search__form-input {
+    color: var(--dark-text);
+}
+
+.dark .c-input:focus,
+.dark .c-textarea:focus,
+.dark .c-search__form-input:focus {
+    background-color: var(--dark-link-hover-bg);
+    color: var(--dark-text);
+}
+
+.dark .c-pagination--post .c-pagination-item:hover {
+    background-color: var(--dark-secondary-translucent);
+    color: var(--dark-link-ternary-hover);
+}

@@ -1,0 +1,38 @@
+/**
+ * Overrides and shameful dirty stuff eeep.
+ */
+
+.aligncenter {
+    display: block;
+    margin: 1.5rem auto;
+}
+
+/**
+ * Manual footnotes.
+ */
+
+.footnotes {
+    border-top: 1px dashed var(--border);
+    color: var(--text-light);
+    font-size: 90%;
+    margin-top: 1.5rem;
+    padding: 0.75rem 0;
+}
+
+/**
+ * InLinkz plugin.
+ */
+
+.InLinkzContainer a {
+    display: inline;
+    position: static;
+}
+
+/**
+ * Fix Firefox making tracking pixel huge.
+ */
+
+img[alt="cookie tracking pixel"] {
+    height: 1px;
+    width: 1px;
+}

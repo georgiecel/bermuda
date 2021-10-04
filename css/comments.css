@@ -1,0 +1,155 @@
+/**
+ * Comments:
+ *
+ * Styles associated with the comment form and comment display.
+ */
+
+.comments {
+    grid-column: 2;
+    padding-top: 2rem;
+}
+
+.c-comment-form-container {
+    background-color: var(--primary-translucent-dark);
+    border-radius: 0.25rem;
+    grid-column: 2;
+    grid-row: 3;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 1.5rem 1.5rem 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (min-width: 45rem) {
+    .c-comment-form-container {
+        background-color: transparent;
+        border: 3px solid var(--primary-translucent-dark);
+        margin: 0;
+        padding: 2rem 3.5rem 2rem 2rem;
+    }
+
+    .c-comment-form-container::after {
+        background-color: var(--primary-translucent);
+        border-radius: 0.25rem;
+        content: '';
+        display: inline-block;
+        height: 100%;
+        position: absolute;
+        left: -1.5rem;
+        top: 1rem;
+        width: 100%;
+        z-index: 0;
+    }
+}
+
+/**
+ * To render the comment form properly in comment threads.
+ */
+
+.c-comment-form {
+    position: relative;
+    z-index: 1;
+}
+
+/**
+ * Puts a space between elements when replying to a comment.
+ */
+
+.c-comment-form + .comment {
+    margin-top: 3rem;
+}
+
+.c-cancel-link {
+    background-color: transparent;
+    border: 0;
+    color: var(--link);
+    font-size: 90%;
+}
+
+.c-cancel-link:hover {
+    color: var(--link-hover);
+}
+
+.c-comment-form__item {
+    margin-bottom: 1rem;
+}
+
+.comments-list--child {
+    border-left: 0.5rem solid var(--comment-border-color);
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.comments-list--child > .comment {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.comments-list--child:last-child:not(:first-child) {
+    margin-bottom: 0;
+}
+
+/**
+ * Breaks URLs and other nonsense in users’ comments (which can be common).
+ */
+
+.comment {
+    margin-bottom: 2rem;
+    word-break: break-word;
+}
+
+@media screen and (min-width: 45rem) {
+    .comment {
+        background-color: var(--comment-background-color);
+        border: 3px solid var(--comment-border-color);
+        border-left-width: 1rem;
+        border-radius: 0.5rem;
+        padding: 3rem;
+    }
+}
+
+.comment + .c-comment-form-container {
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 45rem) {
+    .comment + .c-comment-form-container {
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+.comment a {
+    color: var(--link-secondary);
+    font-weight: 600;
+}
+
+.comment a:hover {
+    color: var(--link-secondary-hover);
+}
+
+.comment__author {
+    margin: 0;
+}
+
+.comment--author > .comment__author::after {
+    background-color: var(--link-ternary-hover);
+    border-radius: 0.25rem;
+    color: var(--text-alt);
+    content: 'Post author';
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    vertical-align: middle;
+}
+
+.comment__meta-item {
+    color: var(--text-light);
+    font-size: 90%;
+    margin-top: 0.5rem;
+}

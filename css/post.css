@@ -1,0 +1,93 @@
+/**
+ * Post:
+ *
+ * Styles associated with an individual post view.
+ * Includes summaries on homepage, search results, or category view.
+ *
+ * 1. Set the same template as in `l-post-wrapper`.
+ * 2. Only a small gap is required because of the existing margins on paragraphs.
+ * 3. The content starts in the third row as the post title and date are in the first and second.
+ */
+
+.post__title {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.post__meta {
+    font-size: 90%;
+}
+
+.l-listing-wrapper--homepage .post__meta {
+    text-align: left;
+}
+
+/**
+ * 1. Add a margin to the left when a `blockquote` is the first child, so it doesn’t run into the post meta.
+ */
+
+.post__content blockquote:first-child {
+    margin-left: 2rem;
+}
+
+/**
+ * End mark.
+ * Uses website logo and is placed at the end of the last paragraph in a post.
+ */
+
+.post__content > p:last-of-type::after {
+    background-image: url('images/site-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: '';
+    display: inline-block;
+    height: 1.28rem;
+    margin-left: 0.5rem;
+    margin-top: -0.25rem;
+    vertical-align: middle;
+    width: 1rem;
+}
+
+@media screen and (min-width: 55rem) {
+    .post {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post__title {
+        grid-column-start: 2;
+        margin-top: 3rem;
+    }
+
+    .post__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @supports (display: grid) {
+        .post {
+            display: grid;
+            grid-column: span 3;
+            grid-template-columns: minmax(10rem, 1fr) 4fr minmax(10rem, 1fr); /* [1] */
+            grid-gap: 1.5rem;
+        }
+
+        .post__meta {
+            grid-column-start: 2;
+            grid-row-start: 2;
+        }
+
+        .post__content > * {
+            grid-column: 2 / span 1;
+        }
+
+        .post__content {
+            display: grid;
+            grid-gap: 1.5rem;
+            grid-template-columns: minmax(10rem, 1fr) 4fr minmax(10rem, 1fr); /* [1] */
+            grid-column: 1 / -1;
+            grid-row-gap: 0.5rem; /* [2] */
+            grid-row-start: 3; /* [3] */
+        }
+    }
+}

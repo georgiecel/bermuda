@@ -1,0 +1,98 @@
+/**
+ * Box:
+ *
+ * A box/card component used as a preview to link to other content.
+ */
+
+@supports (display: grid) {
+    .c-box-listing {
+        display: grid;
+        grid-gap: 2rem;
+    }
+
+    @media screen and (min-width: 60rem) {
+        .c-box-listing {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        .c-box-listing--home {
+            grid-template-columns: 1fr 1fr;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+.c-box {
+    --box-background-color: rgba(80, 200, 196, 0.05);
+    align-items: flex-end;
+    background-color: var(--box-background-color);
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.25rem;
+    display: flex;
+    grid-column-start: initial;
+    justify-content: center;
+    min-height: 40vh;
+    transition: transform 0.2s ease-out;
+}
+
+.c-box:hover {
+    transform: scale(1.01);
+}
+
+.c-box:focus {
+    box-shadow: 0 0 0 3px var(--link);
+}
+
+.c-box-info {
+    --box-info-background-color: rgba(255, 255, 255, 0.75);
+    --box-info-color: #343434;
+    background-color: var(--box-info-background-color);
+    border-radius: 0 0 inherit inherit;
+    color: var(--box-info-color);
+    padding: 0.75rem 1rem;
+    width: 100%;
+}
+
+.c-box-info__subtitle {
+    display: block;
+    font-size: 1rem;
+}
+
+.c-box-info__title {
+    font-family: Lexend, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 40rem) {
+    .c-box {
+        height: 60vh;
+        min-height: 0;
+    }
+
+    .c-box-info {
+        padding: 1rem 1.5rem;
+    }
+
+    .c-box-info__subtitle {
+        font-size: 1.25rem;
+    }
+
+    .c-box-info__title {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .c-box {
+        height: 65vh;
+        max-height: 26rem;
+    }
+}

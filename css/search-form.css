@@ -1,0 +1,126 @@
+/**
+ * Search form.
+ */
+
+.c-search {
+    align-items: center;
+    display: flex;
+}
+
+.c-search__trigger {
+    background: transparent;
+    border-width: 0;
+    color: var(--primary);
+    line-height: 1;
+    padding: 1rem;
+    transition: opacity 0.25s;
+}
+
+.c-search__trigger:hover {
+    color: var(--primary-dark);
+}
+
+.c-search__trigger:focus {
+    background: var(--secondary);
+    color: var(--text-dark);
+    outline: none;
+}
+
+.c-search__trigger-icon {
+    display: block;
+    height: 1rem;
+    pointer-events: none;
+    width: 1rem;
+}
+
+.c-search-form-wrapper {
+    align-items: flex-start;
+    background-color: var(--search-takeover-light);
+    bottom: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.25s;
+    width: 100%;
+    z-index: -1;
+}
+
+.c-search-form-wrapper.is-visible {
+    clip: auto;
+    opacity: 1;
+    z-index: 3;
+}
+
+.c-search__form {
+    display: flex;
+    margin-top: 3rem;
+    max-width: 35rem;
+}
+
+.c-search__form-input {
+    -webkit-appearance: none;
+    background-color: var(--primary-translucent-dark);
+    border: none;
+    border-radius: 0.25rem 0 0 0.25rem;
+    color: var(--primary-dark);
+    display: block;
+    font: bold 1rem Lexend, sans-serif;
+    max-width: 15rem;
+    padding: 0.75rem 1rem;
+    width: auto;
+}
+
+.c-search__form-input:focus {
+    background-color: var(--bg-translucent);
+    color: var(--text-dark);
+    outline: 2px solid var(--primary);
+}
+
+.c-search__form-submit {
+    border-radius: 0 0.25rem 0.25rem 0;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 45rem) {
+    .c-search-form-wrapper {
+        align-items: center;
+    }
+
+    .c-search__form {
+        margin-top: 0;
+        max-width: none;
+    }
+
+    .c-search__form-input {
+        font-size: 125%;
+        max-width: none;
+    }
+
+    .c-search__form-submit {
+        font-size: 125%;
+    }
+}
+
+@media screen and (min-width: 65rem) {
+    .c-search__trigger-icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .c-search__trigger {
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .c-search-form-wrapper {
+        width: 100vw;
+    }
+}

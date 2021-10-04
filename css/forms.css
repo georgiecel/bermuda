@@ -1,0 +1,225 @@
+.btn {
+    --btn-bg: var(--primary);
+    --btn-bg-hover: var(--primary-medium);
+    background-color: var(--btn-bg);
+    border: none;
+    border-radius: 0.25rem;
+    color: var(--text-alt);
+    display: inline-block;
+    font-family: Lexend, sans-serif;
+    font-weight: 600;
+    padding: 0.75em 1.5em;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--btn-bg-hover);
+}
+
+.btn:focus {
+    background-color: var(--text-highlight);
+    color: var(--text-dark);
+    outline: none;
+}
+
+.c-input,
+.c-textarea {
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 0.25rem;
+    color: var(--input-text);
+    padding: 1rem;
+}
+
+.c-input:focus,
+.c-textarea:focus {
+    background-color: var(--text-highlight);
+    color: var(--text-dark);
+    font-weight: bold;
+    outline: 2px solid var(--link);
+}
+
+.c-input {
+    display: block;
+    font: normal 1.1rem Lexend, sans-serif;
+    transition: background-color 0.2s, color 0.2s;
+    width: 100%;
+}
+
+.c-input-label {
+    color: var(--text-light);
+    font-size: 90%;
+}
+
+.c-textarea {
+    font: normal 1em Lexend, sans-serif;
+    height: 15rem;
+}
+
+.c-checkbox {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    height: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.c-checkbox__indicator {
+    background-color: var(--input-bg);
+    border: 2px solid var(--primary-translucent-dark);
+    border-radius: 0.25rem;
+    flex-shrink: 0;
+    height: 1.5rem;
+    margin-right: 1rem;
+    position: relative;
+    transition: background-color 0.2s, color 0.2s;
+    width: 1.5rem;
+}
+
+.c-checkbox__indicator::after {
+    border: solid var(--text-alt);
+    border-width: 0 0.2rem 0.2rem 0;
+    content: '';
+    display: none;
+    height: 0.8rem;
+    left: 0.4rem;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 0.05rem;
+    width: 0.3rem;
+}
+
+.c-checkbox input:checked ~ .c-checkbox__indicator::after {
+    display: block;
+}
+
+/**
+ * Hide the original input.
+ */
+
+.c-checkbox input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/**
+ * Checked state.
+ */
+
+.c-checkbox input:checked ~ .c-checkbox__indicator {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/**
+ * Hover/focus state for unchecked.
+ */
+
+.c-checkbox:hover input ~ .c-checkbox__indicator,
+.c-checkbox input:focus ~ .c-checkbox__indicator {
+    background-color: var(--primary-translucent-dark);
+}
+
+/**
+ * Hover/focus state for checked.
+ */
+
+.c-checkbox:hover input:not([disabled]):checked ~ .c-checkbox__indicator,
+.c-checkbox input:checked:focus ~ .c-checkbox__indicator {
+    background-color: var(--primary-medium);
+    border-color: var(--primary-medium);
+}
+
+.c-checkbox input:disabled ~ .c-checkbox__indicator {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/**
+ * Toggle switch:
+ *
+ * Toggle to turn a feature off and on (e.g. dark mode).
+ */
+
+.c-toggle-wrapper {
+    padding: 1rem 1rem 0 0;
+}
+
+.c-toggle {
+    align-items: center;
+    border-radius: 50em;
+    display: flex;
+    flex-shrink: 0;
+    height: var(--toggle-height);
+    padding: var(--toggle-padding) 0;
+    position: relative;
+    width: var(--toggle-width);
+}
+
+.c-toggle__input,
+.c-toggle__label {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.c-toggle__input {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    pointer-events: none;
+    width: 0;
+}
+
+.c-toggle__input:checked + .c-toggle__label {
+    background-color: var(--primary);
+}
+
+.c-toggle__input:checked + .c-toggle__label + .c-toggle__marker {
+    left: calc(100% - var(--toggle-height) + var(--toggle-padding));
+}
+
+.c-toggle__input:checked + .c-toggle__label + .c-toggle__marker::after {
+    content: '🌒';
+}
+
+.c-toggle__input:focus + .c-toggle__label,
+.c-toggle__input:active + .c-toggle__label {
+    background-color: var(--secondary);
+}
+
+.c-toggle__label {
+    background-color: var(--primary-translucent-dark);
+    border-radius: inherit;
+    color: transparent;
+    height: 100%;
+    transition: background var(--toggle-animation-duration);
+    user-select: none;
+    width: 100%;
+    z-index: 2;
+}
+
+.c-toggle__marker {
+    align-items: center;
+    display: flex;
+    height: calc(var(--toggle-height) - var(--toggle-padding) * 2);
+    justify-content: center;
+    left: var(--toggle-padding);
+    pointer-events: none;
+    position: relative;
+    transition: left var(--toggle-animation-duration);
+    width: calc(var(--toggle-height) - var(--toggle-padding) * 2);
+    will-change: left;
+    z-index: 2;
+}
+
+.c-toggle__marker::after {
+    content: '🌞';
+}

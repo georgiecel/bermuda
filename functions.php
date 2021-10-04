@@ -23,11 +23,12 @@
         } elseif ( is_tax() ) {
             $title = single_term_title( '', false );
         }
-      
+
         return $title;
     }
-     
+
     add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
 
     // Site logo
 
@@ -228,9 +229,9 @@
         }
     }
 
-    add_action( 'template_redirect', 'change_search_url_rewrite' ); 
+    add_action( 'template_redirect', 'change_search_url_rewrite' );
 
-    // Highlight search terms 
+    // Highlight search terms
 
     function search_excerpt_highlight( $limit ) {
         $excerpt = get_the_excerpt();
@@ -252,7 +253,7 @@
 
         $keys = implode('|', explode(' ', get_search_query()));
         $excerpt = trim(preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt));
-    
+
         echo '<p>' . $excerpt . ' [&hellip;]</p>';
     }
 
@@ -317,7 +318,7 @@
         $excerpt = strip_tags( $excerpt, $allowed_tags );
 
         $excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
-    
+
         echo '<p>' . $excerpt . ' [&hellip;]</p>';
     }
 
@@ -326,7 +327,7 @@
     function image_url_meta() {
         global $post;
         $args = array(
-            'post_type' => 'attachment', 
+            'post_type' => 'attachment',
             'numberposts' => -1,
             'post_mime_type' => 'image',
             'post_status' => null,
@@ -402,7 +403,7 @@
     class comment_walker extends Walker_Comment {
         var $tree_type = 'comment';
         var $db_fields = array( 'parent' => 'comment_parent', 'id' => 'comment_ID' );
- 
+
         // constructor – wrapper for the comments list
         function __construct() { ?>
             <div class="comments-list">
@@ -482,7 +483,7 @@
 
     }
 
-    // Subscribe to posts form 
+    // Subscribe to posts form
 
     add_action( 'init', 'process_my_subscription_form' );
     function process_my_subscription_form() {
@@ -682,7 +683,7 @@
     remove_filter( 'wp_mail',               'wp_staticize_emoji_for_email' );
 
     // Remove unnecessary self-closing tags
-    
+
     function remove_self_closing_tags($input) {
         return str_replace(' />', '>', $input);
     }
@@ -712,4 +713,122 @@
     }
 
     add_action( 'wp_print_styles', 'deregister_css_js' );
+
+    // Remove WooCommerce Tabs - this code removes all 3 tabs
+
+    add_filter( 'woocommerce_product_tabs', 'custom_remove_product_tabs', 98 );
+
+    function custom_remove_product_tabs( $tabs ) {
+
+        unset( $tabs['description'] );
+        unset( $tabs['reviews'] );
+        unset( $tabs['additional_information'] );
+
+        return $tabs;
+    }
+
+    // Remove WooCommerce breadcrumb
+
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+
+    // Remove WooCommerce shipping and billing
+
+    add_filter('woocommerce_billing_fields','custom_remove_billing_fields');
+
+    function custom_remove_billing_fields( $fields = array() ) {
+        unset($fields['billing_company']);
+        unset($fields['billing_address_1']);
+        unset($fields['billing_address_2']);
+        unset($fields['billing_state']);
+        unset($fields['billing_city']);
+        unset($fields['billing_phone']);
+        unset($fields['billing_postcode']);
+        unset($fields['billing_country']);
+        return $fields;
+    }
+
+    add_filter( 'woocommerce_checkout_fields' , 'custom_remove_checkout_fields', 20 );
+
+    function custom_remove_checkout_fields( $fields ) {
+        $fields['billing']['billing_first_name'] = array(
+            'label' => 'First name',
+            'label_class' => array('c-input-label'),
+            'required' => true,
+        );
+        $fields['billing']['billing_last_name'] = array(
+            'label' => 'Last name',
+            'label_class' => array('c-input-label'),
+            'required' => true,
+        );
+        $fields['billing']['billing_email'] = array(
+            'label' => 'Email address',
+            'label_class' => array('c-input-label'),
+            'required' => true,
+        );
+        unset($fields['billing']['billing_company']);
+        unset($fields['billing']['billing_address_1']);
+        unset($fields['billing']['billing_postcode']);
+        unset($fields['billing']['billing_state']);
+        return $fields;
+    }
+
+    // Remove order notes field
+
+    add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 20 );
+
+    // Add custom cart validation for single item cart
+
+    add_filter( 'woocommerce_add_to_cart_validation', 'custom_add_to_cart_validation', 10, 3 );
+
+    function custom_add_to_cart_validation( $passed, $product_id, $quantity ) {
+        $cart_items_count = WC()->cart->get_cart_contents_count();
+        $total_count = $cart_items_count + $quantity;
+
+        if( $cart_items_count >= 1 || $total_count > 1 ) {
+            $passed = false;
+            wp_safe_redirect( wc_get_checkout_url() );
+            exit;
+        }
+
+        return $passed;
+    }
+
+    // Add redirection when product is added to cart
+
+    add_filter( 'woocommerce_add_to_cart_redirect', 'custom_add_to_cart_redirect' );
+
+    function custom_add_to_cart_redirect( $url ) {
+        $url = wc_get_checkout_url();
+
+        return $url;
+    }
+
+    // Add custom text to “Add to cart” button
+
+    add_filter( 'woocommerce_product_single_add_to_cart_text', 'custom_add_to_cart_text' );
+
+    function custom_add_to_cart_text() {
+        return __( 'Buy now', 'woocommerce' );
+    }
+
+    // Custom “order received” text
+
+    add_action( 'woocommerce_thankyou_order_received_text', 'custom_order_received_text' );
+
+    function custom_order_received_text() {
+        return __( 'Thank you so much for your purchase and for your support! 💌 I really appreciate it and hope you enjoy reading my work. If you have any questions about your order, or any feedback, please send an email to <a href="mailto:tosib@georgie.nu">tosib@georgie.nu</a>.' );
+    }
+
+    // Make orders automatically processed
+
+    add_action( 'woocommerce_thankyou', 'custom_woocommerce_auto_complete_order' );
+
+    function custom_woocommerce_auto_complete_order( $order_id ) {
+        if ( ! $order_id ) {
+            return;
+        }
+
+        $order = wc_get_order( $order_id );
+        $order->update_status( 'completed' );
+    }
 ?>
